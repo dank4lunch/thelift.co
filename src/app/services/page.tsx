@@ -132,7 +132,7 @@ export default function ServicesPage() {
               <a href="/#contact" className="btn-secondary text-lg px-8 py-4">
                 Book Consultation
               </a>
-              <a href="/about" className="bg-white/20 hover:bg-white/30 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200 text-lg px-8 py-4">
+              <a href="/about" className="bg-white/20 hover:bg-white/30 text-white font-medium py-4 px-8 rounded-lg transition-colors duration-200 text-lg">
                 Learn More
               </a>
             </div>
