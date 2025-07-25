@@ -124,20 +124,38 @@ export default function Pricing() {
   const handlePurchase = async (plan: Plan) => {
     setIsLoading(true)
     setSelectedPlan(plan)
-    
+
     try {
-      // In a real implementation, you would call your backend to create a Stripe checkout session
-      // For now, we'll simulate the process
-      await new Promise(resolve => setTimeout(resolve, 2000))
-      
-      // Redirect to Stripe Checkout (simulated)
-      console.log(`Redirecting to payment for plan: ${plan.name}`)
-      alert(`Payment integration would redirect to checkout for ${plan.name} - R${plan.price}/${plan.duration}`)
-      
+      // Create Stripe checkout session
+      const response = await fetch('/api/create-checkout-session', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          priceId: plan.stripePriceId,
+          quantity: 1,
+          successUrl: `${window.location.origin}/payment/success`,
+          cancelUrl: `${window.location.origin}/payment/cancelled`,
+        }),
+      })
+
+      if (!response.ok) {
+        throw new Error('Failed to create checkout session')
+      }
+
+      const { url } = await response.json()
+
+      if (url) {
+        // Redirect to Stripe Checkout
+        window.location.href = url
+      } else {
+        throw new Error('No checkout URL received')
+      }
+
     } catch (error) {
       console.error('Payment error:', error)
-      alert('Payment failed. Please try again.')
-    } finally {
+      alert('Payment failed. Please try again or contact support.')
       setIsLoading(false)
     }
   }
