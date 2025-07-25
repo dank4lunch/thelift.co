@@ -79,14 +79,15 @@ export default function Navigation() {
               
               {/* CTA Button with 3D effect */}
               <div className="ml-6">
-                <a href="#contact" 
+                <button
+                   onClick={() => handleNavClick('#contact')}
                    className="group relative bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 text-white font-bold px-8 py-3 rounded-2xl transform transition-all duration-500 hover:scale-110 hover:rotate-x-12"
                    style={{
                      boxShadow: '0 10px 25px rgba(168,85,247,0.4)'
                    }}>
                   <span className="relative z-10">Get Started</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-purple-700 via-pink-700 to-cyan-700 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </a>
+                </button>
               </div>
             </div>
           </div>
