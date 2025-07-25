@@ -61,16 +61,7 @@ export default function Footer() {
         <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-12 mb-12">
           {/* Brand Section */}
           <div className="lg:col-span-2">
-            <div className="mb-8">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2Fa11fc95e48c6423b88726372c48e8f21%2F3a602c662ffe4fb48475c4a2230a450e?format=webp&width=800"
-                alt="The Lift Co"
-                className="h-16 w-auto object-contain brightness-0 invert mb-6"
-                style={{
-                  filter: 'brightness(0) invert(1) drop-shadow(0 0 10px rgba(255,255,255,0.5))'
-                }}
-              />
-            </div>
+
             
             <h3 className="text-2xl font-bold text-transparent bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text mb-4">
               Built to Boost
