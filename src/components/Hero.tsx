@@ -96,31 +96,7 @@ export default function Hero() {
 
       <div className="container-custom relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Enhanced 3D Logo */}
-          <div className="mb-8 md:mb-12 perspective-1000 transform-gpu">
-            <div className="relative inline-block transform transition-all duration-1000 hover:scale-105 md:hover:scale-110"
-                 style={{
-                   transform: mounted ? `perspective(1000px) rotateX(${mousePosition.y * 0.005}deg) rotateY(${mousePosition.x * 0.005}deg)` : 'perspective(1000px)',
-                   filter: 'drop-shadow(0 15px 30px rgba(168,85,247,0.4))'
-                 }}>
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2Fa11fc95e48c6423b88726372c48e8f21%2F3a602c662ffe4fb48475c4a2230a450e?format=webp&width=800"
-                alt="The Lift Co - Built to Boost"
-                className="h-20 sm:h-24 md:h-32 lg:h-36 w-auto object-contain brightness-0 invert mx-auto transform transition-all duration-700 max-w-none"
-                style={{
-                  filter: 'brightness(0) invert(1) drop-shadow(0 0 25px rgba(255,255,255,0.9)) drop-shadow(0 0 50px rgba(168,85,247,0.7)) contrast(1.2)'
-                }}
-                loading="eager"
-              />
 
-              {/* Multi-layered glow effects - reduced on mobile */}
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-500/30 via-pink-500/30 to-cyan-500/30 rounded-2xl blur-2xl scale-110 animate-pulse opacity-70 md:opacity-100"></div>
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-400/15 via-pink-400/15 to-cyan-400/15 rounded-2xl blur-3xl scale-125 animate-pulse hidden md:block" style={{ animationDelay: '1s' }}></div>
-
-              {/* 3D depth shadow - simplified on mobile */}
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-900/30 to-pink-900/30 rounded-2xl blur-lg transform translate-y-1 translate-x-1 md:translate-y-2 md:translate-x-2 scale-95"></div>
-            </div>
-          </div>
 
           {/* 3D Hero Text */}
           <div className="perspective-1000 transform-gpu">
