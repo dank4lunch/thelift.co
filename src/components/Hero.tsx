@@ -36,32 +36,32 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
         <div className="absolute inset-0 bg-gradient-to-tr from-pink-500/20 via-purple-500/20 to-cyan-500/20"></div>
         
-        {/* Animated geometric shapes */}
+        {/* Animated geometric shapes with parallax */}
         <div className="absolute inset-0">
-          <div 
+          <div
             className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-r from-pink-500/30 to-purple-500/30 rounded-full blur-xl animate-float"
             style={{
-              transform: `translate(${mousePosition.x * 0.02}px, ${mousePosition.y * 0.02}px) perspective(1000px) rotateX(${mousePosition.y * 0.1}deg) rotateY(${mousePosition.x * 0.1}deg)`
+              transform: mounted ? `translate(${mousePosition.x * 0.02 + scrollY * 0.1}px, ${mousePosition.y * 0.02 + scrollY * 0.05}px) perspective(1000px) rotateX(${mousePosition.y * 0.1}deg) rotateY(${mousePosition.x * 0.1}deg)` : 'translate(0px, 0px)'
             }}
           ></div>
-          <div 
+          <div
             className="absolute top-40 right-20 w-24 h-24 bg-gradient-to-r from-cyan-500/30 to-blue-500/30 rounded-lg blur-lg animate-float"
             style={{
-              transform: `translate(${mousePosition.x * -0.03}px, ${mousePosition.y * -0.03}px) perspective(1000px) rotateX(${mousePosition.y * -0.1}deg) rotateY(${mousePosition.x * -0.1}deg)`,
+              transform: mounted ? `translate(${mousePosition.x * -0.03 + scrollY * -0.08}px, ${mousePosition.y * -0.03 + scrollY * 0.03}px) perspective(1000px) rotateX(${mousePosition.y * -0.1}deg) rotateY(${mousePosition.x * -0.1}deg)` : 'translate(0px, 0px)',
               animationDelay: '1s'
             }}
           ></div>
-          <div 
+          <div
             className="absolute bottom-40 left-1/4 w-20 h-20 bg-gradient-to-r from-yellow-500/30 to-orange-500/30 rounded-full blur-lg animate-float"
             style={{
-              transform: `translate(${mousePosition.x * 0.025}px, ${mousePosition.y * 0.025}px) perspective(1000px) rotateX(${mousePosition.y * 0.15}deg) rotateY(${mousePosition.x * 0.15}deg)`,
+              transform: mounted ? `translate(${mousePosition.x * 0.025 + scrollY * 0.06}px, ${mousePosition.y * 0.025 + scrollY * -0.04}px) perspective(1000px) rotateX(${mousePosition.y * 0.15}deg) rotateY(${mousePosition.x * 0.15}deg)` : 'translate(0px, 0px)',
               animationDelay: '2s'
             }}
           ></div>
-          <div 
+          <div
             className="absolute top-1/3 right-1/3 w-16 h-16 bg-gradient-to-r from-green-500/30 to-emerald-500/30 rounded-lg blur-lg animate-float"
             style={{
-              transform: `translate(${mousePosition.x * -0.02}px, ${mousePosition.y * -0.02}px) perspective(1000px) rotateX(${mousePosition.y * -0.15}deg) rotateY(${mousePosition.x * -0.15}deg)`,
+              transform: mounted ? `translate(${mousePosition.x * -0.02 + scrollY * -0.05}px, ${mousePosition.y * -0.02 + scrollY * 0.02}px) perspective(1000px) rotateX(${mousePosition.y * -0.15}deg) rotateY(${mousePosition.x * -0.15}deg)` : 'translate(0px, 0px)',
               animationDelay: '3s'
             }}
           ></div>
