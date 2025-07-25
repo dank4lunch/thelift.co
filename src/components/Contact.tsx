@@ -42,7 +42,7 @@ export default function Contact() {
           {/* Contact Form */}
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
             <h3 className="text-2xl font-semibold mb-6">Send us a message</h3>
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6" suppressHydrationWarning={true}>
               <div>
                 <label htmlFor="name" className="block text-sm font-medium mb-2">
                   Full Name
