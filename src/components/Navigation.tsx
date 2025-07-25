@@ -59,22 +59,22 @@ export default function Navigation() {
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-2">
               {navigation.map((item, index) => (
-                <Link
+                <button
                   key={item.name}
-                  href={item.href}
+                  onClick={() => handleNavClick(item.href)}
                   className="group relative px-6 py-3 text-white font-medium transition-all duration-500 hover:scale-105"
                 >
                   <span className="relative z-10 text-shadow-lg">{item.name}</span>
-                  
+
                   {/* Glass morphism background */}
                   <div className="absolute inset-0 bg-white/10 backdrop-blur-md rounded-2xl opacity-0 group-hover:opacity-100 transition-all duration-500 transform group-hover:scale-110"></div>
-                  
+
                   {/* Gradient border */}
                   <div className="absolute inset-0 bg-gradient-to-r from-purple-500/50 via-pink-500/50 to-cyan-500/50 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm"></div>
-                  
+
                   {/* Inner glow */}
                   <div className="absolute inset-[1px] bg-white/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                </Link>
+                </button>
               ))}
               
               {/* CTA Button with 3D effect */}
