@@ -104,7 +104,7 @@ export default function Hero() {
                    filter: 'drop-shadow(0 15px 30px rgba(168,85,247,0.4))'
                  }}>
               <img
-                src="https://cdn.builder.io/api/v1/image/assets%2Fa11fc95e48c6423b88726372c48e8f21%2F7f1cb837b11f4c358d061a03cfc8826f?format=webp&width=800"
+                src="https://cdn.builder.io/api/v1/image/assets%2Fa11fc95e48c6423b88726372c48e8f21%2F3a602c662ffe4fb48475c4a2230a450e?format=webp&width=800"
                 alt="The Lift Co - Built to Boost"
                 className="h-20 sm:h-24 md:h-32 lg:h-36 w-auto object-contain brightness-0 invert mx-auto transform transition-all duration-700 max-w-none"
                 style={{
