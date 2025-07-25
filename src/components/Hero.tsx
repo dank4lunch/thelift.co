@@ -8,6 +8,17 @@ export default function Hero() {
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
+    setMounted(true)
+
+    // Generate particles only on client side
+    const particleArray = Array.from({ length: 15 }, () => ({
+      left: `${Math.random() * 100}%`,
+      top: `${Math.random() * 100}%`,
+      delay: `${Math.random() * 5}s`,
+      duration: `${3 + Math.random() * 4}s`
+    }))
+    setParticles(particleArray)
+
     const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({
         x: (e.clientX / window.innerWidth) * 100,
