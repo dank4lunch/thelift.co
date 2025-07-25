@@ -5,8 +5,9 @@ export default function Founder() {
   ]
 
   const fitnessPartners = [
-    "Switch Playgrounds", "STRONG", "F45", "BODY 20", 
-    "CResults Digital Fitness Boxing", "True Combat Boxing"
+    "Switch Playgrounds", "STRONG", "F45", "BODY 20",
+    "CResults Digital Fitness Boxing", "True Combat Boxing",
+    "Virgin Active", "Bodyflo"
   ]
 
   return (
