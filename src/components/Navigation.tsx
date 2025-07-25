@@ -37,10 +37,32 @@ export default function Navigation() {
           {/* Logo with 3D effect */}
           <div className="flex-shrink-0">
             <Link href="/" className="group relative">
-              <span className="text-3xl font-black font-heading bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 bg-clip-text text-transparent transform transition-all duration-500 group-hover:scale-110">
-                The Lift Co
-              </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500"></div>
+              <div className="relative transform transition-all duration-700 group-hover:scale-110 group-hover:rotate-x-12"
+                   style={{
+                     filter: 'drop-shadow(0 10px 20px rgba(168,85,247,0.3))',
+                     transform: 'perspective(1000px)'
+                   }}>
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2Fa11fc95e48c6423b88726372c48e8f21%2F7f1cb837b11f4c358d061a03cfc8826f?format=webp&width=800"
+                  alt="The Lift Co - Built to Boost"
+                  className="h-12 w-auto object-contain brightness-0 invert transform transition-all duration-500 group-hover:brightness-110"
+                  style={{
+                    filter: 'brightness(0) invert(1) drop-shadow(0 0 10px rgba(255,255,255,0.5))'
+                  }}
+                />
+                {/* Glowing background effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 via-pink-500/20 to-cyan-500/20 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-500 blur-lg scale-110"></div>
+
+                {/* 3D shadow effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-600/30 via-pink-600/30 to-cyan-600/30 rounded-lg opacity-0 group-hover:opacity-60 transition-all duration-500 blur-md transform translate-y-1 translate-x-1"></div>
+
+                {/* Floating particles on hover */}
+                <div className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <div className="absolute w-1 h-1 bg-purple-400 rounded-full animate-float" style={{ top: '10%', left: '20%', animationDelay: '0s' }}></div>
+                  <div className="absolute w-1 h-1 bg-pink-400 rounded-full animate-float" style={{ top: '80%', right: '15%', animationDelay: '0.5s' }}></div>
+                  <div className="absolute w-1 h-1 bg-cyan-400 rounded-full animate-float" style={{ top: '50%', right: '30%', animationDelay: '1s' }}></div>
+                </div>
+              </div>
             </Link>
           </div>
           
