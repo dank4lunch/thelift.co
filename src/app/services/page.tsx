@@ -15,7 +15,7 @@ export default function ServicesPage() {
         "Wellness coaching and lifestyle optimization"
       ],
       icon: "💪",
-      price: "From R500/session",
+      price: "From R300/session",
       duration: "45-60 minutes"
     },
     {
