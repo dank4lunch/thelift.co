@@ -36,9 +36,9 @@ export default function Navigation() {
 
   return (
     <nav className={`fixed w-full z-50 transition-all duration-700 ${
-      scrolled 
-        ? 'bg-white/10 backdrop-blur-2xl border-b border-white/20 shadow-2xl' 
-        : 'bg-transparent'
+      scrolled || isOpen
+        ? 'bg-white/15 backdrop-blur-2xl border-b border-white/20 shadow-2xl'
+        : 'bg-white/10 backdrop-blur-xl border-b border-white/10 shadow-lg'
     }`}>
       {/* Glassmorphism background effect */}
       <div className="absolute inset-0 bg-gradient-to-r from-white/5 via-white/10 to-white/5 backdrop-blur-xl"></div>
