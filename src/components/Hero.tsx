@@ -68,14 +68,39 @@ export default function Hero() {
 
       <div className="container-custom relative z-10">
         <div className="max-w-4xl mx-auto text-center">
+          {/* 3D Logo */}
+          <div className="mb-8 perspective-1000 transform-gpu">
+            <div className="relative inline-block transform transition-all duration-1000 hover:scale-110"
+                 style={{
+                   transform: `perspective(1000px) rotateX(${mousePosition.y * 0.01}deg) rotateY(${mousePosition.x * 0.01}deg)`,
+                   filter: 'drop-shadow(0 20px 40px rgba(168,85,247,0.4))'
+                 }}>
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2Fa11fc95e48c6423b88726372c48e8f21%2F7f1cb837b11f4c358d061a03cfc8826f?format=webp&width=800"
+                alt="The Lift Co - Built to Boost"
+                className="h-24 md:h-32 w-auto object-contain brightness-0 invert mx-auto transform transition-all duration-700"
+                style={{
+                  filter: 'brightness(0) invert(1) drop-shadow(0 0 20px rgba(255,255,255,0.8)) drop-shadow(0 0 40px rgba(168,85,247,0.6))'
+                }}
+              />
+
+              {/* Multi-layered glow effects */}
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-500/30 via-pink-500/30 to-cyan-500/30 rounded-2xl blur-2xl scale-110 animate-pulse"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-400/20 via-pink-400/20 to-cyan-400/20 rounded-2xl blur-3xl scale-125 animate-pulse" style={{ animationDelay: '1s' }}></div>
+
+              {/* 3D depth shadow */}
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-900/40 to-pink-900/40 rounded-2xl blur-lg transform translate-y-2 translate-x-2 scale-95"></div>
+            </div>
+          </div>
+
           {/* 3D Hero Text */}
           <div className="perspective-1000 transform-gpu">
-            <h1 className="text-6xl md:text-8xl font-black font-heading text-white mb-6 transform hover:scale-105 transition-all duration-700 hover:rotate-x-12"
+            <h1 className="text-5xl md:text-7xl font-black font-heading text-white mb-6 transform hover:scale-105 transition-all duration-700 hover:rotate-x-12"
                 style={{
                   textShadow: '0 0 20px rgba(255,255,255,0.5), 0 0 40px rgba(138,43,226,0.3), 0 0 60px rgba(138,43,226,0.2)',
                   transform: `perspective(1000px) rotateX(${mousePosition.y * 0.02}deg) rotateY(${mousePosition.x * 0.02}deg)`
                 }}>
-              Built to <span className="bg-gradient-to-r from-pink-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent animate-glow">Boost</span>
+              <span className="bg-gradient-to-r from-pink-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent animate-glow">Strategic Moves. Creative Lifts.</span>
             </h1>
           </div>
           
