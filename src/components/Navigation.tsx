@@ -133,11 +133,11 @@ export default function Navigation() {
                 
                 {/* Mobile CTA */}
                 <div className="pt-4">
-                  <a href="#contact" 
-                     className="block text-center bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 text-white font-bold px-6 py-4 rounded-2xl transform transition-all duration-500 hover:scale-105"
-                     onClick={() => setIsOpen(false)}>
+                  <button
+                     onClick={() => handleNavClick('#contact')}
+                     className="block w-full text-center bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 text-white font-bold px-6 py-4 rounded-2xl transform transition-all duration-500 hover:scale-105">
                     Get Started
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
