@@ -8,6 +8,8 @@ export default function Hero() {
   const [particles, setParticles] = useState<Array<{left: string, top: string, delay: string, duration: string}>>([])
   const [mounted, setMounted] = useState(false)
   const [scrollY, setScrollY] = useState(0)
+  const { device, getAnimationConfig } = useResponsiveAnimation()
+  const animConfig = getAnimationConfig('high')
 
   useEffect(() => {
     setMounted(true)
