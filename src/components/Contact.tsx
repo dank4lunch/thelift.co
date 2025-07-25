@@ -54,6 +54,7 @@ export default function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                   required
+                  suppressHydrationWarning={true}
                   className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-accent-500"
                   placeholder="Your name"
                 />
@@ -70,6 +71,7 @@ export default function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   required
+                  suppressHydrationWarning={true}
                   className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-accent-500"
                   placeholder="your@email.com"
                 />
@@ -85,6 +87,7 @@ export default function Contact() {
                   value={formData.service}
                   onChange={handleChange}
                   required
+                  suppressHydrationWarning={true}
                   className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white focus:outline-none focus:ring-2 focus:ring-accent-500"
                 >
                   <option value="" className="text-gray-900">Select a service</option>
@@ -106,6 +109,7 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   rows={4}
+                  suppressHydrationWarning={true}
                   className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-accent-500"
                   placeholder="Tell us about your goals and how we can help..."
                 ></textarea>
