@@ -6,6 +6,7 @@ export default function Hero() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const [particles, setParticles] = useState<Array<{left: string, top: string, delay: string, duration: string}>>([])
   const [mounted, setMounted] = useState(false)
+  const [scrollY, setScrollY] = useState(0)
 
   useEffect(() => {
     setMounted(true)
