@@ -213,6 +213,7 @@ export default function Footer() {
               type="email"
               placeholder="Enter your email"
               className="flex-1 px-6 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-purple-500 backdrop-blur-xl"
+              suppressHydrationWarning={true}
             />
             <button className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-bold px-8 py-3 rounded-xl hover:scale-105 transition-transform duration-300">
               Subscribe
