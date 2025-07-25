@@ -4,6 +4,8 @@ import { useState, useEffect } from 'react'
 
 export default function Hero() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+  const [particles, setParticles] = useState<Array<{left: string, top: string, delay: string, duration: string}>>([])
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
