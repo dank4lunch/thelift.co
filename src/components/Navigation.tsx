@@ -115,21 +115,20 @@ export default function Navigation() {
             <div className="bg-white/10 backdrop-blur-2xl rounded-3xl border border-white/20 shadow-2xl overflow-hidden">
               <div className="px-6 pt-4 pb-6 space-y-2">
                 {navigation.map((item, index) => (
-                  <Link
+                  <button
                     key={item.name}
-                    href={item.href}
-                    className="group relative block px-6 py-4 text-white font-medium rounded-2xl transition-all duration-500 hover:scale-105"
-                    onClick={() => setIsOpen(false)}
+                    onClick={() => handleNavClick(item.href)}
+                    className="group relative block w-full text-left px-6 py-4 text-white font-medium rounded-2xl transition-all duration-500 hover:scale-105"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
                     <span className="relative z-10">{item.name}</span>
-                    
+
                     {/* Hover background */}
                     <div className="absolute inset-0 bg-white/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    
+
                     {/* Gradient effect */}
                     <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 via-pink-500/20 to-cyan-500/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  </Link>
+                  </button>
                 ))}
                 
                 {/* Mobile CTA */}
