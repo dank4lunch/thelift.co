@@ -35,37 +35,13 @@ export default function Navigation() {
       
       <div className="container-custom relative z-10">
         <div className="flex justify-between items-center h-20">
-          {/* Enhanced Logo with 3D effect */}
+          {/* Brand Text */}
           <div className="flex-shrink-0">
-            <Link href="/" className="group relative block">
-              <div className="relative transform transition-all duration-700 group-hover:scale-110"
-                   style={{
-                     filter: 'drop-shadow(0 8px 16px rgba(168,85,247,0.3))',
-                     transform: 'perspective(1000px)'
-                   }}>
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2Fa11fc95e48c6423b88726372c48e8f21%2F3a602c662ffe4fb48475c4a2230a450e?format=webp&width=800"
-                  alt="The Lift Co - Built to Boost"
-                  className="h-10 md:h-12 w-auto object-contain brightness-0 invert transform transition-all duration-500 group-hover:brightness-125 max-w-none"
-                  style={{
-                    filter: 'brightness(0) invert(1) drop-shadow(0 0 15px rgba(255,255,255,0.6)) contrast(1.1)'
-                  }}
-                  loading="eager"
-                />
-
-                {/* Enhanced glowing background effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-500/30 via-pink-500/30 to-cyan-500/30 rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-500 blur-lg scale-125 -z-10"></div>
-
-                {/* 3D depth shadow */}
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-600/40 via-pink-600/40 to-cyan-600/40 rounded-xl opacity-0 group-hover:opacity-70 transition-all duration-500 blur-md transform translate-y-1 translate-x-1 -z-20"></div>
-
-                {/* Floating particles on hover - simplified for performance */}
-                <div className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 hidden md:block">
-                  <div className="absolute w-1 h-1 bg-purple-400 rounded-full animate-pulse" style={{ top: '20%', left: '10%' }}></div>
-                  <div className="absolute w-1 h-1 bg-pink-400 rounded-full animate-pulse" style={{ top: '70%', right: '10%', animationDelay: '0.5s' }}></div>
-                  <div className="absolute w-1 h-1 bg-cyan-400 rounded-full animate-pulse" style={{ top: '50%', right: '25%', animationDelay: '1s' }}></div>
-                </div>
-              </div>
+            <Link href="/" className="group relative">
+              <span className="text-2xl md:text-3xl font-black font-heading bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent transform transition-all duration-500 group-hover:scale-110">
+                The Lift Co
+              </span>
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500"></div>
             </Link>
           </div>
           
