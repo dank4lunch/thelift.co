@@ -7,6 +7,16 @@ export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
 
+  const handleNavClick = (href: string) => {
+    if (href.startsWith('#')) {
+      const element = document.querySelector(href)
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' })
+      }
+    }
+    setIsOpen(false)
+  }
+
   const navigation = [
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
