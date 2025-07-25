@@ -62,8 +62,8 @@ export default function Footer() {
           {/* Brand Section */}
           <div className="lg:col-span-2">
             <div className="mb-8">
-              <img 
-                src="https://cdn.builder.io/api/v1/image/assets%2Fa11fc95e48c6423b88726372c48e8f21%2F7f1cb837b11f4c358d061a03cfc8826f?format=webp&width=800"
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2Fa11fc95e48c6423b88726372c48e8f21%2F3a602c662ffe4fb48475c4a2230a450e?format=webp&width=800"
                 alt="The Lift Co"
                 className="h-16 w-auto object-contain brightness-0 invert mb-6"
                 style={{
