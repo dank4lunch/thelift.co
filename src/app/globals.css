@@ -265,13 +265,109 @@
 
 /* Responsive 3D effects */
 @media (max-width: 768px) {
+  /* Simplified transforms for better mobile performance */
   .card-3d:hover {
     transform: scale(1.02);
   }
-  
+
   .btn-primary:hover,
   .btn-secondary:hover {
     transform: scale(1.05);
+  }
+
+  /* Disable intensive 3D transforms on mobile */
+  .perspective-1000 {
+    perspective: none;
+  }
+
+  .preserve-3d {
+    transform-style: flat;
+  }
+
+  /* Reduce animation complexity on mobile */
+  .floating-element {
+    animation: none;
+  }
+
+  /* Simplified hover effects for touch devices */
+  .group:hover .rotate-y-180 {
+    transform: rotate(0deg);
+  }
+
+  .group:hover .rotate-360 {
+    transform: rotate(180deg);
+  }
+
+  /* Optimize blur effects for mobile */
+  .blur-3xl {
+    filter: blur(20px);
+  }
+
+  .blur-2xl {
+    filter: blur(15px);
+  }
+
+  /* Reduce glow effects for better performance */
+  .glow-purple,
+  .glow-pink,
+  .glow-cyan {
+    box-shadow: none;
+  }
+
+  /* Simplified backdrop blur */
+  .backdrop-blur-2xl {
+    backdrop-filter: blur(8px);
+  }
+
+  .backdrop-blur-xl {
+    backdrop-filter: blur(6px);
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  /* Disable hover effects on touch devices */
+  .group:hover .scale-110 {
+    transform: scale(1);
+  }
+
+  .group:hover .rotate-12 {
+    transform: rotate(0deg);
+  }
+
+  /* Use touch-friendly interactions instead */
+  .touch-scale:active {
+    transform: scale(0.98);
+  }
+
+  .touch-glow:active {
+    box-shadow: 0 0 20px rgba(168,85,247,0.4);
+  }
+}
+
+/* High performance mode for older devices */
+@media (max-width: 480px) {
+  /* Disable expensive effects on small screens */
+  .animate-float,
+  .animate-pulse,
+  .animate-glow {
+    animation: none;
+  }
+
+  /* Use simpler gradients */
+  .bg-gradient-to-br,
+  .bg-gradient-to-tr {
+    background: linear-gradient(135deg, var(--tw-gradient-from), var(--tw-gradient-to));
+  }
+
+  /* Simplify transforms */
+  .transform-gpu {
+    transform: none;
+  }
+
+  /* Reduce shadow complexity */
+  .shadow-2xl {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
   }
 }
 
