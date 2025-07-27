@@ -160,20 +160,20 @@ export default function Navigation() {
             {/* Mobile Page Toggle */}
             <div className="px-6 flex space-x-2 mb-4">
               <button
-                onClick={() => router.push('/')}
+                onClick={() => window.location.href = '/'}
                 className={`flex-1 py-2 rounded-lg font-bold text-sm transition-all duration-300 ${
-                  pathname !== '/marketing' 
-                    ? 'bg-primary-500 text-neutral-950' 
+                  pathname !== '/marketing'
+                    ? 'bg-primary-500 text-neutral-950'
                     : 'text-neutral-400 border border-neutral-600'
                 }`}
               >
                 FITNESS
               </button>
               <button
-                onClick={() => router.push('/marketing')}
+                onClick={() => window.location.href = '/marketing'}
                 className={`flex-1 py-2 rounded-lg font-bold text-sm transition-all duration-300 ${
-                  pathname === '/marketing' 
-                    ? 'bg-primary-500 text-neutral-950' 
+                  pathname === '/marketing'
+                    ? 'bg-primary-500 text-neutral-950'
                     : 'text-neutral-400 border border-neutral-600'
                 }`}
               >
