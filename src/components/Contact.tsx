@@ -248,20 +248,6 @@ Note: Email notification is pending (will be sent shortly)`)
 
         {/* Emergency Contact */}
         <div className="text-center mt-16">
-          <div className="strength-card p-8 max-w-2xl mx-auto">
-            <h4 className="text-2xl font-bold text-primary-400 mb-4 muscle-text">IMMEDIATE RESPONSE</h4>
-            <p className="text-neutral-300 mb-6 font-medium">
-              Serious about starting? Call or WhatsApp for immediate consultation booking.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:+27635432439" className="text-accent-400 font-bold text-xl hover:text-accent-300 transition-colors">
-                📞 +27 635432439
-              </a>
-              <a href="https://wa.me/27635432439" className="text-primary-400 font-bold text-xl hover:text-primary-300 transition-colors">
-                💬 WhatsApp Direct
-              </a>
-            </div>
-          </div>
         </div>
       </div>
     </section>
