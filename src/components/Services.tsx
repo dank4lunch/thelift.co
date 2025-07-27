@@ -218,7 +218,7 @@ export default function Services() {
                     <img
                       src="https://images.pexels.com/photos/16513597/pexels-photo-16513597.jpeg"
                       alt={option.title}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover object-center"
                     />
                   </div>
                   <div className="md:w-1/2 p-8">
