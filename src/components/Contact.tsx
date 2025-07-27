@@ -239,7 +239,7 @@ Note: Email notification is pending (will be sent shortly)`)
                   rel="noopener noreferrer"
                   className="btn-secondary w-full text-center py-4 block muscle-text text-lg bg-green-600 hover:bg-green-700 from-green-600 to-green-700 hover:from-green-500 hover:to-green-600 border border-green-500/30"
                 >
-                  💬 WHATSAPP DIRECT
+                  📱 WHATSAPP DIRECT
                 </a>
               </div>
             </div>
