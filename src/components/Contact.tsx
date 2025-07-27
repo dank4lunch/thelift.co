@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { emailService } from '../utils/emailService'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
