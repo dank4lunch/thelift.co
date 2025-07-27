@@ -2,8 +2,17 @@
 
 import { useState, useEffect } from 'react'
 
+interface Particle {
+  id: number
+  left: number
+  top: number
+  delay: number
+  duration: number
+}
+
 export default function Hero() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+  const [particles, setParticles] = useState<Particle[]>([])
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -12,6 +21,18 @@ export default function Hero() {
 
     window.addEventListener('mousemove', handleMouseMove)
     return () => window.removeEventListener('mousemove', handleMouseMove)
+  }, [])
+
+  useEffect(() => {
+    // Generate particles only on client side to avoid hydration mismatch
+    const generatedParticles = Array.from({ length: 15 }, (_, i) => ({
+      id: i,
+      left: Math.random() * 100,
+      top: Math.random() * 100,
+      delay: Math.random() * 6,
+      duration: 4 + Math.random() * 4,
+    }))
+    setParticles(generatedParticles)
   }, [])
 
   return (
