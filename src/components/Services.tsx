@@ -5,6 +5,8 @@ import Booking from './Booking'
 
 export default function Services() {
   const [selectedPlan, setSelectedPlan] = useState<number | null>(null)
+  const [isBookingOpen, setIsBookingOpen] = useState(false)
+  const [selectedService, setSelectedService] = useState<any>(null)
 
   const services = [
     {
