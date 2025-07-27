@@ -117,7 +117,7 @@ export default function About() {
                   onMouseLeave={() => setHoveredCard(null)}
                 >
                   <div className="text-6xl mb-6 text-center">{principle.icon}</div>
-                  <h4 className={`text-xl font-bold mb-4 text-center bg-gradient-to-r ${principle.color} bg-clip-text text-transparent muscle-text`}>
+                  <h4 className={`text-xl font-bold mb-4 text-center text-amber-600 muscle-text`}>
                     {principle.title}
                   </h4>
                   <p className="text-neutral-300 text-center leading-relaxed font-medium">
