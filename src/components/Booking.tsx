@@ -188,9 +188,9 @@ Note: Email notifications are pending (will be sent shortly)`)
                   className="w-full px-4 py-3 bg-neutral-800 border border-neutral-600 rounded-lg text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                 >
                   <option value="">Select a service</option>
-                  <option value="Personal Training & Fitness">Personal Training & Fitness - R300</option>
-                  <option value="Brand Development">Brand Development - R2500</option>
-                  <option value="Business Strategy">Business Strategy - R3500</option>
+                  <option value="Personal Training & Fitness">Personal Training & Fitness - Premium</option>
+                  <option value="Brand Development">Brand Development - Elite</option>
+                  <option value="Business Strategy">Business Strategy - Executive</option>
                 </select>
               </div>
             </div>
