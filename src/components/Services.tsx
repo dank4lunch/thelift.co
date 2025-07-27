@@ -154,6 +154,13 @@ export default function Services() {
           </a>
         </div>
       </div>
+
+      {/* Booking Modal */}
+      <Booking
+        isOpen={isBookingOpen}
+        onClose={() => setIsBookingOpen(false)}
+        service={selectedService}
+      />
     </section>
   )
 }
