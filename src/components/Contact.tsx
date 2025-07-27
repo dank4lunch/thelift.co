@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { emailService } from '../utils/emailService'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -9,13 +10,37 @@ export default function Contact() {
     service: '',
     message: ''
   })
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Here you would typically handle form submission
-    console.log('Form submitted:', formData)
-    // Reset form
-    setFormData({ name: '', email: '', service: '', message: '' })
+    setIsSubmitting(true)
+
+    try {
+      // Send email notification using email service
+      const emailResult = await emailService.sendContactFormNotification(formData)
+      
+      if (emailResult.success) {
+        alert(`💪 MESSAGE SENT!
+
+Your inquiry has been received. Expect a response within 24 hours.
+
+✅ Notification sent to tshiamokl@gmail.com`)
+      } else {
+        alert(`💪 MESSAGE RECEIVED!
+
+Your inquiry has been logged. We'll get back to you within 24 hours.
+
+Note: Email notification is pending (will be sent shortly)`)
+      }
+
+      // Reset form
+      setFormData({ name: '', email: '', service: '', message: '' })
+    } catch (error) {
+      alert('❌ Failed to send message. Contact us directly at tshiamokl@gmail.com or +27 635432439')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -25,26 +50,65 @@ export default function Contact() {
     })
   }
 
+  const contactInfo = [
+    {
+      icon: "📍",
+      title: "Location",
+      info: "Johannesburg, South Africa",
+      gradient: "from-primary-500 to-accent-500"
+    },
+    {
+      icon: "📞",
+      title: "Phone",
+      info: "+27 635432439",
+      gradient: "from-accent-500 to-fitness-power"
+    },
+    {
+      icon: "✉️",
+      title: "Email",
+      info: "tshiamokl@gmail.com",
+      gradient: "from-fitness-power to-primary-600"
+    },
+    {
+      icon: "📱",
+      title: "Instagram",
+      info: "@thelift.co",
+      gradient: "from-primary-600 to-accent-500"
+    }
+  ]
+
   return (
-    <section id="contact" className="section-padding bg-primary-900 text-white">
-      <div className="container-custom">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold font-heading mb-6">
-            Talk To Us
+    <section id="contact" className="section-padding bg-gradient-to-b from-neutral-950 to-neutral-900 relative overflow-hidden">
+      {/* Background elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-0 left-0 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl energy-pulse" />
+        <div className="absolute bottom-0 right-0 w-80 h-80 bg-accent-500/10 rounded-full blur-3xl energy-pulse" style={{ animationDelay: '3s' }} />
+      </div>
+
+      <div className="container-custom relative z-10">
+        <div className="text-center mb-20">
+          <div className="inline-block mb-6">
+            <span className="text-primary-400 text-lg font-bold tracking-wider uppercase border border-primary-500/30 px-6 py-3 rounded-full bg-primary-500/10">
+              READY TO START?
+            </span>
+          </div>
+          <h2 className="text-5xl md:text-7xl font-bold font-heading text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-accent-400 mb-8 muscle-text">
+            LET'S TALK RESULTS
           </h2>
-          <div className="w-24 h-1 bg-accent-500 mx-auto mb-8"></div>
-          <p className="text-xl opacity-90 max-w-3xl mx-auto">
-            Ready to elevate your journey? Let's discuss how we can help transform your goals into reality.
+          <div className="section-divider mb-8" />
+          <p className="text-xl md:text-2xl text-neutral-300 max-w-4xl mx-auto leading-relaxed font-medium">
+            Ready to transform your body and life? Let's discuss your goals and create a plan 
+            that delivers serious results. No time wasters—serious inquiries only.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-16 max-w-6xl mx-auto">
           {/* Contact Form */}
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
-            <h3 className="text-2xl font-semibold mb-6">Send us a message</h3>
+          <div className="strength-card p-8 fitness-glow">
+            <h3 className="text-3xl font-bold mb-8 text-primary-400 muscle-text">GET STARTED NOW</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium mb-2">
+                <label htmlFor="name" className="block text-sm font-bold mb-2 text-neutral-300 uppercase tracking-wide">
                   Full Name
                 </label>
                 <input
@@ -54,13 +118,13 @@ export default function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-accent-500"
+                  className="w-full px-4 py-4 rounded-lg bg-neutral-800 border border-neutral-600 text-white placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300 font-medium"
                   placeholder="Your name"
                 />
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium mb-2">
+                <label htmlFor="email" className="block text-sm font-bold mb-2 text-neutral-300 uppercase tracking-wide">
                   Email Address
                 </label>
                 <input
@@ -70,14 +134,14 @@ export default function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-accent-500"
+                  className="w-full px-4 py-4 rounded-lg bg-neutral-800 border border-neutral-600 text-white placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300 font-medium"
                   placeholder="your@email.com"
                 />
               </div>
 
               <div>
-                <label htmlFor="service" className="block text-sm font-medium mb-2">
-                  Service Interest
+                <label htmlFor="service" className="block text-sm font-bold mb-2 text-neutral-300 uppercase tracking-wide">
+                  Program Interest
                 </label>
                 <select
                   id="service"
@@ -85,19 +149,19 @@ export default function Contact() {
                   value={formData.service}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white focus:outline-none focus:ring-2 focus:ring-accent-500"
+                  className="w-full px-4 py-4 rounded-lg bg-neutral-800 border border-neutral-600 text-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300 font-medium"
                 >
-                  <option value="" className="text-gray-900">Select a service</option>
-                  <option value="personal-training" className="text-gray-900">Personal Training & Fitness</option>
-                  <option value="brand-development" className="text-gray-900">Brand Development</option>
-                  <option value="business-strategy" className="text-gray-900">Business Strategy</option>
-                  <option value="consultation" className="text-gray-900">General Consultation</option>
+                  <option value="" className="text-neutral-400">Select a program</option>
+                  <option value="personal-training" className="text-white">Elite Personal Training</option>
+                  <option value="brand-development" className="text-white">Brand Dominance</option>
+                  <option value="business-strategy" className="text-white">Business Powerhouse</option>
+                  <option value="consultation" className="text-white">General Consultation</option>
                 </select>
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium mb-2">
-                  Message
+                <label htmlFor="message" className="block text-sm font-bold mb-2 text-neutral-300 uppercase tracking-wide">
+                  Your Goals
                 </label>
                 <textarea
                   id="message"
@@ -106,84 +170,102 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   rows={4}
-                  className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-accent-500"
-                  placeholder="Tell us about your goals and how we can help..."
+                  className="w-full px-4 py-4 rounded-lg bg-neutral-800 border border-neutral-600 text-white placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300 font-medium"
+                  placeholder="Tell us about your goals and what you want to achieve..."
                 ></textarea>
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-accent-500 hover:bg-accent-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200"
+                disabled={isSubmitting}
+                className="w-full bg-gradient-to-r from-primary-500 to-accent-500 hover:from-primary-600 hover:to-accent-600 text-white font-bold py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none muscle-text text-lg border border-primary-500/30"
               >
-                Send Message
+                {isSubmitting ? '🚀 SENDING...' : '💪 SEND MESSAGE'}
               </button>
             </form>
           </div>
 
           {/* Contact Information */}
           <div className="space-y-8">
-            <div>
-              <h3 className="text-2xl font-semibold mb-6">Get in touch</h3>
+            <div className="strength-card p-8 fitness-glow">
+              <h3 className="text-3xl font-bold mb-8 text-accent-400 muscle-text">CONTACT INFO</h3>
               <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="bg-accent-500 p-3 rounded-lg">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
+                {contactInfo.map((item, index) => (
+                  <div key={index} className="flex items-start space-x-4 group cursor-pointer">
+                    <div className={`bg-gradient-to-r ${item.gradient} p-4 rounded-lg group-hover:scale-110 transition-transform duration-300 border border-primary-500/30`}>
+                      <span className="text-2xl">{item.icon}</span>
+                    </div>
+                    <div>
+                      <h4 className="font-bold mb-1 text-neutral-200 group-hover:text-primary-400 transition-colors duration-300 muscle-text uppercase tracking-wide">
+                        {item.title}
+                      </h4>
+                      <p className="text-neutral-400 group-hover:text-neutral-300 transition-colors duration-300 font-medium">
+                        {item.info}
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-semibold mb-1">Location</h4>
-                    <p className="opacity-90">Johannesburg, South Africa</p>
-                  </div>
-                </div>
+                ))}
+              </div>
+            </div>
 
-                <div className="flex items-start space-x-4">
-                  <div className="bg-accent-500 p-3 rounded-lg">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold mb-1">Phone</h4>
-                    <p className="opacity-90">+27 635432439</p>
-                  </div>
+            <div className="strength-card p-8 fitness-glow">
+              <h4 className="text-2xl font-bold mb-4 text-primary-400 muscle-text">TRAINING HOURS</h4>
+              <div className="space-y-3 text-neutral-300">
+                <div className="flex justify-between font-medium">
+                  <span>Monday - Friday:</span>
+                  <span className="text-accent-400 font-bold">06:00 - 20:00</span>
                 </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="bg-accent-500 p-3 rounded-lg">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold mb-1">Email</h4>
-                    <p className="opacity-90">tshiamokl@gmail.com</p>
-                  </div>
+                <div className="flex justify-between font-medium">
+                  <span>Saturday:</span>
+                  <span className="text-accent-400 font-bold">08:00 - 16:00</span>
                 </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="bg-accent-500 p-3 rounded-lg">
-                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.74-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146 1.124.347 2.317.535 3.554.535 6.624 0 11.99-5.367 11.99-11.99C24.007 5.367 18.641.001 12.017.001z"/>
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold mb-1">Instagram</h4>
-                    <p className="opacity-90">@thelift.co</p>
-                  </div>
+                <div className="flex justify-between font-medium">
+                  <span>Sunday:</span>
+                  <span className="text-neutral-500">By Appointment</span>
                 </div>
               </div>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
-              <h4 className="text-lg font-semibold mb-3">Coming Soon</h4>
-              <p className="opacity-90 mb-4">
-                Our full website and Linktree are launching soon. Stay connected for updates!
+            <div className="strength-card p-8 fitness-glow bg-gradient-to-r from-primary-900/50 to-accent-900/50 border border-primary-500/50">
+              <h4 className="text-2xl font-bold mb-4 text-accent-400 muscle-text">💪 FIRST SESSION</h4>
+              <p className="text-neutral-300 mb-6 font-medium">
+                Book your first elite training session now. Includes FREE consultation
+                and personalized program design.
               </p>
-              <div className="text-accent-400 font-medium">
-                Website: Coming soon...
+              <div className="space-y-4">
+                <a
+                  href="#services"
+                  className="btn-primary w-full text-center py-4 block muscle-text text-lg"
+                >
+                  BOOK NOW - R300
+                </a>
+                <a
+                  href="https://wa.me/27635432439?text=Hi! I'm interested in booking a training session with The Lift Co. Can you help me get started?"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-secondary w-full text-center py-4 block muscle-text text-lg bg-green-600 hover:bg-green-700 from-green-600 to-green-700 hover:from-green-500 hover:to-green-600 border border-green-500/30"
+                >
+                  💬 WHATSAPP DIRECT
+                </a>
               </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Emergency Contact */}
+        <div className="text-center mt-16">
+          <div className="strength-card p-8 max-w-2xl mx-auto">
+            <h4 className="text-2xl font-bold text-primary-400 mb-4 muscle-text">IMMEDIATE RESPONSE</h4>
+            <p className="text-neutral-300 mb-6 font-medium">
+              Serious about starting? Call or WhatsApp for immediate consultation booking.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="tel:+27635432439" className="text-accent-400 font-bold text-xl hover:text-accent-300 transition-colors">
+                📞 +27 635432439
+              </a>
+              <a href="https://wa.me/27635432439" className="text-primary-400 font-bold text-xl hover:text-primary-300 transition-colors">
+                💬 WhatsApp Direct
+              </a>
             </div>
           </div>
         </div>

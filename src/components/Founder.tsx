@@ -1,81 +1,207 @@
+'use client'
+
+import { useState } from 'react'
+
 export default function Founder() {
-  const brands = [
-    "Herbally VSC", "Busa Creative Agency", "The J Spot", "House of Hemp", 
-    "Canna Kush", "GIBS", "BasslineLive", "Mwanza Risk Solutions", "Senqu Municipality"
+  const [activeTab, setActiveTab] = useState<'credentials' | 'partners'>('credentials')
+
+  const credentials = [
+    "Certified Personal Trainer", "Strength & Conditioning Specialist", "Nutrition Coach", 
+    "Elite Performance Training", "Functional Movement", "Sports Psychology",
+    "Body Transformation Expert", "Leadership Development"
   ]
 
   const fitnessPartners = [
-    "Switch Playgrounds", "STRONG", "F45", "BODY 20", 
+    "Virgin Active", "BodyFlow", "Switch Playgrounds", "STRONG", "F45", "BODY 20", 
     "CResults Digital Fitness Boxing", "True Combat Boxing"
   ]
 
+  const achievements = [
+    { number: "500+", label: "Bodies Transformed", icon: "💪" },
+    { number: "98%", label: "Success Rate", icon: "🎯" },
+    { number: "10+", label: "Years Mastery", icon: "⭐" },
+    { number: "100%", label: "Commitment Level", icon: "🔥" }
+  ]
+
   return (
-    <section id="founder" className="section-padding bg-white">
-      <div className="container-custom">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold font-heading text-primary-900 mb-6">
-            Meet The Founder
+    <section id="founder" className="section-padding bg-gradient-to-b from-neutral-950 to-neutral-900 relative overflow-hidden">
+      {/* Background elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-20 right-20 w-64 h-64 bg-primary-500/10 rounded-full blur-3xl energy-pulse" />
+        <div className="absolute bottom-20 left-20 w-80 h-80 bg-accent-500/10 rounded-full blur-3xl energy-pulse" style={{ animationDelay: '4s' }} />
+      </div>
+
+      <div className="container-custom relative z-10">
+        <div className="text-center mb-20">
+          <div className="inline-block mb-6">
+            <span className="text-primary-400 text-lg font-bold tracking-wider uppercase border border-primary-500/30 px-6 py-3 rounded-full bg-primary-500/10">
+              ELITE TRAINER
+            </span>
+          </div>
+          <h2 className="text-5xl md:text-7xl font-bold font-heading text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-accent-400 mb-8 muscle-text">
+            MEET YOUR COACH
           </h2>
-          <div className="w-24 h-1 bg-accent-500 mx-auto mb-8"></div>
+          <div className="section-divider mb-8" />
         </div>
 
-        <div className="max-w-5xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <div>
-                <h3 className="text-3xl font-bold font-heading text-primary-900 mb-2">
-                  Tshiamo Sookane
-                </h3>
-                <p className="text-xl text-accent-600 font-medium mb-6">
-                  Creative Strategist & Certified Personal Trainer
-                </p>
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
+            {/* Trainer Profile */}
+            <div className="space-y-8">
+              <div className="strength-card p-10 fitness-glow">
+                <div className="flex items-center mb-8">
+                  <div className="w-24 h-24 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full flex items-center justify-center mr-6 border border-primary-500/30">
+                    <span className="text-4xl">👑</span>
+                  </div>
+                  <div>
+                    <h3 className="text-4xl font-bold font-heading text-primary-400 mb-2 muscle-text">
+                      TSHIAMO SOOKANE
+                    </h3>
+                    <p className="text-xl text-accent-400 font-bold muscle-text">
+                      ELITE PERSONAL TRAINER & STRATEGIC COACH
+                    </p>
+                  </div>
+                </div>
+
+                <div className="space-y-6">
+                  <p className="text-lg text-neutral-300 leading-relaxed font-medium">
+                    Elite certified personal trainer with 10+ years of proven results in body transformation 
+                    and performance optimization. Specializes in strength training, athletic conditioning, 
+                    and total lifestyle transformation.
+                  </p>
+
+                  <p className="text-lg text-neutral-300 leading-relaxed font-medium">
+                    The Lift Co represents the pinnacle of personal training excellence—where science meets 
+                    discipline, and potential becomes reality. Every client receives world-class training 
+                    designed for maximum results.
+                  </p>
+
+                  <div className="bg-gradient-to-r from-primary-600/20 to-accent-600/20 p-6 rounded-lg border border-primary-500/30">
+                    <h4 className="text-xl font-bold text-primary-400 mb-3 muscle-text">TRAINING PHILOSOPHY</h4>
+                    <p className="text-neutral-300 italic font-medium">
+                      "Transformation isn't just physical—it's mental, emotional, and spiritual. 
+                      I don't just build bodies; I forge champions who dominate in every aspect of life."
+                    </p>
+                  </div>
+                </div>
               </div>
-
-              <p className="text-lg text-gray-600 leading-relaxed">
-                Tshiamo is a versatile creative strategist and certified personal trainer with a 
-                strong background in project management, brand development, and fitness coaching.
-              </p>
-
-              <p className="text-lg text-gray-600 leading-relaxed">
-                The Lift Co is his expression of holistic upliftment — a manifestation of years 
-                of experience in transforming both businesses and lives through strategic thinking 
-                and authentic execution.
-              </p>
             </div>
 
-            <div className="bg-primary-50 rounded-2xl p-8">
-              <div className="mb-8">
-                <h4 className="text-xl font-semibold text-primary-900 mb-4">Brand Experience</h4>
-                <div className="grid grid-cols-2 gap-2">
-                  {brands.map((brand, index) => (
-                    <div key={index} className="bg-white px-3 py-2 rounded-lg text-sm text-gray-700 text-center">
-                      {brand}
-                    </div>
-                  ))}
-                </div>
+            {/* Credentials & Partners */}
+            <div className="space-y-8">
+              {/* Tab Navigation */}
+              <div className="flex space-x-4 mb-8">
+                <button
+                  onClick={() => setActiveTab('credentials')}
+                  className={`px-6 py-3 rounded-lg font-bold transition-all duration-300 muscle-text ${
+                    activeTab === 'credentials'
+                      ? 'bg-gradient-to-r from-primary-500 to-accent-500 text-white border border-primary-500/30'
+                      : 'bg-neutral-800 text-neutral-400 hover:text-white'
+                  }`}
+                >
+                  CREDENTIALS
+                </button>
+                <button
+                  onClick={() => setActiveTab('partners')}
+                  className={`px-6 py-3 rounded-lg font-bold transition-all duration-300 muscle-text ${
+                    activeTab === 'partners'
+                      ? 'bg-gradient-to-r from-primary-500 to-accent-500 text-white border border-primary-500/30'
+                      : 'bg-neutral-800 text-neutral-400 hover:text-white'
+                  }`}
+                >
+                  PARTNERS
+                </button>
               </div>
 
-              <div>
-                <h4 className="text-xl font-semibold text-primary-900 mb-4">Fitness Partners</h4>
-                <div className="grid grid-cols-2 gap-2">
-                  {fitnessPartners.map((partner, index) => (
-                    <div key={index} className="bg-white px-3 py-2 rounded-lg text-sm text-gray-700 text-center">
-                      {partner}
+              {/* Content */}
+              <div className="strength-card p-8 fitness-glow min-h-[400px]">
+                {activeTab === 'credentials' ? (
+                  <div>
+                    <h4 className="text-2xl font-bold text-primary-400 mb-6 flex items-center muscle-text">
+                      <span className="text-3xl mr-3">���</span>
+                      ELITE CERTIFICATIONS
+                    </h4>
+                    <div className="grid grid-cols-1 gap-4">
+                      {credentials.map((credential, index) => (
+                        <div 
+                          key={index} 
+                          className="bg-gradient-to-r from-neutral-800 to-neutral-700 px-6 py-4 rounded-lg text-neutral-200 hover:from-primary-800 hover:to-accent-800 transition-all duration-300 cursor-pointer transform hover:scale-105 border border-neutral-600/50 font-medium"
+                        >
+                          <div className="flex items-center">
+                            <span className="text-primary-400 mr-3 font-bold">✓</span>
+                            {credential}
+                          </div>
+                        </div>
+                      ))}
                     </div>
-                  ))}
-                </div>
+                  </div>
+                ) : (
+                  <div>
+                    <h4 className="text-2xl font-bold text-accent-400 mb-6 flex items-center muscle-text">
+                      <span className="text-3xl mr-3">🤝</span>
+                      ELITE NETWORK
+                    </h4>
+                    <div className="grid grid-cols-2 gap-4">
+                      {fitnessPartners.map((partner, index) => (
+                        <div 
+                          key={index} 
+                          className={`px-4 py-4 rounded-lg text-sm text-neutral-200 text-center transition-all duration-300 cursor-pointer transform hover:scale-105 font-bold ${
+                            partner === 'Virgin Active' || partner === 'BodyFlow'
+                              ? 'bg-gradient-to-r from-accent-600 to-primary-600 ring-2 ring-accent-500/50 border border-accent-500/30'
+                              : 'bg-gradient-to-r from-neutral-800 to-neutral-700 hover:from-accent-800 hover:to-primary-800'
+                          }`}
+                        >
+                          {partner}
+                          {(partner === 'Virgin Active' || partner === 'BodyFlow') && (
+                            <div className="text-xs text-accent-200 mt-1 font-normal">Elite Partner</div>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           </div>
 
-          <div className="mt-12 bg-gradient-to-r from-primary-600 to-accent-500 rounded-2xl p-8 text-white text-center">
-            <h4 className="text-2xl font-bold mb-4">Ready to Transform?</h4>
-            <p className="text-lg mb-6 opacity-90">
-              Join the movement. Experience the unique blend of strategy, creativity, and authentic growth.
-            </p>
-            <a href="#contact" className="bg-white text-primary-600 font-semibold px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors duration-200 inline-block">
-              Let's Connect
-            </a>
+          {/* Results */}
+          <div className="mb-16">
+            <h3 className="text-4xl font-bold text-center text-primary-400 mb-12 muscle-text">PROVEN RESULTS</h3>
+            <div className="grid md:grid-cols-4 gap-6">
+              {achievements.map((achievement, index) => (
+                <div key={index} className="strength-card p-8 text-center fitness-glow group">
+                  <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                    {achievement.icon}
+                  </div>
+                  <div className="text-5xl font-bold text-primary-400 mb-2 group-hover:text-accent-400 transition-colors duration-300 muscle-text">
+                    {achievement.number}
+                  </div>
+                  <div className="text-neutral-400 text-sm font-bold uppercase tracking-wide">{achievement.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Call to Action */}
+          <div className="text-center">
+            <div className="strength-card p-12 fitness-glow relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-accent-600/20" />
+              <div className="relative z-10">
+                <h4 className="text-4xl font-bold mb-6 text-gradient muscle-text">READY TO DOMINATE?</h4>
+                <p className="text-xl text-neutral-300 mb-8 max-w-3xl mx-auto font-medium">
+                  Stop settling for average. Join the elite. Experience transformation that delivers 
+                  results that speak for themselves.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                  <a href="#contact" className="btn-primary text-lg px-12 py-5 muscle-text">
+                    BOOK CONSULTATION
+                  </a>
+                  <a href="#services" className="btn-secondary text-lg px-12 py-5 muscle-text">
+                    VIEW PROGRAMS
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -1,48 +1,196 @@
+'use client'
+
 export default function Footer() {
+  const currentYear = new Date().getFullYear()
+
+  const quickLinks = [
+    { name: 'Home', href: '#home' },
+    { name: 'About', href: '#about' },
+    { name: 'Programs', href: '#services' },
+    { name: 'Trainer', href: '#founder' },
+    { name: 'Contact', href: '#contact' },
+  ]
+
+  const programs = [
+    { name: 'Elite Personal Training', href: '#services' },
+    { name: 'Brand Dominance', href: '#services' },
+    { name: 'Business Powerhouse', href: '#services' },
+    { name: 'Consultation', href: '#contact' },
+  ]
+
+  const socialLinks = [
+    {
+      name: 'Instagram',
+      href: 'https://instagram.com/thelift.co',
+      icon: '📱',
+      color: 'from-primary-500 to-accent-500'
+    },
+    {
+      name: 'WhatsApp',
+      href: 'https://wa.me/27635432439',
+      icon: '💬',
+      color: 'from-accent-500 to-fitness-power'
+    },
+    {
+      name: 'Email',
+      href: 'mailto:tshiamokl@gmail.com',
+      icon: '✉️',
+      color: 'from-fitness-power to-primary-600'
+    },
+    {
+      name: 'Phone',
+      href: 'tel:+27635432439',
+      icon: '📞',
+      color: 'from-primary-600 to-accent-500'
+    }
+  ]
+
   return (
-    <footer className="bg-gray-900 text-white py-12">
+    <footer className="bg-gradient-to-b from-neutral-900 to-neutral-950 border-t border-neutral-800">
       <div className="container-custom">
-        <div className="grid md:grid-cols-3 gap-8">
-          <div>
-            <h3 className="text-2xl font-bold font-heading mb-4">The Lift Co</h3>
-            <p className="text-gray-300 mb-4 leading-relaxed">
-              Built to Boost. Strategic Moves. Creative Lifts. We blend strategy with soul 
-              to uniquely uplift every layer of your life and business.
+        {/* Main Footer Content */}
+        <div className="py-16">
+          <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
+            {/* Brand Section */}
+            <div className="lg:col-span-2">
+              <div className="flex items-center space-x-4 mb-6">
+                <div className="w-16 h-16 rounded-xl overflow-hidden border border-primary-500/30 bg-white/10 backdrop-blur-sm">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2F40f4f3f8cf004cb78312fbe6b3e1cec8%2F08e7771950634f09bf5906b11a6d0d83?format=webp&width=800"
+                    alt="The Lift Co Logo"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <div>
+                  <h3 className="text-3xl font-bold font-heading text-primary-400 muscle-text">THE LIFT CO</h3>
+                  <p className="text-sm text-accent-400 font-bold uppercase tracking-wider">Elite Training Excellence</p>
+                </div>
+              </div>
+              
+              <p className="text-neutral-300 mb-6 max-w-md leading-relaxed font-medium">
+                Elite personal training that delivers serious results. No shortcuts, no excuses—
+                just proven methods that transform bodies and build champions. 
+                Your strongest self is waiting.
+              </p>
+
+              {/* Social Links */}
+              <div className="flex space-x-4">
+                {socialLinks.map((social) => (
+                  <a
+                    key={social.name}
+                    href={social.href}
+                    className={`w-14 h-14 bg-gradient-to-r ${social.color} rounded-lg flex items-center justify-center hover:scale-110 transform transition-all duration-300 group border border-primary-500/30`}
+                    aria-label={social.name}
+                  >
+                    <span className="text-xl group-hover:scale-110 transition-transform duration-300">
+                      {social.icon}
+                    </span>
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            {/* Quick Links */}
+            <div>
+              <h4 className="text-lg font-bold text-primary-400 mb-6 muscle-text uppercase tracking-wide">Navigation</h4>
+              <ul className="space-y-3">
+                {quickLinks.map((link) => (
+                  <li key={link.name}>
+                    <a
+                      href={link.href}
+                      className="text-neutral-300 hover:text-primary-400 transition-colors duration-300 hover:translate-x-1 transform inline-block font-medium"
+                    >
+                      {link.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Programs */}
+            <div>
+              <h4 className="text-lg font-bold text-accent-400 mb-6 muscle-text uppercase tracking-wide">Programs</h4>
+              <ul className="space-y-3">
+                {programs.map((program) => (
+                  <li key={program.name}>
+                    <a
+                      href={program.href}
+                      className="text-neutral-300 hover:text-accent-400 transition-colors duration-300 hover:translate-x-1 transform inline-block font-medium"
+                    >
+                      {program.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Newsletter Section */}
+        <div className="py-8 border-t border-neutral-800">
+          <div className="text-center">
+            <h4 className="text-3xl font-bold text-primary-400 mb-4 muscle-text">JOIN THE ELITE</h4>
+            <p className="text-neutral-300 mb-6 max-w-2xl mx-auto font-medium">
+              Get exclusive training tips, nutrition guides, and be first to know about new programs. 
+              Elite content for serious people only.
             </p>
-            <div className="flex space-x-4">
-              <a href="https://instagram.com/thelift.co" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-accent-500 transition-colors duration-200">
-                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.74-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146 1.124.347 2.317.535 3.554.535 6.624 0 11.99-5.367 11.99-11.99C24.007 5.367 18.641.001 12.017.001z"/>
-                </svg>
+            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="flex-1 px-4 py-4 bg-neutral-800 border border-neutral-600 rounded-lg text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent font-medium"
+              />
+              <button className="btn-primary px-8 py-4 whitespace-nowrap muscle-text">
+                JOIN NOW
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Footer */}
+        <div className="py-8 border-t border-neutral-800">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <div className="text-neutral-400 text-sm font-medium">
+              © {currentYear} The Lift Co. All rights reserved. Built for elite transformation. 💪
+            </div>
+            
+            <div className="flex space-x-6 text-sm">
+              <a href="#" className="text-neutral-400 hover:text-primary-400 transition-colors duration-300 font-medium">
+                Privacy Policy
+              </a>
+              <a href="#" className="text-neutral-400 hover:text-primary-400 transition-colors duration-300 font-medium">
+                Terms of Service
+              </a>
+              <a href="#contact" className="text-neutral-400 hover:text-primary-400 transition-colors duration-300 font-medium">
+                Support
               </a>
             </div>
           </div>
+        </div>
 
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Services</h4>
-            <ul className="space-y-2 text-gray-300">
-              <li><a href="#services" className="hover:text-accent-500 transition-colors duration-200">Personal Training</a></li>
-              <li><a href="#services" className="hover:text-accent-500 transition-colors duration-200">Brand Development</a></li>
-              <li><a href="#services" className="hover:text-accent-500 transition-colors duration-200">Business Strategy</a></li>
-              <li><a href="#services" className="hover:text-accent-500 transition-colors duration-200">Project Management</a></li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
-            <ul className="space-y-2 text-gray-300">
-              <li>Johannesburg, South Africa</li>
-              <li>+27 635432439</li>
-              <li>tshiamokl@gmail.com</li>
-              <li>@thelift.co</li>
-            </ul>
+        {/* Training Hours */}
+        <div className="py-6 border-t border-neutral-800/50">
+          <div className="text-center">
+            <h5 className="text-lg font-bold text-accent-400 mb-4 muscle-text">TRAINING HOURS</h5>
+            <div className="flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-8 text-neutral-300">
+              <span className="font-medium">Mon-Fri: <span className="text-primary-400 font-bold">06:00-20:00</span></span>
+              <span className="font-medium">Saturday: <span className="text-primary-400 font-bold">08:00-16:00</span></span>
+              <span className="font-medium">Sunday: <span className="text-accent-400 font-bold">By Appointment</span></span>
+            </div>
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} The Lift Co. All rights reserved.</p>
-          <p className="mt-2 text-sm">Built to Boost. Strategic Moves. Creative Lifts.</p>
+        {/* Floating Action Button */}
+        <div className="fixed bottom-6 right-6 z-40">
+          <a
+            href="#contact"
+            className="w-16 h-16 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transform transition-all duration-300 fitness-glow group border border-primary-500/30"
+          >
+            <span className="text-3xl group-hover:scale-110 transition-transform duration-300">💬</span>
+          </a>
         </div>
+
+
       </div>
     </footer>
   )
