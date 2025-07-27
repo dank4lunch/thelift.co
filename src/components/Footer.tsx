@@ -186,20 +186,7 @@ export default function Footer() {
           </a>
         </div>
 
-        {/* Emergency Contact Banner */}
-        <div className="fixed bottom-24 right-6 z-30">
-          <div className="strength-card p-4 max-w-xs">
-            <h6 className="text-sm font-bold text-primary-400 mb-2 muscle-text">IMMEDIATE BOOKING</h6>
-            <div className="space-y-1">
-              <a href="tel:+27635432439" className="block text-accent-400 font-bold text-sm hover:text-accent-300">
-                📞 +27 635432439
-              </a>
-              <a href="https://wa.me/27635432439" className="block text-primary-400 font-bold text-sm hover:text-primary-300">
-                ���� WhatsApp
-              </a>
-            </div>
-          </div>
-        </div>
+
       </div>
     </footer>
   )
