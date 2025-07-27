@@ -66,6 +66,15 @@ export default function Hero() {
       <div className="container-custom relative z-10">
         <div className="max-w-6xl mx-auto text-center">
           <div className="mb-8">
+            <div className="flex justify-center mb-8">
+              <div className="w-24 h-24 rounded-2xl overflow-hidden border border-primary-500/30 bg-white/10 backdrop-blur-sm shadow-2xl">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F40f4f3f8cf004cb78312fbe6b3e1cec8%2F08e7771950634f09bf5906b11a6d0d83?format=webp&width=800"
+                  alt="The Lift Co Logo"
+                  className="w-full h-full object-contain"
+                />
+              </div>
+            </div>
             <div className="inline-block mb-6">
               <span className="text-primary-400 text-lg font-bold tracking-wider uppercase border border-primary-500/30 px-4 py-2 rounded-full bg-primary-500/10">
                 Elite Personal Training
