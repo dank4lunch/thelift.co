@@ -29,8 +29,8 @@ export default function MarketingServices() {
       description: "Elevate your creative output with strategic direction that converts. Every piece of content works toward your goals.",
       features: ["Campaign Development", "Creative Strategy", "Content Planning", "Photography Direction", "Video Concepts", "Marketing Materials"],
       icon: "🎨",
-      price: "R1,800",
-      duration: "per campaign",
+      price: "Executive",
+      duration: "Creative Package",
       timeline: "1-2 weeks"
     }
   ]
