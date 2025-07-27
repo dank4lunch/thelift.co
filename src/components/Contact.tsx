@@ -227,9 +227,9 @@ Note: Email notification is pending (will be sent shortly)`)
             </div>
 
             <div className="strength-card p-8 fitness-glow bg-gradient-to-r from-primary-900/50 to-accent-900/50 border border-primary-500/50">
-              <h4 className="text-2xl font-bold mb-4 text-accent-400 muscle-text">💪 FIRST SESSION</h4>
+              <h4 className="text-2xl font-bold mb-4 text-accent-400 muscle-text">💪🏽 ELITE SESSION</h4>
               <p className="text-neutral-300 mb-6 font-medium">
-                Book your first elite training session now. Includes FREE consultation
+                Book your premium elite training session now. Includes complimentary consultation
                 and personalized program design.
               </p>
               <div className="space-y-4">
