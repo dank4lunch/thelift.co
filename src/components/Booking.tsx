@@ -41,29 +41,41 @@ export default function Booking({ isOpen, onClose, service }: BookingProps) {
 
     // Here we would integrate with a payment processor and email service
     try {
-      // Simulate booking process
+      // Prepare booking data
       const bookingData = {
         ...formData,
         timestamp: new Date().toISOString(),
         amount: service?.price || 'R300',
-        status: 'confirmed'
       }
 
-      // Simulate API call
+      // Simulate API call for payment processing
       await new Promise(resolve => setTimeout(resolve, 2000))
 
-      // Send email notification (this would be done server-side)
-      console.log('Booking confirmed:', bookingData)
-      
-      alert(`🎉 Booking Confirmed! 
+      // Send email notifications
+      const emailResult = await emailService.sendBookingConfirmation(bookingData)
+
+      if (emailResult.success) {
+        alert(`🎉 Booking Confirmed!
 
 Service: ${formData.service}
 Date: ${formData.date}
 Time: ${formData.time}
 Total: ${service?.price || 'R300'}
 
-Email notification sent to tshiamokl@gmail.com
-Confirmation email sent to ${formData.email}`)
+✅ Email notification sent to tshiamokl@gmail.com
+✅ Confirmation email sent to ${formData.email}
+
+You'll receive a confirmation call within 24 hours!`)
+      } else {
+        alert(`🎉 Booking Confirmed!
+
+Service: ${formData.service}
+Date: ${formData.date}
+Time: ${formData.time}
+Total: ${service?.price || 'R300'}
+
+Note: Email notifications are pending (will be sent shortly)`)
+      }
 
       onClose()
       setStep(1)
@@ -78,7 +90,7 @@ Confirmation email sent to ${formData.email}`)
         paymentMethod: 'card'
       })
     } catch (error) {
-      alert('Booking failed. Please try again.')
+      alert('❌ Booking failed. Please try again or contact us directly at +27 635432439')
     }
   }
 
