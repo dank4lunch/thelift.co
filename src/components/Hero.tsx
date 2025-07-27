@@ -40,15 +40,15 @@ export default function Hero() {
       {/* 3D Background Elements */}
       <div className="absolute inset-0 transform-3d">
         {/* Elite floating particles */}
-        {[...Array(15)].map((_, i) => (
+        {particles.map((particle) => (
           <div
-            key={i}
+            key={particle.id}
             className="absolute w-3 h-3 bg-primary-500/40 rounded-full floating-orb"
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 6}s`,
-              animationDuration: `${4 + Math.random() * 4}s`,
+              left: `${particle.left}%`,
+              top: `${particle.top}%`,
+              animationDelay: `${particle.delay}s`,
+              animationDuration: `${particle.duration}s`,
             }}
           />
         ))}
