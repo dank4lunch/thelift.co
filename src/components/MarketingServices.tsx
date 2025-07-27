@@ -20,8 +20,8 @@ export default function MarketingServices() {
       description: "Establish dominant digital presence across all platforms. From websites to social media, we make your brand unmissable.",
       features: ["Website Development", "Social Media Strategy", "Content Creation", "SEO Optimization", "Digital Marketing", "Online Reputation"],
       icon: "🚀",
-      price: "R3,500",
-      duration: "per project",
+      price: "Elite",
+      duration: "Comprehensive Suite",
       timeline: "3-4 weeks"
     },
     {
