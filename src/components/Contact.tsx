@@ -229,15 +229,25 @@ Note: Email notification is pending (will be sent shortly)`)
             <div className="strength-card p-8 fitness-glow bg-gradient-to-r from-primary-900/50 to-accent-900/50 border border-primary-500/50">
               <h4 className="text-2xl font-bold mb-4 text-accent-400 muscle-text">💪 FIRST SESSION</h4>
               <p className="text-neutral-300 mb-6 font-medium">
-                Book your first elite training session now. Includes FREE consultation 
+                Book your first elite training session now. Includes FREE consultation
                 and personalized program design.
               </p>
-              <a 
-                href="#services" 
-                className="btn-primary w-full text-center py-4 block muscle-text text-lg"
-              >
-                BOOK NOW - R300
-              </a>
+              <div className="space-y-4">
+                <a
+                  href="#services"
+                  className="btn-primary w-full text-center py-4 block muscle-text text-lg"
+                >
+                  BOOK NOW - R300
+                </a>
+                <a
+                  href="https://wa.me/27635432439?text=Hi! I'm interested in booking a training session with The Lift Co. Can you help me get started?"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-secondary w-full text-center py-4 block muscle-text text-lg bg-green-600 hover:bg-green-700 from-green-600 to-green-700 hover:from-green-500 hover:to-green-600 border border-green-500/30"
+                >
+                  💬 WHATSAPP DIRECT
+                </a>
+              </div>
             </div>
           </div>
         </div>
