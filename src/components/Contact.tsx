@@ -17,35 +17,27 @@ export default function Contact() {
     setIsSubmitting(true)
 
     try {
-      // Here you would integrate with an email service like EmailJS, Resend, or your backend
-      await new Promise(resolve => setTimeout(resolve, 2000)) // Simulate API call
+      // Send email notification using email service
+      const emailResult = await emailService.sendContactFormNotification(formData)
 
-      // Log for now (in production, this would send emails)
-      console.log('Contact form submitted:', formData)
-      
-      // Email notification to business owner
-      const ownerEmail = {
-        to: 'tshiamokl@gmail.com',
-        subject: `New Contact Form Submission - ${formData.service}`,
-        body: `
-Name: ${formData.name}
-Email: ${formData.email}
-Service Interest: ${formData.service}
-Message: ${formData.message}
-Submitted: ${new Date().toLocaleString()}
-        `
-      }
-
-      alert(`✅ Message Sent Successfully!
+      if (emailResult.success) {
+        alert(`✅ Message Sent Successfully!
 
 Your message has been received and we'll get back to you within 24 hours.
 
-A copy has been sent to tshiamokl@gmail.com`)
+✅ Notification sent to tshiamokl@gmail.com`)
+      } else {
+        alert(`✅ Message Received!
+
+Your message has been logged and we'll get back to you within 24 hours.
+
+Note: Email notification is pending (will be sent shortly)`)
+      }
 
       // Reset form
       setFormData({ name: '', email: '', service: '', message: '' })
     } catch (error) {
-      alert('❌ Failed to send message. Please try again or contact us directly.')
+      alert('❌ Failed to send message. Please try again or contact us directly at tshiamokl@gmail.com')
     } finally {
       setIsSubmitting(false)
     }
