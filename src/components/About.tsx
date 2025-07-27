@@ -103,6 +103,58 @@ export default function About() {
             </div>
           </div>
 
+          {/* Trainer Personality */}
+          <div className="mb-20">
+            <h3 className="text-4xl font-bold text-center text-primary-400 mb-12 muscle-text">🔍 TRAINER BREAKDOWN: TSHIAMO SOOKANE</h3>
+            <div className="grid md:grid-cols-2 gap-12">
+              <div className="strength-card p-8 fitness-glow">
+                <h4 className="text-2xl font-bold text-accent-400 mb-6 muscle-text">💡 CORE IDENTITY</h4>
+                <p className="text-neutral-300 leading-relaxed font-medium mb-6">
+                  Tshiamo's energy is self-assured, future-focused, and purpose-driven. He presents like someone who's done with "waiting for permission."
+                  He's about strategy, execution, and transformation—moving fast but thinking long-term.
+                </p>
+                <div className="space-y-3">
+                  <div className="flex items-center">
+                    <span className="w-3 h-3 bg-primary-500 rounded-full mr-3"></span>
+                    <span className="text-neutral-300"><strong className="text-primary-400">Confidence:</strong> Doesn't play small. Trains like a champion.</span>
+                  </div>
+                  <div className="flex items-center">
+                    <span className="w-3 h-3 bg-accent-500 rounded-full mr-3"></span>
+                    <span className="text-neutral-300"><strong className="text-accent-400">Visionary:</strong> Always focused on "next level," "breakthrough results."</span>
+                  </div>
+                  <div className="flex items-center">
+                    <span className="w-3 h-3 bg-primary-500 rounded-full mr-3"></span>
+                    <span className="text-neutral-300"><strong className="text-primary-400">Empathetic Leader:</strong> Cares about every client's journey, not just reps.</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="strength-card p-8 fitness-glow">
+                <h4 className="text-2xl font-bold text-accent-400 mb-6 muscle-text">🔥 TRAINING PHILOSOPHY</h4>
+                <div className="space-y-4 text-neutral-300">
+                  <blockquote className="text-lg italic border-l-4 border-primary-500 pl-4 text-primary-300">
+                    "I build bodies that move people—not just muscles. Fitness means nothing without function,
+                    and function dies without purpose. I'm here to help athletes, professionals, and individuals scale with strength."
+                  </blockquote>
+                  <p className="font-medium">
+                    "I work where science meets soul. From training programs to lifestyle transformation,
+                    I don't just talk fitness—I build futures."
+                  </p>
+                </div>
+
+                <div className="mt-6 p-4 bg-gradient-to-r from-primary-900/30 to-accent-900/30 rounded-lg border border-primary-500/30">
+                  <h5 className="text-lg font-bold text-primary-400 mb-3 muscle-text">🎯 COACHING STYLE</h5>
+                  <div className="grid grid-cols-2 gap-3 text-sm">
+                    <span className="text-neutral-300"><strong>Tone:</strong> Clear, warm, intentional</span>
+                    <span className="text-neutral-300"><strong>Approach:</strong> Science-based, soul-driven</span>
+                    <span className="text-neutral-300"><strong>Focus:</strong> Results with purpose</span>
+                    <span className="text-neutral-300"><strong>Energy:</strong> Empowering, confident</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* Core Principles */}
           <div className="mb-16">
             <h3 className="text-4xl font-bold text-center text-primary-400 mb-12 muscle-text">CORE PRINCIPLES</h3>
