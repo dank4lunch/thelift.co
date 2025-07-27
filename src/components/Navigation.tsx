@@ -68,18 +68,18 @@ export default function Navigation() {
         <div className="flex items-center justify-between py-4">
           {/* Logo with 3D effect */}
           <div className="flex items-center space-x-4">
-            <div 
-              onClick={() => router.push('/')}
+            <div
+              onClick={() => window.location.href = '/'}
               className="w-14 h-14 rounded-xl overflow-hidden transform hover:scale-110 transition-transform duration-300 border-2 border-primary-500/50 bg-elite-cream/10 backdrop-blur-sm luxury-glow depth-hover cursor-pointer"
             >
-              <img 
+              <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F40f4f3f8cf004cb78312fbe6b3e1cec8%2F08e7771950634f09bf5906b11a6d0d83?format=webp&width=800"
                 alt="The Lift Co Logo"
                 className="w-full h-full object-contain"
               />
             </div>
             <div className="hidden sm:block">
-              <h1 className="text-2xl font-bold font-heading premium-text muscle-text cursor-pointer" onClick={() => router.push('/')}>
+              <h1 className="text-2xl font-bold font-heading premium-text muscle-text cursor-pointer" onClick={() => window.location.href = '/'}>
                 THE LIFT CO
               </h1>
               <p className="text-xs text-accent-400 font-bold uppercase tracking-wider">
