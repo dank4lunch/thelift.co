@@ -9,11 +9,11 @@ export default function Services() {
   const [selectedService, setSelectedService] = useState<any>(null)
 
   const specializations = [
-    { name: "Bootcamp", icon: "🏃‍♂️" },
-    { name: "Boxing", icon: "🥊" },
+    { name: "Bootcamp", icon: "🏃🏽‍♂️" },
+    { name: "Boxing", icon: "🥊🏽" },
     { name: "Exercise Science", icon: "🧬" },
-    { name: "HIIT", icon: "⚡" },
-    { name: "Personal Training", icon: "💪" },
+    { name: "HIIT", icon: "⚡️" },
+    { name: "Personal Training", icon: "💪🏽" },
     { name: "Sports Coaching", icon: "🏆" },
     { name: "Conditioning", icon: "🔥" },
     { name: "Corporate Wellness", icon: "🏢" },
