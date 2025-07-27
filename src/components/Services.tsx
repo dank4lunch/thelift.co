@@ -8,191 +8,273 @@ export default function Services() {
   const [isBookingOpen, setIsBookingOpen] = useState(false)
   const [selectedService, setSelectedService] = useState<any>(null)
 
-  const services = [
+  const specializations = [
+    { name: "Bootcamp", icon: "🏃‍♂️" },
+    { name: "Boxing", icon: "🥊" },
+    { name: "Exercise Science", icon: "🧬" },
+    { name: "HIIT", icon: "⚡" },
+    { name: "Personal Training", icon: "💪" }
+  ]
+
+  const trainingPackages = [
     {
-      title: "Elite Personal Training",
-      description: "Serious strength training with certified expertise. Transform your physique with proven methods that deliver results.",
-      features: ["Certified Elite Training", "Custom Workout Plans", "Strength & Conditioning", "Body Transformation", "Progress Tracking", "Nutritional Guidance"],
-      icon: "💪",
-      price: "R300",
-      duration: "per session",
-      popular: true,
-      gradient: "from-primary-500 to-accent-500",
-      intensity: "HIGH INTENSITY"
+      title: "Free Consultation",
+      description: "The best way to kick off your Personal Training journey. Get to know your trainer and discuss your goals.",
+      duration: "15 min",
+      features: [
+        "Training goals assessment",
+        "Health concerns discussion", 
+        "Training preferences review",
+        "Available packages overview"
+      ],
+      image: "https://cdn.builder.io/api/v1/image/assets%2F40f4f3f8cf004cb78312fbe6b3e1cec8%2Fe034fe9d3c0245ecbece44ae5fe79c12?format=webp&width=800",
+      price: "FREE",
+      duration_text: "15 minutes",
+      popular: false,
+      gradient: "from-green-500 to-emerald-500"
     },
     {
-      title: "Brand Dominance",
-      description: "Build a brand that commands respect. Strategic development and creative direction that sets you apart from the competition.",
-      features: ["Brand Strategy", "Visual Identity", "Market Dominance", "Creative Direction", "Brand Positioning", "Competitive Edge"],
-      icon: "🎯",
-      price: "R2500",
-      duration: "per project",
+      title: "PT Intro Pack",
+      description: "Perfect starting point for new clients. Includes consultation plus training sessions to get you going.",
+      features: [
+        "1 × in-depth consultation",
+        "2 × 45 min training sessions",
+        "Personalized workout plan",
+        "Nutrition guidance basics"
+      ],
+      image: "https://cdn.builder.io/api/v1/image/assets%2F40f4f3f8cf004cb78312fbe6b3e1cec8%2F3709fa01aabe413285bfd44dae01298c?format=webp&width=800",
+      price: "R624",
+      duration_text: "per package",
+      popular: true,
+      gradient: "from-primary-500 to-accent-500"
+    },
+    {
+      title: "PT Six Pack",
+      description: "Extended package for serious commitment. Multiple sessions with ongoing support and progress tracking.",
+      features: [
+        "1 × in-depth consultation", 
+        "5 × 45 min training sessions",
+        "Progress assessments",
+        "Nutrition plan development",
+        "24/7 support access"
+      ],
+      image: "https://cdn.builder.io/api/v1/image/assets%2F40f4f3f8cf004cb78312fbe6b3e1cec8%2F8f93a6c749ca48c18e700f02a6f500ec?format=webp&width=800",
+      price: "R1,270",
+      duration_text: "per package",
       popular: false,
       gradient: "from-accent-500 to-primary-600",
-      intensity: "STRATEGIC"
-    },
+      badge: "Best Value"
+    }
+  ]
+
+  const monthlyOptions = [
     {
-      title: "Business Powerhouse",
-      description: "Dominate your market with elite business strategies. Proven systems for explosive growth and operational excellence.",
-      features: ["Growth Strategy", "Market Analysis", "Operational Excellence", "Performance Optimization", "ROI Maximization", "Leadership Development"],
-      icon: "⚡",
-      price: "R3500",
-      duration: "per consultation",
-      popular: false,
-      gradient: "from-primary-600 to-accent-600",
-      intensity: "ELITE"
+      title: "One-on-One Monthly",
+      description: "Custom frequency and duration based on your goals. Work directly with your trainer to design the perfect program.",
+      sessions: "8 sessions over 1 month",
+      duration: "60 min per session",
+      price: "R2,160",
+      perSession: "R270 per session",
+      image: "https://cdn.builder.io/api/v1/image/assets%2F40f4f3f8cf004cb78312fbe6b3e1cec8%2F2122d2ab28f143c8817c70bb170ae240?format=webp&width=800"
     }
   ]
 
   const handleBooking = (serviceIndex: number) => {
     setSelectedPlan(serviceIndex)
-    setSelectedService(services[serviceIndex])
+    setSelectedService(trainingPackages[serviceIndex])
     setIsBookingOpen(true)
   }
 
   return (
-    <section id="services" className="section-padding bg-gradient-to-b from-neutral-900 to-neutral-950 relative overflow-hidden perspective-container">
+    <section id="services" className="section-padding bg-gradient-to-b from-neutral-950 to-neutral-900 relative overflow-hidden perspective-container">
       {/* 3D Background elements */}
       <div className="absolute inset-0 transform-3d">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl floating-orb" />
         <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-accent-500/10 rounded-full blur-3xl floating-orb" style={{ animationDelay: '2s' }} />
-        
-        {/* 3D geometric pattern overlay */}
-        <div className="absolute inset-0 opacity-5 tilt-3d">
-          <div className="h-full w-full transform-3d" style={{
-            backgroundImage: `
-              linear-gradient(45deg, rgba(227,181,71,0.1) 25%, transparent 25%),
-              linear-gradient(-45deg, rgba(168,145,72,0.1) 25%, transparent 25%),
-              linear-gradient(45deg, transparent 75%, rgba(227,181,71,0.1) 75%),
-              linear-gradient(-45deg, transparent 75%, rgba(168,145,72,0.1) 75%)
-            `,
-            backgroundSize: '40px 40px',
-            backgroundPosition: '0 0, 0 20px, 20px -20px, -20px 0px',
-          }} />
-        </div>
-
-        {/* Floating 3D shapes */}
-        <div className="absolute top-1/4 left-10 w-16 h-16 border-2 border-primary-500/20 rotate-45 animate-rotate-slow floating-element" />
-        <div className="absolute bottom-1/3 right-20 w-12 h-12 bg-gradient-to-r from-accent-500/20 to-primary-500/20 rounded-full bounce-3d" />
       </div>
 
       <div className="container-custom relative z-10">
+        {/* Header */}
         <div className="text-center mb-20">
           <div className="inline-block mb-6 depth-hover">
             <span className="elite-badge">
-              ELITE PROGRAMS
+              ELITE TRAINING PROGRAMS
             </span>
           </div>
           <h2 className="text-5xl md:text-7xl font-bold font-heading premium-text mb-8 muscle-text animate-fade-in">
-            CHOOSE YOUR PATH
+            TRANSFORM YOUR BODY
           </h2>
           <div className="section-divider mb-8" />
           <p className="text-xl md:text-2xl text-neutral-300 max-w-4xl mx-auto leading-relaxed font-medium">
-            Elite training programs designed for serious results. No compromises, no excuses—just pure transformation.
+            Professional personal training with Tshiamo Sookane. Located in Sandton CBD, Gauteng. 
+            Certified trainer with proven results.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8 mb-16">
-          {services.map((service, index) => (
-            <div 
-              key={index} 
-              className={`relative luxury-card p-8 transition-all duration-500 depth-hover group ${
-                service.popular ? 'ring-2 ring-primary-500/60 shadow-2xl luxury-glow' : ''
-              }`}
-              style={{ animationDelay: `${index * 0.2}s` }}
-            >
-              {service.popular && (
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 depth-hover">
-                  <div className="bg-gradient-to-r from-primary-500 to-accent-500 text-neutral-950 px-6 py-2 rounded-full text-sm font-bold muscle-text shadow-lg border border-primary-400/50">
-                    MOST POPULAR
-                  </div>
-                </div>
-              )}
-
-              <div className="text-center mb-6">
-                <div className="inline-block p-4 bg-gradient-to-r from-primary-500/20 to-accent-500/20 rounded-xl mb-4 depth-hover">
-                  <span className="text-6xl transform group-hover:scale-110 transition-transform duration-300 animate-bounce-3d">
-                    {service.icon}
-                  </span>
-                </div>
-                
-                <div className="mb-4">
-                  <span className="text-xs font-bold text-accent-400 uppercase tracking-wider bg-accent-500/10 px-3 py-1 rounded-full border border-accent-500/30">
-                    {service.intensity}
-                  </span>
-                </div>
-
-                <h3 className={`text-2xl font-bold font-heading mb-3 premium-text muscle-text`}>
-                  {service.title}
-                </h3>
-                
-                <div className="flex items-center justify-center space-x-2 mb-4">
-                  <span className="text-4xl font-bold premium-text muscle-text">{service.price}</span>
-                  <span className="text-neutral-400 font-medium">{service.duration}</span>
+        {/* Specializations */}
+        <div className="mb-16">
+          <h3 className="text-2xl font-bold text-center text-primary-400 mb-8 muscle-text">Specialized In</h3>
+          <div className="flex flex-wrap justify-center gap-4">
+            {specializations.map((spec, index) => (
+              <div key={index} className="luxury-card px-6 py-4 depth-hover flex items-center space-x-3">
+                <span className="text-2xl">{spec.icon}</span>
+                <span className="text-neutral-300 font-medium">{spec.name}</span>
+                <div className="w-6 h-6 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full flex items-center justify-center">
+                  <svg className="w-3 h-3 text-neutral-950" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
                 </div>
               </div>
-
-              <p className="text-neutral-300 mb-6 leading-relaxed text-center font-medium">
-                {service.description}
-              </p>
-
-              <ul className="space-y-3 mb-8">
-                {service.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-center text-neutral-300">
-                    <div className="w-6 h-6 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0 depth-hover">
-                      <svg className="w-4 h-4 text-neutral-950" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <span className="font-medium">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <button
-                onClick={() => handleBooking(index)}
-                className={`w-full py-4 px-6 rounded-xl font-bold text-neutral-950 transition-all duration-300 bg-gradient-to-r ${service.gradient} hover:shadow-2xl hover:scale-105 transform border border-primary-500/30 muscle-text text-lg depth-hover`}
-              >
-                {index === 0 ? '💪 BOOK SESSION' : '🚀 GET STARTED'}
-              </button>
-            </div>
-          ))}
-        </div>
-
-        {/* Elite Packages with 3D effects */}
-        <div className="text-center mb-16">
-          <div className="luxury-card p-12 elite-glow depth-hover">
-            <h3 className="text-4xl font-bold premium-text mb-8 muscle-text">ELITE PACKAGES</h3>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="text-center p-6 bg-gradient-to-br from-primary-600/20 to-accent-600/20 rounded-xl border border-primary-500/30 depth-hover">
-                <div className="text-5xl mb-4 animate-bounce-3d">🔥</div>
-                <h4 className="text-2xl font-bold text-accent-400 mb-3 muscle-text">STRENGTH PACKAGE</h4>
-                <p className="text-neutral-300 mb-4 font-medium">5 Sessions + 1 FREE Consultation</p>
-                <div className="text-3xl font-bold premium-text muscle-text">R1500 <span className="text-base text-neutral-400 font-normal">total savings</span></div>
-              </div>
-              <div className="text-center p-6 bg-gradient-to-br from-accent-600/20 to-primary-600/20 rounded-xl border border-accent-500/30 depth-hover">
-                <div className="text-5xl mb-4 animate-bounce-3d" style={{ animationDelay: '0.5s' }}>💎</div>
-                <h4 className="text-2xl font-bold premium-text mb-3 muscle-text">ELITE BUNDLE</h4>
-                <p className="text-neutral-300 mb-4 font-medium">Training + Brand Development</p>
-                <div className="text-3xl font-bold premium-text muscle-text">R2000 <span className="text-base text-neutral-400 font-normal">value package</span></div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
 
-        {/* Final CTA with 3D effect */}
+        {/* Training Packages */}
+        <div className="mb-16">
+          <h3 className="text-3xl font-bold text-center text-primary-400 mb-12 muscle-text">Choose Your Package</h3>
+          <div className="grid lg:grid-cols-3 gap-8">
+            {trainingPackages.map((package_, index) => (
+              <div 
+                key={index} 
+                className={`relative luxury-card overflow-hidden transition-all duration-500 depth-hover group ${
+                  package_.popular ? 'ring-2 ring-primary-500/60 shadow-2xl luxury-glow' : ''
+                }`}
+                style={{ animationDelay: `${index * 0.2}s` }}
+              >
+                {package_.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 depth-hover z-10">
+                    <div className="bg-gradient-to-r from-primary-500 to-accent-500 text-neutral-950 px-6 py-2 rounded-full text-sm font-bold muscle-text shadow-lg border border-primary-400/50">
+                      MOST POPULAR
+                    </div>
+                  </div>
+                )}
+
+                {package_.badge && (
+                  <div className="absolute top-4 right-4 z-10">
+                    <div className="bg-gradient-to-r from-accent-500 to-primary-500 text-white px-3 py-1 rounded-full text-xs font-bold">
+                      {package_.badge}
+                    </div>
+                  </div>
+                )}
+
+                {/* Image */}
+                <div className="h-48 overflow-hidden rounded-t-xl">
+                  <img 
+                    src={package_.image}
+                    alt={package_.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                </div>
+
+                <div className="p-8">
+                  <div className="text-center mb-6">
+                    <h4 className="text-2xl font-bold font-heading mb-3 premium-text muscle-text">
+                      {package_.title}
+                    </h4>
+                    
+                    <div className="flex items-center justify-center space-x-2 mb-4">
+                      <span className="text-3xl font-bold premium-text muscle-text">{package_.price}</span>
+                      <span className="text-neutral-400 font-medium">{package_.duration_text}</span>
+                    </div>
+                  </div>
+
+                  <p className="text-neutral-300 mb-6 leading-relaxed text-center">
+                    {package_.description}
+                  </p>
+
+                  <ul className="space-y-3 mb-8">
+                    {package_.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center text-neutral-300 text-sm">
+                        <div className="w-4 h-4 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                          <svg className="w-2 h-2 text-neutral-950" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                          </svg>
+                        </div>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <button
+                    onClick={() => index > 0 ? handleBooking(index) : window.location.href = '#contact'}
+                    className={`w-full py-4 px-6 rounded-xl font-bold text-neutral-950 transition-all duration-300 bg-gradient-to-r ${package_.gradient} hover:shadow-2xl hover:scale-105 transform border border-primary-500/30 muscle-text text-lg depth-hover`}
+                  >
+                    {index === 0 ? 'BOOK FREE CONSULTATION' : 'BUY NOW'}
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Monthly Options */}
+        <div className="mb-16">
+          <h3 className="text-3xl font-bold text-center text-primary-400 mb-12 muscle-text">Custom Monthly Plans</h3>
+          <div className="max-w-2xl mx-auto">
+            {monthlyOptions.map((option, index) => (
+              <div key={index} className="luxury-card overflow-hidden depth-hover">
+                <div className="md:flex">
+                  <div className="md:w-1/2 h-64 md:h-auto">
+                    <img 
+                      src={option.image}
+                      alt={option.title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="md:w-1/2 p-8">
+                    <h4 className="text-2xl font-bold premium-text muscle-text mb-4">{option.title}</h4>
+                    <p className="text-neutral-300 mb-6">{option.description}</p>
+                    
+                    <div className="space-y-2 mb-6">
+                      <div className="flex justify-between">
+                        <span className="text-neutral-400">Sessions:</span>
+                        <span className="text-primary-400 font-medium">{option.sessions}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-neutral-400">Duration:</span>
+                        <span className="text-primary-400 font-medium">{option.duration}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-neutral-400">Per Session:</span>
+                        <span className="text-accent-400 font-medium">{option.perSession}</span>
+                      </div>
+                    </div>
+
+                    <div className="text-center mb-6">
+                      <div className="text-4xl font-bold premium-text muscle-text">{option.price}</div>
+                      <div className="text-neutral-400 text-sm">total package</div>
+                    </div>
+
+                    <button className="w-full py-3 px-6 rounded-lg font-bold text-neutral-950 bg-gradient-to-r from-accent-500 to-primary-500 hover:shadow-xl hover:scale-105 transform transition-all duration-300 muscle-text">
+                      CUSTOMIZE PLAN
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Trainer Info */}
         <div className="text-center">
-          <div className="luxury-card p-12 relative overflow-hidden luxury-glow depth-hover">
+          <div className="luxury-card p-12 relative overflow-hidden luxury-glow depth-hover max-w-4xl mx-auto">
             <div className="absolute inset-0 bg-gradient-to-r from-primary-600/10 to-accent-600/10" />
             <div className="relative z-10">
-              <h3 className="text-4xl font-bold mb-6 premium-text muscle-text">READY TO DOMINATE?</h3>
-              <p className="text-xl text-neutral-300 mb-8 max-w-3xl mx-auto font-medium">
-                Stop making excuses. Start making progress. Book your transformation session today.
+              <h3 className="text-3xl font-bold mb-6 premium-text muscle-text">Ready to Transform?</h3>
+              <p className="text-lg text-neutral-300 mb-4 font-medium">
+                <strong>Tshiamo Sookane</strong> - Certified Personal Trainer
               </p>
-              <a href="#contact" className="btn-primary text-xl px-12 py-6 elite-glow group relative overflow-hidden">
-                <span className="relative z-10 muscle-text">START NOW - R300</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-primary-400 to-accent-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
-              </a>
+              <p className="text-neutral-400 mb-8">
+                📍 Sandton CBD, Gauteng | 📞 0635432439 | ✉️ Tshiamokl@gmail.com
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#contact" className="btn-primary text-lg px-10 py-4 muscle-text">
+                  BOOK CONSULTATION
+                </a>
+                <a href="https://wa.me/27635432439" className="btn-secondary text-lg px-10 py-4 muscle-text">
+                  WHATSAPP DIRECT
+                </a>
+              </div>
             </div>
           </div>
         </div>
