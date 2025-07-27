@@ -88,7 +88,7 @@ export default function Hero() {
             </div>
             
             <h1 className="text-6xl md:text-8xl font-bold font-heading premium-text mb-6 animate-slide-up glow-text muscle-text transform-3d">
-              BUILT TO DOMINATE
+              BUILT TO TO BOOST
             </h1>
             
             <div className="text-2xl md:text-4xl font-bold text-primary-300 mb-8 space-y-3 animate-fade-in">
