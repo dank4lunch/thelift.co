@@ -35,10 +35,14 @@ export default function Navigation() {
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
           <div className="flex items-center space-x-4">
-            <div className="w-14 h-14 bg-gradient-to-r from-primary-500 to-accent-500 rounded-xl flex items-center justify-center transform hover:scale-110 transition-transform duration-300 border border-primary-500/30">
-              <span className="text-2xl font-bold text-white">💪</span>
+            <div className="w-14 h-14 rounded-xl overflow-hidden transform hover:scale-110 transition-transform duration-300 border border-primary-500/30 bg-white/10 backdrop-blur-sm">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F40f4f3f8cf004cb78312fbe6b3e1cec8%2F08e7771950634f09bf5906b11a6d0d83?format=webp&width=800"
+                alt="The Lift Co Logo"
+                className="w-full h-full object-contain"
+              />
             </div>
-            <div>
+            <div className="hidden sm:block">
               <h1 className="text-2xl font-bold font-heading text-primary-400 muscle-text">THE LIFT CO</h1>
               <p className="text-xs text-accent-400 font-bold uppercase tracking-wider">Elite Training</p>
             </div>
