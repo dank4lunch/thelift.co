@@ -32,8 +32,8 @@ export default function Services() {
         "Available packages overview"
       ],
       image: "https://cdn.builder.io/api/v1/image/assets%2F40f4f3f8cf004cb78312fbe6b3e1cec8%2Fe034fe9d3c0245ecbece44ae5fe79c12?format=webp&width=800",
-      price: "FREE",
-      duration_text: "15 minutes",
+      price: "Complimentary",
+      duration_text: "Discovery Session",
       popular: false,
       gradient: "from-green-500 to-emerald-500"
     },
