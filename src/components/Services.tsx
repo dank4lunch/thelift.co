@@ -63,8 +63,8 @@ export default function Services() {
         "24/7 support access"
       ],
       image: "https://cdn.builder.io/api/v1/image/assets%2F40f4f3f8cf004cb78312fbe6b3e1cec8%2F8f93a6c749ca48c18e700f02a6f500ec?format=webp&width=800",
-      price: "R1,270",
-      duration_text: "per package",
+      price: "Elite Package",
+      duration_text: "Premium Level",
       popular: false,
       gradient: "from-accent-500 to-primary-600",
       badge: "Best Value"
