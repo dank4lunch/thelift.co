@@ -47,8 +47,8 @@ export default function Services() {
         "Nutrition guidance basics"
       ],
       image: "https://cdn.builder.io/api/v1/image/assets%2F40f4f3f8cf004cb78312fbe6b3e1cec8%2F3709fa01aabe413285bfd44dae01298c?format=webp&width=800",
-      price: "R624",
-      duration_text: "per package",
+      price: "Starter Package",
+      duration_text: "Foundation Level",
       popular: true,
       gradient: "from-primary-500 to-accent-500"
     },
