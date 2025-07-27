@@ -91,7 +91,7 @@ export default function About() {
               <div className="strength-card p-8 fitness-glow">
                 <div className="flex items-center mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-fitness-power to-primary-600 rounded-xl flex items-center justify-center mr-6 border border-fitness-power/30">
-                    <span className="text-3xl">⚡</span>
+                    <span className="text-3xl">⚡️</span>
                   </div>
                   <h4 className="text-2xl font-bold text-fitness-energy muscle-text">OUR METHOD</h4>
                 </div>
