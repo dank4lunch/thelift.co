@@ -40,15 +40,15 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-500 hover:to-primary-600 text-white font-semibold py-4 px-8 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 ease-out;
+    @apply bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-500 hover:to-primary-600 text-white font-bold py-4 px-8 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 ease-out border border-primary-500/30;
   }
   
   .btn-secondary {
-    @apply bg-gradient-to-r from-accent-500 to-accent-600 hover:from-accent-400 hover:to-accent-500 text-white font-semibold py-4 px-8 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 ease-out;
+    @apply bg-gradient-to-r from-accent-600 to-accent-700 hover:from-accent-500 hover:to-accent-600 text-white font-bold py-4 px-8 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 ease-out border border-accent-500/30;
   }
   
   .btn-outline {
-    @apply border-2 border-primary-500 text-primary-400 hover:bg-primary-600 hover:text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 ease-out;
+    @apply border-2 border-primary-500 text-primary-400 hover:bg-primary-600 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 ease-out hover:shadow-lg;
   }
   
   .section-padding {
@@ -60,7 +60,7 @@
   }
 
   .glass-effect {
-    @apply bg-neutral-900/80 backdrop-blur-lg border border-neutral-700/50 shadow-xl;
+    @apply bg-neutral-900/90 backdrop-blur-lg border border-neutral-700/50 shadow-2xl;
   }
 
   .gradient-text {
@@ -88,23 +88,43 @@
   }
 
   .hero-gradient {
-    @apply bg-gradient-to-br from-neutral-950 via-primary-950 to-neutral-900;
+    @apply bg-gradient-to-br from-neutral-950 via-fitness-steel to-neutral-900;
   }
 
   .nav-blur {
-    @apply bg-neutral-950/95 backdrop-blur-lg border-b border-neutral-800/50 shadow-lg;
+    @apply bg-neutral-950/95 backdrop-blur-lg border-b border-neutral-800/50 shadow-xl;
   }
 
   .dark-card {
-    @apply bg-neutral-900/90 backdrop-blur-lg border border-neutral-700/50 rounded-xl;
+    @apply bg-neutral-900/95 backdrop-blur-lg border border-neutral-700/50 rounded-xl shadow-xl;
   }
 
-  .neon-glow {
-    @apply shadow-[0_0_20px_rgba(14,165,233,0.3)] hover:shadow-[0_0_30px_rgba(14,165,233,0.5)] transition-all duration-300;
+  .fitness-glow {
+    @apply shadow-[0_0_20px_rgba(249,115,22,0.3)] hover:shadow-[0_0_30px_rgba(239,68,68,0.4)] transition-all duration-300;
+  }
+
+  .power-glow {
+    @apply shadow-[0_0_25px_rgba(239,68,68,0.4)] hover:shadow-[0_0_40px_rgba(239,68,68,0.6)] transition-all duration-300;
   }
 
   .glow-text {
     @apply animate-glow;
-    text-shadow: 0 0 10px rgba(14, 165, 233, 0.5);
+    text-shadow: 0 0 15px rgba(249, 115, 22, 0.6);
+  }
+
+  .strength-card {
+    @apply bg-gradient-to-br from-neutral-900 via-fitness-steel/20 to-neutral-800 border border-primary-500/30 rounded-xl shadow-xl;
+  }
+
+  .muscle-text {
+    @apply font-bold tracking-wide;
+  }
+
+  .trainer-hero {
+    @apply bg-gradient-to-br from-neutral-950 via-fitness-steel to-fitness-iron relative overflow-hidden;
+  }
+
+  .energy-pulse {
+    @apply animate-pulse-slow;
   }
 }
