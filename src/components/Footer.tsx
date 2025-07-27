@@ -6,15 +6,15 @@ export default function Footer() {
   const quickLinks = [
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
-    { name: 'Services', href: '#services' },
-    { name: 'Founder', href: '#founder' },
+    { name: 'Programs', href: '#services' },
+    { name: 'Trainer', href: '#founder' },
     { name: 'Contact', href: '#contact' },
   ]
 
-  const services = [
-    { name: 'Personal Training', href: '#services' },
-    { name: 'Brand Development', href: '#services' },
-    { name: 'Business Strategy', href: '#services' },
+  const programs = [
+    { name: 'Elite Personal Training', href: '#services' },
+    { name: 'Brand Dominance', href: '#services' },
+    { name: 'Business Powerhouse', href: '#services' },
     { name: 'Consultation', href: '#contact' },
   ]
 
@@ -23,25 +23,25 @@ export default function Footer() {
       name: 'Instagram',
       href: 'https://instagram.com/thelift.co',
       icon: '📱',
-      color: 'from-pink-500 to-purple-500'
-    },
-    {
-      name: 'LinkedIn',
-      href: '#',
-      icon: '💼',
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      name: 'Email',
-      href: 'mailto:tshiamokl@gmail.com',
-      icon: '✉️',
-      color: 'from-green-500 to-emerald-500'
+      color: 'from-primary-500 to-accent-500'
     },
     {
       name: 'WhatsApp',
       href: 'https://wa.me/27635432439',
       icon: '💬',
-      color: 'from-green-400 to-green-600'
+      color: 'from-accent-500 to-fitness-power'
+    },
+    {
+      name: 'Email',
+      href: 'mailto:tshiamokl@gmail.com',
+      icon: '✉️',
+      color: 'from-fitness-power to-primary-600'
+    },
+    {
+      name: 'Phone',
+      href: 'tel:+27635432439',
+      icon: '📞',
+      color: 'from-primary-600 to-accent-500'
     }
   ]
 
@@ -53,20 +53,20 @@ export default function Footer() {
           <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
             {/* Brand Section */}
             <div className="lg:col-span-2">
-              <div className="flex items-center space-x-3 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-r from-primary-500 to-accent-500 rounded-lg flex items-center justify-center">
-                  <span className="text-2xl font-bold text-white">🚀</span>
+              <div className="flex items-center space-x-4 mb-6">
+                <div className="w-16 h-16 bg-gradient-to-r from-primary-500 to-accent-500 rounded-xl flex items-center justify-center border border-primary-500/30">
+                  <span className="text-3xl font-bold text-white">💪</span>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold font-heading text-primary-400">The Lift Co</h3>
-                  <p className="text-sm text-neutral-400">Built to Boost</p>
+                  <h3 className="text-3xl font-bold font-heading text-primary-400 muscle-text">THE LIFT CO</h3>
+                  <p className="text-sm text-accent-400 font-bold uppercase tracking-wider">Elite Training Excellence</p>
                 </div>
               </div>
               
-              <p className="text-neutral-300 mb-6 max-w-md leading-relaxed">
-                We blend strategy with soul. Our multidisciplinary approach ensures authentic growth 
-                in your body, business, and brand. Join the movement and experience transformation 
-                that actually works.
+              <p className="text-neutral-300 mb-6 max-w-md leading-relaxed font-medium">
+                Elite personal training that delivers serious results. No shortcuts, no excuses—
+                just proven methods that transform bodies and build champions. 
+                Your strongest self is waiting.
               </p>
 
               {/* Social Links */}
@@ -75,7 +75,7 @@ export default function Footer() {
                   <a
                     key={social.name}
                     href={social.href}
-                    className={`w-12 h-12 bg-gradient-to-r ${social.color} rounded-lg flex items-center justify-center hover:scale-110 transform transition-all duration-300 group`}
+                    className={`w-14 h-14 bg-gradient-to-r ${social.color} rounded-lg flex items-center justify-center hover:scale-110 transform transition-all duration-300 group border border-primary-500/30`}
                     aria-label={social.name}
                   >
                     <span className="text-xl group-hover:scale-110 transition-transform duration-300">
@@ -88,13 +88,13 @@ export default function Footer() {
 
             {/* Quick Links */}
             <div>
-              <h4 className="text-lg font-semibold text-primary-400 mb-6">Quick Links</h4>
+              <h4 className="text-lg font-bold text-primary-400 mb-6 muscle-text uppercase tracking-wide">Navigation</h4>
               <ul className="space-y-3">
                 {quickLinks.map((link) => (
                   <li key={link.name}>
                     <a
                       href={link.href}
-                      className="text-neutral-300 hover:text-primary-400 transition-colors duration-300 hover:translate-x-1 transform inline-block"
+                      className="text-neutral-300 hover:text-primary-400 transition-colors duration-300 hover:translate-x-1 transform inline-block font-medium"
                     >
                       {link.name}
                     </a>
@@ -103,17 +103,17 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* Services */}
+            {/* Programs */}
             <div>
-              <h4 className="text-lg font-semibold text-accent-400 mb-6">Our Services</h4>
+              <h4 className="text-lg font-bold text-accent-400 mb-6 muscle-text uppercase tracking-wide">Programs</h4>
               <ul className="space-y-3">
-                {services.map((service) => (
-                  <li key={service.name}>
+                {programs.map((program) => (
+                  <li key={program.name}>
                     <a
-                      href={service.href}
-                      className="text-neutral-300 hover:text-accent-400 transition-colors duration-300 hover:translate-x-1 transform inline-block"
+                      href={program.href}
+                      className="text-neutral-300 hover:text-accent-400 transition-colors duration-300 hover:translate-x-1 transform inline-block font-medium"
                     >
-                      {service.name}
+                      {program.name}
                     </a>
                   </li>
                 ))}
@@ -125,18 +125,19 @@ export default function Footer() {
         {/* Newsletter Section */}
         <div className="py-8 border-t border-neutral-800">
           <div className="text-center">
-            <h4 className="text-2xl font-bold text-primary-400 mb-4">Stay in the Loop</h4>
-            <p className="text-neutral-300 mb-6 max-w-2xl mx-auto">
-              Get exclusive tips, behind-the-scenes content, and be the first to know about new programs and offers.
+            <h4 className="text-3xl font-bold text-primary-400 mb-4 muscle-text">JOIN THE ELITE</h4>
+            <p className="text-neutral-300 mb-6 max-w-2xl mx-auto font-medium">
+              Get exclusive training tips, nutrition guides, and be first to know about new programs. 
+              Elite content for serious people only.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-3 bg-neutral-800 border border-neutral-600 rounded-lg text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                className="flex-1 px-4 py-4 bg-neutral-800 border border-neutral-600 rounded-lg text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent font-medium"
               />
-              <button className="btn-primary px-6 py-3 whitespace-nowrap">
-                Join Now
+              <button className="btn-primary px-8 py-4 whitespace-nowrap muscle-text">
+                JOIN NOW
               </button>
             </div>
           </div>
@@ -145,20 +146,32 @@ export default function Footer() {
         {/* Bottom Footer */}
         <div className="py-8 border-t border-neutral-800">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="text-neutral-400 text-sm">
-              © {currentYear} The Lift Co. All rights reserved. Built with 🔥 for transformation.
+            <div className="text-neutral-400 text-sm font-medium">
+              © {currentYear} The Lift Co. All rights reserved. Built for elite transformation. 💪
             </div>
             
             <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-neutral-400 hover:text-primary-400 transition-colors duration-300">
+              <a href="#" className="text-neutral-400 hover:text-primary-400 transition-colors duration-300 font-medium">
                 Privacy Policy
               </a>
-              <a href="#" className="text-neutral-400 hover:text-primary-400 transition-colors duration-300">
+              <a href="#" className="text-neutral-400 hover:text-primary-400 transition-colors duration-300 font-medium">
                 Terms of Service
               </a>
-              <a href="#contact" className="text-neutral-400 hover:text-primary-400 transition-colors duration-300">
+              <a href="#contact" className="text-neutral-400 hover:text-primary-400 transition-colors duration-300 font-medium">
                 Support
               </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Training Hours */}
+        <div className="py-6 border-t border-neutral-800/50">
+          <div className="text-center">
+            <h5 className="text-lg font-bold text-accent-400 mb-4 muscle-text">TRAINING HOURS</h5>
+            <div className="flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-8 text-neutral-300">
+              <span className="font-medium">Mon-Fri: <span className="text-primary-400 font-bold">06:00-20:00</span></span>
+              <span className="font-medium">Saturday: <span className="text-primary-400 font-bold">08:00-16:00</span></span>
+              <span className="font-medium">Sunday: <span className="text-accent-400 font-bold">By Appointment</span></span>
             </div>
           </div>
         </div>
@@ -167,10 +180,25 @@ export default function Footer() {
         <div className="fixed bottom-6 right-6 z-40">
           <a
             href="#contact"
-            className="w-14 h-14 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transform transition-all duration-300 neon-glow group"
+            className="w-16 h-16 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transform transition-all duration-300 fitness-glow group border border-primary-500/30"
           >
-            <span className="text-2xl group-hover:scale-110 transition-transform duration-300">💬</span>
+            <span className="text-3xl group-hover:scale-110 transition-transform duration-300">💬</span>
           </a>
+        </div>
+
+        {/* Emergency Contact Banner */}
+        <div className="fixed bottom-24 right-6 z-30">
+          <div className="strength-card p-4 max-w-xs">
+            <h6 className="text-sm font-bold text-primary-400 mb-2 muscle-text">IMMEDIATE BOOKING</h6>
+            <div className="space-y-1">
+              <a href="tel:+27635432439" className="block text-accent-400 font-bold text-sm hover:text-accent-300">
+                📞 +27 635432439
+              </a>
+              <a href="https://wa.me/27635432439" className="block text-primary-400 font-bold text-sm hover:text-primary-300">
+                ���� WhatsApp
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
