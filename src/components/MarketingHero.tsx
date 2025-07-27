@@ -126,8 +126,8 @@ export default function MarketingHero() {
               <div className="text-neutral-400 text-sm font-medium">Average Growth</div>
             </div>
             <div className="text-center group luxury-card p-4 depth-hover">
-              <div className="text-3xl md:text-4xl font-bold premium-text mb-2 group-hover:scale-110 transition-transform duration-300">R2.5k</div>
-              <div className="text-neutral-400 text-sm font-medium">Starting Investment</div>
+              <div className="text-3xl md:text-4xl font-bold premium-text mb-2 group-hover:scale-110 transition-transform duration-300">Premium</div>
+              <div className="text-neutral-400 text-sm font-medium">Bespoke Solutions</div>
             </div>
             <div className="text-center group luxury-card p-4 depth-hover">
               <div className="text-3xl md:text-4xl font-bold premium-text mb-2 group-hover:scale-110 transition-transform duration-300">100%</div>
