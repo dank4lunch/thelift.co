@@ -215,6 +215,11 @@ export default function Services() {
               <div key={index} className="luxury-card overflow-hidden depth-hover">
                 <div className="md:flex">
                   <div className="md:w-1/2 h-64 md:h-auto">
+                    <img
+                      src="https://images.pexels.com/photos/16513597/pexels-photo-16513597.jpeg"
+                      alt={option.title}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <div className="md:w-1/2 p-8">
                     <h4 className="text-2xl font-bold premium-text muscle-text mb-4">{option.title}</h4>
