@@ -11,21 +11,21 @@ export default function BusinessOverview() {
       description: "Strategic brand positioning that creates market leaders",
       icon: "🎯",
       features: ["Brand Strategy", "Visual Identity", "Market Research"],
-      startingPrice: "R2,500"
+      startingPrice: "Premium Tier"
     },
     {
-      title: "Digital Presence", 
+      title: "Digital Presence",
       description: "Dominate digital platforms with strategic online presence",
       icon: "🚀",
       features: ["Website Development", "Social Strategy", "SEO Optimization"],
-      startingPrice: "R3,500"
+      startingPrice: "Elite Package"
     },
     {
       title: "Business Strategy",
       description: "Growth strategies that scale and systems that perform",
-      icon: "📈", 
+      icon: "📈",
       features: ["Growth Planning", "Operations", "Team Development"],
-      startingPrice: "R3,500"
+      startingPrice: "Executive Suite"
     }
   ]
 
