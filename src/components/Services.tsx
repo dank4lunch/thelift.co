@@ -162,7 +162,7 @@ export default function Services() {
                   <img
                     src={index === 0 ? "https://images.pexels.com/photos/6975559/pexels-photo-6975559.jpeg" : index === 1 ? "https://images.pexels.com/photos/6740330/pexels-photo-6740330.jpeg" : "https://images.pexels.com/photos/791763/pexels-photo-791763.jpeg"}
                     alt={package_.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500"
                   />
                 </div>
 
