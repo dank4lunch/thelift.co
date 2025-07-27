@@ -13,7 +13,11 @@ export default function Services() {
     { name: "Boxing", icon: "🥊" },
     { name: "Exercise Science", icon: "🧬" },
     { name: "HIIT", icon: "⚡" },
-    { name: "Personal Training", icon: "💪" }
+    { name: "Personal Training", icon: "💪" },
+    { name: "Sports Coaching", icon: "🏆" },
+    { name: "Conditioning", icon: "🔥" },
+    { name: "Corporate Wellness", icon: "🏢" },
+    { name: "Event Training", icon: "🎯" }
   ]
 
   const trainingPackages = [
