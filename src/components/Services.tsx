@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Booking from './Booking'
 
 export default function Services() {
   const [selectedPlan, setSelectedPlan] = useState<number | null>(null)
