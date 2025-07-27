@@ -59,8 +59,8 @@ export default function MarketingServices() {
       description: "Build leaders who inspire and teams that deliver. Transform your human capital into competitive advantage.",
       features: ["Leadership Coaching", "Team Building", "Performance Management", "Skill Development", "Culture Building", "Strategic Planning"],
       icon: "👑",
-      price: "R2,800",
-      duration: "per program",
+      price: "Executive",
+      duration: "Leadership Program",
       timeline: "6-8 weeks"
     }
   ]
