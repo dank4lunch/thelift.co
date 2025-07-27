@@ -50,8 +50,8 @@ export default function MarketingServices() {
       description: "Streamline operations for maximum efficiency. Build systems that scale and processes that perform.",
       features: ["Process Optimization", "System Integration", "Workflow Automation", "Performance Metrics", "Quality Control", "Resource Planning"],
       icon: "⚙️",
-      price: "R4,500",
-      duration: "per project",
+      price: "Platinum",
+      duration: "Systems Overhaul",
       timeline: "4-6 weeks"
     },
     {
