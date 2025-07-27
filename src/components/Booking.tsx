@@ -60,7 +60,7 @@ export default function Booking({ isOpen, onClose, service }: BookingProps) {
 Service: ${formData.service}
 Date: ${formData.date}
 Time: ${formData.time}
-Total: ${service?.price || 'R300'}
+Tier: ${service?.price || 'Premium Experience'}
 
 ✅ Email notification sent to tshiamokl@gmail.com
 ✅ Confirmation email sent to ${formData.email}
@@ -72,7 +72,7 @@ You'll receive a confirmation call within 24 hours!`)
 Service: ${formData.service}
 Date: ${formData.date}
 Time: ${formData.time}
-Total: ${service?.price || 'R300'}
+Tier: ${service?.price || 'Premium Experience'}
 
 Note: Email notifications are pending (will be sent shortly)`)
       }
