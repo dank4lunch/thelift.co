@@ -265,8 +265,8 @@ Note: Email notifications are pending (will be sent shortly)`)
                     <span>{formData.time}</span>
                   </div>
                   <div className="flex justify-between font-semibold text-accent-400 pt-2 border-t border-neutral-600">
-                    <span>Total:</span>
-                    <span>{service?.price || 'R300'}</span>
+                    <span>Tier:</span>
+                    <span>{service?.price || 'Premium Experience'}</span>
                   </div>
                 </div>
               </div>
