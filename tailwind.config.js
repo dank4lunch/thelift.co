@@ -65,6 +65,7 @@ module.exports = {
         'scale-in': 'scaleIn 0.3s ease-out',
         'float': 'float 6s ease-in-out infinite',
         'glow': 'glow 2s ease-in-out infinite alternate',
+        'pulse-slow': 'pulse 4s ease-in-out infinite',
       },
       keyframes: {
         fadeIn: {
