@@ -43,9 +43,8 @@ export default function Services() {
 
   const handleBooking = (serviceIndex: number) => {
     setSelectedPlan(serviceIndex)
-    // This will be expanded with the booking modal
-    const service = services[serviceIndex]
-    alert(`Booking ${service.title} - ${service.price} ${service.duration}. Full booking system coming next!`)
+    setSelectedService(services[serviceIndex])
+    setIsBookingOpen(true)
   }
 
   return (
