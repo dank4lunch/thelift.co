@@ -54,8 +54,12 @@ export default function Footer() {
             {/* Brand Section */}
             <div className="lg:col-span-2">
               <div className="flex items-center space-x-4 mb-6">
-                <div className="w-16 h-16 bg-gradient-to-r from-primary-500 to-accent-500 rounded-xl flex items-center justify-center border border-primary-500/30">
-                  <span className="text-3xl font-bold text-white">💪</span>
+                <div className="w-16 h-16 rounded-xl overflow-hidden border border-primary-500/30 bg-white/10 backdrop-blur-sm">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2F40f4f3f8cf004cb78312fbe6b3e1cec8%2F08e7771950634f09bf5906b11a6d0d83?format=webp&width=800"
+                    alt="The Lift Co Logo"
+                    className="w-full h-full object-contain"
+                  />
                 </div>
                 <div>
                   <h3 className="text-3xl font-bold font-heading text-primary-400 muscle-text">THE LIFT CO</h3>
