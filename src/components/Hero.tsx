@@ -15,79 +15,85 @@ export default function Hero() {
   }, [])
 
   return (
-    <section id="home" className="min-h-screen flex items-center trainer-hero pt-16">
-      {/* Background Elements */}
-      <div className="absolute inset-0">
-        {/* Strength particles */}
-        {[...Array(15)].map((_, i) => (
+    <section id="home" className="min-h-screen flex items-center trainer-hero pt-16 perspective-container">
+      {/* 3D Background Elements */}
+      <div className="absolute inset-0 transform-3d">
+        {/* Elite floating particles */}
+        {[...Array(20)].map((_, i) => (
           <div
             key={i}
-            className="absolute w-3 h-3 bg-primary-500/40 rounded-full animate-float"
+            className="absolute w-3 h-3 bg-primary-500/40 rounded-full floating-orb"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 4}s`,
-              animationDuration: `${4 + Math.random() * 3}s`,
+              animationDelay: `${Math.random() * 6}s`,
+              animationDuration: `${4 + Math.random() * 4}s`,
             }}
           />
         ))}
         
-        {/* Power orbs */}
+        {/* Luxury orbs with 3D movement */}
         <div 
-          className="absolute w-96 h-96 bg-gradient-to-r from-primary-600/20 to-accent-500/20 rounded-full blur-3xl energy-pulse"
+          className="absolute w-96 h-96 bg-gradient-to-r from-primary-600/20 to-accent-500/20 rounded-full blur-3xl floating-orb"
           style={{
-            transform: `translate(${mousePosition.x * 0.015}px, ${mousePosition.y * 0.015}px)`,
+            transform: `translate3d(${mousePosition.x * 0.02}px, ${mousePosition.y * 0.02}px, 0px) rotateX(${mousePosition.y * 0.01}deg) rotateY(${mousePosition.x * 0.01}deg)`,
             left: '5%',
             top: '15%',
           }}
         />
         <div 
-          className="absolute w-80 h-80 bg-gradient-to-r from-accent-500/20 to-primary-400/20 rounded-full blur-3xl energy-pulse"
+          className="absolute w-80 h-80 bg-gradient-to-r from-accent-500/20 to-primary-400/20 rounded-full blur-3xl floating-orb"
           style={{
-            transform: `translate(${mousePosition.x * -0.008}px, ${mousePosition.y * -0.008}px)`,
+            transform: `translate3d(${mousePosition.x * -0.01}px, ${mousePosition.y * -0.01}px, 0px) rotateX(${mousePosition.y * -0.005}deg) rotateY(${mousePosition.x * -0.005}deg)`,
             right: '5%',
             bottom: '15%',
-            animationDelay: '1.5s',
+            animationDelay: '2s',
           }}
         />
 
-        {/* Geometric strength pattern */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="h-full w-full" style={{
+        {/* 3D geometric grid */}
+        <div className="absolute inset-0 opacity-10 tilt-3d">
+          <div className="h-full w-full transform-3d" style={{
             backgroundImage: `
-              linear-gradient(rgba(249,115,22,0.3) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(249,115,22,0.3) 1px, transparent 1px)
+              linear-gradient(rgba(227,181,71,0.3) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(227,181,71,0.3) 1px, transparent 1px)
             `,
             backgroundSize: '60px 60px',
+            transform: 'perspective(1000px) rotateX(45deg) translateZ(-50px)',
           }} />
         </div>
+
+        {/* Floating golden geometric shapes */}
+        <div className="absolute top-20 left-20 w-20 h-20 border-2 border-primary-500/30 rotate-45 animate-rotate-slow floating-element" />
+        <div className="absolute bottom-32 right-32 w-16 h-16 bg-gradient-to-r from-primary-500/20 to-accent-500/20 rounded-full bounce-3d" />
+        <div className="absolute top-1/3 right-20 w-12 h-12 border border-accent-500/40 animate-flip-3d" style={{ animationDelay: '3s' }} />
       </div>
 
       <div className="container-custom relative z-10">
-        <div className="max-w-6xl mx-auto text-center">
+        <div className="max-w-6xl mx-auto text-center perspective-container">
           <div className="mb-8">
-            <div className="flex justify-center mb-8">
-              <div className="w-24 h-24 rounded-2xl overflow-hidden border border-primary-500/30 bg-white/10 backdrop-blur-sm shadow-2xl">
-                <img
+            <div className="flex justify-center mb-8 depth-hover">
+              <div className="w-28 h-28 rounded-2xl overflow-hidden border-2 border-primary-500/50 bg-elite-cream/10 backdrop-blur-sm shadow-2xl luxury-glow">
+                <img 
                   src="https://cdn.builder.io/api/v1/image/assets%2F40f4f3f8cf004cb78312fbe6b3e1cec8%2F08e7771950634f09bf5906b11a6d0d83?format=webp&width=800"
                   alt="The Lift Co Logo"
                   className="w-full h-full object-contain"
                 />
               </div>
             </div>
-            <div className="inline-block mb-6">
-              <span className="text-primary-400 text-lg font-bold tracking-wider uppercase border border-primary-500/30 px-4 py-2 rounded-full bg-primary-500/10">
+            <div className="inline-block mb-6 depth-hover">
+              <span className="elite-badge">
                 Elite Personal Training
               </span>
             </div>
             
-            <h1 className="text-6xl md:text-8xl font-bold font-heading text-transparent bg-clip-text bg-gradient-to-r from-primary-400 via-accent-400 to-primary-300 mb-6 animate-slide-up glow-text muscle-text">
+            <h1 className="text-6xl md:text-8xl font-bold font-heading premium-text mb-6 animate-slide-up glow-text muscle-text transform-3d">
               BUILT TO DOMINATE
             </h1>
             
             <div className="text-2xl md:text-4xl font-bold text-primary-300 mb-8 space-y-3 animate-fade-in">
-              <p className="transform hover:scale-105 transition-transform duration-300 cursor-default muscle-text">STRENGTH. DISCIPLINE.</p>
-              <p className="transform hover:scale-105 transition-transform duration-300 cursor-default muscle-text">RESULTS. GUARANTEED.</p>
+              <p className="transform hover:scale-105 transition-transform duration-300 cursor-default muscle-text depth-hover">STRENGTH. DISCIPLINE.</p>
+              <p className="transform hover:scale-105 transition-transform duration-300 cursor-default muscle-text depth-hover">RESULTS. GUARANTEED.</p>
             </div>
           </div>
           
@@ -99,58 +105,58 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16 animate-scale-in">
             <a 
               href="#contact" 
-              className="btn-primary text-xl px-12 py-6 fitness-glow group relative overflow-hidden"
+              className="btn-primary text-xl px-12 py-6 elite-glow group relative overflow-hidden"
             >
               <span className="relative z-10 muscle-text">START TRANSFORMATION</span>
               <div className="absolute inset-0 bg-gradient-to-r from-primary-400 to-accent-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
             </a>
             <a 
               href="#services" 
-              className="btn-secondary text-xl px-12 py-6 power-glow group relative overflow-hidden"
+              className="btn-secondary text-xl px-12 py-6 luxury-glow group relative overflow-hidden"
             >
               <span className="relative z-10 muscle-text">VIEW PROGRAMS</span>
               <div className="absolute inset-0 bg-gradient-to-r from-accent-400 to-primary-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
             </a>
           </div>
 
-          {/* Power Stats */}
+          {/* Elite Stats with 3D Cards */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto mb-16">
-            <div className="text-center group strength-card p-6">
-              <div className="text-4xl md:text-5xl font-bold text-primary-400 mb-2 group-hover:text-accent-400 transition-colors duration-300 muscle-text">500+</div>
+            <div className="text-center group luxury-card p-6 depth-hover">
+              <div className="text-4xl md:text-5xl font-bold premium-text mb-2 group-hover:text-accent-400 transition-colors duration-300 muscle-text animate-bounce-3d">500+</div>
               <div className="text-neutral-300 text-sm font-medium uppercase tracking-wide">Bodies Transformed</div>
             </div>
-            <div className="text-center group strength-card p-6">
-              <div className="text-4xl md:text-5xl font-bold text-accent-400 mb-2 group-hover:text-primary-400 transition-colors duration-300 muscle-text">10+</div>
+            <div className="text-center group luxury-card p-6 depth-hover">
+              <div className="text-4xl md:text-5xl font-bold premium-text mb-2 group-hover:text-primary-400 transition-colors duration-300 muscle-text animate-bounce-3d" style={{ animationDelay: '0.2s' }}>10+</div>
               <div className="text-neutral-300 text-sm font-medium uppercase tracking-wide">Years Mastery</div>
             </div>
-            <div className="text-center group strength-card p-6">
-              <div className="text-4xl md:text-5xl font-bold text-primary-400 mb-2 group-hover:text-accent-400 transition-colors duration-300 muscle-text">R300</div>
+            <div className="text-center group luxury-card p-6 depth-hover">
+              <div className="text-4xl md:text-5xl font-bold premium-text mb-2 group-hover:text-accent-400 transition-colors duration-300 muscle-text animate-bounce-3d" style={{ animationDelay: '0.4s' }}>R300</div>
               <div className="text-neutral-300 text-sm font-medium uppercase tracking-wide">Per Session</div>
             </div>
-            <div className="text-center group strength-card p-6">
-              <div className="text-4xl md:text-5xl font-bold text-accent-400 mb-2 group-hover:text-primary-400 transition-colors duration-300 muscle-text">100%</div>
+            <div className="text-center group luxury-card p-6 depth-hover">
+              <div className="text-4xl md:text-5xl font-bold premium-text mb-2 group-hover:text-primary-400 transition-colors duration-300 muscle-text animate-bounce-3d" style={{ animationDelay: '0.6s' }}>100%</div>
               <div className="text-neutral-300 text-sm font-medium uppercase tracking-wide">Commitment</div>
             </div>
           </div>
 
-          {/* Call to Action Banner */}
-          <div className="strength-card p-8 max-w-3xl mx-auto">
-            <h3 className="text-2xl md:text-3xl font-bold text-primary-400 mb-4 muscle-text">
+          {/* Elite Call to Action Banner with 3D Effect */}
+          <div className="luxury-card p-8 max-w-3xl mx-auto depth-hover">
+            <h3 className="text-2xl md:text-3xl font-bold premium-text mb-4 muscle-text">
               NO ORDINARY TRAINING. NO ORDINARY RESULTS.
             </h3>
             <p className="text-neutral-300 text-lg mb-6">
               Elite coaching that pushes limits and delivers transformation. Your strongest self is waiting.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <span className="text-accent-400 font-bold text-lg">📞 +27 635432439</span>
-              <span className="text-primary-400 font-bold text-lg">📧 tshiamokl@gmail.com</span>
+              <a href="tel:+27635432439" className="text-accent-400 font-bold text-lg hover:text-accent-300 transition-colors depth-hover">📞 +27 635432439</a>
+              <a href="mailto:tshiamokl@gmail.com" className="text-primary-400 font-bold text-lg hover:text-primary-300 transition-colors depth-hover">📧 tshiamokl@gmail.com</a>
             </div>
           </div>
         </div>
       </div>
       
-      {/* Scroll indicator */}
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+      {/* Animated scroll indicator */}
+      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce-3d">
         <div className="flex flex-col items-center space-y-2">
           <div className="text-primary-400 text-sm font-bold uppercase tracking-wider">EXPLORE</div>
           <svg className="w-6 h-6 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
