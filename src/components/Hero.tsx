@@ -19,7 +19,7 @@ export default function Hero() {
       {/* 3D Background Elements */}
       <div className="absolute inset-0 transform-3d">
         {/* Elite floating particles */}
-        {[...Array(20)].map((_, i) => (
+        {[...Array(15)].map((_, i) => (
           <div
             key={i}
             className="absolute w-3 h-3 bg-primary-500/40 rounded-full floating-orb"
@@ -62,18 +62,13 @@ export default function Hero() {
             transform: 'perspective(1000px) rotateX(45deg) translateZ(-50px)',
           }} />
         </div>
-
-        {/* Floating golden geometric shapes */}
-        <div className="absolute top-20 left-20 w-20 h-20 border-2 border-primary-500/30 rotate-45 animate-rotate-slow floating-element" />
-        <div className="absolute bottom-32 right-32 w-16 h-16 bg-gradient-to-r from-primary-500/20 to-accent-500/20 rounded-full bounce-3d" />
-        <div className="absolute top-1/3 right-20 w-12 h-12 border border-accent-500/40 animate-flip-3d" style={{ animationDelay: '3s' }} />
       </div>
 
       <div className="container-custom relative z-10">
-        <div className="max-w-6xl mx-auto text-center perspective-container">
+        <div className="max-w-5xl mx-auto text-center perspective-container">
           <div className="mb-8">
             <div className="flex justify-center mb-8 depth-hover">
-              <div className="w-28 h-28 rounded-2xl overflow-hidden border-2 border-primary-500/50 bg-elite-cream/10 backdrop-blur-sm shadow-2xl luxury-glow">
+              <div className="w-32 h-32 rounded-2xl overflow-hidden border-2 border-primary-500/50 bg-elite-cream/10 backdrop-blur-sm shadow-2xl luxury-glow">
                 <img 
                   src="https://cdn.builder.io/api/v1/image/assets%2F40f4f3f8cf004cb78312fbe6b3e1cec8%2F08e7771950634f09bf5906b11a6d0d83?format=webp&width=800"
                   alt="The Lift Co Logo"
@@ -81,75 +76,52 @@ export default function Hero() {
                 />
               </div>
             </div>
-            <div className="inline-block mb-6 depth-hover">
-              <span className="elite-badge">
-                Elite Personal Training
-              </span>
-            </div>
             
             <h1 className="text-6xl md:text-8xl font-bold font-heading premium-text mb-6 animate-slide-up glow-text muscle-text transform-3d">
-              BUILT TO TO BOOST
+              BUILT TO BOOST
             </h1>
             
             <div className="text-2xl md:text-4xl font-bold text-primary-300 mb-8 space-y-3 animate-fade-in">
-              <p className="transform hover:scale-105 transition-transform duration-300 cursor-default muscle-text depth-hover">STRENGTH. DISCIPLINE.</p>
-              <p className="transform hover:scale-105 transition-transform duration-300 cursor-default muscle-text depth-hover">RESULTS. GUARANTEED.</p>
+              <p className="transform hover:scale-105 transition-transform duration-300 cursor-default muscle-text depth-hover">Strategic Moves.</p>
+              <p className="transform hover:scale-105 transition-transform duration-300 cursor-default muscle-text depth-hover">Creative Lifts.</p>
             </div>
           </div>
           
           <p className="text-xl md:text-2xl text-neutral-300 mb-12 max-w-4xl mx-auto leading-relaxed animate-slide-up font-medium">
-            Transform your body with elite personal training. No excuses, no shortcuts—just proven methods 
-            that deliver serious results. Ready to unleash your potential?
+            We blend strategy with soul. The Lift Co is not just a service — it's a movement. 
+            Transform your body, business, and brand with our multidisciplinary approach.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16 animate-scale-in">
             <a 
-              href="#contact" 
+              href="#services" 
               className="btn-primary text-xl px-12 py-6 elite-glow group relative overflow-hidden"
             >
-              <span className="relative z-10 muscle-text">START TRANSFORMATION</span>
+              <span className="relative z-10 muscle-text">PERSONAL TRAINING</span>
               <div className="absolute inset-0 bg-gradient-to-r from-primary-400 to-accent-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
             </a>
             <a 
-              href="#services" 
+              href="/marketing" 
               className="btn-secondary text-xl px-12 py-6 luxury-glow group relative overflow-hidden"
             >
-              <span className="relative z-10 muscle-text">VIEW PROGRAMS</span>
+              <span className="relative z-10 muscle-text">BRAND & BUSINESS</span>
               <div className="absolute inset-0 bg-gradient-to-r from-accent-400 to-primary-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
             </a>
           </div>
 
-          {/* Elite Stats with 3D Cards */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto mb-16">
-            <div className="text-center group luxury-card p-6 depth-hover">
-              <div className="text-4xl md:text-5xl font-bold premium-text mb-2 group-hover:text-accent-400 transition-colors duration-300 muscle-text animate-bounce-3d">500+</div>
-              <div className="text-neutral-300 text-sm font-medium uppercase tracking-wide">Bodies Transformed</div>
+          {/* Quick Stats */}
+          <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto">
+            <div className="text-center group">
+              <div className="text-3xl md:text-4xl font-bold premium-text mb-2 group-hover:scale-110 transition-transform duration-300">500+</div>
+              <div className="text-neutral-400 text-sm">Transformations</div>
             </div>
-            <div className="text-center group luxury-card p-6 depth-hover">
-              <div className="text-4xl md:text-5xl font-bold premium-text mb-2 group-hover:text-primary-400 transition-colors duration-300 muscle-text animate-bounce-3d" style={{ animationDelay: '0.2s' }}>10+</div>
-              <div className="text-neutral-300 text-sm font-medium uppercase tracking-wide">Years Mastery</div>
+            <div className="text-center group">
+              <div className="text-3xl md:text-4xl font-bold premium-text mb-2 group-hover:scale-110 transition-transform duration-300">10+</div>
+              <div className="text-neutral-400 text-sm">Years Experience</div>
             </div>
-            <div className="text-center group luxury-card p-6 depth-hover">
-              <div className="text-4xl md:text-5xl font-bold premium-text mb-2 group-hover:text-accent-400 transition-colors duration-300 muscle-text animate-bounce-3d" style={{ animationDelay: '0.4s' }}>R300</div>
-              <div className="text-neutral-300 text-sm font-medium uppercase tracking-wide">Per Session</div>
-            </div>
-            <div className="text-center group luxury-card p-6 depth-hover">
-              <div className="text-4xl md:text-5xl font-bold premium-text mb-2 group-hover:text-primary-400 transition-colors duration-300 muscle-text animate-bounce-3d" style={{ animationDelay: '0.6s' }}>100%</div>
-              <div className="text-neutral-300 text-sm font-medium uppercase tracking-wide">Commitment</div>
-            </div>
-          </div>
-
-          {/* Elite Call to Action Banner with 3D Effect */}
-          <div className="luxury-card p-8 max-w-3xl mx-auto depth-hover">
-            <h3 className="text-2xl md:text-3xl font-bold premium-text mb-4 muscle-text">
-              NO ORDINARY TRAINING. NO ORDINARY RESULTS.
-            </h3>
-            <p className="text-neutral-300 text-lg mb-6">
-              Elite coaching that pushes limits and delivers transformation. Your strongest self is waiting.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:+27635432439" className="text-accent-400 font-bold text-lg hover:text-accent-300 transition-colors depth-hover">📞 +27 635432439</a>
-              <a href="mailto:tshiamokl@gmail.com" className="text-primary-400 font-bold text-lg hover:text-primary-300 transition-colors depth-hover">📧 tshiamokl@gmail.com</a>
+            <div className="text-center group">
+              <div className="text-3xl md:text-4xl font-bold premium-text mb-2 group-hover:scale-110 transition-transform duration-300">R300</div>
+              <div className="text-neutral-400 text-sm">Per Session</div>
             </div>
           </div>
         </div>
