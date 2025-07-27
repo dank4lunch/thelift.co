@@ -41,17 +41,17 @@ export default function Navigation() {
       // Handle internal navigation
       if (pathname === '/marketing' && href === '#contact') {
         // If on marketing page and clicking contact, go to main contact
-        router.push('/#contact')
+        window.location.href = '/#contact'
       } else if (pathname !== '/marketing' && (href === '#brand-services' || href === '#business-services')) {
         // If not on marketing page and clicking marketing sections, go to marketing page
-        router.push(`/marketing${href}`)
+        window.location.href = `/marketing${href}`
       } else {
         // Normal anchor navigation
         const element = document.querySelector(href)
         element?.scrollIntoView({ behavior: 'smooth' })
       }
     } else {
-      router.push(href)
+      window.location.href = href
     }
     setIsMobileMenuOpen(false)
   }
