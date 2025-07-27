@@ -7,7 +7,6 @@ export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const pathname = usePathname()
-  const router = useRouter()
 
   useEffect(() => {
     const handleScroll = () => {
