@@ -272,7 +272,7 @@ export default function Services() {
                   BOOK CONSULTATION
                 </a>
                 <a href="https://wa.me/27635432439" className="btn-secondary text-lg px-10 py-4 muscle-text">
-                  WHATSAPP DIRECT
+                  📱 WHATSAPP DIRECT
                 </a>
               </div>
             </div>
