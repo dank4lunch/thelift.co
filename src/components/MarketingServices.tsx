@@ -11,8 +11,8 @@ export default function MarketingServices() {
       description: "Complete brand development from strategy to visual identity. Create a brand that commands respect and drives results.",
       features: ["Brand Positioning", "Visual Identity Design", "Logo & Brand Guidelines", "Market Research", "Competitive Analysis", "Brand Messaging"],
       icon: "🎯",
-      price: "R2,500",
-      duration: "per project",
+      price: "Premium",
+      duration: "Bespoke Package",
       timeline: "2-3 weeks"
     },
     {
