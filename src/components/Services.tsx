@@ -246,7 +246,7 @@ export default function Services() {
 
                     <div className="text-center mb-6">
                       <div className="text-4xl font-bold premium-text muscle-text">{option.price}</div>
-                      <div className="text-neutral-400 text-sm">total package</div>
+                      <div className="text-neutral-400 text-sm">membership tier</div>
                     </div>
 
                     <button className="w-full py-3 px-6 rounded-lg font-bold text-neutral-950 bg-gradient-to-r from-accent-500 to-primary-500 hover:shadow-xl hover:scale-105 transform transition-all duration-300 muscle-text">
