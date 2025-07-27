@@ -186,7 +186,7 @@ export default function Footer() {
             href="#contact"
             className="w-16 h-16 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transform transition-all duration-300 fitness-glow group border border-primary-500/30"
           >
-            <span className="text-3xl group-hover:scale-110 transition-transform duration-300">💬</span>
+            <span className="text-3xl group-hover:scale-110 transition-transform duration-300">📱</span>
           </a>
         </div>
 
