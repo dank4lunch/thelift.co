@@ -77,8 +77,8 @@ export default function Services() {
       description: "Custom frequency and duration based on your goals. Work directly with your trainer to design the perfect program.",
       sessions: "8 sessions over 1 month",
       duration: "60 min per session",
-      price: "R2,160",
-      perSession: "R270 per session",
+      price: "Executive Monthly",
+      perSession: "VIP Experience",
       image: "https://cdn.builder.io/api/v1/image/assets%2F40f4f3f8cf004cb78312fbe6b3e1cec8%2F2122d2ab28f143c8817c70bb170ae240?format=webp&width=800"
     }
   ]
