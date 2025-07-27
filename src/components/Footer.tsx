@@ -28,7 +28,7 @@ export default function Footer() {
     {
       name: 'WhatsApp',
       href: 'https://wa.me/27635432439',
-      icon: '💬',
+      icon: '📱',
       color: 'from-accent-500 to-fitness-power'
     },
     {
