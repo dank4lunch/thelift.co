@@ -234,12 +234,6 @@ Note: Email notification is pending (will be sent shortly)`)
               </p>
               <div className="space-y-4">
                 <a
-                  href="#services"
-                  className="btn-primary w-full text-center py-4 block muscle-text text-lg"
-                >
-                  BOOK NOW - R300
-                </a>
-                <a
                   href="https://wa.me/27635432439?text=Hi! I'm interested in booking a training session with The Lift Co. Can you help me get started?"
                   target="_blank"
                   rel="noopener noreferrer"
