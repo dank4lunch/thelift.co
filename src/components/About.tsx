@@ -83,8 +83,8 @@ export default function About() {
                   <h4 className="text-2xl font-bold text-accent-400 muscle-text">TARGET CLIENTS</h4>
                 </div>
                 <p className="text-neutral-300 leading-relaxed font-medium">
-                  Serious individuals aged 21–55 who demand excellence. Professionals, entrepreneurs, 
-                  and driven people who understand that elite results require elite training.
+                  Students, athletes to senior active individuals (10-65 years old) who demand excellence.
+                  Professionals, entrepreneurs, and driven people who understand that elite results require elite training.
                 </p>
               </div>
 
