@@ -41,8 +41,8 @@ export default function MarketingServices() {
       description: "Scale your business with proven strategies. From startup to enterprise, we deliver growth that sticks.",
       features: ["Growth Strategy", "Market Analysis", "Business Planning", "Revenue Optimization", "Process Improvement", "Team Development"],
       icon: "📈",
-      price: "R3,500",
-      duration: "per consultation",
+      price: "Strategic",
+      duration: "Growth Partnership",
       timeline: "Ongoing"
     },
     {
