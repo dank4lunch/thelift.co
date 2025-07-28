@@ -126,7 +126,7 @@ export default function Founder() {
                 {activeTab === 'credentials' ? (
                   <div>
                     <h4 className="text-2xl font-bold text-primary-400 mb-6 flex items-center muscle-text">
-                      <span className="text-3xl mr-3">���</span>
+                      <span className="text-3xl mr-3">🏆</span>
                       ELITE CERTIFICATIONS
                     </h4>
                     <div className="grid grid-cols-1 gap-4">
