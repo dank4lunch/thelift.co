@@ -110,8 +110,9 @@ export default function About() {
               <div className="strength-card p-8 fitness-glow">
                 <h4 className="text-2xl font-bold text-accent-400 mb-6 muscle-text">💡 CORE IDENTITY</h4>
                 <p className="text-neutral-300 leading-relaxed font-medium mb-6">
-                  Tshiamo's energy is self-assured, future-focused, and purpose-driven. He presents like someone who's done with "waiting for permission."
-                  He's about strategy, execution, and transformation—moving fast but thinking long-term.
+                  Tshiamo doesn't just train—he transforms. His energy is magnetic: self-assured but never arrogant,
+                  future-focused but grounded in action. He's the guy who shows up at 5 AM with the same intensity
+                  as 8 PM, because excellence doesn't clock out. Strategy meets sweat, and results follow.
                 </p>
                 <div className="space-y-3">
                   <div className="flex items-center">
