@@ -193,7 +193,7 @@ export default function Founder() {
           {/* Training in Action Gallery */}
           <div className="mb-20">
             <h3 className="text-4xl font-bold text-center text-primary-400 mb-12 muscle-text">TRAINING IN ACTION</h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
               <div className="strength-card overflow-hidden depth-hover">
                 <img
                   src="https://cdn.builder.io/o/assets%2Fefc7a121aea64604b51eafdf7eebedf8%2Fe0eebac39fba4b98a6badf31bd773ad7?alt=media&token=1671cfb7-1bbc-4a80-b3c1-e95df19f8821&apiKey=efc7a121aea64604b51eafdf7eebedf8"
@@ -208,10 +208,31 @@ export default function Founder() {
                   className="w-full h-64 object-cover object-center"
                 />
               </div>
-              <div className="strength-card overflow-hidden depth-hover md:col-span-2 lg:col-span-1">
+              <div className="strength-card overflow-hidden depth-hover">
                 <img
                   src="https://cdn.builder.io/o/assets%2Fefc7a121aea64604b51eafdf7eebedf8%2Fdf34e7957abf4da989b60e8e9d6d04e3?alt=media&token=4a414f05-4c44-47d4-aaa8-31a3d8e017e3&apiKey=efc7a121aea64604b51eafdf7eebedf8"
                   alt="Expert form and technique"
+                  className="w-full h-64 object-cover object-center"
+                />
+              </div>
+              <div className="strength-card overflow-hidden depth-hover">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2Fefc7a121aea64604b51eafdf7eebedf8%2F32635675ac5a465f885e0a283bb6b1a1?format=webp&width=800"
+                  alt="Training partnership and results"
+                  className="w-full h-64 object-cover object-center"
+                />
+              </div>
+              <div className="strength-card overflow-hidden depth-hover">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2Fefc7a121aea64604b51eafdf7eebedf8%2Fd293f5d6775c427292b9fd9a6d241f94?format=webp&width=800"
+                  alt="Elite training focus"
+                  className="w-full h-64 object-cover object-center"
+                />
+              </div>
+              <div className="strength-card overflow-hidden depth-hover">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2Fefc7a121aea64604b51eafdf7eebedf8%2F539132640720446d9dcaf18d5bf7e972?format=webp&width=800"
+                  alt="Professional training technique"
                   className="w-full h-64 object-cover object-center"
                 />
               </div>
