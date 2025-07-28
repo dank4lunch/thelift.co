@@ -264,12 +264,15 @@ export default function Services() {
           <div className="luxury-card p-12 relative overflow-hidden luxury-glow depth-hover max-w-4xl mx-auto">
             <div className="absolute inset-0 bg-gradient-to-r from-primary-600/10 to-accent-600/10" />
             <div className="relative z-10">
-              <h3 className="text-3xl font-bold mb-6 premium-text muscle-text">Ready to Transform?</h3>
+              <h3 className="text-3xl font-bold mb-6 premium-text muscle-text">Your Transformation Architect</h3>
               <p className="text-lg text-neutral-300 mb-4 font-medium">
-                <strong>Tshiamo Sookane</strong> - Certified Personal Trainer
+                <strong>Tshiamo Sookane</strong> - Elite Performance Engineer & Mindset Catalyst
               </p>
-              <p className="text-neutral-400 mb-8">
+              <p className="text-neutral-400 mb-6">
                 📍 Sandton CBD, Gauteng | 📞 0635432439 | ✉️ Tshiamokl@gmail.com
+              </p>
+              <p className="text-sm text-primary-300 italic mb-8">
+                "I don't build bodies. I build legends. Let's make you unstoppable." —TS
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="#contact" className="btn-primary text-lg px-10 py-4 muscle-text">
