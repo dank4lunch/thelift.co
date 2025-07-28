@@ -110,8 +110,8 @@ export default function Services() {
           </h2>
           <div className="section-divider mb-8" />
           <p className="text-xl md:text-2xl text-neutral-300 max-w-4xl mx-auto leading-relaxed font-medium">
-            Professional personal training with Tshiamo Sookane. Located in Sandton CBD, Gauteng. 
-            Certified trainer with proven results.
+            Where transformation meets obsession. Tshiamo Sookane doesn't just train bodies—he engineers
+            breakthroughs. Based in Sandton CBD, delivering results that rewrite your story.
           </p>
         </div>
 
