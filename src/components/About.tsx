@@ -47,8 +47,8 @@ export default function About() {
             </h2>
             <div className="section-divider mb-8 sm:mb-12" />
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-neutral-300 max-w-4xl mx-auto leading-relaxed font-medium px-4 sm:px-0">
-              This isn't your average gym experience. We deliver results through precision, dedication, 
-              and an uncompromising commitment to excellence.
+              We blend strategy with soul. The Lift Co is not just a service — it's a movement.
+              We deliver results through precision, dedication, and an uncompromising commitment to excellence that transforms bodies, businesses, and brands.
             </p>
           </div>
 
