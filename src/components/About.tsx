@@ -80,9 +80,9 @@ export default function About() {
                   <div className="w-16 h-16 bg-gradient-to-r from-accent-500 to-fitness-power rounded-xl flex items-center justify-center mr-6 border border-accent-500/30">
                     <span className="text-3xl">��</span>
                   </div>
-                  <h4 className="text-2xl font-bold text-accent-400 muscle-text">TARGET CLIENTS</h4>
+                  <h4 className="text-xl sm:text-2xl font-bold text-accent-400 muscle-text">TARGET CLIENTS</h4>
                 </div>
-                <p className="text-neutral-300 leading-relaxed font-medium">
+                <p className="text-sm sm:text-base text-neutral-300 leading-relaxed font-medium">
                   Students, athletes to senior active individuals (10-65 years old) who demand excellence.
                   Professionals, entrepreneurs, and driven people who understand that elite results require elite training.
                 </p>
