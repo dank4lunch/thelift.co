@@ -164,7 +164,7 @@ export default function Services() {
                 {/* Image */}
                 <div className="h-40 sm:h-48 overflow-hidden rounded-t-xl">
                   <img
-                    src={index === 0 ? "https://images.pexels.com/photos/6975559/pexels-photo-6975559.jpeg" : index === 1 ? "https://images.pexels.com/photos/6740330/pexels-photo-6740330.jpeg" : "https://images.pexels.com/photos/791763/pexels-photo-791763.jpeg"}
+                    src={index === 0 ? "https://cdn.builder.io/api/v1/image/assets%2Fefc7a121aea64604b51eafdf7eebedf8%2F32635675ac5a465f885e0a283bb6b1a1?format=webp&width=800" : index === 1 ? "https://cdn.builder.io/api/v1/image/assets%2Fefc7a121aea64604b51eafdf7eebedf8%2Fd293f5d6775c427292b9fd9a6d241f94?format=webp&width=800" : "https://cdn.builder.io/api/v1/image/assets%2Fefc7a121aea64604b51eafdf7eebedf8%2Fe053b26524c74bf48dcbcaf2a0e533af?format=webp&width=800"}
                     alt={package_.title}
                     className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500"
                   />
