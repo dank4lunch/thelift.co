@@ -64,12 +64,26 @@ export default function About() {
                   </h3>
                 </div>
                 <p className="text-base sm:text-lg text-neutral-300 mb-4 sm:mb-6 leading-relaxed font-medium">
-                  Transform bodies through elite training methodologies. We combine scientific precision
-                  with relentless dedication to forge champions in fitness and life.
+                  Transform bodies through elite training methodologies and strategic business development.
+                  We combine scientific precision with relentless dedication to forge champions in fitness, business, and life.
                 </p>
                 <p className="text-base sm:text-lg text-neutral-300 leading-relaxed font-medium">
                   Whether you're building strength, transforming your physique, or elevating your business—
-                  we deliver the strategic foundation and disciplined execution to achieve dominance.
+                  we deliver the strategic foundation and disciplined execution to achieve complete dominance across all areas of your life.
+                </p>
+              </div>
+
+              <div className="strength-card p-4 sm:p-6 lg:p-8 fitness-glow">
+                <div className="flex items-center mb-4 sm:mb-6">
+                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-accent-500 to-primary-500 rounded-xl flex items-center justify-center mr-4 sm:mr-6 border border-accent-500/30">
+                    <span className="text-2xl sm:text-3xl">🚀</span>
+                  </div>
+                  <h4 className="text-xl sm:text-2xl font-bold text-accent-400 muscle-text">MULTIDISCIPLINARY EDGE</h4>
+                </div>
+                <p className="text-sm sm:text-base text-neutral-300 leading-relaxed font-medium">
+                  Our unique approach combines elite personal training with strategic business coaching and brand development.
+                  This multidisciplinary edge allows us to uniquely uplift every layer of your life and business, creating
+                  transformations that go beyond the gym and into every aspect of success.
                 </p>
               </div>
             </div>
