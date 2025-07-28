@@ -10,7 +10,7 @@ export default function MarketingServices() {
       title: "Brand Strategy & Identity",
       description: "Complete brand development from strategy to visual identity. Create a brand that commands respect and drives results.",
       features: ["Brand Positioning", "Visual Identity Design", "Logo & Brand Guidelines", "Market Research", "Competitive Analysis", "Brand Messaging"],
-      icon: "��",
+      icon: "🎯",
       price: "Premium",
       duration: "Bespoke Package",
       timeline: "2-3 weeks"
