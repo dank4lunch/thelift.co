@@ -7,7 +7,7 @@ export default function About() {
 
   const principles = [
     {
-      icon: "⚡",
+      icon: "⚡️",
       title: "Maximum Results",
       description: "Every session is designed for peak performance. No time wasted, every rep counts toward your transformation.",
       color: "from-primary-500 to-accent-500"
@@ -19,7 +19,7 @@ export default function About() {
       color: "from-accent-500 to-fitness-power"
     },
     {
-      icon: "💪",
+      icon: "💪🏽",
       title: "Elite Standards",
       description: "Professional excellence in every aspect. From technique to nutrition—we deliver world-class results.",
       color: "from-fitness-power to-primary-600"
@@ -78,20 +78,20 @@ export default function About() {
               <div className="strength-card p-8 fitness-glow">
                 <div className="flex items-center mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-accent-500 to-fitness-power rounded-xl flex items-center justify-center mr-6 border border-accent-500/30">
-                    <span className="text-3xl">👥</span>
+                    <span className="text-3xl">��</span>
                   </div>
                   <h4 className="text-2xl font-bold text-accent-400 muscle-text">TARGET CLIENTS</h4>
                 </div>
                 <p className="text-neutral-300 leading-relaxed font-medium">
-                  Serious individuals aged 21–55 who demand excellence. Professionals, entrepreneurs, 
-                  and driven people who understand that elite results require elite training.
+                  Students, athletes to senior active individuals (10-65 years old) who demand excellence.
+                  Professionals, entrepreneurs, and driven people who understand that elite results require elite training.
                 </p>
               </div>
 
               <div className="strength-card p-8 fitness-glow">
                 <div className="flex items-center mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-fitness-power to-primary-600 rounded-xl flex items-center justify-center mr-6 border border-fitness-power/30">
-                    <span className="text-3xl">⚡</span>
+                    <span className="text-3xl">⚡️</span>
                   </div>
                   <h4 className="text-2xl font-bold text-fitness-energy muscle-text">OUR METHOD</h4>
                 </div>
@@ -99,6 +99,60 @@ export default function About() {
                   Strategic programming meets uncompromising execution. Every session is precision-engineered 
                   for maximum results, backed by proven methodologies and relentless accountability.
                 </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Trainer Personality */}
+          <div className="mb-20">
+            <h3 className="text-4xl font-bold text-center text-primary-400 mb-12 muscle-text">🔍 TRAINER BREAKDOWN: TSHIAMO SOOKANE</h3>
+            <div className="grid md:grid-cols-2 gap-12">
+              <div className="strength-card p-8 fitness-glow">
+                <h4 className="text-2xl font-bold text-accent-400 mb-6 muscle-text">💡 CORE IDENTITY</h4>
+                <p className="text-neutral-300 leading-relaxed font-medium mb-6">
+                  Tshiamo doesn't just train—he transforms. His energy is magnetic: self-assured but never arrogant,
+                  future-focused but grounded in action. He's the guy who shows up at 5 AM with the same intensity
+                  as 8 PM, because excellence doesn't clock out. Strategy meets sweat, and results follow.
+                </p>
+                <div className="space-y-3">
+                  <div className="flex items-center">
+                    <span className="w-3 h-3 bg-primary-500 rounded-full mr-3"></span>
+                    <span className="text-neutral-300"><strong className="text-primary-400">Confidence:</strong> Doesn't play small. Trains like a champion.</span>
+                  </div>
+                  <div className="flex items-center">
+                    <span className="w-3 h-3 bg-accent-500 rounded-full mr-3"></span>
+                    <span className="text-neutral-300"><strong className="text-accent-400">Visionary:</strong> Always focused on "next level," "breakthrough results."</span>
+                  </div>
+                  <div className="flex items-center">
+                    <span className="w-3 h-3 bg-primary-500 rounded-full mr-3"></span>
+                    <span className="text-neutral-300"><strong className="text-primary-400">Empathetic Leader:</strong> Cares about every client's journey, not just reps.</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="strength-card p-8 fitness-glow">
+                <h4 className="text-2xl font-bold text-accent-400 mb-6 muscle-text">🔥 TRAINING PHILOSOPHY</h4>
+                <div className="space-y-4 text-neutral-300">
+                  <blockquote className="text-lg italic border-l-4 border-primary-500 pl-4 text-primary-300">
+                    "Every rep tells a story. Every set builds character. I don't just count your workouts—
+                    I architect your comeback story. Whether you're 15 or 65, there's a champion inside waiting
+                    to break free. My job? Introduce you two."
+                  </blockquote>
+                  <p className="font-medium">
+                    "The gym is my canvas, your potential is my masterpiece. I work where grit meets grace,
+                    where sweat becomes strength, and where ordinary people discover they're actually extraordinary."
+                  </p>
+                </div>
+
+                <div className="mt-6 p-4 bg-gradient-to-r from-primary-900/30 to-accent-900/30 rounded-lg border border-primary-500/30">
+                  <h5 className="text-lg font-bold text-primary-400 mb-3 muscle-text">🎯 COACHING STYLE</h5>
+                  <div className="grid grid-cols-2 gap-3 text-sm">
+                    <span className="text-neutral-300"><strong>Tone:</strong> Clear, warm, intentional</span>
+                    <span className="text-neutral-300"><strong>Approach:</strong> Science-based, soul-driven</span>
+                    <span className="text-neutral-300"><strong>Focus:</strong> Results with purpose</span>
+                    <span className="text-neutral-300"><strong>Energy:</strong> Empowering, confident</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -117,7 +171,7 @@ export default function About() {
                   onMouseLeave={() => setHoveredCard(null)}
                 >
                   <div className="text-6xl mb-6 text-center">{principle.icon}</div>
-                  <h4 className={`text-xl font-bold mb-4 text-center bg-gradient-to-r ${principle.color} bg-clip-text text-transparent muscle-text`}>
+                  <h4 className={`text-xl font-bold mb-4 text-center text-amber-600 muscle-text`}>
                     {principle.title}
                   </h4>
                   <p className="text-neutral-300 text-center leading-relaxed font-medium">

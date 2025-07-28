@@ -9,11 +9,15 @@ export default function Services() {
   const [selectedService, setSelectedService] = useState<any>(null)
 
   const specializations = [
-    { name: "Bootcamp", icon: "🏃‍♂️" },
-    { name: "Boxing", icon: "🥊" },
+    { name: "Bootcamp", icon: "🏃🏽‍♂️" },
+    { name: "Boxing", icon: "🥊🏽" },
     { name: "Exercise Science", icon: "🧬" },
-    { name: "HIIT", icon: "⚡" },
-    { name: "Personal Training", icon: "💪" }
+    { name: "HIIT", icon: "⚡️" },
+    { name: "Personal Training", icon: "💪🏽" },
+    { name: "Sports Coaching", icon: "🏆" },
+    { name: "Conditioning", icon: "🔥" },
+    { name: "Corporate Wellness", icon: "🏢" },
+    { name: "Event Training", icon: "🎯" }
   ]
 
   const trainingPackages = [
@@ -28,8 +32,8 @@ export default function Services() {
         "Available packages overview"
       ],
       image: "https://cdn.builder.io/api/v1/image/assets%2F40f4f3f8cf004cb78312fbe6b3e1cec8%2Fe034fe9d3c0245ecbece44ae5fe79c12?format=webp&width=800",
-      price: "FREE",
-      duration_text: "15 minutes",
+      price: "Complimentary",
+      duration_text: "Discovery Session",
       popular: false,
       gradient: "from-green-500 to-emerald-500"
     },
@@ -43,8 +47,8 @@ export default function Services() {
         "Nutrition guidance basics"
       ],
       image: "https://cdn.builder.io/api/v1/image/assets%2F40f4f3f8cf004cb78312fbe6b3e1cec8%2F3709fa01aabe413285bfd44dae01298c?format=webp&width=800",
-      price: "R624",
-      duration_text: "per package",
+      price: "Starter Package",
+      duration_text: "Foundation Level",
       popular: true,
       gradient: "from-primary-500 to-accent-500"
     },
@@ -59,8 +63,8 @@ export default function Services() {
         "24/7 support access"
       ],
       image: "https://cdn.builder.io/api/v1/image/assets%2F40f4f3f8cf004cb78312fbe6b3e1cec8%2F8f93a6c749ca48c18e700f02a6f500ec?format=webp&width=800",
-      price: "R1,270",
-      duration_text: "per package",
+      price: "Elite Package",
+      duration_text: "Premium Level",
       popular: false,
       gradient: "from-accent-500 to-primary-600",
       badge: "Best Value"
@@ -73,8 +77,8 @@ export default function Services() {
       description: "Custom frequency and duration based on your goals. Work directly with your trainer to design the perfect program.",
       sessions: "8 sessions over 1 month",
       duration: "60 min per session",
-      price: "R2,160",
-      perSession: "R270 per session",
+      price: "Executive Monthly",
+      perSession: "VIP Experience",
       image: "https://cdn.builder.io/api/v1/image/assets%2F40f4f3f8cf004cb78312fbe6b3e1cec8%2F2122d2ab28f143c8817c70bb170ae240?format=webp&width=800"
     }
   ]
@@ -106,8 +110,8 @@ export default function Services() {
           </h2>
           <div className="section-divider mb-8" />
           <p className="text-xl md:text-2xl text-neutral-300 max-w-4xl mx-auto leading-relaxed font-medium">
-            Professional personal training with Tshiamo Sookane. Located in Sandton CBD, Gauteng. 
-            Certified trainer with proven results.
+            Where transformation meets obsession. Tshiamo Sookane doesn't just train bodies—he engineers
+            breakthroughs. Based in Sandton CBD, delivering results that rewrite your story.
           </p>
         </div>
 
@@ -159,10 +163,10 @@ export default function Services() {
 
                 {/* Image */}
                 <div className="h-48 overflow-hidden rounded-t-xl">
-                  <img 
-                    src={package_.image}
+                  <img
+                    src={index === 0 ? "https://images.pexels.com/photos/6975559/pexels-photo-6975559.jpeg" : index === 1 ? "https://images.pexels.com/photos/6740330/pexels-photo-6740330.jpeg" : "https://images.pexels.com/photos/791763/pexels-photo-791763.jpeg"}
                     alt={package_.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500"
                   />
                 </div>
 
@@ -199,7 +203,7 @@ export default function Services() {
                     onClick={() => index > 0 ? handleBooking(index) : window.location.href = '#contact'}
                     className={`w-full py-4 px-6 rounded-xl font-bold text-neutral-950 transition-all duration-300 bg-gradient-to-r ${package_.gradient} hover:shadow-2xl hover:scale-105 transform border border-primary-500/30 muscle-text text-lg depth-hover`}
                   >
-                    {index === 0 ? 'BOOK FREE CONSULTATION' : 'BUY NOW'}
+                    {index === 0 ? 'BOOK DISCOVERY SESSION' : 'RESERVE SPOT'}
                   </button>
                 </div>
               </div>
@@ -215,10 +219,10 @@ export default function Services() {
               <div key={index} className="luxury-card overflow-hidden depth-hover">
                 <div className="md:flex">
                   <div className="md:w-1/2 h-64 md:h-auto">
-                    <img 
-                      src={option.image}
+                    <img
+                      src="https://images.pexels.com/photos/16513597/pexels-photo-16513597.jpeg"
                       alt={option.title}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover object-center"
                     />
                   </div>
                   <div className="md:w-1/2 p-8">
@@ -242,7 +246,7 @@ export default function Services() {
 
                     <div className="text-center mb-6">
                       <div className="text-4xl font-bold premium-text muscle-text">{option.price}</div>
-                      <div className="text-neutral-400 text-sm">total package</div>
+                      <div className="text-neutral-400 text-sm">membership tier</div>
                     </div>
 
                     <button className="w-full py-3 px-6 rounded-lg font-bold text-neutral-950 bg-gradient-to-r from-accent-500 to-primary-500 hover:shadow-xl hover:scale-105 transform transition-all duration-300 muscle-text">
@@ -260,19 +264,22 @@ export default function Services() {
           <div className="luxury-card p-12 relative overflow-hidden luxury-glow depth-hover max-w-4xl mx-auto">
             <div className="absolute inset-0 bg-gradient-to-r from-primary-600/10 to-accent-600/10" />
             <div className="relative z-10">
-              <h3 className="text-3xl font-bold mb-6 premium-text muscle-text">Ready to Transform?</h3>
+              <h3 className="text-3xl font-bold mb-6 premium-text muscle-text">Your Transformation Architect</h3>
               <p className="text-lg text-neutral-300 mb-4 font-medium">
-                <strong>Tshiamo Sookane</strong> - Certified Personal Trainer
+                <strong>Tshiamo Sookane</strong> - Elite Performance Engineer & Mindset Catalyst
               </p>
-              <p className="text-neutral-400 mb-8">
+              <p className="text-neutral-400 mb-6">
                 📍 Sandton CBD, Gauteng | 📞 0635432439 | ✉️ Tshiamokl@gmail.com
+              </p>
+              <p className="text-sm text-primary-300 italic mb-8">
+                "I don't build bodies. I build legends. Let's make you unstoppable." —TS
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="#contact" className="btn-primary text-lg px-10 py-4 muscle-text">
                   BOOK CONSULTATION
                 </a>
                 <a href="https://wa.me/27635432439" className="btn-secondary text-lg px-10 py-4 muscle-text">
-                  WHATSAPP DIRECT
+                  📱 WHATSAPP DIRECT
                 </a>
               </div>
             </div>

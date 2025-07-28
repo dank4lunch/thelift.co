@@ -50,8 +50,12 @@ export default function Founder() {
             <div className="space-y-8">
               <div className="strength-card p-10 fitness-glow">
                 <div className="flex items-center mb-8">
-                  <div className="w-24 h-24 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full flex items-center justify-center mr-6 border border-primary-500/30">
-                    <span className="text-4xl">👑</span>
+                  <div className="w-24 h-24 rounded-full overflow-hidden mr-6 border-2 border-primary-500/50 shadow-xl">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2Fefc7a121aea64604b51eafdf7eebedf8%2F24f572d4409b40419a8d3b8d260a33a8?format=webp&width=800"
+                      alt="Tshiamo Sookane - Elite Personal Trainer"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <div>
                     <h3 className="text-4xl font-bold font-heading text-primary-400 mb-2 muscle-text">
@@ -65,23 +69,27 @@ export default function Founder() {
 
                 <div className="space-y-6">
                   <p className="text-lg text-neutral-300 leading-relaxed font-medium">
-                    Elite certified personal trainer with 10+ years of proven results in body transformation 
-                    and performance optimization. Specializes in strength training, athletic conditioning, 
-                    and total lifestyle transformation.
+                    Meet the mastermind behind The Lift Co. Tshiamo isn't your typical trainer—he's a
+                    movement architect, a mindset shifter, and your personal performance catalyst. With 10+ years
+                    of turning "impossible" into "inevitable," he's built a reputation for making champions.
                   </p>
 
                   <p className="text-lg text-neutral-300 leading-relaxed font-medium">
-                    The Lift Co represents the pinnacle of personal training excellence—where science meets 
-                    discipline, and potential becomes reality. Every client receives world-class training 
-                    designed for maximum results.
+                    Born in Johannesburg, raised on ambition. Tshiamo combines old-school discipline with
+                    cutting-edge science. He doesn't just count reps—he builds legacies. From corporate executives
+                    to aspiring athletes, he's the secret weapon behind transformations that stick.
                   </p>
 
                   <div className="bg-gradient-to-r from-primary-600/20 to-accent-600/20 p-6 rounded-lg border border-primary-500/30">
-                    <h4 className="text-xl font-bold text-primary-400 mb-3 muscle-text">TRAINING PHILOSOPHY</h4>
+                    <h4 className="text-xl font-bold text-primary-400 mb-3 muscle-text">💭 MINDSET MANIFESTO</h4>
                     <p className="text-neutral-300 italic font-medium">
-                      "Transformation isn't just physical—it's mental, emotional, and spiritual. 
-                      I don't just build bodies; I forge champions who dominate in every aspect of life."
+                      "I don't believe in shortcuts, but I do believe in smart paths. Your body is capable
+                      of incredible things—my job is to unlock that potential and show you what elite really feels like.
+                      We're not just changing how you look; we're upgrading how you think, move, and conquer."
                     </p>
+                    <div className="mt-4 text-sm text-primary-300 font-bold">
+                      — The Tshiamo Method
+                    </div>
                   </div>
                 </div>
               </div>

@@ -45,7 +45,7 @@ export default function Booking({ isOpen, onClose, service }: BookingProps) {
       const bookingData = {
         ...formData,
         timestamp: new Date().toISOString(),
-        amount: service?.price || 'R300',
+        tier: service?.price || 'Premium',
       }
 
       // Simulate API call for payment processing
@@ -60,7 +60,7 @@ export default function Booking({ isOpen, onClose, service }: BookingProps) {
 Service: ${formData.service}
 Date: ${formData.date}
 Time: ${formData.time}
-Total: ${service?.price || 'R300'}
+Tier: ${service?.price || 'Premium Experience'}
 
 ✅ Email notification sent to tshiamokl@gmail.com
 ✅ Confirmation email sent to ${formData.email}
@@ -72,7 +72,7 @@ You'll receive a confirmation call within 24 hours!`)
 Service: ${formData.service}
 Date: ${formData.date}
 Time: ${formData.time}
-Total: ${service?.price || 'R300'}
+Tier: ${service?.price || 'Premium Experience'}
 
 Note: Email notifications are pending (will be sent shortly)`)
       }
@@ -188,9 +188,9 @@ Note: Email notifications are pending (will be sent shortly)`)
                   className="w-full px-4 py-3 bg-neutral-800 border border-neutral-600 rounded-lg text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                 >
                   <option value="">Select a service</option>
-                  <option value="Personal Training & Fitness">Personal Training & Fitness - R300</option>
-                  <option value="Brand Development">Brand Development - R2500</option>
-                  <option value="Business Strategy">Business Strategy - R3500</option>
+                  <option value="Personal Training & Fitness">Personal Training & Fitness - Premium</option>
+                  <option value="Brand Development">Brand Development - Elite</option>
+                  <option value="Business Strategy">Business Strategy - Executive</option>
                 </select>
               </div>
             </div>
@@ -265,8 +265,8 @@ Note: Email notifications are pending (will be sent shortly)`)
                     <span>{formData.time}</span>
                   </div>
                   <div className="flex justify-between font-semibold text-accent-400 pt-2 border-t border-neutral-600">
-                    <span>Total:</span>
-                    <span>{service?.price || 'R300'}</span>
+                    <span>Tier:</span>
+                    <span>{service?.price || 'Premium Experience'}</span>
                   </div>
                 </div>
               </div>

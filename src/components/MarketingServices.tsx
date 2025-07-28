@@ -10,9 +10,9 @@ export default function MarketingServices() {
       title: "Brand Strategy & Identity",
       description: "Complete brand development from strategy to visual identity. Create a brand that commands respect and drives results.",
       features: ["Brand Positioning", "Visual Identity Design", "Logo & Brand Guidelines", "Market Research", "Competitive Analysis", "Brand Messaging"],
-      icon: "🎯",
-      price: "R2,500",
-      duration: "per project",
+      icon: "��",
+      price: "Premium",
+      duration: "Bespoke Package",
       timeline: "2-3 weeks"
     },
     {
@@ -20,8 +20,8 @@ export default function MarketingServices() {
       description: "Establish dominant digital presence across all platforms. From websites to social media, we make your brand unmissable.",
       features: ["Website Development", "Social Media Strategy", "Content Creation", "SEO Optimization", "Digital Marketing", "Online Reputation"],
       icon: "🚀",
-      price: "R3,500",
-      duration: "per project",
+      price: "Elite",
+      duration: "Comprehensive Suite",
       timeline: "3-4 weeks"
     },
     {
@@ -29,8 +29,8 @@ export default function MarketingServices() {
       description: "Elevate your creative output with strategic direction that converts. Every piece of content works toward your goals.",
       features: ["Campaign Development", "Creative Strategy", "Content Planning", "Photography Direction", "Video Concepts", "Marketing Materials"],
       icon: "🎨",
-      price: "R1,800",
-      duration: "per campaign",
+      price: "Executive",
+      duration: "Creative Package",
       timeline: "1-2 weeks"
     }
   ]
@@ -41,8 +41,8 @@ export default function MarketingServices() {
       description: "Scale your business with proven strategies. From startup to enterprise, we deliver growth that sticks.",
       features: ["Growth Strategy", "Market Analysis", "Business Planning", "Revenue Optimization", "Process Improvement", "Team Development"],
       icon: "📈",
-      price: "R3,500",
-      duration: "per consultation",
+      price: "Strategic",
+      duration: "Growth Partnership",
       timeline: "Ongoing"
     },
     {
@@ -50,17 +50,17 @@ export default function MarketingServices() {
       description: "Streamline operations for maximum efficiency. Build systems that scale and processes that perform.",
       features: ["Process Optimization", "System Integration", "Workflow Automation", "Performance Metrics", "Quality Control", "Resource Planning"],
       icon: "⚙️",
-      price: "R4,500",
-      duration: "per project",
+      price: "Platinum",
+      duration: "Systems Overhaul",
       timeline: "4-6 weeks"
     },
     {
       title: "Leadership & Development",
       description: "Build leaders who inspire and teams that deliver. Transform your human capital into competitive advantage.",
       features: ["Leadership Coaching", "Team Building", "Performance Management", "Skill Development", "Culture Building", "Strategic Planning"],
-      icon: "👑",
-      price: "R2,800",
-      duration: "per program",
+      icon: "🏆",
+      price: "Executive",
+      duration: "Leadership Program",
       timeline: "6-8 weeks"
     }
   ]

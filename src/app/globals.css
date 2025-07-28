@@ -21,6 +21,12 @@
     @apply font-semibold leading-tight text-neutral-50;
   }
 
+  /* iOS Emoji Styling */
+  .ios-emoji {
+    font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
+    font-size: 1.5em;
+  }
+
   /* Custom scrollbar */
   ::-webkit-scrollbar {
     width: 8px;

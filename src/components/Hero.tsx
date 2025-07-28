@@ -2,8 +2,17 @@
 
 import { useState, useEffect } from 'react'
 
+interface Particle {
+  id: number
+  left: number
+  top: number
+  delay: number
+  duration: number
+}
+
 export default function Hero() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+  const [particles, setParticles] = useState<Particle[]>([])
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -14,20 +23,32 @@ export default function Hero() {
     return () => window.removeEventListener('mousemove', handleMouseMove)
   }, [])
 
+  useEffect(() => {
+    // Generate particles only on client side to avoid hydration mismatch
+    const generatedParticles = Array.from({ length: 15 }, (_, i) => ({
+      id: i,
+      left: Math.random() * 100,
+      top: Math.random() * 100,
+      delay: Math.random() * 6,
+      duration: 4 + Math.random() * 4,
+    }))
+    setParticles(generatedParticles)
+  }, [])
+
   return (
     <section id="home" className="min-h-screen flex items-center trainer-hero pt-16 perspective-container">
       {/* 3D Background Elements */}
       <div className="absolute inset-0 transform-3d">
         {/* Elite floating particles */}
-        {[...Array(15)].map((_, i) => (
+        {particles.map((particle) => (
           <div
-            key={i}
+            key={particle.id}
             className="absolute w-3 h-3 bg-primary-500/40 rounded-full floating-orb"
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 6}s`,
-              animationDuration: `${4 + Math.random() * 4}s`,
+              left: `${particle.left}%`,
+              top: `${particle.top}%`,
+              animationDelay: `${particle.delay}s`,
+              animationDuration: `${particle.duration}s`,
             }}
           />
         ))}
@@ -110,7 +131,7 @@ export default function Hero() {
           </div>
 
           {/* Quick Stats */}
-          <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto">
+          <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto mb-20">
             <div className="text-center group">
               <div className="text-3xl md:text-4xl font-bold premium-text mb-2 group-hover:scale-110 transition-transform duration-300">500+</div>
               <div className="text-neutral-400 text-sm">Transformations</div>
@@ -120,15 +141,15 @@ export default function Hero() {
               <div className="text-neutral-400 text-sm">Years Experience</div>
             </div>
             <div className="text-center group">
-              <div className="text-3xl md:text-4xl font-bold premium-text mb-2 group-hover:scale-110 transition-transform duration-300">R300</div>
-              <div className="text-neutral-400 text-sm">Per Session</div>
+              <div className="text-3xl md:text-4xl font-bold premium-text mb-2 group-hover:scale-110 transition-transform duration-300">Premium</div>
+              <div className="text-neutral-400 text-sm">Elite Training</div>
             </div>
           </div>
         </div>
       </div>
       
       {/* Animated scroll indicator */}
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce-3d">
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-3d">
         <div className="flex flex-col items-center space-y-2">
           <div className="text-primary-400 text-sm font-bold uppercase tracking-wider">EXPLORE</div>
           <svg className="w-6 h-6 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
