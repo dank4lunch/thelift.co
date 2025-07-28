@@ -131,7 +131,7 @@ export default function Hero() {
           </div>
 
           {/* Quick Stats */}
-          <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto">
+          <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto mb-20">
             <div className="text-center group">
               <div className="text-3xl md:text-4xl font-bold premium-text mb-2 group-hover:scale-110 transition-transform duration-300">500+</div>
               <div className="text-neutral-400 text-sm">Transformations</div>
