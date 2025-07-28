@@ -50,7 +50,7 @@ export default function Footer() {
       <div className="container-custom">
         {/* Main Footer Content */}
         <div className="py-16">
-          <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {/* Brand Section */}
             <div className="lg:col-span-2">
               <div className="flex items-center space-x-4 mb-6">
