@@ -42,11 +42,11 @@ export default function About() {
                 ELITE TRAINING PHILOSOPHY
               </span>
             </div>
-            <h2 className="text-5xl md:text-7xl font-bold font-heading text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-accent-400 mb-8 animate-fade-in muscle-text">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold font-heading text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-accent-400 mb-6 sm:mb-8 animate-fade-in muscle-text">
               WHY WE DOMINATE
             </h2>
-            <div className="section-divider mb-12" />
-            <p className="text-xl md:text-2xl text-neutral-300 max-w-4xl mx-auto leading-relaxed font-medium">
+            <div className="section-divider mb-8 sm:mb-12" />
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-neutral-300 max-w-4xl mx-auto leading-relaxed font-medium px-4 sm:px-0">
               This isn't your average gym experience. We deliver results through precision, dedication, 
               and an uncompromising commitment to excellence.
             </p>
