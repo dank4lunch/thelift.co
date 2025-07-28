@@ -69,15 +69,15 @@ export default function Founder() {
 
                 <div className="space-y-6">
                   <p className="text-lg text-neutral-300 leading-relaxed font-medium">
-                    Elite certified personal trainer with 10+ years of proven results in body transformation 
-                    and performance optimization. Specializes in strength training, athletic conditioning, 
-                    and total lifestyle transformation.
+                    Meet the mastermind behind The Lift Co. Tshiamo isn't your typical trainer—he's a
+                    movement architect, a mindset shifter, and your personal performance catalyst. With 10+ years
+                    of turning "impossible" into "inevitable," he's built a reputation for making champions.
                   </p>
 
                   <p className="text-lg text-neutral-300 leading-relaxed font-medium">
-                    The Lift Co represents the pinnacle of personal training excellence—where science meets 
-                    discipline, and potential becomes reality. Every client receives world-class training 
-                    designed for maximum results.
+                    Born in Johannesburg, raised on ambition. Tshiamo combines old-school discipline with
+                    cutting-edge science. He doesn't just count reps—he builds legacies. From corporate executives
+                    to aspiring athletes, he's the secret weapon behind transformations that stick.
                   </p>
 
                   <div className="bg-gradient-to-r from-primary-600/20 to-accent-600/20 p-6 rounded-lg border border-primary-500/30">
