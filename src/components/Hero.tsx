@@ -108,9 +108,8 @@ export default function Hero() {
             </div>
           </div>
           
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-neutral-300 mb-8 sm:mb-12 max-w-4xl mx-auto leading-relaxed animate-slide-up font-medium px-4 sm:px-0">
-            We blend strategy with soul. The Lift Co is not just a service — it's a movement. 
-            Transform your body, business, and brand with our multidisciplinary approach.
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-neutral-300 mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed animate-slide-up font-medium px-4 sm:px-0">
+            Elite personal training that delivers real results. Transform your body and mindset with Johannesburg's premier trainer.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center mb-12 sm:mb-16 animate-scale-in px-4 sm:px-0">
