@@ -149,7 +149,7 @@ export default function Hero() {
       </div>
       
       {/* Animated scroll indicator */}
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce-3d">
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-3d">
         <div className="flex flex-col items-center space-y-2">
           <div className="text-primary-400 text-sm font-bold uppercase tracking-wider">EXPLORE</div>
           <svg className="w-6 h-6 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
