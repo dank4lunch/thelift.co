@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import React from 'react'
-import Script from 'next/script'
+import TwemojiLoader from '@/components/TwemojiLoader'
 import './globals.css'
 
 export const metadata: Metadata = {
