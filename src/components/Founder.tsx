@@ -81,11 +81,15 @@ export default function Founder() {
                   </p>
 
                   <div className="bg-gradient-to-r from-primary-600/20 to-accent-600/20 p-6 rounded-lg border border-primary-500/30">
-                    <h4 className="text-xl font-bold text-primary-400 mb-3 muscle-text">TRAINING PHILOSOPHY</h4>
+                    <h4 className="text-xl font-bold text-primary-400 mb-3 muscle-text">💭 MINDSET MANIFESTO</h4>
                     <p className="text-neutral-300 italic font-medium">
-                      "Transformation isn't just physical—it's mental, emotional, and spiritual. 
-                      I don't just build bodies; I forge champions who dominate in every aspect of life."
+                      "I don't believe in shortcuts, but I do believe in smart paths. Your body is capable
+                      of incredible things—my job is to unlock that potential and show you what elite really feels like.
+                      We're not just changing how you look; we're upgrading how you think, move, and conquer."
                     </p>
+                    <div className="mt-4 text-sm text-primary-300 font-bold">
+                      — The Tshiamo Method
+                    </div>
                   </div>
                 </div>
               </div>
