@@ -1,5 +1,6 @@
 import Hero from '@/components/Hero'
 import About from '@/components/About'
+import InstagramShowcase from '@/components/InstagramShowcase'
 import Services from '@/components/Services'
 import BusinessOverview from '@/components/BusinessOverview'
 import Founder from '@/components/Founder'
