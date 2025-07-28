@@ -130,18 +130,18 @@ export default function Hero() {
           </div>
 
           {/* Quick Stats */}
-          <div className="grid grid-cols-3 gap-4 sm:gap-8 max-w-2xl mx-auto mb-12 sm:mb-20 px-4 sm:px-0">
+          <div className="grid grid-cols-3 gap-4 sm:gap-8 max-w-lg mx-auto mb-8 sm:mb-12 px-4 sm:px-0">
             <div className="text-center group">
-              <div className="text-2xl sm:text-3xl md:text-4xl font-bold premium-text mb-1 sm:mb-2 group-hover:scale-110 transition-transform duration-300">500+</div>
-              <div className="text-neutral-400 text-xs sm:text-sm">Transformations</div>
+              <div className="text-xl sm:text-2xl md:text-3xl font-bold premium-text mb-1 group-hover:scale-110 transition-transform duration-300">500+</div>
+              <div className="text-neutral-400 text-xs sm:text-sm">Results</div>
             </div>
             <div className="text-center group">
-              <div className="text-2xl sm:text-3xl md:text-4xl font-bold premium-text mb-1 sm:mb-2 group-hover:scale-110 transition-transform duration-300">10+</div>
-              <div className="text-neutral-400 text-xs sm:text-sm">Years Experience</div>
+              <div className="text-xl sm:text-2xl md:text-3xl font-bold premium-text mb-1 group-hover:scale-110 transition-transform duration-300">10+</div>
+              <div className="text-neutral-400 text-xs sm:text-sm">Years</div>
             </div>
             <div className="text-center group">
-              <div className="text-2xl sm:text-3xl md:text-4xl font-bold premium-text mb-1 sm:mb-2 group-hover:scale-110 transition-transform duration-300">Premium</div>
-              <div className="text-neutral-400 text-xs sm:text-sm">Elite Training</div>
+              <div className="text-xl sm:text-2xl md:text-3xl font-bold premium-text mb-1 group-hover:scale-110 transition-transform duration-300">Elite</div>
+              <div className="text-neutral-400 text-xs sm:text-sm">Training</div>
             </div>
           </div>
         </div>
