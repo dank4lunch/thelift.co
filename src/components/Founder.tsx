@@ -196,21 +196,21 @@ export default function Founder() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
               <div className="strength-card overflow-hidden depth-hover">
                 <img
-                  src="https://cdn.builder.io/o/assets%2Fefc7a121aea64604b51eafdf7eebedf8%2Fe0eebac39fba4b98a6badf31bd773ad7?alt=media&token=1671cfb7-1bbc-4a80-b3c1-e95df19f8821&apiKey=efc7a121aea64604b51eafdf7eebedf8"
+                  src="https://cdn.builder.io/api/v1/image/assets%2Fefc7a121aea64604b51eafdf7eebedf8%2F53b97d318ef947d4813e973e62a9fe8e"
                   alt="Elite training intensity"
                   className="w-full h-64 object-cover object-center"
                 />
               </div>
               <div className="strength-card overflow-hidden depth-hover">
                 <img
-                  src="https://cdn.builder.io/o/assets%2Fefc7a121aea64604b51eafdf7eebedf8%2F95d3a99d7657457b94f3ad20a3cd9e70?alt=media&token=fbde3e51-5ccb-446a-bf03-1ff78930cf32&apiKey=efc7a121aea64604b51eafdf7eebedf8"
+                  src="https://cdn.builder.io/api/v1/image/assets%2Fefc7a121aea64604b51eafdf7eebedf8%2F3a2b427508bc4e4ba5606ba3cdd50837"
                   alt="Professional training technique"
                   className="w-full h-64 object-cover object-center"
                 />
               </div>
               <div className="strength-card overflow-hidden depth-hover">
                 <img
-                  src="https://cdn.builder.io/o/assets%2Fefc7a121aea64604b51eafdf7eebedf8%2Fdf34e7957abf4da989b60e8e9d6d04e3?alt=media&token=4a414f05-4c44-47d4-aaa8-31a3d8e017e3&apiKey=efc7a121aea64604b51eafdf7eebedf8"
+                  src="https://cdn.builder.io/api/v1/image/assets%2Fefc7a121aea64604b51eafdf7eebedf8%2F251539e798824670a6a282d155916ce8"
                   alt="Expert form and technique"
                   className="w-full h-64 object-cover object-center"
                 />
