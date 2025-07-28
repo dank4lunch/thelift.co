@@ -22,6 +22,21 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossOrigin="anonymous"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              document.addEventListener('DOMContentLoaded', function() {
+                twemoji.parse(document.body, {
+                  folder: 'svg',
+                  ext: '.svg'
+                });
+              });
+            `
+          }}
+        />
+      </head>
       <body>{children}</body>
     </html>
   )
