@@ -25,18 +25,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         {children}
-        <Script
-          src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js"
-          strategy="afterInteractive"
-          onLoad={() => {
-            if (typeof window !== 'undefined' && window.twemoji) {
-              window.twemoji.parse(document.body, {
-                folder: 'svg',
-                ext: '.svg'
-              });
-            }
-          }}
-        />
+        <TwemojiLoader />
       </body>
     </html>
   )
