@@ -104,8 +104,8 @@ Note: Email notification is pending (will be sent shortly)`)
 
         <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 max-w-6xl mx-auto px-4 sm:px-0">
           {/* Contact Form */}
-          <div className="strength-card p-8 fitness-glow">
-            <h3 className="text-3xl font-bold mb-8 text-primary-400 muscle-text">GET STARTED NOW</h3>
+          <div className="strength-card p-4 sm:p-6 lg:p-8 fitness-glow">
+            <h3 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-primary-400 muscle-text">GET STARTED NOW</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-bold mb-2 text-neutral-300 uppercase tracking-wide">
