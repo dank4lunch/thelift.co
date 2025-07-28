@@ -239,7 +239,7 @@ export default function About() {
               </div>
               <div className="strength-card overflow-hidden depth-hover sm:col-span-2 lg:col-span-1">
                 <img
-                  src="https://cdn.builder.io/o/assets%2Fefc7a121aea64604b51eafdf7eebedf8%2F2f29555d01a64462929c7818002ec9e1?alt=media&token=793b84b6-7a0f-4380-8f2e-6950bd64c4ef&apiKey=efc7a121aea64604b51eafdf7eebedf8"
+                  src="https://cdn.builder.io/api/v1/image/assets%2Fefc7a121aea64604b51eafdf7eebedf8%2F782f7eb13e7c4795ad06bb380a895435"
                   alt="Elite training community"
                   className="w-full h-64 object-cover object-center"
                 />
