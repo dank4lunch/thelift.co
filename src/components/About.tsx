@@ -182,6 +182,34 @@ export default function About() {
             </div>
           </div>
 
+          {/* Client Success Gallery */}
+          <div className="mb-16">
+            <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-primary-400 mb-8 sm:mb-12 muscle-text px-4 sm:px-0">CLIENT TRANSFORMATIONS</h3>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 px-4 sm:px-0 mb-12">
+              <div className="strength-card overflow-hidden depth-hover">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2Fefc7a121aea64604b51eafdf7eebedf8%2Fa7e57207bf8848f1a55d4478c00a0b3e?format=webp&width=800"
+                  alt="Group training session with clients"
+                  className="w-full h-64 object-cover object-center"
+                />
+              </div>
+              <div className="strength-card overflow-hidden depth-hover">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2Fefc7a121aea64604b51eafdf7eebedf8%2F551cb9748ab54515bf20ad51dae3e598?format=webp&width=800"
+                  alt="Successful training group"
+                  className="w-full h-64 object-cover object-center"
+                />
+              </div>
+              <div className="strength-card overflow-hidden depth-hover sm:col-span-2 lg:col-span-1">
+                <img
+                  src="https://cdn.builder.io/o/assets%2Fefc7a121aea64604b51eafdf7eebedf8%2F2f29555d01a64462929c7818002ec9e1?alt=media&token=793b84b6-7a0f-4380-8f2e-6950bd64c4ef&apiKey=efc7a121aea64604b51eafdf7eebedf8"
+                  alt="Elite training community"
+                  className="w-full h-64 object-cover object-center"
+                />
+              </div>
+            </div>
+          </div>
+
           {/* Results Promise */}
           <div className="text-center">
             <div className="strength-card p-12 fitness-glow relative overflow-hidden">
