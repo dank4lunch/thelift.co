@@ -171,6 +171,29 @@ export default function About() {
             </div>
           </div>
 
+          {/* Achievement Stats */}
+          <div className="mb-16">
+            <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-primary-400 mb-8 sm:mb-12 muscle-text px-4 sm:px-0">PROVEN RESULTS</h3>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 px-4 sm:px-0 mb-16">
+              <div className="text-center strength-card p-6 depth-hover">
+                <div className="text-3xl sm:text-4xl font-bold premium-text mb-2">500+</div>
+                <div className="text-neutral-400 font-medium">Successful Transformations</div>
+              </div>
+              <div className="text-center strength-card p-6 depth-hover">
+                <div className="text-3xl sm:text-4xl font-bold premium-text mb-2">10+</div>
+                <div className="text-neutral-400 font-medium">Years of Excellence</div>
+              </div>
+              <div className="text-center strength-card p-6 depth-hover">
+                <div className="text-3xl sm:text-4xl font-bold premium-text mb-2">98%</div>
+                <div className="text-neutral-400 font-medium">Client Success Rate</div>
+              </div>
+              <div className="text-center strength-card p-6 depth-hover">
+                <div className="text-3xl sm:text-4xl font-bold premium-text mb-2">Elite</div>
+                <div className="text-neutral-400 font-medium">Training Standards</div>
+              </div>
+            </div>
+          </div>
+
           {/* Core Principles */}
           <div className="mb-16">
             <h3 className="text-4xl font-bold text-center text-primary-400 mb-12 muscle-text">CORE PRINCIPLES</h3>
