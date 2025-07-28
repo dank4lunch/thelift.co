@@ -74,7 +74,7 @@ export default function About() {
               </div>
             </div>
 
-            <div className="space-y-8">
+            <div className="space-y-6 sm:space-y-8">
               <div className="strength-card p-8 fitness-glow">
                 <div className="flex items-center mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-accent-500 to-fitness-power rounded-xl flex items-center justify-center mr-6 border border-accent-500/30">
