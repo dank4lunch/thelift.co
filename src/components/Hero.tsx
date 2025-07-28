@@ -108,41 +108,25 @@ export default function Hero() {
             </div>
           </div>
           
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-neutral-300 mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed animate-slide-up font-medium px-4 sm:px-0">
-            Elite personal training that delivers real results. Transform your body and mindset with Johannesburg's premier trainer.
+          <p className="text-base sm:text-lg md:text-xl text-neutral-300 mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed animate-slide-up font-medium px-4 sm:px-0">
+            Elite personal training in Johannesburg. Transform your body with proven results.
           </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center mb-12 sm:mb-16 animate-scale-in px-4 sm:px-0">
-            <a 
-              href="#services" 
-              className="btn-primary text-lg sm:text-xl px-8 sm:px-12 py-4 sm:py-6 elite-glow group relative overflow-hidden"
+
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center mb-8 sm:mb-12 animate-scale-in px-4 sm:px-0">
+            <a
+              href="#services"
+              className="btn-primary text-base sm:text-lg px-6 sm:px-10 py-3 sm:py-4 elite-glow group relative overflow-hidden"
             >
-              <span className="relative z-10 muscle-text">PERSONAL TRAINING</span>
+              <span className="relative z-10 muscle-text">START TRAINING</span>
               <div className="absolute inset-0 bg-gradient-to-r from-primary-400 to-accent-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
             </a>
-            <a 
-              href="/marketing" 
-              className="btn-secondary text-lg sm:text-xl px-8 sm:px-12 py-4 sm:py-6 luxury-glow group relative overflow-hidden"
+            <a
+              href="/marketing"
+              className="btn-secondary text-base sm:text-lg px-6 sm:px-10 py-3 sm:py-4 luxury-glow group relative overflow-hidden"
             >
-              <span className="relative z-10 muscle-text">BRAND & BUSINESS</span>
+              <span className="relative z-10 muscle-text">BUSINESS SERVICES</span>
               <div className="absolute inset-0 bg-gradient-to-r from-accent-400 to-primary-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
             </a>
-          </div>
-
-          {/* Quick Stats */}
-          <div className="grid grid-cols-3 gap-4 sm:gap-8 max-w-lg mx-auto mb-8 sm:mb-12 px-4 sm:px-0">
-            <div className="text-center group">
-              <div className="text-xl sm:text-2xl md:text-3xl font-bold premium-text mb-1 group-hover:scale-110 transition-transform duration-300">500+</div>
-              <div className="text-neutral-400 text-xs sm:text-sm">Results</div>
-            </div>
-            <div className="text-center group">
-              <div className="text-xl sm:text-2xl md:text-3xl font-bold premium-text mb-1 group-hover:scale-110 transition-transform duration-300">10+</div>
-              <div className="text-neutral-400 text-xs sm:text-sm">Years</div>
-            </div>
-            <div className="text-center group">
-              <div className="text-xl sm:text-2xl md:text-3xl font-bold premium-text mb-1 group-hover:scale-110 transition-transform duration-300">Elite</div>
-              <div className="text-neutral-400 text-xs sm:text-sm">Training</div>
-            </div>
           </div>
         </div>
       </div>
