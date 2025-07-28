@@ -1,49 +1,26 @@
-'use client'
-
-import { useEffect } from 'react'
-
 export default function InstagramShowcase() {
   const instagramPosts = [
     {
       id: 'C--Q54Nttq9',
       url: 'https://www.instagram.com/p/C--Q54Nttq9/',
+      title: 'Elite Training Session',
     },
     {
       id: 'DA8l4rWNWfU',
       url: 'https://www.instagram.com/p/DA8l4rWNWfU/',
+      title: 'Strength & Conditioning',
     },
     {
       id: 'CjDSY09DugY',
       url: 'https://www.instagram.com/p/CjDSY09DugY/',
+      title: 'Professional Results',
     },
     {
       id: 'Chjsd14DgDT',
       url: 'https://www.instagram.com/p/Chjsd14DgDT/',
+      title: 'Transformation Journey',
     }
   ]
-
-  useEffect(() => {
-    // Load Instagram embed script
-    const script = document.createElement('script')
-    script.src = 'https://www.instagram.com/embed.js'
-    script.async = true
-    document.body.appendChild(script)
-
-    // Process embeds when script loads
-    script.onload = () => {
-      if ((window as any).instgrm) {
-        (window as any).instgrm.Embeds.process()
-      }
-    }
-
-    return () => {
-      // Cleanup
-      const existingScript = document.querySelector('script[src="https://www.instagram.com/embed.js"]')
-      if (existingScript) {
-        document.body.removeChild(existingScript)
-      }
-    }
-  }, [])
 
   return (
     <section className="section-padding bg-gradient-to-b from-neutral-900 to-neutral-950 relative overflow-hidden">
