@@ -46,6 +46,7 @@ export default function Booking({ isOpen, onClose, service }: BookingProps) {
         ...formData,
         timestamp: new Date().toISOString(),
         tier: service?.price || 'Premium',
+        amount: service?.price || 'Premium Experience',
       }
 
       // Simulate API call for payment processing
