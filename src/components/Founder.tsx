@@ -50,8 +50,12 @@ export default function Founder() {
             <div className="space-y-8">
               <div className="strength-card p-10 fitness-glow">
                 <div className="flex items-center mb-8">
-                  <div className="w-24 h-24 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full flex items-center justify-center mr-6 border border-primary-500/30">
-                    <span className="text-4xl">👑</span>
+                  <div className="w-24 h-24 rounded-full overflow-hidden mr-6 border-2 border-primary-500/50 shadow-xl">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2Fefc7a121aea64604b51eafdf7eebedf8%2F24f572d4409b40419a8d3b8d260a33a8?format=webp&width=800"
+                      alt="Tshiamo Sookane - Elite Personal Trainer"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <div>
                     <h3 className="text-4xl font-bold font-heading text-primary-400 mb-2 muscle-text">
