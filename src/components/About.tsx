@@ -53,21 +53,21 @@ export default function About() {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center mb-12 sm:mb-16 lg:mb-20 px-4 sm:px-0">
-            <div className="space-y-8">
-              <div className="strength-card p-8 fitness-glow">
-                <div className="flex items-center mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-r from-primary-500 to-accent-500 rounded-xl flex items-center justify-center mr-6 border border-primary-500/30">
-                    <span className="text-3xl">🎯</span>
+            <div className="space-y-6 sm:space-y-8">
+              <div className="strength-card p-4 sm:p-6 lg:p-8 fitness-glow">
+                <div className="flex items-center mb-4 sm:mb-6">
+                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-primary-500 to-accent-500 rounded-xl flex items-center justify-center mr-4 sm:mr-6 border border-primary-500/30">
+                    <span className="text-2xl sm:text-3xl">🎯</span>
                   </div>
-                  <h3 className="text-3xl font-bold font-heading text-primary-400 muscle-text">
+                  <h3 className="text-2xl sm:text-3xl font-bold font-heading text-primary-400 muscle-text">
                     OUR MISSION
                   </h3>
                 </div>
-                <p className="text-lg text-neutral-300 mb-6 leading-relaxed font-medium">
-                  Transform bodies through elite training methodologies. We combine scientific precision 
+                <p className="text-base sm:text-lg text-neutral-300 mb-4 sm:mb-6 leading-relaxed font-medium">
+                  Transform bodies through elite training methodologies. We combine scientific precision
                   with relentless dedication to forge champions in fitness and life.
                 </p>
-                <p className="text-lg text-neutral-300 leading-relaxed font-medium">
+                <p className="text-base sm:text-lg text-neutral-300 leading-relaxed font-medium">
                   Whether you're building strength, transforming your physique, or elevating your business—
                   we deliver the strategic foundation and disciplined execution to achieve dominance.
                 </p>
