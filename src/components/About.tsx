@@ -134,12 +134,13 @@ export default function About() {
                 <h4 className="text-2xl font-bold text-accent-400 mb-6 muscle-text">🔥 TRAINING PHILOSOPHY</h4>
                 <div className="space-y-4 text-neutral-300">
                   <blockquote className="text-lg italic border-l-4 border-primary-500 pl-4 text-primary-300">
-                    "I build bodies that move people—not just muscles. Fitness means nothing without function,
-                    and function dies without purpose. I'm here to help athletes, professionals, and individuals scale with strength."
+                    "Every rep tells a story. Every set builds character. I don't just count your workouts—
+                    I architect your comeback story. Whether you're 15 or 65, there's a champion inside waiting
+                    to break free. My job? Introduce you two."
                   </blockquote>
                   <p className="font-medium">
-                    "I work where science meets soul. From training programs to lifestyle transformation,
-                    I don't just talk fitness—I build futures."
+                    "The gym is my canvas, your potential is my masterpiece. I work where grit meets grace,
+                    where sweat becomes strength, and where ordinary people discover they're actually extraordinary."
                   </p>
                 </div>
 
