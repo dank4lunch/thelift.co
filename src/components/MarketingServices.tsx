@@ -10,7 +10,7 @@ export default function MarketingServices() {
       title: "Brand Strategy & Identity",
       description: "Complete brand development from strategy to visual identity. Create a brand that commands respect and drives results.",
       features: ["Brand Positioning", "Visual Identity Design", "Logo & Brand Guidelines", "Market Research", "Competitive Analysis", "Brand Messaging"],
-      icon: "🎯",
+      icon: "��",
       price: "Premium",
       duration: "Bespoke Package",
       timeline: "2-3 weeks"
@@ -58,7 +58,7 @@ export default function MarketingServices() {
       title: "Leadership & Development",
       description: "Build leaders who inspire and teams that deliver. Transform your human capital into competitive advantage.",
       features: ["Leadership Coaching", "Team Building", "Performance Management", "Skill Development", "Culture Building", "Strategic Planning"],
-      icon: "👑",
+      icon: "🏆",
       price: "Executive",
       duration: "Leadership Program",
       timeline: "6-8 weeks"
