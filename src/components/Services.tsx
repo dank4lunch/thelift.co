@@ -220,7 +220,7 @@ export default function Services() {
                 <div className="sm:flex">
                   <div className="sm:w-1/2 h-48 sm:h-64 md:h-auto">
                     <img
-                      src="https://cdn.builder.io/api/v1/image/assets%2Fefc7a121aea64604b51eafdf7eebedf8%2F539132640720446d9dcaf18d5bf7e972?format=webp&width=800"
+                      src="https://images.pexels.com/photos/16513597/pexels-photo-16513597.jpeg"
                       alt={option.title}
                       className="w-full h-full object-cover object-center"
                     />
