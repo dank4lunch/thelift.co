@@ -52,7 +52,7 @@ export default function About() {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center mb-12 sm:mb-16 lg:mb-20 px-4 sm:px-0">
             <div className="space-y-8">
               <div className="strength-card p-8 fitness-glow">
                 <div className="flex items-center mb-6">
