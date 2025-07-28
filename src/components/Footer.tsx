@@ -52,20 +52,20 @@ export default function Footer() {
         <div className="py-16">
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {/* Brand Section */}
-            <div className="lg:col-span-2">
-              <div className="flex items-center space-x-4 mb-6">
-                <div className="w-16 h-16 rounded-xl overflow-hidden border border-primary-500/30 bg-white/10 backdrop-blur-sm">
-                  <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F40f4f3f8cf004cb78312fbe6b3e1cec8%2F08e7771950634f09bf5906b11a6d0d83?format=webp&width=800"
-                    alt="The Lift Co Logo"
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-                <div>
-                  <h3 className="text-3xl font-bold font-heading text-primary-400 muscle-text">THE LIFT CO</h3>
-                  <p className="text-sm text-accent-400 font-bold uppercase tracking-wider">Elite Training Excellence</p>
-                </div>
+            <div className="sm:col-span-2 lg:col-span-2">
+            <div className="flex items-center space-x-3 sm:space-x-4 mb-4 sm:mb-6">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-xl overflow-hidden border border-primary-500/30 bg-white/10 backdrop-blur-sm">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F40f4f3f8cf004cb78312fbe6b3e1cec8%2F08e7771950634f09bf5906b11a6d0d83?format=webp&width=800"
+                  alt="The Lift Co Logo"
+                  className="w-full h-full object-contain"
+                />
               </div>
+              <div>
+                <h3 className="text-2xl sm:text-3xl font-bold font-heading text-primary-400 muscle-text">THE LIFT CO</h3>
+                <p className="text-xs sm:text-sm text-accent-400 font-bold uppercase tracking-wider">Elite Training Excellence</p>
+              </div>
+            </div>
               
               <p className="text-neutral-300 mb-6 max-w-md leading-relaxed font-medium">
                 Elite personal training that delivers serious results. No shortcuts, no excuses—
