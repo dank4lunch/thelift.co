@@ -14,6 +14,7 @@ export default function Home() {
       <Navigation />
       <Hero />
       <About />
+      <InstagramShowcase />
       <Services />
       <BusinessOverview />
       <Founder />
