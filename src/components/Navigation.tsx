@@ -19,10 +19,10 @@ export default function Navigation() {
 
   // Different nav items based on current page
   const homeNavItems = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Training', href: '#services' },
-    { name: 'Trainer', href: '#founder' },
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
+    { name: 'Training', href: '/services' },
+    { name: 'Trainer', href: '/about#founder' },
     { name: 'Contact', href: '#contact' },
   ]
 
