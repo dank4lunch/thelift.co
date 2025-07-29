@@ -27,11 +27,11 @@ export default function Navigation() {
   ]
 
   const marketingNavItems = [
-    { name: 'Overview', href: '#marketing-home' },
-    { name: 'Brand Services', href: '#brand-services' },
-    { name: 'Business Strategy', href: '#business-services' },
-    { name: 'Portfolio', href: '#founder' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Overview', href: '/marketing' },
+    { name: 'Brand Services', href: '/marketing#brand-services' },
+    { name: 'Business Strategy', href: '/marketing#business-services' },
+    { name: 'Portfolio', href: '/about#founder' },
+    { name: 'Contact', href: '/#contact' },
   ]
 
   const navItems = pathname === '/marketing' ? marketingNavItems : homeNavItems
