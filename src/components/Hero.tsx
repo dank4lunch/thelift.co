@@ -114,7 +114,7 @@ export default function Hero() {
 
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center mb-8 sm:mb-12 animate-scale-in px-4 sm:px-0">
             <a
-              href="#services"
+              href="/services"
               className="btn-primary text-base sm:text-lg px-6 sm:px-10 py-3 sm:py-4 elite-glow group relative overflow-hidden"
             >
               <span className="relative z-10 muscle-text">START TRAINING</span>
