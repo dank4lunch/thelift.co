@@ -24,14 +24,58 @@ const structuredData = {
   "@type": "LocalBusiness",
   "name": "The Lift Co",
   "image": "https://theliftco.co.za/logo.png",
-  "description": "Elite personal training and body transformation services in Sandton CBD",
+  "description": "Elite personal training and body transformation services across Gauteng province including Johannesburg, Pretoria, Sandton, Centurion, Midrand, Randburg, Roodepoort, and surrounding areas",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Sandton CBD",
-    "addressLocality": "Sandton",
+    "streetAddress": "Gauteng Province",
+    "addressLocality": "Johannesburg",
     "addressRegion": "Gauteng",
     "addressCountry": "ZA"
   },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Johannesburg",
+      "addressRegion": "Gauteng",
+      "addressCountry": "ZA"
+    },
+    {
+      "@type": "City",
+      "name": "Pretoria",
+      "addressRegion": "Gauteng",
+      "addressCountry": "ZA"
+    },
+    {
+      "@type": "City",
+      "name": "Sandton",
+      "addressRegion": "Gauteng",
+      "addressCountry": "ZA"
+    },
+    {
+      "@type": "City",
+      "name": "Centurion",
+      "addressRegion": "Gauteng",
+      "addressCountry": "ZA"
+    },
+    {
+      "@type": "City",
+      "name": "Midrand",
+      "addressRegion": "Gauteng",
+      "addressCountry": "ZA"
+    },
+    {
+      "@type": "City",
+      "name": "Randburg",
+      "addressRegion": "Gauteng",
+      "addressCountry": "ZA"
+    },
+    {
+      "@type": "City",
+      "name": "Roodepoort",
+      "addressRegion": "Gauteng",
+      "addressCountry": "ZA"
+    }
+  ],
   "telephone": "+27635432439",
   "email": "Tshiamokl@gmail.com",
   "url": "https://theliftco.co.za",
@@ -41,10 +85,10 @@ const structuredData = {
     "@type": "GeoCircle",
     "geoMidpoint": {
       "@type": "GeoCoordinates",
-      "latitude": -26.1076,
-      "longitude": 28.0567
+      "latitude": -26.2041,
+      "longitude": 28.0473
     },
-    "geoRadius": "25000"
+    "geoRadius": "50000"
   },
   "founder": {
     "@type": "Person",
