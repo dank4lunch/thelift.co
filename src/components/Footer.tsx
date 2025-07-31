@@ -161,7 +161,7 @@ export default function Footer() {
               <a href="#" className="text-neutral-400 hover:text-primary-400 transition-colors duration-300 font-medium">
                 Terms of Service
               </a>
-              <a href="#contact" className="text-neutral-400 hover:text-primary-400 transition-colors duration-300 font-medium">
+              <a href="/#contact" className="text-neutral-400 hover:text-primary-400 transition-colors duration-300 font-medium">
                 Support
               </a>
             </div>
