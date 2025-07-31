@@ -27,6 +27,34 @@
     font-size: 1.5em;
   }
 
+  /* Consistent emoji sizing */
+  .emoji-sm {
+    font-size: 0.875rem; /* 14px */
+    line-height: 1;
+    vertical-align: text-top;
+  }
+
+  .emoji-base {
+    font-size: 1rem; /* 16px */
+    line-height: 1;
+    vertical-align: text-top;
+  }
+
+  .emoji-lg {
+    font-size: 1.25rem; /* 20px */
+    line-height: 1;
+    vertical-align: text-top;
+  }
+
+  /* Override Twemoji sizing to be consistent */
+  img.emoji {
+    height: 1em !important;
+    width: 1em !important;
+    margin: 0 0.05em 0 0.1em !important;
+    vertical-align: -0.1em !important;
+    display: inline !important;
+  }
+
   /* Custom scrollbar */
   ::-webkit-scrollbar {
     width: 8px;
