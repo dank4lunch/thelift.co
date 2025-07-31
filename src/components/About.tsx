@@ -56,8 +56,8 @@ export default function About() {
             <div className="space-y-6 sm:space-y-8">
               <div className="strength-card p-4 sm:p-6 lg:p-8 fitness-glow">
                 <div className="flex items-center mb-4 sm:mb-6">
-                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-primary-500 to-accent-500 rounded-xl flex items-center justify-center mr-4 sm:mr-6 border border-primary-500/30">
-                    <span className="text-2xl sm:text-3xl">🎯</span>
+                  <div className="w-12 h-12 bg-gradient-to-r from-primary-500 to-accent-500 rounded-xl flex items-center justify-center mr-4 sm:mr-6 border border-primary-500/30">
+                    <span className="text-2xl">🎯</span>
                   </div>
                   <h3 className="text-2xl sm:text-3xl font-bold font-heading text-primary-400 muscle-text">
                     OUR MISSION
@@ -75,8 +75,8 @@ export default function About() {
 
               <div className="strength-card p-4 sm:p-6 lg:p-8 fitness-glow">
                 <div className="flex items-center mb-4 sm:mb-6">
-                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-accent-500 to-primary-500 rounded-xl flex items-center justify-center mr-4 sm:mr-6 border border-accent-500/30">
-                    <span className="text-2xl sm:text-3xl">🚀</span>
+                  <div className="w-12 h-12 bg-gradient-to-r from-accent-500 to-primary-500 rounded-xl flex items-center justify-center mr-4 sm:mr-6 border border-accent-500/30">
+                    <span className="text-2xl">🚀</span>
                   </div>
                   <h4 className="text-xl sm:text-2xl font-bold text-accent-400 muscle-text">MULTIDISCIPLINARY EDGE</h4>
                 </div>
@@ -91,8 +91,8 @@ export default function About() {
             <div className="space-y-6 sm:space-y-8">
               <div className="strength-card p-8 fitness-glow">
                 <div className="flex items-center mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-r from-accent-500 to-fitness-power rounded-xl flex items-center justify-center mr-6 border border-accent-500/30">
-                    <span className="text-3xl">👥</span>
+                  <div className="w-12 h-12 bg-gradient-to-r from-accent-500 to-fitness-power rounded-xl flex items-center justify-center mr-6 border border-accent-500/30">
+                    <span className="text-2xl">👥</span>
                   </div>
                   <h4 className="text-xl sm:text-2xl font-bold text-accent-400 muscle-text">TARGET CLIENTS</h4>
                 </div>
@@ -104,8 +104,8 @@ export default function About() {
 
               <div className="strength-card p-8 fitness-glow">
                 <div className="flex items-center mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-r from-fitness-power to-primary-600 rounded-xl flex items-center justify-center mr-6 border border-fitness-power/30">
-                    <span className="text-3xl">⚡️</span>
+                  <div className="w-12 h-12 bg-gradient-to-r from-fitness-power to-primary-600 rounded-xl flex items-center justify-center mr-6 border border-fitness-power/30">
+                    <span className="text-2xl">⚡️</span>
                   </div>
                   <h4 className="text-2xl font-bold text-fitness-energy muscle-text">OUR METHOD</h4>
                 </div>
@@ -207,7 +207,7 @@ export default function About() {
                   onMouseEnter={() => setHoveredCard(index)}
                   onMouseLeave={() => setHoveredCard(null)}
                 >
-                  <div className="text-6xl mb-6 text-center">{principle.icon}</div>
+                  <div className="text-4xl mb-6 text-center">{principle.icon}</div>
                   <h4 className={`text-xl font-bold mb-4 text-center text-amber-600 muscle-text`}>
                     {principle.title}
                   </h4>
