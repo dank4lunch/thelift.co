@@ -4,9 +4,9 @@ import TwemojiLoader from '@/components/TwemojiLoader'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'The Lift Co - Elite Personal Training & Transformation | Sandton CBD',
-  description: 'Elite personal training in Sandton CBD with Tshiamo Sookane. Transform your body with proven fitness programs, strength training, HIIT, boxing, and nutrition coaching. Book your consultation today.',
-  keywords: 'personal trainer Sandton, elite fitness training Johannesburg, body transformation Sandton CBD, strength training, HIIT training, boxing coach, nutrition coaching, personal training Gauteng, fitness transformation, weight loss coach Sandton, muscle building, corporate wellness, sports conditioning',
+  title: 'The Lift Co - Elite Personal Training Gauteng | Johannesburg, Pretoria, Sandton',
+  description: 'Elite personal training across Gauteng with Tshiamo Sookane. Serving Johannesburg, Pretoria, Sandton, Centurion, Midrand, Randburg. Transform your body with proven fitness programs, strength training, HIIT, boxing, and nutrition coaching.',
+  keywords: 'personal trainer Gauteng, elite fitness training Johannesburg, personal trainer Pretoria, body transformation Sandton, strength training Centurion, HIIT training Midrand, boxing coach Randburg, nutrition coaching Roodepoort, personal training Benoni, fitness transformation Boksburg, weight loss coach Germiston, muscle building Soweto, corporate wellness Fourways, sports conditioning Rosebank, personal trainer Woodmead, fitness coach Melrose, gym trainer Bryanston',
   authors: [{ name: 'Tshiamo Sookane - The Lift Co' }],
   robots: 'index, follow',
   openGraph: {
