@@ -10,8 +10,8 @@ export const metadata: Metadata = {
   authors: [{ name: 'Tshiamo Sookane - The Lift Co' }],
   robots: 'index, follow',
   openGraph: {
-    title: 'The Lift Co - Elite Personal Training & Transformation | Sandton CBD',
-    description: 'Elite personal training in Sandton CBD with Tshiamo Sookane. Transform your body with proven fitness programs and achieve your fitness goals.',
+    title: 'The Lift Co - Elite Personal Training Gauteng | Johannesburg, Pretoria, Sandton',
+    description: 'Elite personal training across Gauteng with Tshiamo Sookane. Serving Johannesburg, Pretoria, Sandton, Centurion, and surrounding areas.',
     type: 'website',
     locale: 'en_ZA',
     siteName: 'The Lift Co',
