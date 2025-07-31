@@ -9,7 +9,6 @@ export const metadata: Metadata = {
   keywords: 'personal trainer Sandton, elite fitness training Johannesburg, body transformation Sandton CBD, strength training, HIIT training, boxing coach, nutrition coaching, personal training Gauteng, fitness transformation, weight loss coach Sandton, muscle building, corporate wellness, sports conditioning',
   authors: [{ name: 'Tshiamo Sookane - The Lift Co' }],
   robots: 'index, follow',
-  viewport: 'width=device-width, initial-scale=1',
   openGraph: {
     title: 'The Lift Co - Elite Personal Training & Transformation | Sandton CBD',
     description: 'Elite personal training in Sandton CBD with Tshiamo Sookane. Transform your body with proven fitness programs and achieve your fitness goals.',
@@ -26,6 +25,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://theliftco.co.za',
   },
+}
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
 }
 
 export default function RootLayout({
