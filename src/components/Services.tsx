@@ -275,7 +275,7 @@ export default function Services() {
                 "I don't build bodies. I build legends. Let's make you unstoppable." —TS
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-                <a href="#contact" className="btn-primary text-base sm:text-lg px-6 sm:px-10 py-3 sm:py-4 muscle-text">
+                <a href="/#contact" className="btn-primary text-base sm:text-lg px-6 sm:px-10 py-3 sm:py-4 muscle-text">
                   BOOK CONSULTATION
                 </a>
                 <a href="https://wa.me/27635432439" className="btn-secondary text-base sm:text-lg px-6 sm:px-10 py-3 sm:py-4 muscle-text">
