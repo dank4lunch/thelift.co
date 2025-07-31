@@ -4,9 +4,9 @@ import Footer from '@/components/Footer'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Personal Training Services Sandton CBD | Elite Fitness Programs - The Lift Co',
-  description: 'Elite personal training services in Sandton CBD. Choose from PT packages, monthly plans, bootcamp, boxing, HIIT, and sports coaching. Free consultation available. Tshiamo Sookane - certified trainer with 500+ transformations.',
-  keywords: 'personal training packages Sandton, fitness programs Sandton CBD, personal trainer Johannesburg, bootcamp training, boxing classes, HIIT training, sports coaching, nutrition coaching, body transformation, strength training, consultation booking',
+  title: 'Personal Training Services Gauteng | Elite Fitness Programs Johannesburg, Pretoria',
+  description: 'Elite personal training services across Gauteng. Serving Johannesburg, Pretoria, Sandton, Centurion, Midrand. Choose from PT packages, monthly plans, bootcamp, boxing, HIIT, and sports coaching. Free consultation available.',
+  keywords: 'personal training packages Gauteng, fitness programs Johannesburg, personal trainer Pretoria, bootcamp training Sandton, boxing classes Centurion, HIIT training Midrand, sports coaching Randburg, nutrition coaching Roodepoort, body transformation Benoni, strength training Boksburg, consultation booking Fourways, gym trainer Bryanston',
   openGraph: {
     title: 'Personal Training Services Sandton CBD | Elite Fitness Programs',
     description: 'Elite personal training services in Sandton CBD. Free consultation, PT packages, and monthly fitness plans available.',
