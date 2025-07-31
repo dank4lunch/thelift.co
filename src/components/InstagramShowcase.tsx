@@ -88,8 +88,8 @@ export default function InstagramShowcase() {
               >
                 📱 FOLLOW ON INSTAGRAM
               </a>
-              <a 
-                href="#services" 
+              <a
+                href="/services"
                 className="btn-primary text-base sm:text-lg px-8 sm:px-10 py-3 sm:py-4 muscle-text"
               >
                 START TRAINING
