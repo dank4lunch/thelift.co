@@ -10,8 +10,8 @@ export const metadata: Metadata = {
   description: 'Elite personal training across Gauteng with Tshiamo Sookane. Serving Johannesburg, Pretoria, Sandton, Centurion, Midrand, Randburg. Proven body transformation programs including strength training, HIIT, boxing, and nutrition coaching.',
   keywords: 'personal trainer Gauteng, elite fitness training Johannesburg, personal trainer Pretoria, body transformation Sandton, strength training Centurion, HIIT training Midrand, boxing coach Randburg, nutrition coaching Roodepoort, fitness transformation Benoni, weight loss coach Boksburg, gym trainer Fourways',
   openGraph: {
-    title: 'The Lift Co - Elite Personal Training Sandton CBD',
-    description: 'Transform your body with elite personal training programs in Sandton CBD. Free consultation available.',
+    title: 'The Lift Co - Elite Personal Training Gauteng',
+    description: 'Transform your body with elite personal training programs across Gauteng - Johannesburg, Pretoria, Sandton & more. Free consultation available.',
     type: 'website',
   },
   alternates: {
