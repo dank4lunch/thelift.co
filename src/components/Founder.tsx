@@ -250,10 +250,10 @@ export default function Founder() {
                   results that speak for themselves.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                  <a href="#contact" className="btn-primary text-lg px-12 py-5 muscle-text">
+                  <a href="/#contact" className="btn-primary text-lg px-12 py-5 muscle-text">
                     BOOK CONSULTATION
                   </a>
-                  <a href="#services" className="btn-secondary text-lg px-12 py-5 muscle-text">
+                  <a href="/services" className="btn-secondary text-lg px-12 py-5 muscle-text">
                     VIEW PROGRAMS
                   </a>
                 </div>
