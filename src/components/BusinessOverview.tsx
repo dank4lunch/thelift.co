@@ -124,8 +124,8 @@ export default function BusinessOverview() {
                   >
                     VIEW BUSINESS SERVICES
                   </a>
-                  <a 
-                    href="#contact" 
+                  <a
+                    href="/#contact"
                     className="btn-outline text-lg px-10 py-4 muscle-text"
                   >
                     FREE CONSULTATION
