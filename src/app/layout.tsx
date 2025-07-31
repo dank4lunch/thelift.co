@@ -19,8 +19,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'The Lift Co - Elite Personal Training Sandton CBD',
-    description: 'Transform your body with elite personal training programs in Sandton CBD.',
+    title: 'The Lift Co - Elite Personal Training Gauteng',
+    description: 'Transform your body with elite personal training programs across Gauteng - Johannesburg, Pretoria, Sandton & more.',
   },
   alternates: {
     canonical: 'https://theliftco.co.za',
