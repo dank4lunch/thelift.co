@@ -200,7 +200,7 @@ export default function Services() {
                   </ul>
 
                   <button
-                    onClick={() => index > 0 ? handleBooking(index) : window.location.href = '#contact'}
+                    onClick={() => index > 0 ? handleBooking(index) : window.location.href = '/#contact'}
                     className={`w-full py-3 sm:py-4 px-4 sm:px-6 rounded-xl font-bold text-neutral-950 transition-all duration-300 bg-gradient-to-r ${package_.gradient} hover:shadow-2xl hover:scale-105 transform border border-primary-500/30 muscle-text text-sm sm:text-lg depth-hover`}
                   >
                     {index === 0 ? 'BOOK DISCOVERY SESSION' : 'RESERVE SPOT'}
