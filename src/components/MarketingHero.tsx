@@ -2,8 +2,31 @@
 
 import { useState, useEffect } from 'react'
 
+interface Particle {
+  id: number
+  left: number
+  top: number
+  animationDelay: number
+  animationDuration: number
+}
+
 export default function MarketingHero() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+  const [particles, setParticles] = useState<Particle[]>([])
+  const [isClient, setIsClient] = useState(false)
+
+  useEffect(() => {
+    setIsClient(true)
+    // Generate particles only on client side to avoid hydration mismatch
+    const generatedParticles = Array.from({ length: 25 }, (_, i) => ({
+      id: i,
+      left: Math.random() * 100,
+      top: Math.random() * 100,
+      animationDelay: Math.random() * 8,
+      animationDuration: 6 + Math.random() * 4,
+    }))
+    setParticles(generatedParticles)
+  }, [])
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
