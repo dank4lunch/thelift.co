@@ -258,10 +258,10 @@ export default function About() {
                   Ready to experience what elite training can do for you?
                 </p>
                 <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                  <a href="#services" className="btn-primary text-lg px-10 py-4 muscle-text">
+                  <a href="/services" className="btn-primary text-lg px-10 py-4 muscle-text">
                     VIEW PROGRAMS
                   </a>
-                  <a href="#contact" className="btn-secondary text-lg px-10 py-4 muscle-text">
+                  <a href="/#contact" className="btn-secondary text-lg px-10 py-4 muscle-text">
                     BOOK CONSULTATION
                   </a>
                 </div>
