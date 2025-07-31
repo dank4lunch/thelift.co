@@ -269,7 +269,7 @@ export default function Services() {
                 <strong>Tshiamo Sookane</strong> - Elite Performance Engineer & Mindset Catalyst
               </p>
               <p className="text-neutral-400 mb-4 sm:mb-6 text-sm sm:text-base">
-                📍 Sandton CBD, Gauteng | ���� 0635432439 | ✉️ Tshiamokl@gmail.com
+                <span className="inline-block text-sm mr-1">📍</span> Sandton CBD, Gauteng | <span className="inline-block text-sm mr-1">📞</span> 0635432439 | <span className="inline-block text-sm mr-1">✉️</span> Tshiamokl@gmail.com
               </p>
               <p className="text-xs sm:text-sm text-primary-300 italic mb-6 sm:mb-8">
                 "I don't build bodies. I build legends. Let's make you unstoppable." —TS
@@ -279,7 +279,7 @@ export default function Services() {
                   BOOK CONSULTATION
                 </a>
                 <a href="https://wa.me/27635432439" className="btn-secondary text-base sm:text-lg px-6 sm:px-10 py-3 sm:py-4 muscle-text">
-                  📱 WHATSAPP DIRECT
+                  <span className="inline-block text-sm mr-2">📱</span> WHATSAPP DIRECT
                 </a>
               </div>
             </div>
