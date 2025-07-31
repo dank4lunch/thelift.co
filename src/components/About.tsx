@@ -119,7 +119,7 @@ export default function About() {
 
           {/* Trainer Personality */}
           <div className="mb-20">
-            <h3 className="text-4xl font-bold text-center text-primary-400 mb-12 muscle-text">🔍 TRAINER BREAKDOWN: TSHIAMO SOOKANE</h3>
+            <h3 className="text-4xl font-bold text-center text-primary-400 mb-12 muscle-text">TRAINER BREAKDOWN: TSHIAMO SOOKANE</h3>
             <div className="grid md:grid-cols-2 gap-12">
               <div className="strength-card p-8 fitness-glow">
                 <h4 className="text-2xl font-bold text-accent-400 mb-6 muscle-text">💡 CORE IDENTITY</h4>
