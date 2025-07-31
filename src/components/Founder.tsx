@@ -126,7 +126,7 @@ export default function Founder() {
                 {activeTab === 'credentials' ? (
                   <div>
                     <h4 className="text-2xl font-bold text-primary-400 mb-6 flex items-center muscle-text">
-                      <span className="text-3xl mr-3">🏆</span>
+                      <span className="text-2xl mr-3">🏆</span>
                       ELITE CERTIFICATIONS
                     </h4>
                     <div className="grid grid-cols-1 gap-4">
@@ -146,7 +146,7 @@ export default function Founder() {
                 ) : (
                   <div>
                     <h4 className="text-2xl font-bold text-accent-400 mb-6 flex items-center muscle-text">
-                      <span className="text-3xl mr-3">🤝</span>
+                      <span className="text-2xl mr-3">🤝</span>
                       ELITE NETWORK
                     </h4>
                     <div className="grid grid-cols-2 gap-4">
@@ -178,7 +178,7 @@ export default function Founder() {
             <div className="grid md:grid-cols-4 gap-6">
               {achievements.map((achievement, index) => (
                 <div key={index} className="strength-card p-8 text-center fitness-glow group">
-                  <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <div className="text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">
                     {achievement.icon}
                   </div>
                   <div className="text-5xl font-bold text-primary-400 mb-2 group-hover:text-accent-400 transition-colors duration-300 muscle-text">
