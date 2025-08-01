@@ -79,7 +79,17 @@ export default function PaymentForm({ packageName, onClose }: PaymentFormProps) 
       }))
 
       // Redirect to PayFast
-      redirectToPayFast(paymentData)
+      try {
+        redirectToPayFast(paymentData)
+      } catch (redirectError) {
+        console.error('PayFast redirect error:', redirectError)
+        // Fallback to WhatsApp if payment redirect fails
+        const message = `Hi! I'd like to purchase the ${packageName} for R${packagePrice}. My details: ${formData.firstName} ${formData.lastName}, ${formData.email}, ${formData.phone}`
+        const encodedMessage = encodeURIComponent(message)
+        window.open(`https://wa.me/27635432439?text=${encodedMessage}`, '_blank')
+        setIsProcessing(false)
+        return
+      }
     } catch (error) {
       console.error('Payment error:', error)
       alert('There was an error processing your payment. Please try again.')
