@@ -89,55 +89,46 @@ export default function Hero() {
         <div className="max-w-5xl mx-auto text-center perspective-container px-4 sm:px-6 lg:px-8">
           <div className="mb-8">
             <div className="flex justify-center mb-6 sm:mb-8 depth-hover">
-              <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-2xl overflow-hidden border-2 border-primary-500/50 bg-elite-cream/10 backdrop-blur-sm shadow-2xl luxury-glow">
+              <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-2xl overflow-hidden border-2 border-primary-500/50 bg-elite-cream/10 backdrop-blur-sm shadow-2xl luxury-glow">
                 <img 
                   src="https://cdn.builder.io/api/v1/image/assets%2F40f4f3f8cf004cb78312fbe6b3e1cec8%2F08e7771950634f09bf5906b11a6d0d83?format=webp&width=800"
-                  alt="The Lift Co Logo"
-                  className="w-full h-full object-contain"
+                  alt="Tshiamo Sookane - Personal Trainer"
+                  className="w-full h-full object-cover"
                 />
               </div>
             </div>
             
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold font-heading premium-text mb-4 sm:mb-6 animate-slide-up glow-text muscle-text transform-3d">
-              BUILT TO BOOST
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-heading premium-text mb-4 sm:mb-6 animate-slide-up glow-text muscle-text transform-3d">
+              Crush Your Fitness Goals with a Personal Trainer in Sandton
             </h1>
             
-            <div className="text-lg sm:text-xl md:text-2xl lg:text-4xl font-bold text-primary-300 mb-6 sm:mb-8 space-y-2 sm:space-y-3 animate-fade-in">
-              <p className="transform hover:scale-105 transition-transform duration-300 cursor-default muscle-text depth-hover">Strategic Moves.</p>
-              <p className="transform hover:scale-105 transition-transform duration-300 cursor-default muscle-text depth-hover">Creative Lifts.</p>
+            <div className="text-lg sm:text-xl md:text-2xl text-primary-300 mb-6 sm:mb-8 animate-fade-in">
+              <p className="transform hover:scale-105 transition-transform duration-300 cursor-default muscle-text depth-hover">Get a free 15-minute consultation. Training packages available now.</p>
             </div>
           </div>
           
           <p className="text-base sm:text-lg md:text-xl text-neutral-300 mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed animate-slide-up font-medium px-4 sm:px-0">
-            Elite personal training in Johannesburg. Transform your body with proven results.
+            Elite personal training with Tshiamo Sookane in Sandton CBD. Transform your body with proven results and expert guidance.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center mb-8 sm:mb-12 animate-scale-in px-4 sm:px-0">
             <a
-              href="/services"
+              href="https://wa.me/27635432439?text=Hi! I'd like to book a free 15-minute consultation with Tshiamo. Please let me know your availability."
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-primary text-base sm:text-lg px-6 sm:px-10 py-3 sm:py-4 elite-glow group relative overflow-hidden"
             >
-              <span className="relative z-10 muscle-text">START TRAINING</span>
+              <span className="relative z-10 muscle-text">Book Free Consultation</span>
               <div className="absolute inset-0 bg-gradient-to-r from-primary-400 to-accent-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
             </a>
             <a
-              href="/marketing"
+              href="#packages"
               className="btn-secondary text-base sm:text-lg px-6 sm:px-10 py-3 sm:py-4 luxury-glow group relative overflow-hidden"
             >
-              <span className="relative z-10 muscle-text">BUSINESS SERVICES</span>
+              <span className="relative z-10 muscle-text">View Packages</span>
               <div className="absolute inset-0 bg-gradient-to-r from-accent-400 to-primary-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
             </a>
           </div>
-        </div>
-      </div>
-      
-      {/* Animated scroll indicator */}
-      <div className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-3d">
-        <div className="flex flex-col items-center space-y-1 sm:space-y-2">
-          <div className="text-primary-400 text-xs sm:text-sm font-bold uppercase tracking-wider">EXPLORE</div>
-          <svg className="w-5 h-5 sm:w-6 sm:h-6 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-          </svg>
         </div>
       </div>
     </section>
