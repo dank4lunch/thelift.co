@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import PaymentForm from './PaymentForm'
-import { PackageName } from '@/utils/payfast'
+import { PackageName } from '@/utils/payfast-simple'
 
 export default function TrainingPackages() {
   const [showPaymentForm, setShowPaymentForm] = useState(false)
