@@ -9,6 +9,7 @@ import Contact from '@/components/Contact'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import SkipNav from '@/components/SkipNav'
+import ClientErrorBoundary from '@/components/ClientErrorBoundary'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -150,21 +151,23 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      <div className="min-h-screen">
-        <SkipNav />
-        <Navigation />
-        <main id="main-content" className="focus:outline-none" tabIndex={-1}>
-          <Hero />
-          <TrainerAbout />
-          <Specializations />
-          <TrainingPackages />
-          <FreeConsultation />
-          <FAQ />
-          <FinalCTA />
-          <Contact />
-        </main>
-        <Footer />
-      </div>
+      <ClientErrorBoundary>
+        <div className="min-h-screen">
+          <SkipNav />
+          <Navigation />
+          <main id="main-content" className="focus:outline-none" tabIndex={-1}>
+            <Hero />
+            <TrainerAbout />
+            <Specializations />
+            <TrainingPackages />
+            <FreeConsultation />
+            <FAQ />
+            <FinalCTA />
+            <Contact />
+          </main>
+          <Footer />
+        </div>
+      </ClientErrorBoundary>
     </>
   )
 }
