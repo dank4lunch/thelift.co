@@ -77,7 +77,16 @@ export default function FAQ() {
               >
                 <button
                   onClick={() => toggleAccordion(index)}
-                  className="w-full px-6 py-6 text-left flex items-center justify-between group focus:outline-none"
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault()
+                      toggleAccordion(index)
+                    }
+                  }}
+                  className="w-full px-6 py-6 text-left flex items-center justify-between group focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-neutral-950 rounded-lg"
+                  aria-expanded={openIndex === index}
+                  aria-controls={`faq-content-${index}`}
+                  id={`faq-button-${index}`}
                 >
                   <h3 className="text-lg font-bold text-primary-300 group-hover:text-primary-200 transition-colors duration-300 muscle-text pr-4">
                     {faq.question}
@@ -93,11 +102,16 @@ export default function FAQ() {
                   </div>
                 </button>
                 
-                <div className={`transition-all duration-300 ease-in-out ${
-                  openIndex === index 
-                    ? 'max-h-96 opacity-100' 
-                    : 'max-h-0 opacity-0'
-                } overflow-hidden`}>
+                <div
+                  className={`transition-all duration-300 ease-in-out ${
+                    openIndex === index
+                      ? 'max-h-96 opacity-100'
+                      : 'max-h-0 opacity-0'
+                  } overflow-hidden`}
+                  id={`faq-content-${index}`}
+                  aria-labelledby={`faq-button-${index}`}
+                  role="region"
+                >
                   <div className="px-6 pb-6">
                     <div className="bg-gradient-to-r from-primary-500/10 to-accent-500/10 rounded-lg p-4 border border-primary-500/20">
                       <p className="text-neutral-300 leading-relaxed font-medium">
