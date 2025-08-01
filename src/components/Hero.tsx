@@ -98,7 +98,7 @@ export default function Hero() {
               </div>
             </div>
             
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-heading premium-text mb-4 sm:mb-6 animate-slide-up glow-text muscle-text transform-3d">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-heading premium-text mb-4 sm:mb-6 animate-slide-up glow-text muscle-text transform-3d" role="banner">
               Crush Your Fitness Goals with a Personal Trainer in Sandton
             </h1>
             
@@ -116,17 +116,19 @@ export default function Hero() {
               href="https://wa.me/27635432439?text=Hi! I'd like to book a free 15-minute consultation with Tshiamo. Please let me know your availability."
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary text-base sm:text-lg px-6 sm:px-10 py-3 sm:py-4 elite-glow group relative overflow-hidden"
+              className="btn-primary text-base sm:text-lg px-6 sm:px-10 py-3 sm:py-4 elite-glow group relative overflow-hidden focus:outline-none focus:ring-2 focus:ring-primary-300 focus:ring-offset-2 focus:ring-offset-neutral-950"
+              aria-label="Book free consultation via WhatsApp"
             >
               <span className="relative z-10 muscle-text">Book Free Consultation</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-primary-400 to-accent-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-primary-400 to-accent-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300" aria-hidden="true"></div>
             </a>
             <a
               href="#packages"
-              className="btn-secondary text-base sm:text-lg px-6 sm:px-10 py-3 sm:py-4 luxury-glow group relative overflow-hidden"
+              className="btn-secondary text-base sm:text-lg px-6 sm:px-10 py-3 sm:py-4 luxury-glow group relative overflow-hidden focus:outline-none focus:ring-2 focus:ring-accent-300 focus:ring-offset-2 focus:ring-offset-neutral-950"
+              aria-label="View training packages"
             >
               <span className="relative z-10 muscle-text">View Packages</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-accent-400 to-primary-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-accent-400 to-primary-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300" aria-hidden="true"></div>
             </a>
           </div>
         </div>
