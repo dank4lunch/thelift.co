@@ -145,14 +145,17 @@ export default function Navigation() {
         </div>
 
         {/* Mobile Menu with 3D transition */}
-        <div className={`md:hidden transition-all duration-300 overflow-hidden ${
-          isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+        <div className={`md:hidden fixed top-full left-0 right-0 z-40 transition-all duration-300 ${
+          isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
         }`}>
-          <div className="py-6 space-y-4 luxury-card mt-4 depth-hover">
+          <div className="py-6 space-y-4 luxury-card mx-4 depth-hover shadow-2xl">
             {/* Mobile Page Toggle */}
             <div className="px-6 flex space-x-2 mb-4">
               <button
-                onClick={() => window.location.href = '/'}
+                onClick={() => {
+                  window.location.href = '/'
+                  setIsMobileMenuOpen(false)
+                }}
                 className={`flex-1 py-2 rounded-lg font-bold text-sm transition-all duration-300 ${
                   pathname !== '/marketing'
                     ? 'bg-primary-500 text-neutral-950'
@@ -162,7 +165,10 @@ export default function Navigation() {
                 FITNESS
               </button>
               <button
-                onClick={() => window.location.href = '/marketing'}
+                onClick={() => {
+                  window.location.href = '/marketing'
+                  setIsMobileMenuOpen(false)
+                }}
                 className={`flex-1 py-2 rounded-lg font-bold text-sm transition-all duration-300 ${
                   pathname === '/marketing'
                     ? 'bg-primary-500 text-neutral-950'
@@ -176,15 +182,21 @@ export default function Navigation() {
             {navItems.map((item) => (
               <button
                 key={item.name}
-                onClick={() => handleNavigation(item.href)}
+                onClick={() => {
+                  handleNavigation(item.href)
+                  setIsMobileMenuOpen(false)
+                }}
                 className="block w-full text-left px-6 py-3 text-neutral-300 hover:text-primary-400 hover:bg-neutral-800/50 transition-all duration-300 font-bold uppercase tracking-wide"
               >
                 {item.name}
               </button>
             ))}
             <div className="px-6 pt-4">
-              <button 
-                onClick={() => handleNavigation('#contact')}
+              <button
+                onClick={() => {
+                  handleNavigation('#contact')
+                  setIsMobileMenuOpen(false)
+                }}
                 className="btn-primary w-full text-center py-3 muscle-text"
               >
                 {pathname === '/marketing' ? 'GET QUOTE' : 'BOOK NOW'}
