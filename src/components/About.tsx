@@ -42,47 +42,61 @@ export default function About() {
                 ELITE TRAINING PHILOSOPHY
               </span>
             </div>
-            <h2 className="text-5xl md:text-7xl font-bold font-heading text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-accent-400 mb-8 animate-fade-in muscle-text">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold font-heading text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-accent-400 mb-6 sm:mb-8 animate-fade-in muscle-text">
               WHY WE DOMINATE
             </h2>
-            <div className="section-divider mb-12" />
-            <p className="text-xl md:text-2xl text-neutral-300 max-w-4xl mx-auto leading-relaxed font-medium">
-              This isn't your average gym experience. We deliver results through precision, dedication, 
-              and an uncompromising commitment to excellence.
+            <div className="section-divider mb-8 sm:mb-12" />
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-neutral-300 max-w-4xl mx-auto leading-relaxed font-medium px-4 sm:px-0">
+              We blend strategy with soul. The Lift Co is not just a service — it's a movement.
+              We deliver results through precision, dedication, and an uncompromising commitment to excellence that transforms bodies, businesses, and brands.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
-            <div className="space-y-8">
-              <div className="strength-card p-8 fitness-glow">
-                <div className="flex items-center mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-r from-primary-500 to-accent-500 rounded-xl flex items-center justify-center mr-6 border border-primary-500/30">
-                    <span className="text-3xl">🎯</span>
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center mb-12 sm:mb-16 lg:mb-20 px-4 sm:px-0">
+            <div className="space-y-6 sm:space-y-8">
+              <div className="strength-card p-4 sm:p-6 lg:p-8 fitness-glow">
+                <div className="flex items-center mb-4 sm:mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-r from-primary-500 to-accent-500 rounded-xl flex items-center justify-center mr-4 sm:mr-6 border border-primary-500/30">
+                    <span className="text-2xl">🎯</span>
                   </div>
-                  <h3 className="text-3xl font-bold font-heading text-primary-400 muscle-text">
+                  <h3 className="text-2xl sm:text-3xl font-bold font-heading text-primary-400 muscle-text">
                     OUR MISSION
                   </h3>
                 </div>
-                <p className="text-lg text-neutral-300 mb-6 leading-relaxed font-medium">
-                  Transform bodies through elite training methodologies. We combine scientific precision 
-                  with relentless dedication to forge champions in fitness and life.
+                <p className="text-base sm:text-lg text-neutral-300 mb-4 sm:mb-6 leading-relaxed font-medium">
+                  Transform bodies through elite training methodologies and strategic business development.
+                  We combine scientific precision with relentless dedication to forge champions in fitness, business, and life.
                 </p>
-                <p className="text-lg text-neutral-300 leading-relaxed font-medium">
+                <p className="text-base sm:text-lg text-neutral-300 leading-relaxed font-medium">
                   Whether you're building strength, transforming your physique, or elevating your business—
-                  we deliver the strategic foundation and disciplined execution to achieve dominance.
+                  we deliver the strategic foundation and disciplined execution to achieve complete dominance across all areas of your life.
+                </p>
+              </div>
+
+              <div className="strength-card p-4 sm:p-6 lg:p-8 fitness-glow">
+                <div className="flex items-center mb-4 sm:mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-r from-accent-500 to-primary-500 rounded-xl flex items-center justify-center mr-4 sm:mr-6 border border-accent-500/30">
+                    <span className="text-2xl">🚀</span>
+                  </div>
+                  <h4 className="text-xl sm:text-2xl font-bold text-accent-400 muscle-text">MULTIDISCIPLINARY EDGE</h4>
+                </div>
+                <p className="text-sm sm:text-base text-neutral-300 leading-relaxed font-medium">
+                  Our unique approach combines elite personal training with strategic business coaching and brand development.
+                  This multidisciplinary edge allows us to uniquely uplift every layer of your life and business, creating
+                  transformations that go beyond the gym and into every aspect of success.
                 </p>
               </div>
             </div>
 
-            <div className="space-y-8">
+            <div className="space-y-6 sm:space-y-8">
               <div className="strength-card p-8 fitness-glow">
                 <div className="flex items-center mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-r from-accent-500 to-fitness-power rounded-xl flex items-center justify-center mr-6 border border-accent-500/30">
-                    <span className="text-3xl">��</span>
+                  <div className="w-12 h-12 bg-gradient-to-r from-accent-500 to-fitness-power rounded-xl flex items-center justify-center mr-6 border border-accent-500/30">
+                    <span className="text-2xl">👥</span>
                   </div>
-                  <h4 className="text-2xl font-bold text-accent-400 muscle-text">TARGET CLIENTS</h4>
+                  <h4 className="text-xl sm:text-2xl font-bold text-accent-400 muscle-text">TARGET CLIENTS</h4>
                 </div>
-                <p className="text-neutral-300 leading-relaxed font-medium">
+                <p className="text-sm sm:text-base text-neutral-300 leading-relaxed font-medium">
                   Students, athletes to senior active individuals (10-65 years old) who demand excellence.
                   Professionals, entrepreneurs, and driven people who understand that elite results require elite training.
                 </p>
@@ -90,8 +104,8 @@ export default function About() {
 
               <div className="strength-card p-8 fitness-glow">
                 <div className="flex items-center mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-r from-fitness-power to-primary-600 rounded-xl flex items-center justify-center mr-6 border border-fitness-power/30">
-                    <span className="text-3xl">⚡️</span>
+                  <div className="w-12 h-12 bg-gradient-to-r from-fitness-power to-primary-600 rounded-xl flex items-center justify-center mr-6 border border-fitness-power/30">
+                    <span className="text-2xl">⚡️</span>
                   </div>
                   <h4 className="text-2xl font-bold text-fitness-energy muscle-text">OUR METHOD</h4>
                 </div>
@@ -105,7 +119,7 @@ export default function About() {
 
           {/* Trainer Personality */}
           <div className="mb-20">
-            <h3 className="text-4xl font-bold text-center text-primary-400 mb-12 muscle-text">🔍 TRAINER BREAKDOWN: TSHIAMO SOOKANE</h3>
+            <h3 className="text-4xl font-bold text-center text-primary-400 mb-12 muscle-text">TRAINER BREAKDOWN: TSHIAMO SOOKANE</h3>
             <div className="grid md:grid-cols-2 gap-12">
               <div className="strength-card p-8 fitness-glow">
                 <h4 className="text-2xl font-bold text-accent-400 mb-6 muscle-text">💡 CORE IDENTITY</h4>
@@ -157,6 +171,29 @@ export default function About() {
             </div>
           </div>
 
+          {/* Achievement Stats */}
+          <div className="mb-16">
+            <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-primary-400 mb-8 sm:mb-12 muscle-text px-4 sm:px-0">PROVEN RESULTS</h3>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 px-4 sm:px-0 mb-16">
+              <div className="text-center strength-card p-6 depth-hover">
+                <div className="text-3xl sm:text-4xl font-bold premium-text mb-2">500+</div>
+                <div className="text-neutral-400 font-medium">Successful Transformations</div>
+              </div>
+              <div className="text-center strength-card p-6 depth-hover">
+                <div className="text-3xl sm:text-4xl font-bold premium-text mb-2">10+</div>
+                <div className="text-neutral-400 font-medium">Years of Excellence</div>
+              </div>
+              <div className="text-center strength-card p-6 depth-hover">
+                <div className="text-3xl sm:text-4xl font-bold premium-text mb-2">98%</div>
+                <div className="text-neutral-400 font-medium">Client Success Rate</div>
+              </div>
+              <div className="text-center strength-card p-6 depth-hover">
+                <div className="text-3xl sm:text-4xl font-bold premium-text mb-2">Elite</div>
+                <div className="text-neutral-400 font-medium">Training Standards</div>
+              </div>
+            </div>
+          </div>
+
           {/* Core Principles */}
           <div className="mb-16">
             <h3 className="text-4xl font-bold text-center text-primary-400 mb-12 muscle-text">CORE PRINCIPLES</h3>
@@ -170,7 +207,7 @@ export default function About() {
                   onMouseEnter={() => setHoveredCard(index)}
                   onMouseLeave={() => setHoveredCard(null)}
                 >
-                  <div className="text-6xl mb-6 text-center">{principle.icon}</div>
+                  <div className="text-4xl mb-6 text-center">{principle.icon}</div>
                   <h4 className={`text-xl font-bold mb-4 text-center text-amber-600 muscle-text`}>
                     {principle.title}
                   </h4>
@@ -179,6 +216,34 @@ export default function About() {
                   </p>
                 </div>
               ))}
+            </div>
+          </div>
+
+          {/* Client Success Gallery */}
+          <div className="mb-16">
+            <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-primary-400 mb-8 sm:mb-12 muscle-text px-4 sm:px-0">CLIENT TRANSFORMATIONS</h3>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 px-4 sm:px-0 mb-12">
+              <div className="strength-card overflow-hidden depth-hover">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2Fefc7a121aea64604b51eafdf7eebedf8%2Fa7e57207bf8848f1a55d4478c00a0b3e?format=webp&width=800"
+                  alt="Group training session with clients"
+                  className="w-full h-64 object-cover object-center"
+                />
+              </div>
+              <div className="strength-card overflow-hidden depth-hover">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2Fefc7a121aea64604b51eafdf7eebedf8%2F551cb9748ab54515bf20ad51dae3e598?format=webp&width=800"
+                  alt="Successful training group"
+                  className="w-full h-64 object-cover object-center"
+                />
+              </div>
+              <div className="strength-card overflow-hidden depth-hover sm:col-span-2 lg:col-span-1">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2Fefc7a121aea64604b51eafdf7eebedf8%2F782f7eb13e7c4795ad06bb380a895435"
+                  alt="Elite training community"
+                  className="w-full h-64 object-cover object-center"
+                />
+              </div>
             </div>
           </div>
 
@@ -193,10 +258,10 @@ export default function About() {
                   Ready to experience what elite training can do for you?
                 </p>
                 <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                  <a href="#services" className="btn-primary text-lg px-10 py-4 muscle-text">
+                  <a href="/services" className="btn-primary text-lg px-10 py-4 muscle-text">
                     VIEW PROGRAMS
                   </a>
-                  <a href="#contact" className="btn-secondary text-lg px-10 py-4 muscle-text">
+                  <a href="/#contact" className="btn-secondary text-lg px-10 py-4 muscle-text">
                     BOOK CONSULTATION
                   </a>
                 </div>

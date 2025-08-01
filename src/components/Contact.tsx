@@ -92,20 +92,20 @@ Note: Email notification is pending (will be sent shortly)`)
               READY TO START?
             </span>
           </div>
-          <h2 className="text-5xl md:text-7xl font-bold font-heading text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-accent-400 mb-8 muscle-text">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold font-heading text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-accent-400 mb-6 sm:mb-8 muscle-text">
             LET'S TALK RESULTS
           </h2>
-          <div className="section-divider mb-8" />
-          <p className="text-xl md:text-2xl text-neutral-300 max-w-4xl mx-auto leading-relaxed font-medium">
+          <div className="section-divider mb-6 sm:mb-8" />
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-neutral-300 max-w-4xl mx-auto leading-relaxed font-medium px-4 sm:px-0">
             Ready to transform your body and life? Let's discuss your goals and create a plan 
             that delivers serious results. No time wasters—serious inquiries only.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16 max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 max-w-6xl mx-auto px-4 sm:px-0">
           {/* Contact Form */}
-          <div className="strength-card p-8 fitness-glow">
-            <h3 className="text-3xl font-bold mb-8 text-primary-400 muscle-text">GET STARTED NOW</h3>
+          <div className="strength-card p-4 sm:p-6 lg:p-8 fitness-glow">
+            <h3 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-primary-400 muscle-text">GET STARTED NOW</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-bold mb-2 text-neutral-300 uppercase tracking-wide">

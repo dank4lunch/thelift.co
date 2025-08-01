@@ -126,7 +126,7 @@ export default function Founder() {
                 {activeTab === 'credentials' ? (
                   <div>
                     <h4 className="text-2xl font-bold text-primary-400 mb-6 flex items-center muscle-text">
-                      <span className="text-3xl mr-3">���</span>
+                      <span className="text-2xl mr-3">🏆</span>
                       ELITE CERTIFICATIONS
                     </h4>
                     <div className="grid grid-cols-1 gap-4">
@@ -146,7 +146,7 @@ export default function Founder() {
                 ) : (
                   <div>
                     <h4 className="text-2xl font-bold text-accent-400 mb-6 flex items-center muscle-text">
-                      <span className="text-3xl mr-3">🤝</span>
+                      <span className="text-2xl mr-3">🤝</span>
                       ELITE NETWORK
                     </h4>
                     <div className="grid grid-cols-2 gap-4">
@@ -178,7 +178,7 @@ export default function Founder() {
             <div className="grid md:grid-cols-4 gap-6">
               {achievements.map((achievement, index) => (
                 <div key={index} className="strength-card p-8 text-center fitness-glow group">
-                  <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <div className="text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">
                     {achievement.icon}
                   </div>
                   <div className="text-5xl font-bold text-primary-400 mb-2 group-hover:text-accent-400 transition-colors duration-300 muscle-text">
@@ -187,6 +187,55 @@ export default function Founder() {
                   <div className="text-neutral-400 text-sm font-bold uppercase tracking-wide">{achievement.label}</div>
                 </div>
               ))}
+            </div>
+          </div>
+
+          {/* Training in Action Gallery */}
+          <div className="mb-20">
+            <h3 className="text-4xl font-bold text-center text-primary-400 mb-12 muscle-text">TRAINING IN ACTION</h3>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+              <div className="strength-card overflow-hidden depth-hover">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2Fefc7a121aea64604b51eafdf7eebedf8%2F53b97d318ef947d4813e973e62a9fe8e"
+                  alt="Elite training intensity"
+                  className="w-full h-64 object-cover object-center"
+                />
+              </div>
+              <div className="strength-card overflow-hidden depth-hover">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2Fefc7a121aea64604b51eafdf7eebedf8%2F3a2b427508bc4e4ba5606ba3cdd50837"
+                  alt="Professional training technique"
+                  className="w-full h-64 object-cover object-center"
+                />
+              </div>
+              <div className="strength-card overflow-hidden depth-hover">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2Fefc7a121aea64604b51eafdf7eebedf8%2F251539e798824670a6a282d155916ce8"
+                  alt="Expert form and technique"
+                  className="w-full h-64 object-cover object-center"
+                />
+              </div>
+              <div className="strength-card overflow-hidden depth-hover">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2Fefc7a121aea64604b51eafdf7eebedf8%2F32635675ac5a465f885e0a283bb6b1a1?format=webp&width=800"
+                  alt="Training partnership and results"
+                  className="w-full h-64 object-cover object-center"
+                />
+              </div>
+              <div className="strength-card overflow-hidden depth-hover">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2Fefc7a121aea64604b51eafdf7eebedf8%2Fd293f5d6775c427292b9fd9a6d241f94?format=webp&width=800"
+                  alt="Elite training focus"
+                  className="w-full h-64 object-cover object-center"
+                />
+              </div>
+              <div className="strength-card overflow-hidden depth-hover">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2Fefc7a121aea64604b51eafdf7eebedf8%2F539132640720446d9dcaf18d5bf7e972?format=webp&width=800"
+                  alt="Professional training technique"
+                  className="w-full h-64 object-cover object-center"
+                />
+              </div>
             </div>
           </div>
 
@@ -201,10 +250,10 @@ export default function Founder() {
                   results that speak for themselves.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                  <a href="#contact" className="btn-primary text-lg px-12 py-5 muscle-text">
+                  <a href="/#contact" className="btn-primary text-lg px-12 py-5 muscle-text">
                     BOOK CONSULTATION
                   </a>
-                  <a href="#services" className="btn-secondary text-lg px-12 py-5 muscle-text">
+                  <a href="/services" className="btn-secondary text-lg px-12 py-5 muscle-text">
                     VIEW PROGRAMS
                   </a>
                 </div>

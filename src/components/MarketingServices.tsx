@@ -10,7 +10,7 @@ export default function MarketingServices() {
       title: "Brand Strategy & Identity",
       description: "Complete brand development from strategy to visual identity. Create a brand that commands respect and drives results.",
       features: ["Brand Positioning", "Visual Identity Design", "Logo & Brand Guidelines", "Market Research", "Competitive Analysis", "Brand Messaging"],
-      icon: "��",
+      icon: "🎯",
       price: "Premium",
       duration: "Bespoke Package",
       timeline: "2-3 weeks"
@@ -230,10 +230,10 @@ export default function MarketingServices() {
                   Let's build something extraordinary together.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <a href="#contact" className="btn-primary text-lg px-10 py-4 muscle-text">
+                  <a href="/#contact" className="btn-primary text-lg px-10 py-4 muscle-text">
                     START PROJECT
                   </a>
-                  <a href="#contact" className="btn-outline text-lg px-10 py-4 muscle-text">
+                  <a href="/#contact" className="btn-outline text-lg px-10 py-4 muscle-text">
                     FREE CONSULTATION
                   </a>
                 </div>

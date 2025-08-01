@@ -105,11 +105,11 @@ export default function Services() {
               ELITE TRAINING PROGRAMS
             </span>
           </div>
-          <h2 className="text-5xl md:text-7xl font-bold font-heading premium-text mb-8 muscle-text animate-fade-in">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold font-heading premium-text mb-6 sm:mb-8 muscle-text animate-fade-in">
             TRANSFORM YOUR BODY
           </h2>
           <div className="section-divider mb-8" />
-          <p className="text-xl md:text-2xl text-neutral-300 max-w-4xl mx-auto leading-relaxed font-medium">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-neutral-300 max-w-4xl mx-auto leading-relaxed font-medium px-4 sm:px-0">
             Where transformation meets obsession. Tshiamo Sookane doesn't just train bodies—he engineers
             breakthroughs. Based in Sandton CBD, delivering results that rewrite your story.
           </p>
@@ -117,14 +117,14 @@ export default function Services() {
 
         {/* Specializations */}
         <div className="mb-16">
-          <h3 className="text-2xl font-bold text-center text-primary-400 mb-8 muscle-text">Specialized In</h3>
-          <div className="flex flex-wrap justify-center gap-4">
+          <h3 className="text-xl sm:text-2xl font-bold text-center text-primary-400 mb-6 sm:mb-8 muscle-text">Specialized In</h3>
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-4 px-4 sm:px-0">
             {specializations.map((spec, index) => (
-              <div key={index} className="luxury-card px-6 py-4 depth-hover flex items-center space-x-3">
-                <span className="text-2xl">{spec.icon}</span>
-                <span className="text-neutral-300 font-medium">{spec.name}</span>
-                <div className="w-6 h-6 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full flex items-center justify-center">
-                  <svg className="w-3 h-3 text-neutral-950" fill="currentColor" viewBox="0 0 20 20">
+              <div key={index} className="luxury-card px-3 sm:px-6 py-3 sm:py-4 depth-hover flex items-center space-x-2 sm:space-x-3">
+                <span className="text-lg">{spec.icon}</span>
+                <span className="text-neutral-300 font-medium text-sm sm:text-base">{spec.name}</span>
+                <div className="w-4 h-4 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full flex items-center justify-center">
+                  <svg className="w-2 h-2 text-neutral-950" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                 </div>
@@ -135,8 +135,8 @@ export default function Services() {
 
         {/* Training Packages */}
         <div className="mb-16">
-          <h3 className="text-3xl font-bold text-center text-primary-400 mb-12 muscle-text">Choose Your Package</h3>
-          <div className="grid lg:grid-cols-3 gap-8">
+          <h3 className="text-2xl sm:text-3xl font-bold text-center text-primary-400 mb-8 sm:mb-12 muscle-text">Choose Your Package</h3>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 px-4 sm:px-0">
             {trainingPackages.map((package_, index) => (
               <div 
                 key={index} 
@@ -162,35 +162,35 @@ export default function Services() {
                 )}
 
                 {/* Image */}
-                <div className="h-48 overflow-hidden rounded-t-xl">
+                <div className="h-40 sm:h-48 overflow-hidden rounded-t-xl">
                   <img
-                    src={index === 0 ? "https://images.pexels.com/photos/6975559/pexels-photo-6975559.jpeg" : index === 1 ? "https://images.pexels.com/photos/6740330/pexels-photo-6740330.jpeg" : "https://images.pexels.com/photos/791763/pexels-photo-791763.jpeg"}
+                    src={index === 0 ? "https://cdn.builder.io/api/v1/image/assets%2Fefc7a121aea64604b51eafdf7eebedf8%2Fdd9ccd33cc374fbbad804c478500cef4" : index === 1 ? "https://images.pexels.com/photos/6740330/pexels-photo-6740330.jpeg" : "https://cdn.builder.io/api/v1/image/assets%2Fefc7a121aea64604b51eafdf7eebedf8%2F78f4dacae3c348fa974923ed0e15de8b"}
                     alt={package_.title}
                     className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500"
                   />
                 </div>
 
-                <div className="p-8">
+                <div className="p-4 sm:p-6 lg:p-8">
                   <div className="text-center mb-6">
-                    <h4 className="text-2xl font-bold font-heading mb-3 premium-text muscle-text">
+                    <h4 className="text-xl sm:text-2xl font-bold font-heading mb-2 sm:mb-3 premium-text muscle-text">
                       {package_.title}
                     </h4>
                     
                     <div className="flex items-center justify-center space-x-2 mb-4">
-                      <span className="text-3xl font-bold premium-text muscle-text">{package_.price}</span>
-                      <span className="text-neutral-400 font-medium">{package_.duration_text}</span>
+                      <span className="text-2xl sm:text-3xl font-bold premium-text muscle-text">{package_.price}</span>
+                      <span className="text-neutral-400 font-medium text-sm sm:text-base">{package_.duration_text}</span>
                     </div>
                   </div>
 
-                  <p className="text-neutral-300 mb-6 leading-relaxed text-center">
+                  <p className="text-neutral-300 mb-4 sm:mb-6 leading-relaxed text-center text-sm sm:text-base">
                     {package_.description}
                   </p>
 
-                  <ul className="space-y-3 mb-8">
+                  <ul className="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
                     {package_.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-neutral-300 text-sm">
-                        <div className="w-4 h-4 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                          <svg className="w-2 h-2 text-neutral-950" fill="currentColor" viewBox="0 0 20 20">
+                      <li key={idx} className="flex items-start text-neutral-300 text-xs sm:text-sm">
+                        <div className="w-3 h-3 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full flex items-center justify-center mr-2 sm:mr-3 flex-shrink-0 mt-0.5">
+                          <svg className="w-1.5 h-1.5 text-neutral-950" fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                           </svg>
                         </div>
@@ -200,8 +200,8 @@ export default function Services() {
                   </ul>
 
                   <button
-                    onClick={() => index > 0 ? handleBooking(index) : window.location.href = '#contact'}
-                    className={`w-full py-4 px-6 rounded-xl font-bold text-neutral-950 transition-all duration-300 bg-gradient-to-r ${package_.gradient} hover:shadow-2xl hover:scale-105 transform border border-primary-500/30 muscle-text text-lg depth-hover`}
+                    onClick={() => index > 0 ? handleBooking(index) : window.location.href = '/#contact'}
+                    className={`w-full py-3 sm:py-4 px-4 sm:px-6 rounded-xl font-bold text-neutral-950 transition-all duration-300 bg-gradient-to-r ${package_.gradient} hover:shadow-2xl hover:scale-105 transform border border-primary-500/30 muscle-text text-sm sm:text-lg depth-hover`}
                   >
                     {index === 0 ? 'BOOK DISCOVERY SESSION' : 'RESERVE SPOT'}
                   </button>
@@ -213,23 +213,23 @@ export default function Services() {
 
         {/* Monthly Options */}
         <div className="mb-16">
-          <h3 className="text-3xl font-bold text-center text-primary-400 mb-12 muscle-text">Custom Monthly Plans</h3>
-          <div className="max-w-2xl mx-auto">
+          <h3 className="text-2xl sm:text-3xl font-bold text-center text-primary-400 mb-8 sm:mb-12 muscle-text px-4 sm:px-0">Custom Monthly Plans</h3>
+          <div className="max-w-2xl mx-auto px-4 sm:px-0">
             {monthlyOptions.map((option, index) => (
               <div key={index} className="luxury-card overflow-hidden depth-hover">
-                <div className="md:flex">
-                  <div className="md:w-1/2 h-64 md:h-auto">
+                <div className="sm:flex">
+                  <div className="sm:w-1/2 h-48 sm:h-64 md:h-auto">
                     <img
                       src="https://images.pexels.com/photos/16513597/pexels-photo-16513597.jpeg"
                       alt={option.title}
                       className="w-full h-full object-cover object-center"
                     />
                   </div>
-                  <div className="md:w-1/2 p-8">
-                    <h4 className="text-2xl font-bold premium-text muscle-text mb-4">{option.title}</h4>
-                    <p className="text-neutral-300 mb-6">{option.description}</p>
+                  <div className="sm:w-1/2 p-4 sm:p-6 lg:p-8">
+                    <h4 className="text-xl sm:text-2xl font-bold premium-text muscle-text mb-3 sm:mb-4">{option.title}</h4>
+                    <p className="text-neutral-300 mb-4 sm:mb-6 text-sm sm:text-base">{option.description}</p>
                     
-                    <div className="space-y-2 mb-6">
+                    <div className="space-y-1 sm:space-y-2 mb-4 sm:mb-6 text-sm sm:text-base">
                       <div className="flex justify-between">
                         <span className="text-neutral-400">Sessions:</span>
                         <span className="text-primary-400 font-medium">{option.sessions}</span>
@@ -245,11 +245,11 @@ export default function Services() {
                     </div>
 
                     <div className="text-center mb-6">
-                      <div className="text-4xl font-bold premium-text muscle-text">{option.price}</div>
-                      <div className="text-neutral-400 text-sm">membership tier</div>
+                      <div className="text-2xl sm:text-3xl lg:text-4xl font-bold premium-text muscle-text">{option.price}</div>
+                      <div className="text-neutral-400 text-xs sm:text-sm">membership tier</div>
                     </div>
 
-                    <button className="w-full py-3 px-6 rounded-lg font-bold text-neutral-950 bg-gradient-to-r from-accent-500 to-primary-500 hover:shadow-xl hover:scale-105 transform transition-all duration-300 muscle-text">
+                    <button className="w-full py-3 px-4 sm:px-6 rounded-lg font-bold text-neutral-950 bg-gradient-to-r from-accent-500 to-primary-500 hover:shadow-xl hover:scale-105 transform transition-all duration-300 muscle-text text-sm sm:text-base">
                       CUSTOMIZE PLAN
                     </button>
                   </div>
@@ -261,25 +261,25 @@ export default function Services() {
 
         {/* Trainer Info */}
         <div className="text-center">
-          <div className="luxury-card p-12 relative overflow-hidden luxury-glow depth-hover max-w-4xl mx-auto">
+          <div className="luxury-card p-6 sm:p-8 lg:p-12 relative overflow-hidden luxury-glow depth-hover max-w-4xl mx-auto">
             <div className="absolute inset-0 bg-gradient-to-r from-primary-600/10 to-accent-600/10" />
             <div className="relative z-10">
-              <h3 className="text-3xl font-bold mb-6 premium-text muscle-text">Your Transformation Architect</h3>
-              <p className="text-lg text-neutral-300 mb-4 font-medium">
+              <h3 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 premium-text muscle-text">Your Transformation Architect</h3>
+              <p className="text-base sm:text-lg text-neutral-300 mb-3 sm:mb-4 font-medium">
                 <strong>Tshiamo Sookane</strong> - Elite Performance Engineer & Mindset Catalyst
               </p>
-              <p className="text-neutral-400 mb-6">
-                📍 Sandton CBD, Gauteng | 📞 0635432439 | ✉️ Tshiamokl@gmail.com
+              <p className="text-neutral-400 mb-4 sm:mb-6 text-sm sm:text-base">
+                <span className="inline-block text-sm mr-1">📍</span> Sandton CBD, Gauteng | <span className="inline-block text-sm mr-1">📞</span> 0635432439 | <span className="inline-block text-sm mr-1">✉️</span> Tshiamokl@gmail.com
               </p>
-              <p className="text-sm text-primary-300 italic mb-8">
+              <p className="text-xs sm:text-sm text-primary-300 italic mb-6 sm:mb-8">
                 "I don't build bodies. I build legends. Let's make you unstoppable." —TS
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#contact" className="btn-primary text-lg px-10 py-4 muscle-text">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+                <a href="/#contact" className="btn-primary text-base sm:text-lg px-6 sm:px-10 py-3 sm:py-4 muscle-text">
                   BOOK CONSULTATION
                 </a>
-                <a href="https://wa.me/27635432439" className="btn-secondary text-lg px-10 py-4 muscle-text">
-                  📱 WHATSAPP DIRECT
+                <a href="https://wa.me/27635432439" className="btn-secondary text-base sm:text-lg px-6 sm:px-10 py-3 sm:py-4 muscle-text">
+                  <span className="inline-block text-sm mr-2">📱</span> WHATSAPP DIRECT
                 </a>
               </div>
             </div>

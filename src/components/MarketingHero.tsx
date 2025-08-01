@@ -2,8 +2,31 @@
 
 import { useState, useEffect } from 'react'
 
+interface Particle {
+  id: number
+  left: number
+  top: number
+  animationDelay: number
+  animationDuration: number
+}
+
 export default function MarketingHero() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+  const [particles, setParticles] = useState<Particle[]>([])
+  const [isClient, setIsClient] = useState(false)
+
+  useEffect(() => {
+    setIsClient(true)
+    // Generate particles only on client side to avoid hydration mismatch
+    const generatedParticles = Array.from({ length: 25 }, (_, i) => ({
+      id: i,
+      left: Math.random() * 100,
+      top: Math.random() * 100,
+      animationDelay: Math.random() * 8,
+      animationDuration: 6 + Math.random() * 4,
+    }))
+    setParticles(generatedParticles)
+  }, [])
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -18,16 +41,16 @@ export default function MarketingHero() {
     <section id="marketing-home" className="min-h-screen flex items-center trainer-hero pt-16 perspective-container">
       {/* 3D Background Elements */}
       <div className="absolute inset-0 transform-3d">
-        {/* Creative floating particles */}
-        {[...Array(25)].map((_, i) => (
+        {/* Creative floating particles - only render on client to avoid hydration mismatch */}
+        {isClient && particles.map((particle) => (
           <div
-            key={i}
+            key={particle.id}
             className="absolute w-2 h-2 bg-primary-500/30 rounded-full floating-orb"
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 8}s`,
-              animationDuration: `${6 + Math.random() * 4}s`,
+              left: `${particle.left}%`,
+              top: `${particle.top}%`,
+              animationDelay: `${particle.animationDelay}s`,
+              animationDuration: `${particle.animationDuration}s`,
             }}
           />
         ))}

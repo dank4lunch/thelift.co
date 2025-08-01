@@ -19,38 +19,30 @@ export default function Navigation() {
 
   // Different nav items based on current page
   const homeNavItems = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Training', href: '#services' },
-    { name: 'Trainer', href: '#founder' },
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
+    { name: 'Training', href: '/services' },
+    { name: 'Trainer', href: '/about#founder' },
     { name: 'Contact', href: '#contact' },
   ]
 
   const marketingNavItems = [
-    { name: 'Overview', href: '#marketing-home' },
-    { name: 'Brand Services', href: '#brand-services' },
-    { name: 'Business Strategy', href: '#business-services' },
-    { name: 'Portfolio', href: '#founder' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Overview', href: '/marketing' },
+    { name: 'Brand Services', href: '/marketing#brand-services' },
+    { name: 'Business Strategy', href: '/marketing#business-services' },
+    { name: 'Portfolio', href: '/about#founder' },
+    { name: 'Contact', href: '/#contact' },
   ]
 
   const navItems = pathname === '/marketing' ? marketingNavItems : homeNavItems
 
   const handleNavigation = (href: string) => {
     if (href.startsWith('#')) {
-      // Handle internal navigation
-      if (pathname === '/marketing' && href === '#contact') {
-        // If on marketing page and clicking contact, go to main contact
-        window.location.href = '/#contact'
-      } else if (pathname !== '/marketing' && (href === '#brand-services' || href === '#business-services')) {
-        // If not on marketing page and clicking marketing sections, go to marketing page
-        window.location.href = `/marketing${href}`
-      } else {
-        // Normal anchor navigation
-        const element = document.querySelector(href)
-        element?.scrollIntoView({ behavior: 'smooth' })
-      }
+      // Handle anchor navigation on current page
+      const element = document.querySelector(href)
+      element?.scrollIntoView({ behavior: 'smooth' })
     } else {
+      // Handle page navigation
       window.location.href = href
     }
     setIsMobileMenuOpen(false)

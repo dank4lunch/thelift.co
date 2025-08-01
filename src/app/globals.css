@@ -27,6 +27,34 @@
     font-size: 1.5em;
   }
 
+  /* Consistent emoji sizing */
+  .emoji-sm {
+    font-size: 0.875rem; /* 14px */
+    line-height: 1;
+    vertical-align: text-top;
+  }
+
+  .emoji-base {
+    font-size: 1rem; /* 16px */
+    line-height: 1;
+    vertical-align: text-top;
+  }
+
+  .emoji-lg {
+    font-size: 1.25rem; /* 20px */
+    line-height: 1;
+    vertical-align: text-top;
+  }
+
+  /* Override Twemoji sizing to be consistent */
+  img.emoji {
+    height: 1em !important;
+    width: 1em !important;
+    margin: 0 0.05em 0 0.1em !important;
+    vertical-align: -0.1em !important;
+    display: inline !important;
+  }
+
   /* Custom scrollbar */
   ::-webkit-scrollbar {
     width: 8px;
@@ -76,6 +104,36 @@
   
   .container-custom {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Mobile-first responsive utilities */
+  .text-responsive {
+    @apply text-sm sm:text-base md:text-lg lg:text-xl;
+  }
+
+  .heading-responsive {
+    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl;
+  }
+
+  .padding-responsive {
+    @apply p-4 sm:p-6 lg:p-8;
+  }
+
+  .margin-responsive {
+    @apply m-4 sm:m-6 lg:m-8;
+  }
+
+  .gap-responsive {
+    @apply gap-4 sm:gap-6 lg:gap-8;
+  }
+
+  /* Touch-friendly button sizes */
+  @media (max-width: 640px) {
+    .btn-primary,
+    .btn-secondary,
+    .btn-outline {
+      @apply min-h-[44px] text-base;
+    }
   }
 
   .glass-effect {
