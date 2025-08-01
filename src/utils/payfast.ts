@@ -177,10 +177,10 @@ const PAYFAST_CONFIG: PayFastConfig = {
 export function generatePayFastSignature(data: Record<string, string>, passphrase?: string): string {
   // Remove signature and hash fields
   const { signature, hash, ...dataToSign } = data
-  
+
   // Create parameter string
   let parameterString = ''
-  
+
   // Sort the data by key
   const sortedData = Object.keys(dataToSign)
     .sort()
@@ -188,24 +188,24 @@ export function generatePayFastSignature(data: Record<string, string>, passphras
       result[key] = dataToSign[key]
       return result
     }, {})
-  
+
   // Create parameter string
   for (const [key, value] of Object.entries(sortedData)) {
     if (value) {
       parameterString += `${key}=${encodeURIComponent(value.toString().trim())}&`
     }
   }
-  
+
   // Remove the last &
   parameterString = parameterString.slice(0, -1)
-  
+
   // Add passphrase if provided
   if (passphrase) {
     parameterString += `&passphrase=${encodeURIComponent(passphrase.trim())}`
   }
-  
-  // Generate signature
-  return createHash('md5').update(parameterString).digest('hex')
+
+  // Generate signature using browser-compatible MD5
+  return md5(parameterString)
 }
 
 export function createPayFastPayment(paymentData: {
