@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { createPayFastPayment, redirectToPayFast, PACKAGE_PRICES, PackageName } from '@/utils/payfast'
+import { createPayFastPayment, redirectToPayFast, PACKAGE_PRICES, PackageName } from '@/utils/payfast-simple'
 
 interface PaymentFormProps {
   packageName: PackageName
