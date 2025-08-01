@@ -61,31 +61,39 @@ export default function Navigation() {
   }
 
   return (
-    <nav 
+    <nav
+      id="navigation"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'nav-blur shadow-2xl border-b border-primary-500/20' 
+        isScrolled
+          ? 'nav-blur shadow-2xl border-b border-primary-500/20'
           : 'bg-transparent'
       }`}
+      role="navigation"
+      aria-label="Main navigation"
     >
       <div className="container-custom">
         <div className="flex items-center justify-between py-4">
           {/* Logo with 3D effect */}
           <div className="flex items-center space-x-4">
-            <div
+            <button
               onClick={() => window.location.href = '/'}
-              className="w-14 h-14 rounded-xl overflow-hidden transform hover:scale-110 transition-transform duration-300 border-2 border-primary-500/50 bg-elite-cream/10 backdrop-blur-sm luxury-glow depth-hover cursor-pointer"
+              className="w-14 h-14 rounded-xl overflow-hidden transform hover:scale-110 transition-transform duration-300 border-2 border-primary-500/50 bg-elite-cream/10 backdrop-blur-sm luxury-glow depth-hover focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-neutral-950"
+              aria-label="The Lift Co - Go to homepage"
             >
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F40f4f3f8cf004cb78312fbe6b3e1cec8%2F08e7771950634f09bf5906b11a6d0d83?format=webp&width=800"
                 alt="The Lift Co Logo"
                 className="w-full h-full object-contain"
               />
-            </div>
+            </button>
             <div className="hidden sm:block">
-              <h1 className="text-2xl font-bold font-heading premium-text muscle-text cursor-pointer" onClick={() => window.location.href = '/'}>
+              <button
+                className="text-2xl font-bold font-heading premium-text muscle-text focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-neutral-950 rounded"
+                onClick={() => window.location.href = '/'}
+                aria-label="The Lift Co - Go to homepage"
+              >
                 THE LIFT CO
-              </h1>
+              </button>
               <p className="text-xs text-accent-400 font-bold uppercase tracking-wider">
                 {pathname === '/marketing' ? 'Brand & Business' : 'Elite Training'}
               </p>
@@ -117,36 +125,42 @@ export default function Navigation() {
           </div>
 
           {/* Desktop Navigation with 3D hover effects */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-8" role="menubar">
             {navItems.map((item) => (
               <button
                 key={item.name}
                 onClick={() => handleNavigation(item.href)}
-                className="text-neutral-300 hover:text-primary-400 font-bold transition-all duration-300 hover:scale-110 relative group uppercase tracking-wide depth-hover"
+                className="text-neutral-300 hover:text-primary-400 font-bold transition-all duration-300 hover:scale-110 relative group uppercase tracking-wide depth-hover focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-neutral-950 rounded px-2 py-1"
+                role="menuitem"
+                aria-label={`Navigate to ${item.name}`}
               >
                 {item.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-500 to-accent-500 group-hover:w-full transition-all duration-300"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-500 to-accent-500 group-hover:w-full transition-all duration-300" aria-hidden="true"></span>
               </button>
             ))}
           </div>
 
           {/* CTA Button with 3D effect */}
           <div className="hidden md:block">
-            <button 
+            <button
               onClick={() => handleNavigation('#contact')}
-              className="btn-primary px-8 py-3 text-sm relative overflow-hidden group elite-glow"
+              className="btn-primary px-8 py-3 text-sm relative overflow-hidden group elite-glow focus:outline-none focus:ring-2 focus:ring-primary-300 focus:ring-offset-2 focus:ring-offset-neutral-950"
+              aria-label={pathname === '/marketing' ? 'Get a quote' : 'Book training now'}
             >
               <span className="relative z-10 muscle-text">
                 {pathname === '/marketing' ? 'GET QUOTE' : 'BOOK NOW'}
               </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-primary-400 to-accent-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-primary-400 to-accent-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" aria-hidden="true"></div>
             </button>
           </div>
 
           {/* Mobile Menu Button with 3D effect */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden w-12 h-12 bg-gradient-to-r from-primary-500 to-accent-500 rounded-xl flex items-center justify-center border border-primary-500/30 depth-hover"
+            className="md:hidden w-12 h-12 bg-gradient-to-r from-primary-500 to-accent-500 rounded-xl flex items-center justify-center border border-primary-500/30 depth-hover focus:outline-none focus:ring-2 focus:ring-primary-300 focus:ring-offset-2 focus:ring-offset-neutral-950"
+            aria-label={isMobileMenuOpen ? 'Close mobile menu' : 'Open mobile menu'}
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-menu"
           >
             <div className="w-6 h-6 flex flex-col justify-center items-center">
               <span className={`bg-neutral-950 block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isMobileMenuOpen ? 'rotate-45 translate-y-1' : '-translate-y-0.5'}`}></span>
@@ -157,9 +171,14 @@ export default function Navigation() {
         </div>
 
         {/* Mobile Menu with 3D transition */}
-        <div className={`md:hidden fixed top-full left-0 right-0 z-40 transition-all duration-300 ${
-          isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
-        }`}>
+        <div
+          id="mobile-menu"
+          className={`md:hidden fixed top-full left-0 right-0 z-40 transition-all duration-300 ${
+            isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
+          }`}
+          role="menu"
+          aria-labelledby="mobile-menu-button"
+        >
           <div className="py-6 space-y-4 luxury-card mx-4 depth-hover shadow-2xl">
             {/* Mobile Page Toggle */}
             <div className="px-6 flex space-x-2 mb-4">
