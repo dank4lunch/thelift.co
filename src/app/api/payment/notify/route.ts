@@ -1,5 +1,39 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { generatePayFastSignature } from '@/utils/payfast'
+import { createHash } from 'crypto'
+
+function generatePayFastSignature(data: Record<string, string>, passphrase?: string): string {
+  // Remove signature and hash fields
+  const { signature, hash, ...dataToSign } = data
+
+  // Create parameter string
+  let parameterString = ''
+
+  // Sort the data by key
+  const sortedData = Object.keys(dataToSign)
+    .sort()
+    .reduce((result: Record<string, string>, key) => {
+      result[key] = dataToSign[key]
+      return result
+    }, {})
+
+  // Create parameter string
+  for (const [key, value] of Object.entries(sortedData)) {
+    if (value) {
+      parameterString += `${key}=${encodeURIComponent(value.toString().trim())}&`
+    }
+  }
+
+  // Remove the last &
+  parameterString = parameterString.slice(0, -1)
+
+  // Add passphrase if provided
+  if (passphrase) {
+    parameterString += `&passphrase=${encodeURIComponent(passphrase.trim())}`
+  }
+
+  // Generate signature using Node.js crypto
+  return createHash('md5').update(parameterString).digest('hex')
+}
 
 export async function POST(request: NextRequest) {
   try {
