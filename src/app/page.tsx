@@ -1,13 +1,18 @@
 import Hero from '@/components/Hero'
-import InstagramShowcase from '@/components/InstagramShowcase'
+import TrainerAbout from '@/components/TrainerAbout'
+import Specializations from '@/components/Specializations'
+import TrainingPackages from '@/components/TrainingPackages'
+import FreeConsultation from '@/components/FreeConsultation'
+import FAQ from '@/components/FAQ'
+import FinalCTA from '@/components/FinalCTA'
 import Contact from '@/components/Contact'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'The Lift Co - Elite Personal Training Gauteng | Transform Your Body',
-  description: 'Elite personal training across Gauteng with Tshiamo Sookane. Serving Johannesburg, Pretoria, Sandton, Centurion, Midrand, Randburg. Proven body transformation programs including strength training, HIIT, boxing, and nutrition coaching.',
+  title: 'Tshiamo Sookane - Personal Trainer Sandton CBD | Transform Your Body',
+  description: 'Personal trainer Tshiamo Sookane in Sandton CBD, Gauteng. Higher Certificate in Exercise Science (HFPA). Specializing in Bootcamp, Boxing, HIIT, and Personal Training. Free 15-minute consultation available.',
   keywords: 'personal trainer Gauteng, elite fitness training Johannesburg, personal trainer Pretoria, body transformation Sandton, strength training Centurion, HIIT training Midrand, boxing coach Randburg, nutrition coaching Roodepoort, fitness transformation Benoni, weight loss coach Boksburg, gym trainer Fourways',
   openGraph: {
     title: 'The Lift Co - Elite Personal Training Gauteng',
@@ -147,7 +152,12 @@ export default function Home() {
       <main className="min-h-screen">
         <Navigation />
         <Hero />
-        <InstagramShowcase />
+        <TrainerAbout />
+        <Specializations />
+        <TrainingPackages />
+        <FreeConsultation />
+        <FAQ />
+        <FinalCTA />
         <Contact />
         <Footer />
       </main>
