@@ -8,6 +8,7 @@ import FinalCTA from '@/components/FinalCTA'
 import Contact from '@/components/Contact'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
+import SkipNav from '@/components/SkipNav'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -149,18 +150,21 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      <main className="min-h-screen">
+      <div className="min-h-screen">
+        <SkipNav />
         <Navigation />
-        <Hero />
-        <TrainerAbout />
-        <Specializations />
-        <TrainingPackages />
-        <FreeConsultation />
-        <FAQ />
-        <FinalCTA />
-        <Contact />
+        <main id="main-content" className="focus:outline-none" tabIndex={-1}>
+          <Hero />
+          <TrainerAbout />
+          <Specializations />
+          <TrainingPackages />
+          <FreeConsultation />
+          <FAQ />
+          <FinalCTA />
+          <Contact />
+        </main>
         <Footer />
-      </main>
+      </div>
     </>
   )
 }
