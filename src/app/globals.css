@@ -9,11 +9,74 @@
     scroll-behavior: smooth;
     @apply antialiased;
   }
-  
+
   body {
     font-family: 'Inter', system-ui, sans-serif;
     @apply bg-neutral-950 text-neutral-50;
     perspective: 1000px;
+  }
+
+  /* Accessibility improvements */
+  :focus {
+    outline: 2px solid theme(colors.primary.500);
+    outline-offset: 2px;
+  }
+
+  /* Screen reader only content */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .focus-within\:not-sr-only:focus-within {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }
+
+  /* High contrast mode support */
+  @media (prefers-contrast: high) {
+    .bg-gradient-to-r {
+      background: theme(colors.primary.500) !important;
+    }
+
+    .text-transparent {
+      color: theme(colors.primary.400) !important;
+      background: none !important;
+      -webkit-background-clip: unset !important;
+      background-clip: unset !important;
+    }
+  }
+
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* Color scheme support */
+  @media (prefers-color-scheme: light) {
+    :root {
+      color-scheme: dark; /* Force dark mode */
+    }
   }
   
   h1, h2, h3, h4, h5, h6 {
