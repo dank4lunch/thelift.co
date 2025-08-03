@@ -110,8 +110,12 @@ export default function Hero() {
               <div className="absolute inset-0 bg-gradient-to-br from-neutral-800 to-neutral-900 flex items-center justify-center">
                 {/* Placeholder - Replace with actual image */}
                 <div className="text-center text-neutral-400 p-8">
-                  <div className="w-32 h-32 mx-auto mb-6 bg-primary-500/20 rounded-full flex items-center justify-center border-4 border-primary-500/30">
-                    <span className="text-5xl">💪</span>
+                  <div className="w-32 h-32 mx-auto mb-6 bg-primary-500/20 rounded-full flex items-center justify-center border-4 border-primary-500/30 overflow-hidden">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2F638bb35e274840ce81c9d7bdb01f9214%2Ffadd090fbad343b0a01ea52fc1729fed?format=webp&width=800"
+                      alt="Tshiamo Sookane - Personal Trainer"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <h3 className="text-2xl font-bold text-primary-400 mb-2">Tshiamo Sookane</h3>
                   <p className="text-lg text-neutral-300 mb-1">Personal Trainer</p>
