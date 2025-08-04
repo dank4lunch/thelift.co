@@ -64,22 +64,19 @@ export default function Hero() {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
               <button
-                onClick={handleWhatsAppBooking}
-                className="group bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-primary-500/25 flex items-center justify-center gap-3 min-w-[280px]"
+                onClick={handleConsultationBooking}
+                className="group bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-primary-500/25 flex items-center justify-center gap-3 min-w-[280px]"
               >
-                <MessageCircle className="w-6 h-6 group-hover:rotate-12 transition-transform duration-300" />
+                <MessageCircle className="w-6 h-6" />
                 Book Free Consultation
               </button>
-              
-              <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLSfdujG_QCb1auGWGglp6o37N8TBJaed7Dn0EJ785iM4oq9Mzg/viewform?usp=send_form"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group border-2 border-primary-500 text-primary-500 hover:bg-primary-500 hover:text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-3 min-w-[200px]"
+
+              <button
+                onClick={handlePersonalDetails}
+                className="group border-2 border-primary-500 text-primary-500 hover:bg-primary-500 hover:text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 flex items-center justify-center gap-3 min-w-[200px]"
               >
-                <span>👤</span>
                 Personal Details
-              </a>
+              </button>
             </div>
 
             {/* Social Proof */}
