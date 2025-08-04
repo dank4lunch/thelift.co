@@ -1,5 +1,5 @@
 import Hero from '@/components/Hero'
-import About from '@/components/About'
+import AboutOverview from '@/components/AboutOverview'
 import ServicesOverview from '@/components/ServicesOverview'
 import Testimonials from '@/components/Testimonials'
 import Navigation from '@/components/Navigation'
@@ -10,7 +10,7 @@ export default function Home() {
     <main className="min-h-screen">
       <Navigation />
       <Hero />
-      <About />
+      <AboutOverview />
       <ServicesOverview />
       <Testimonials />
       <Footer />
