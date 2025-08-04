@@ -294,7 +294,7 @@ export default function EnhancedContact() {
             {/* Contact Methods */}
             <div className="luxury-card p-8">
               <h3 className="text-2xl font-bold text-primary-400 mb-6 muscle-text">
-                💬 Contact Methods
+                Contact Methods
               </h3>
               <div className="space-y-4">
                 {contactMethods.map((method, index) => (
