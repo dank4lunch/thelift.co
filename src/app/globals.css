@@ -52,17 +52,14 @@
   }
   
   .btn-primary:hover {
-    transform: scale(1.05) rotateX(5deg) translateZ(10px);
     box-shadow: 0 15px 35px rgba(227, 181, 71, 0.4);
   }
-  
+
   .btn-secondary {
-    @apply bg-gradient-to-r from-accent-600 to-accent-700 hover:from-accent-500 hover:to-accent-600 text-white font-bold py-4 px-8 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 ease-out border border-accent-500/30;
-    transform-style: preserve-3d;
+    @apply bg-gradient-to-r from-accent-600 to-accent-700 hover:from-accent-500 hover:to-accent-600 text-white font-bold py-4 px-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-out border border-accent-500/30;
   }
-  
+
   .btn-secondary:hover {
-    transform: scale(1.05) rotateX(5deg) translateZ(10px);
     box-shadow: 0 15px 35px rgba(168, 145, 72, 0.4);
   }
   
