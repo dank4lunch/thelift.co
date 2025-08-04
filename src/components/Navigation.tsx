@@ -157,16 +157,16 @@ export default function Navigation() {
         </div>
 
         {/* Mobile Menu */}
-        <div className={`md:hidden fixed top-16 left-0 right-0 bg-neutral-900/95 backdrop-blur-lg border-b border-neutral-800/50 transition-all duration-300 z-40 ${
+        <div className={`md:hidden fixed top-20 left-0 right-0 bg-neutral-900/98 backdrop-blur-lg border-b border-neutral-800/50 transition-all duration-300 z-40 shadow-2xl ${
           isMobileMenuOpen ? 'max-h-screen opacity-100 visible' : 'max-h-0 opacity-0 invisible'
         }`}>
           <div className="container-custom py-6">
-            <div className="space-y-2">
+            <div className="space-y-1">
               {navItems.map((item) => (
                 <button
                   key={item.name}
                   onClick={() => handleNavigation(item.href)}
-                  className="block w-full text-left px-4 py-4 text-neutral-300 hover:text-primary-400 hover:bg-neutral-800/50 transition-all duration-300 font-bold uppercase tracking-wide rounded-lg"
+                  className="block w-full text-left px-6 py-4 text-neutral-300 hover:text-primary-400 hover:bg-neutral-800/50 active:bg-neutral-700/50 transition-all duration-200 font-bold uppercase tracking-wide rounded-lg min-h-[48px] flex items-center"
                 >
                   {item.name}
                 </button>
@@ -177,7 +177,7 @@ export default function Navigation() {
                     window.open('https://docs.google.com/forms/d/e/1FAIpQLSfdujG_QCb1auGWGglp6o37N8TBJaed7Dn0EJ785iM4oq9Mzg/viewform?usp=send_form', '_blank')
                     setIsMobileMenuOpen(false)
                   }}
-                  className="btn-primary w-full text-center py-4 muscle-text text-lg"
+                  className="btn-primary w-full text-center py-4 muscle-text text-base min-h-[48px]"
                 >
                   BOOK FREE CONSULTATION
                 </button>
