@@ -281,24 +281,38 @@
   /* Mobile button improvements */
   @media (max-width: 640px) {
     .btn-primary, .btn-secondary {
-      @apply text-base px-6 py-3 w-full;
+      @apply text-base px-6 py-3 w-full text-center;
+      min-height: 48px;
     }
 
     .section-padding {
-      @apply py-12 md:py-20;
+      @apply py-8 md:py-16;
     }
 
     .container-custom {
-      @apply px-4;
+      @apply px-4 max-w-full;
     }
 
     /* Improve text readability on mobile */
     h1 {
-      @apply text-3xl leading-tight;
+      @apply text-2xl sm:text-3xl leading-tight;
     }
 
     h2 {
-      @apply text-2xl md:text-4xl;
+      @apply text-xl sm:text-2xl md:text-4xl;
+    }
+
+    /* Hero section mobile fixes */
+    .hero-mobile-fix {
+      @apply text-center px-4;
+    }
+
+    .hero-mobile-fix h1 {
+      @apply text-3xl sm:text-4xl;
+    }
+
+    .hero-mobile-fix p {
+      @apply text-lg sm:text-xl;
     }
 
     /* Stack columns on mobile */
@@ -313,12 +327,23 @@
 
     /* Fix form inputs on mobile */
     input, textarea, select {
-      @apply text-base; /* Prevent zoom on iOS */
+      @apply text-base h-12; /* Prevent zoom on iOS */
+      font-size: 16px !important; /* Ensure no zoom */
     }
 
     /* Improve gallery on mobile */
     .gallery-grid {
       @apply grid-cols-1 sm:grid-cols-2 lg:grid-cols-3;
+    }
+
+    /* Mobile navigation improvements */
+    .mobile-nav-fix {
+      @apply flex-col space-y-2 w-full;
+    }
+
+    /* Improve floating stats on mobile */
+    .floating-stats {
+      @apply relative top-0 left-0 right-0 bottom-0 transform-none mt-4;
     }
   }
 
