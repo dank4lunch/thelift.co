@@ -14,35 +14,6 @@ export default function Gallery() {
   ]
 
   const gallery = {
-    transformations: [
-      {
-        id: 1,
-        beforeImage: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=500&fit=crop',
-        afterImage: 'https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=400&h=500&fit=crop',
-        clientName: 'Sarah M.',
-        timeframe: '6 months',
-        achievement: 'Lost 18kg, gained muscle',
-        description: 'From struggling with basic workouts to deadlifting her bodyweight'
-      },
-      {
-        id: 2,
-        beforeImage: 'https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=400&h=500&fit=crop',
-        afterImage: 'https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=400&h=500&fit=crop',
-        clientName: 'Michael C.',
-        timeframe: '4 months',
-        achievement: 'Built 8kg muscle, lost 12kg fat',
-        description: 'Busy entrepreneur transformed his health and energy levels'
-      },
-      {
-        id: 3,
-        beforeImage: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=500&fit=crop',
-        afterImage: 'https://images.unsplash.com/photo-1544348817-5f2cf14b88c8?w=400&h=500&fit=crop',
-        clientName: 'Priya P.',
-        timeframe: '8 months',
-        achievement: 'Improved posture, eliminated back pain',
-        description: 'Doctor who reclaimed her health despite demanding work schedule'
-      }
-    ],
     training: [
       {
         id: 4,
