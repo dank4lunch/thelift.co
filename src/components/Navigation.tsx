@@ -145,51 +145,32 @@ export default function Navigation() {
           </button>
         </div>
 
-        {/* Mobile Menu with 3D transition */}
-        <div className={`md:hidden transition-all duration-300 overflow-hidden ${
-          isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+        {/* Mobile Menu */}
+        <div className={`md:hidden fixed top-16 left-0 right-0 bg-neutral-900/95 backdrop-blur-lg border-b border-neutral-800/50 transition-all duration-300 z-40 ${
+          isMobileMenuOpen ? 'max-h-screen opacity-100 visible' : 'max-h-0 opacity-0 invisible'
         }`}>
-          <div className="py-6 space-y-4 luxury-card mt-4 depth-hover">
-            {/* Mobile Page Toggle */}
-            <div className="px-6 flex space-x-2 mb-4">
-              <button
-                onClick={() => window.location.href = '/'}
-                className={`flex-1 py-2 rounded-lg font-bold text-sm transition-all duration-300 ${
-                  pathname !== '/marketing'
-                    ? 'bg-primary-500 text-neutral-950'
-                    : 'text-neutral-400 border border-neutral-600'
-                }`}
-              >
-                FITNESS
-              </button>
-              <button
-                onClick={() => window.location.href = '/marketing'}
-                className={`flex-1 py-2 rounded-lg font-bold text-sm transition-all duration-300 ${
-                  pathname === '/marketing'
-                    ? 'bg-primary-500 text-neutral-950'
-                    : 'text-neutral-400 border border-neutral-600'
-                }`}
-              >
-                MARKETING
-              </button>
-            </div>
-
-            {navItems.map((item) => (
-              <button
-                key={item.name}
-                onClick={() => handleNavigation(item.href)}
-                className="block w-full text-left px-6 py-3 text-neutral-300 hover:text-primary-400 hover:bg-neutral-800/50 transition-all duration-300 font-bold uppercase tracking-wide"
-              >
-                {item.name}
-              </button>
-            ))}
-            <div className="px-6 pt-4">
-              <button 
-                onClick={() => handleNavigation('#contact')}
-                className="btn-primary w-full text-center py-3 muscle-text"
-              >
-                {pathname === '/marketing' ? 'GET QUOTE' : 'BOOK NOW'}
-              </button>
+          <div className="container-custom py-6">
+            <div className="space-y-2">
+              {navItems.map((item) => (
+                <button
+                  key={item.name}
+                  onClick={() => handleNavigation(item.href)}
+                  className="block w-full text-left px-4 py-4 text-neutral-300 hover:text-primary-400 hover:bg-neutral-800/50 transition-all duration-300 font-bold uppercase tracking-wide rounded-lg"
+                >
+                  {item.name}
+                </button>
+              ))}
+              <div className="pt-4 border-t border-neutral-700 mt-4">
+                <button
+                  onClick={() => {
+                    window.open('https://docs.google.com/forms/d/e/1FAIpQLSfdujG_QCb1auGWGglp6o37N8TBJaed7Dn0EJ785iM4oq9Mzg/viewform?usp=send_form', '_blank')
+                    setIsMobileMenuOpen(false)
+                  }}
+                  className="btn-primary w-full text-center py-4 muscle-text text-lg"
+                >
+                  BOOK FREE CONSULTATION
+                </button>
+              </div>
             </div>
           </div>
         </div>
