@@ -19,11 +19,12 @@ export default function Navigation() {
 
   // Different nav items based on current page
   const homeNavItems = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Training', href: '#services' },
-    { name: 'Trainer', href: '#founder' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
+    { name: 'Services', href: '/services' },
+    { name: 'Gallery', href: '/gallery' },
+    { name: 'Schedule', href: '/schedule' },
+    { name: 'Contact', href: '/contact' },
   ]
 
   const marketingNavItems = [
