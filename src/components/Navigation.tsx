@@ -36,7 +36,7 @@ export default function Navigation() {
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
     { name: 'Services', href: '/services' },
-    { name: 'Gallery', href: '/gallery' },
+    { name: 'Nutrition', href: '/nutrition' },
     { name: 'Schedule', href: '/schedule' },
     { name: 'Contact', href: '/contact' },
   ]
