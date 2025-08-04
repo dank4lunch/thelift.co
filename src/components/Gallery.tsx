@@ -47,31 +47,45 @@ export default function Gallery() {
     training: [
       {
         id: 4,
-        image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop',
-        title: 'HIIT Boxing Session',
-        description: 'High-intensity boxing combinations for cardio and strength',
+        image: 'https://cdn.builder.io/api/v1/image/assets%2F638bb35e274840ce81c9d7bdb01f9214%2Fd5da22afa2e74b648bb83f7edf38edbc?format=webp&width=800',
+        title: 'Professional Training Session',
+        description: 'Expert guidance for optimal form and technique',
         location: 'Sandton Gym'
       },
       {
         id: 5,
-        image: 'https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&h=400&fit=crop',
-        title: 'Strength Training',
-        description: 'Compound movements for functional strength building',
+        image: 'https://cdn.builder.io/api/v1/image/assets%2F638bb35e274840ce81c9d7bdb01f9214%2F39783d7751884673bf65539803af8447?format=webp&width=800',
+        title: 'Strength Building',
+        description: 'Progressive overload training for muscle development',
         location: 'Private Studio'
       },
       {
         id: 6,
-        image: 'https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=600&h=400&fit=crop',
-        title: 'Outdoor Bootcamp',
-        description: 'Dynamic outdoor training in Sandton parks',
-        location: 'Delta Park'
+        image: 'https://cdn.builder.io/api/v1/image/assets%2F638bb35e274840ce81c9d7bdb01f9214%2F69908528a8a04f72a6cd443220fbad8f?format=webp&width=800',
+        title: 'Functional Training',
+        description: 'Real-world movement patterns for daily life',
+        location: 'Training Facility'
       },
       {
         id: 7,
-        image: 'https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=600&h=400&fit=crop',
-        title: 'Corporate Wellness',
-        description: 'Office-based training for busy professionals',
-        location: 'Client Offices'
+        image: 'https://cdn.builder.io/api/v1/image/assets%2F638bb35e274840ce81c9d7bdb01f9214%2Fb0f83d7123d84028b9b0cb9aa41b79b6?format=webp&width=800',
+        title: 'Cardio Conditioning',
+        description: 'High-intensity cardiovascular training sessions',
+        location: 'Elite Fitness Center'
+      },
+      {
+        id: 8,
+        image: 'https://cdn.builder.io/api/v1/image/assets%2F638bb35e274840ce81c9d7bdb01f9214%2F5a4e871366814a2f887ac43b2e20c895?format=webp&width=800',
+        title: 'Performance Training',
+        description: 'Athletic performance enhancement sessions',
+        location: 'Performance Center'
+      },
+      {
+        id: 9,
+        image: 'https://cdn.builder.io/api/v1/image/assets%2F638bb35e274840ce81c9d7bdb01f9214%2Fa2e81d4179ac465587e8b06efd65f50f?format=webp&width=800',
+        title: 'Elite Coaching',
+        description: 'Professional coaching for advanced athletes',
+        location: 'Elite Training Facility'
       }
     ],
     achievements: [
