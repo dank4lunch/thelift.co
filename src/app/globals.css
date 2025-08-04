@@ -85,12 +85,7 @@
   }
 
   .card-hover {
-    @apply transform hover:scale-105 transition-all duration-300 ease-out hover:shadow-2xl;
-    transform-style: preserve-3d;
-  }
-
-  .card-hover:hover {
-    transform: scale(1.05) rotateY(5deg) rotateX(5deg) translateZ(20px);
+    @apply transition-all duration-300 ease-out hover:shadow-2xl;
   }
 
   .floating-element {
