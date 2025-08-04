@@ -10,13 +10,12 @@ export default function Hero() {
     setIsVisible(true)
   }, [])
 
-  const handleWhatsAppBooking = () => {
-    const message = encodeURIComponent("Hi Tshiamo! I'd like to book a free 15-minute consultation for personal training.")
-    window.open(`https://wa.me/27635432439?text=${message}`, '_blank')
+  const handleConsultationBooking = () => {
+    window.open('https://docs.google.com/forms/d/e/1FAIpQLSfdujG_QCb1auGWGglp6o37N8TBJaed7Dn0EJ785iM4oq9Mzg/viewform?usp=send_form', '_blank')
   }
 
-  const handleEmailBooking = () => {
-    window.location.href = 'mailto:tshiamokl@gmail.com?subject=Free Consultation Booking&body=Hi Tshiamo, I would like to book a free 15-minute consultation for personal training.'
+  const handlePersonalDetails = () => {
+    window.location.href = '#contact'
   }
 
   return (
