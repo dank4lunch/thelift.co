@@ -62,10 +62,10 @@ export default function Hero() {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
+            <div className="flex flex-col gap-4 justify-center lg:justify-start mb-8 mobile-stack">
               <button
                 onClick={handleConsultationBooking}
-                className="group bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-primary-500/25 flex items-center justify-center gap-3 min-w-[280px]"
+                className="btn-primary text-lg px-8 py-4 flex items-center justify-center gap-3"
               >
                 <MessageCircle className="w-6 h-6" />
                 Book Free Consultation
@@ -73,7 +73,7 @@ export default function Hero() {
 
               <button
                 onClick={handlePersonalDetails}
-                className="group border-2 border-primary-500 text-primary-500 hover:bg-primary-500 hover:text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 flex items-center justify-center gap-3 min-w-[200px]"
+                className="btn-secondary text-lg px-8 py-4 flex items-center justify-center gap-3"
               >
                 Personal Details
               </button>
