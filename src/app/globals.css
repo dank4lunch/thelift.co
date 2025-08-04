@@ -278,6 +278,62 @@
     @apply text-center sm:text-left;
   }
 
+  /* Mobile button improvements */
+  @media (max-width: 640px) {
+    .btn-primary, .btn-secondary {
+      @apply text-base px-6 py-3 w-full;
+    }
+
+    .section-padding {
+      @apply py-12 md:py-20;
+    }
+
+    .container-custom {
+      @apply px-4;
+    }
+
+    /* Improve text readability on mobile */
+    h1 {
+      @apply text-3xl leading-tight;
+    }
+
+    h2 {
+      @apply text-2xl md:text-4xl;
+    }
+
+    /* Stack columns on mobile */
+    .mobile-stack {
+      @apply flex-col space-y-4;
+    }
+
+    /* Reduce padding on mobile */
+    .luxury-card {
+      @apply p-4 sm:p-6 md:p-8;
+    }
+
+    /* Fix form inputs on mobile */
+    input, textarea, select {
+      @apply text-base; /* Prevent zoom on iOS */
+    }
+
+    /* Improve gallery on mobile */
+    .gallery-grid {
+      @apply grid-cols-1 sm:grid-cols-2 lg:grid-cols-3;
+    }
+  }
+
+  /* Touch targets for mobile */
+  @media (max-width: 768px) {
+    button, a {
+      min-height: 44px; /* iOS recommended touch target */
+    }
+
+    /* Improve navigation on mobile */
+    .mobile-nav {
+      @apply fixed bottom-0 left-0 right-0 bg-neutral-900 border-t border-neutral-700 p-4;
+    }
+  }
+
   /* Form enhancements */
   input:focus, textarea:focus, select:focus {
     outline: none;
