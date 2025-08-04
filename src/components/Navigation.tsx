@@ -39,19 +39,11 @@ export default function Navigation() {
 
   const handleNavigation = (href: string) => {
     if (href.startsWith('#')) {
-      // Handle internal navigation
-      if (pathname === '/marketing' && href === '#contact') {
-        // If on marketing page and clicking contact, go to main contact
-        window.location.href = '/#contact'
-      } else if (pathname !== '/marketing' && (href === '#brand-services' || href === '#business-services')) {
-        // If not on marketing page and clicking marketing sections, go to marketing page
-        window.location.href = `/marketing${href}`
-      } else {
-        // Normal anchor navigation
-        const element = document.querySelector(href)
-        element?.scrollIntoView({ behavior: 'smooth' })
-      }
+      // Handle anchor navigation on current page
+      const element = document.querySelector(href)
+      element?.scrollIntoView({ behavior: 'smooth' })
     } else {
+      // Navigate to different page
       window.location.href = href
     }
     setIsMobileMenuOpen(false)
