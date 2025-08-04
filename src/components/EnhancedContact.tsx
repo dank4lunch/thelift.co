@@ -141,7 +141,7 @@ export default function EnhancedContact() {
           {/* Contact Form */}
           <div className="luxury-card p-8">
             <h3 className="text-2xl font-bold text-primary-400 mb-6 muscle-text">
-              📝 Free Consultation Request
+              Free Consultation Request
             </h3>
             
             <form onSubmit={handleSubmit} className="space-y-6">
