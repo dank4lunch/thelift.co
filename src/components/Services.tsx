@@ -268,7 +268,7 @@ export default function Services() {
                 <strong>Tshiamo Sookane</strong> - Elite Performance Engineer & Mindset Catalyst
               </p>
               <p className="text-neutral-400 mb-6">
-                📍 Sandton CBD, Gauteng | 📞 0635432439 | ✉️ Tshiamokl@gmail.com
+                Sandton CBD, Gauteng | 0635432439 | Tshiamokl@gmail.com
               </p>
               <p className="text-sm text-primary-300 italic mb-8">
                 "I don't build bodies. I build legends. Let's make you unstoppable." —TS
