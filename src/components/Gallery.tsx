@@ -90,21 +90,21 @@ export default function Gallery() {
     ],
     achievements: [
       {
-        id: 8,
+        id: 10,
         image: 'https://images.unsplash.com/photo-1581009137042-c552e485697a?w=600&h=400&fit=crop',
         title: 'First Marathon Complete',
         description: 'Client completed their first marathon after 8 months of training',
         achievement: '42.2km in 4:15:30'
       },
       {
-        id: 9,
+        id: 11,
         image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop',
         title: 'Powerlifting Personal Best',
         description: 'New deadlift record achieved through progressive programming',
         achievement: '180kg Deadlift'
       },
       {
-        id: 10,
+        id: 12,
         image: 'https://images.unsplash.com/photo-1544348817-5f2cf14b88c8?w=600&h=400&fit=crop',
         title: 'Weight Loss Milestone',
         description: 'Incredible transformation through consistency and dedication',
