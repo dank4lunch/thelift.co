@@ -17,6 +17,20 @@ export default function Navigation() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.classList.add('mobile-menu-open')
+    } else {
+      document.body.classList.remove('mobile-menu-open')
+    }
+
+    // Cleanup on unmount
+    return () => {
+      document.body.classList.remove('mobile-menu-open')
+    }
+  }, [isMobileMenuOpen])
+
   // Different nav items based on current page
   const homeNavItems = [
     { name: 'Home', href: '/' },
