@@ -357,6 +357,29 @@
     .mobile-nav {
       @apply fixed bottom-0 left-0 right-0 bg-neutral-900 border-t border-neutral-700 p-4;
     }
+
+    /* Mobile menu specific styles */
+    .mobile-menu-open {
+      overflow: hidden; /* Prevent scrolling when menu is open */
+    }
+
+    /* Ensure mobile menu is above other content */
+    .mobile-menu {
+      transform: translateZ(0); /* Force hardware acceleration */
+    }
+
+    /* Improve mobile menu button */
+    .mobile-menu-button {
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
+    }
+  }
+
+  /* Prevent body scroll when mobile menu is open */
+  .mobile-menu-open {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
   }
 
   /* Form enhancements */
