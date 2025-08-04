@@ -17,7 +17,7 @@ export function GoogleAnalytics() {
   const pathname = usePathname()
 
   useEffect(() => {
-    if (!GA_TRACKING_ID) return
+    if (!GA_TRACKING_ID || process.env.NODE_ENV === 'development') return
 
     // Load Google Analytics
     const script1 = document.createElement('script')
