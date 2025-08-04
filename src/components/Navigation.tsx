@@ -50,13 +50,22 @@ export default function Navigation() {
   }
 
   return (
-    <nav 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'nav-blur shadow-2xl border-b border-primary-500/20' 
-          : 'bg-transparent'
-      }`}
-    >
+    <>
+      {/* Mobile Menu Backdrop */}
+      {isMobileMenuOpen && (
+        <div
+          className="fixed inset-0 bg-black/50 z-30 md:hidden"
+          onClick={() => setIsMobileMenuOpen(false)}
+        />
+      )}
+
+      <nav
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          isScrolled
+            ? 'nav-blur shadow-2xl border-b border-primary-500/20'
+            : 'bg-transparent'
+        }`}
+      >
       <div className="container-custom">
         <div className="flex items-center justify-between py-4">
           {/* Logo with 3D effect */}
@@ -178,5 +187,6 @@ export default function Navigation() {
         </div>
       </div>
     </nav>
+    </>
   )
 }
