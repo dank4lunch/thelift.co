@@ -4,12 +4,11 @@ import { useState } from 'react'
 import { X, ChevronLeft, ChevronRight, Trophy, TrendingUp, Target } from 'lucide-react'
 
 export default function Gallery() {
-  const [selectedCategory, setSelectedCategory] = useState('transformations')
+  const [selectedCategory, setSelectedCategory] = useState('training')
   const [lightboxImage, setLightboxImage] = useState<any>(null)
   const [lightboxIndex, setLightboxIndex] = useState(0)
 
   const categories = [
-    { key: 'transformations', label: 'Transformations', icon: <TrendingUp className="w-4 h-4" /> },
     { key: 'training', label: 'Training Sessions', icon: <Target className="w-4 h-4" /> },
     { key: 'achievements', label: 'Client Wins', icon: <Trophy className="w-4 h-4" /> }
   ]
