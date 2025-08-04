@@ -129,25 +129,41 @@ export default function Hero() {
               <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-accent-500/20 rounded-full blur-xl animate-pulse" style={{ animationDelay: '1s' }}></div>
             </div>
 
-            {/* Floating Stats Cards */}
-            <div className="absolute -top-4 -left-4 sm:-left-8 bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/20 animate-float">
+            {/* Floating Stats Cards - Hidden on mobile, shown on larger screens */}
+            <div className="hidden md:block absolute -top-4 -left-4 sm:-left-8 bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/20 animate-float">
               <div className="text-center">
                 <p className="text-2xl font-bold text-primary-400">5+</p>
                 <p className="text-xs text-neutral-300 whitespace-nowrap">Years Experience</p>
               </div>
             </div>
 
-            <div className="absolute -bottom-4 -right-4 sm:-right-8 bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/20 animate-float" style={{ animationDelay: '1s' }}>
+            <div className="hidden md:block absolute -bottom-4 -right-4 sm:-right-8 bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/20 animate-float" style={{ animationDelay: '1s' }}>
               <div className="text-center">
                 <p className="text-2xl font-bold text-primary-400">100+</p>
                 <p className="text-xs text-neutral-300 whitespace-nowrap">Happy Clients</p>
               </div>
             </div>
 
-            <div className="absolute top-1/2 -left-6 sm:-left-10 bg-white/10 backdrop-blur-md rounded-2xl p-3 border border-white/20 animate-float" style={{ animationDelay: '2s' }}>
+            <div className="hidden md:block absolute top-1/2 -left-6 sm:-left-10 bg-white/10 backdrop-blur-md rounded-2xl p-3 border border-white/20 animate-float" style={{ animationDelay: '2s' }}>
               <div className="text-center">
                 <p className="text-lg font-bold text-primary-400">FREE</p>
                 <p className="text-xs text-neutral-300">Consultation</p>
+              </div>
+            </div>
+
+            {/* Mobile Stats - Visible only on mobile */}
+            <div className="md:hidden mt-6 grid grid-cols-3 gap-4 px-4">
+              <div className="bg-white/10 backdrop-blur-md rounded-xl p-3 border border-white/20 text-center">
+                <p className="text-lg font-bold text-primary-400">5+</p>
+                <p className="text-xs text-neutral-300">Years</p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-md rounded-xl p-3 border border-white/20 text-center">
+                <p className="text-lg font-bold text-primary-400">100+</p>
+                <p className="text-xs text-neutral-300">Clients</p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-md rounded-xl p-3 border border-white/20 text-center">
+                <p className="text-lg font-bold text-primary-400">FREE</p>
+                <p className="text-xs text-neutral-300">Consult</p>
               </div>
             </div>
           </div>
