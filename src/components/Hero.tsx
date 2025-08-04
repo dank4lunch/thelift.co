@@ -15,7 +15,7 @@ export default function Hero() {
   }
 
   const handlePersonalDetails = () => {
-    window.location.href = '#contact'
+    window.location.href = '/contact'
   }
 
   return (
