@@ -86,6 +86,8 @@ export const trackScheduleBooking = (date: string, time: string) => {
 // Performance monitoring
 export function PerformanceMonitor() {
   useEffect(() => {
+    if (process.env.NODE_ENV === 'development') return
+
     // Core Web Vitals tracking
     import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
       getCLS(metric => trackEvent('CLS', 'performance', 'score', metric.value))
