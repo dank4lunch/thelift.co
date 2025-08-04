@@ -148,94 +148,38 @@ export default function Gallery() {
 
         {/* Gallery Grid */}
         <div className="max-w-6xl mx-auto">
-          {selectedCategory === 'transformations' && (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {gallery.transformations.map((transformation, index) => (
-                <div
-                  key={transformation.id}
-                  className="luxury-card overflow-hidden cursor-pointer group"
-                  onClick={() => openLightbox(transformation, index)}
-                >
-                  {/* Before/After Images */}
-                  <div className="relative h-64">
-                    <div className="grid grid-cols-2 h-full">
-                      <div className="relative overflow-hidden">
-                        <img
-                          src={transformation.beforeImage}
-                          alt="Before"
-                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                        />
-                        <div className="absolute top-2 left-2 bg-red-500/80 text-white px-2 py-1 rounded text-xs font-bold">
-                          BEFORE
-                        </div>
-                      </div>
-                      <div className="relative overflow-hidden">
-                        <img
-                          src={transformation.afterImage}
-                          alt="After"
-                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                        />
-                        <div className="absolute top-2 right-2 bg-green-500/80 text-white px-2 py-1 rounded text-xs font-bold">
-                          AFTER
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Info */}
-                  <div className="p-6">
-                    <h4 className="text-xl font-bold text-primary-400 mb-2 muscle-text">
-                      {transformation.clientName}
-                    </h4>
-                    <p className="text-accent-400 font-medium mb-2">
-                      {transformation.timeframe}
-                    </p>
-                    <p className="text-green-400 font-bold mb-3">
-                      {transformation.achievement}
-                    </p>
-                    <p className="text-neutral-300 text-sm">
-                      {transformation.description}
-                    </p>
-                  </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {gallery[selectedCategory as keyof typeof gallery].map((item: any, index: number) => (
+              <div
+                key={item.id}
+                className="luxury-card overflow-hidden cursor-pointer group"
+                onClick={() => openLightbox(item, index)}
+              >
+                <div className="relative h-64 overflow-hidden">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                 </div>
-              ))}
-            </div>
-          )}
-
-          {selectedCategory !== 'transformations' && (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {gallery[selectedCategory as keyof typeof gallery].map((item: any, index: number) => (
-                <div
-                  key={item.id}
-                  className="luxury-card overflow-hidden cursor-pointer group"
-                  onClick={() => openLightbox(item, index)}
-                >
-                  <div className="relative h-64 overflow-hidden">
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                  </div>
-                  <div className="p-6">
-                    <h4 className="text-xl font-bold text-primary-400 mb-2 muscle-text">
-                      {item.title}
-                    </h4>
-                    <p className="text-neutral-300 text-sm mb-3">
-                      {item.description}
-                    </p>
-                    {item.location && (
-                      <p className="text-accent-400 text-sm">📍 {item.location}</p>
-                    )}
-                    {item.achievement && (
-                      <p className="text-green-400 font-bold text-sm">🏆 {item.achievement}</p>
-                    )}
-                  </div>
+                <div className="p-6">
+                  <h4 className="text-xl font-bold text-primary-400 mb-2 muscle-text">
+                    {item.title}
+                  </h4>
+                  <p className="text-neutral-300 text-sm mb-3">
+                    {item.description}
+                  </p>
+                  {item.location && (
+                    <p className="text-accent-400 text-sm">{item.location}</p>
+                  )}
+                  {item.achievement && (
+                    <p className="text-green-400 font-bold text-sm">{item.achievement}</p>
+                  )}
                 </div>
-              ))}
-            </div>
-          )}
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* CTA */}
