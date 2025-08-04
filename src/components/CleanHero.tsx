@@ -136,30 +136,30 @@ export default function CleanHero() {
 
             {/* Right Column - Image */}
             <div className="relative order-first lg:order-last">
-              <div className="relative aspect-square w-72 sm:w-80 mx-auto rounded-2xl overflow-hidden bg-gradient-to-br from-primary-500/10 to-accent-500/10 backdrop-blur-sm border border-primary-500/20">
+              <div className="relative aspect-[4/5] w-full max-w-lg mx-auto rounded-3xl overflow-hidden bg-gradient-to-br from-primary-500/10 to-accent-500/10 backdrop-blur-sm border border-primary-500/20">
 
-                {/* Trainer Image */}
-                <div className="absolute inset-0">
-                  <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F638bb35e274840ce81c9d7bdb01f9214%2Ffadd090fbad343b0a01ea52fc1729fed?format=webp&width=800"
-                    alt="Tshiamo Sookane - Personal Trainer"
-                    className="w-full h-full object-cover"
-                  />
-                  {/* Overlay for better text readability */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
-                </div>
-
-                {/* Trainer Info Overlay */}
-                <div className="absolute bottom-4 left-4 right-4">
-                  <div className="bg-black/70 backdrop-blur-md rounded-xl p-3 border border-white/10">
-                    <h3 className="text-lg font-bold text-white mb-1">Tshiamo Sookane</h3>
-                    <p className="text-primary-400 font-medium text-sm">Elite Performance Coach</p>
+                {/* Main Image Container */}
+                <div className="absolute inset-0 bg-gradient-to-br from-neutral-800 to-neutral-900 flex items-center justify-center">
+                  {/* Placeholder - Replace with actual image */}
+                  <div className="text-center text-neutral-400 p-8">
+                    <div className="w-32 h-32 mx-auto mb-6 bg-primary-500/20 rounded-full flex items-center justify-center border-4 border-primary-500/30">
+                      <span className="text-5xl">💪</span>
+                    </div>
+                    <h3 className="text-2xl font-bold text-primary-400 mb-2">Tshiamo Sookane</h3>
+                    <p className="text-lg text-neutral-300 mb-1">Personal Trainer</p>
+                    <p className="text-sm text-neutral-500 mb-4">Sandton CBD</p>
+                    <div className="text-xs text-neutral-600 bg-neutral-800/50 rounded-lg p-3 border border-neutral-700">
+                      <p className="font-medium text-primary-400 mb-1">📸 Image Placeholder</p>
+                      <p>Replace with high-quality</p>
+                      <p>professional photo of Tshiamo</p>
+                      <p className="mt-2 text-primary-500">Recommended: 400x500px</p>
+                    </div>
                   </div>
                 </div>
 
                 {/* Decorative Elements */}
-                <div className="absolute -top-3 -right-3 w-16 h-16 bg-primary-500/20 rounded-full blur-xl"></div>
-                <div className="absolute -bottom-3 -left-3 w-20 h-20 bg-accent-500/20 rounded-full blur-xl"></div>
+                <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary-500/20 rounded-full blur-xl"></div>
+                <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-accent-500/20 rounded-full blur-xl"></div>
               </div>
 
               {/* Floating Stats - Desktop Only */}
