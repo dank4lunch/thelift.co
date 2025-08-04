@@ -121,7 +121,6 @@ export default function Services() {
           <div className="flex flex-wrap justify-center gap-4">
             {specializations.map((spec, index) => (
               <div key={index} className="luxury-card px-6 py-4 depth-hover flex items-center space-x-3">
-                <span className="text-2xl">{spec.icon}</span>
                 <span className="text-neutral-300 font-medium">{spec.name}</span>
                 <div className="w-6 h-6 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full flex items-center justify-center">
                   <svg className="w-3 h-3 text-neutral-950" fill="currentColor" viewBox="0 0 20 20">
