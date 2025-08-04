@@ -121,10 +121,9 @@ export default function Hero() {
                   <p className="text-lg text-neutral-300 mb-1">Personal Trainer</p>
                   <p className="text-sm text-neutral-500 mb-4">Sandton CBD</p>
                   <div className="text-xs text-neutral-600 bg-neutral-800/50 rounded-lg p-3 border border-neutral-700">
-                    <p className="font-medium text-primary-400 mb-1">📸 Image Placeholder</p>
-                    <p>Replace with high-quality</p>
-                    <p>professional photo of Tshiamo</p>
-                    <p className="mt-2 text-primary-500">Recommended: 400x500px</p>
+                    <p className="font-medium text-primary-400 mb-2">Elite Performance Coach</p>
+                    <p className="text-neutral-300 mb-1">HFPA Certified trainer with 5+ years experience transforming lives through science-based fitness programming.</p>
+                    <p className="text-neutral-400">Specializing in HIIT, boxing, strength training, and sports conditioning for lasting results.</p>
                   </div>
                 </div>
               </div>
