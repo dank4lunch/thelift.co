@@ -52,7 +52,7 @@ export default function Hero() {
             }}
           />
         ))}
-        
+
         {/* Luxury orbs with 3D movement */}
         <div 
           className="absolute w-96 h-96 bg-gradient-to-r from-primary-600/20 to-accent-500/20 rounded-full blur-3xl floating-orb"
@@ -97,16 +97,17 @@ export default function Hero() {
                 />
               </div>
             </div>
-            
+
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-heading premium-text mb-4 sm:mb-6 animate-slide-up glow-text muscle-text transform-3d" role="banner">
-              Crush Your Fitness Goals with a Personal Trainer in Sandton
-            </h1>
+              Build To Boost
             
+            </h1>
+
             <div className="text-lg sm:text-xl md:text-2xl text-primary-300 mb-6 sm:mb-8 animate-fade-in">
               <p className="transform hover:scale-105 transition-transform duration-300 cursor-default muscle-text depth-hover">Get a free 15-minute consultation. Training packages available now.</p>
             </div>
           </div>
-          
+
           <p className="text-base sm:text-lg md:text-xl text-neutral-300 mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed animate-slide-up font-medium px-4 sm:px-0">
             Elite personal training with Tshiamo Sookane in Sandton CBD. Transform your body with proven results and expert guidance.
           </p>
