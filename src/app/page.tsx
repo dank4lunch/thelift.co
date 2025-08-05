@@ -1,4 +1,7 @@
+
 import LandingHero from '@/components/LandingHero'
+import TrainingShowcase from '@/components/TrainingShowcase'
+import LandingContact from '@/components/LandingContact'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import SkipNav from '@/components/SkipNav'
@@ -28,6 +31,8 @@ export default function LandingPage() {
           <Navigation />
           <main id="main-content" className="focus:outline-none" tabIndex={-1}>
             <LandingHero />
+            <TrainingShowcase />
+            <LandingContact />
           </main>
           <Footer />
         </div>

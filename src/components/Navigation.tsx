@@ -132,7 +132,15 @@ export default function Navigation() {
           {/* CTA Button with 3D effect */}
           <div className="hidden md:block">
             <button
-              onClick={() => handleNavigation('#contact')}
+              onClick={() => {
+                if (pathname === '/marketing') {
+                  handleNavigation('#contact')
+                } else if (pathname === '/') {
+                  window.open("https://forms.gle/8mz7dZXLcr47QSNG8", "_blank")
+                } else {
+                  handleNavigation('/home#packages')
+                }
+              }}
               className="btn-primary px-8 py-3 text-sm relative overflow-hidden group elite-glow focus:outline-none focus:ring-2 focus:ring-primary-300 focus:ring-offset-2 focus:ring-offset-neutral-950"
               aria-label={pathname === '/marketing' ? 'Get a quote' : 'Book training now'}
             >
@@ -224,7 +232,13 @@ export default function Navigation() {
             <div className="p-4 border-t border-neutral-700/50">
               <button
                 onClick={() => {
-                  handleNavigation('#contact')
+                  if (pathname === '/marketing') {
+                    handleNavigation('#contact')
+                  } else if (pathname === '/') {
+                    window.open("https://forms.gle/8mz7dZXLcr47QSNG8", "_blank")
+                  } else {
+                    handleNavigation('/home#packages')
+                  }
                   setIsMobileMenuOpen(false)
                 }}
                 className="w-full bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-500 hover:to-primary-600 text-neutral-950 font-bold py-4 px-6 rounded-xl shadow-lg transition-all duration-300 muscle-text"
