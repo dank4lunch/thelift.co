@@ -57,13 +57,12 @@ export default function LandingHero() {
       <div className="container-custom relative z-10 max-w-2xl mx-auto text-center text-safe">
         {/* Logo */}
         <div className={`mb-8 sm:mb-12 transition-all duration-1000 ${textVisible ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-10'}`}>
-          <div className="inline-flex items-center justify-center w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 bg-gradient-to-br from-primary-400/20 to-accent-400/20 backdrop-blur-sm border-2 border-primary-400/50 rounded-2xl shadow-2xl luxury-glow">
-            <div className="text-center">
-              <div className="text-lg sm:text-xl md:text-2xl font-black text-neutral-50 leading-tight">THE</div>
-              <div className="text-2xl sm:text-3xl md:text-4xl font-black text-primary-400 leading-tight">LIFT</div>
-              <div className="text-lg sm:text-xl md:text-2xl font-black text-neutral-50 leading-tight">CO</div>
-              <div className="text-xs text-neutral-400 font-medium mt-1 tracking-wider">BUILT TO BOOST</div>
-            </div>
+          <div className="inline-flex items-center justify-center w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 bg-gradient-to-br from-primary-400/20 to-accent-400/20 backdrop-blur-sm border-2 border-primary-400/50 rounded-2xl shadow-2xl luxury-glow overflow-hidden">
+            <img 
+              src="/images/IMG_0253_1754429519057.jpeg"
+              alt="The Lift Co Logo"
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
 

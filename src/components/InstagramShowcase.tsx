@@ -34,15 +34,15 @@ export default function InstagramShowcase() {
         <div className="text-center mb-16">
           <div className="inline-block mb-6">
             <span className="text-primary-400 text-lg font-bold tracking-wider uppercase border border-primary-500/30 px-6 py-3 rounded-full bg-primary-500/10">
-              TRAINING IN ACTION
+              ELITE RESULTS
             </span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-heading text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-accent-400 mb-6 sm:mb-8 animate-fade-in muscle-text">
-            ELITE RESULTS
+            TRAINING IN ACTION
           </h2>
           <div className="section-divider mb-8" />
           <p className="text-base sm:text-lg md:text-xl text-neutral-300 max-w-3xl mx-auto leading-relaxed font-medium px-4 sm:px-0">
-            See the transformation in action. Real training, real results, real commitment to excellence.
+            With a passion for transforming lives through fitness, I have spent years helping individuals of all ages achieve their health and performance goals.
           </p>
         </div>
 
