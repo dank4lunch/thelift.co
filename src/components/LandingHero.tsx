@@ -83,9 +83,10 @@ export default function LandingHero() {
           </div>
 
           <p className="text-base sm:text-lg md:text-xl text-neutral-300 leading-relaxed max-w-lg mx-auto">
-            Elite personal training across Gauteng.
-            <br />
-            Transform your body with proven results.
+            I'm not your average trainer. I'm a creative entrepreneur who's obsessed 
+            with human transformation - and I've spent 10 years perfecting the art of getting results.
+            <br className="hidden sm:block" />
+            <span className="text-primary-300 font-semibold">Ready to stop making excuses and start making progress?</span>
           </p>
         </div>
 

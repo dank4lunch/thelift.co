@@ -3,9 +3,9 @@
 
 export default function TrainerAbout() {
   const additionalImages = [
-    '/attached_assets/IMG_0240_1754424813561.jpeg',
-    '/attached_assets/IMG_0242_1754424813561.jpeg',
-    '/attached_assets/IMG_0245_1754424813561.jpeg'
+    '/images/IMG_0240_1754424813561.jpeg',
+    '/images/IMG_0242_1754424813561.jpeg', 
+    '/images/IMG_0245_1754424813561.jpeg'
   ]
 
   return (

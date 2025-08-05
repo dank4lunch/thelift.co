@@ -8,74 +8,88 @@ export default function Gallery() {
 
   const galleryImages = [
     {
-      src: '/attached_assets/IMG_0200_1754424195308.jpeg',
+      src: '/images/IMG_0200_1754424195308.jpeg',
       alt: 'Training Session 1',
-      title: 'Strength Training'
+      title: 'This is where the magic happens',
+      description: 'Every rep, every set, every drop of sweat - it all counts'
     },
     {
-      src: '/attached_assets/IMG_0201_1754424195308.jpeg',
-      alt: 'Training Session 2',
-      title: 'Personal Coaching'
+      src: '/images/IMG_0201_1754424195308.jpeg',
+      alt: 'Training Session 2', 
+      title: 'Form over everything',
+      description: 'Perfect technique builds perfect results'
     },
     {
-      src: '/attached_assets/IMG_0202_1754424195308.jpeg',
+      src: '/images/IMG_0202_1754424195308.jpeg',
       alt: 'Training Session 3',
-      title: 'Fitness Progress'
+      title: 'Progress in motion',
+      description: 'Small steps, massive transformations'
     },
     {
-      src: '/attached_assets/2f6605d9-b403-4315-ba58-875ad50e9824_1754424319425.jpeg',
+      src: '/images/2f6605d9-b403-4315-ba58-875ad50e9824_1754424319425.jpeg',
       alt: 'Professional Training',
-      title: 'Elite Performance'
+      title: 'Elite mindset, elite results',
+      description: 'When you train with purpose, everything changes'
     },
     {
-      src: '/attached_assets/dc6d1645-ab70-49fe-b4ae-d3b2ddb9e51c_1754424319425.jpeg',
+      src: '/images/dc6d1645-ab70-49fe-b4ae-d3b2ddb9e51c_1754424319425.jpeg',
       alt: 'Training Results',
-      title: 'Transformation'
+      title: 'Transformation evidence',
+      description: 'This is what dedication looks like'
     },
     {
-      src: '/attached_assets/IMG_0239_1754424813561.jpeg',
+      src: '/images/IMG_0239_1754424813561.jpeg',
       alt: 'Gym Session 1',
-      title: 'Workout Intensity'
+      title: 'Intensity with intelligence',
+      description: 'Hard work, smart programming'
     },
     {
-      src: '/attached_assets/IMG_0240_1754424813561.jpeg',
+      src: '/images/IMG_0240_1754424813561.jpeg',
       alt: 'Gym Session 2',
-      title: 'Professional Setup'
+      title: 'Professional environment',
+      description: 'Where champions are made'
     },
     {
-      src: '/attached_assets/IMG_0241_1754424813561.jpeg',
+      src: '/images/IMG_0241_1754424813561.jpeg',
       alt: 'Gym Session 3',
-      title: 'Training Excellence'
+      title: 'Excellence in action',
+      description: 'Every session counts toward your goals'
     },
     {
-      src: '/attached_assets/IMG_0242_1754424813561.jpeg',
+      src: '/images/IMG_0242_1754424813561.jpeg',
       alt: 'Gym Session 4',
-      title: 'Fitness Journey'
+      title: 'Your fitness journey',
+      description: 'One workout at a time'
     },
     {
-      src: '/attached_assets/IMG_0243_1754424813561.jpeg',
+      src: '/images/IMG_0243_1754424813561.jpeg',
       alt: 'Gym Session 5',
-      title: 'Elite Training'
+      title: 'Elite training standards',
+      description: 'No shortcuts, just results'
     },
     {
-      src: '/attached_assets/IMG_0245_1754424813561.jpeg',
+      src: '/images/IMG_0245_1754424813561.jpeg',
       alt: 'Gym Session 6',
-      title: 'Professional Coaching'
+      title: 'Personal coaching excellence',
+      description: 'Your success is my mission'
     },
     {
-      src: '/attached_assets/IMG_0246_1754424813561.jpeg',
+      src: '/images/IMG_0246_1754424813561.jpeg',
       alt: 'Gym Session 7',
-      title: 'Strength Building'
+      title: 'Building real strength',
+      description: 'Physical and mental fortitude'
     },
     {
-      src: '/attached_assets/IMG_0248_1754424813561.jpeg',
+      src: '/images/IMG_0248_1754424813561.jpeg',
       alt: 'Gym Session 8',
-      title: 'Fitness Goals'
+      title: 'Goals becoming reality',
+      description: 'This is how dreams take shape'
     },
     {
-      src: '/attached_assets/IMG_0249_1754424813560.jpeg',
+      src: '/images/IMG_0249_1754424813560.jpeg',
       alt: 'Gym Session 9',
-      title: 'Training Success'
+      title: 'Success stories in the making',
+      description: 'Your chapter starts here'
     }
   ]
 
@@ -99,7 +113,11 @@ export default function Gallery() {
           </h2>
           <div className="section-divider mb-8" />
           <p className="text-base sm:text-lg md:text-xl text-neutral-300 max-w-3xl mx-auto leading-relaxed font-medium px-4 sm:px-0">
-            Get lifted with your personal trainer. See the dedication, effort, and transformation in action.
+            This isn't just a photo gallery - it's proof. Proof that transformation is real, that hard work pays off, 
+            and that with the right guidance, you can become the person you've always wanted to be.
+          </p>
+          <p className="text-sm sm:text-base text-primary-300 mt-4 font-semibold">
+            Every picture tells a story of someone who decided to stop making excuses and start making progress.
           </p>
         </div>
 
@@ -118,9 +136,10 @@ export default function Gallery() {
                   alt={image.alt}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="absolute bottom-4 left-4 right-4">
-                    <h4 className="text-white font-bold muscle-text">{image.title}</h4>
+                    <h4 className="text-white font-bold muscle-text mb-1">{image.title}</h4>
+                    <p className="text-primary-300 text-xs font-medium">{image.description}</p>
                   </div>
                 </div>
               </div>

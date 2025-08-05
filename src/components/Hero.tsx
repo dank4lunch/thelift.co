@@ -107,9 +107,15 @@ export default function Hero() {
           </div>
 
           {/* Simplified description */}
-          <p className="text-lg sm:text-xl text-neutral-300 mb-12 max-w-2xl mx-auto leading-relaxed animate-slide-up font-medium">
-            Let's work together to build the strongest, healthiest version of yourself. I'm here to guide you every step of the way.
-          </p>
+          <div className="mb-12 max-w-2xl mx-auto animate-slide-up">
+            <p className="text-lg sm:text-xl text-neutral-300 leading-relaxed font-medium mb-4">
+              Look, I'm not here to sugarcoat it - transformation is hard work. But here's what I promise: 
+              you won't do it alone.
+            </p>
+            <p className="text-base sm:text-lg text-primary-300 leading-relaxed font-semibold">
+              I'm Tshiamo, your creative entrepreneur turned elite trainer. 10 years of turning "I can't" into "watch me."
+            </p>
+          </div>
 
           {/* CTA Buttons - Improved spacing and design */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16 animate-scale-in">
