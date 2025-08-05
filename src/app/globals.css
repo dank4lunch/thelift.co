@@ -78,7 +78,7 @@
       color-scheme: dark; /* Force dark mode */
     }
   }
-  
+
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Poppins', system-ui, sans-serif;
     @apply font-semibold leading-tight text-neutral-50;
@@ -122,15 +122,15 @@
   ::-webkit-scrollbar {
     width: 8px;
   }
-  
+
   ::-webkit-scrollbar-track {
     @apply bg-neutral-900;
   }
-  
+
   ::-webkit-scrollbar-thumb {
     @apply bg-primary-600 rounded-full;
   }
-  
+
   ::-webkit-scrollbar-thumb:hover {
     @apply bg-primary-500;
   }
@@ -141,30 +141,30 @@
     @apply bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-500 hover:to-primary-600 text-neutral-950 font-bold py-4 px-8 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 ease-out border border-primary-500/30;
     transform-style: preserve-3d;
   }
-  
+
   .btn-primary:hover {
     transform: scale(1.05) rotateX(5deg) translateZ(10px);
     box-shadow: 0 15px 35px rgba(227, 181, 71, 0.4);
   }
-  
+
   .btn-secondary {
     @apply bg-gradient-to-r from-accent-600 to-accent-700 hover:from-accent-500 hover:to-accent-600 text-white font-bold py-4 px-8 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 ease-out border border-accent-500/30;
     transform-style: preserve-3d;
   }
-  
+
   .btn-secondary:hover {
     transform: scale(1.05) rotateX(5deg) translateZ(10px);
     box-shadow: 0 15px 35px rgba(168, 145, 72, 0.4);
   }
-  
+
   .btn-outline {
     @apply border-2 border-primary-500 text-primary-400 hover:bg-primary-600 hover:text-neutral-950 font-bold py-4 px-8 rounded-xl transition-all duration-300 ease-out hover:shadow-lg;
   }
-  
+
   .section-padding {
     @apply py-20 md:py-32;
   }
-  
+
   .container-custom {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
@@ -285,6 +285,56 @@
   }
 
   /* 3D Effects */
+  .perspective-container {
+    perspective: 1000px;
+  }
+
+  .transform-3d {
+    transform-style: preserve-3d;
+  }
+
+  .depth-hover {
+    transition: transform 0.3s ease;
+  }
+
+  /* Improved gradient animation */
+  @keyframes gradient {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient 3s ease infinite;
+  }
+
+  /* Enhanced button hover effects */
+  .btn-primary:hover,
+  .btn-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 20px 40px rgba(227, 181, 71, 0.3);
+  }
+
+  /* Improved luxury glow */
+  .luxury-glow {
+    box-shadow: 
+      0 0 20px rgba(227, 181, 71, 0.2),
+      0 0 40px rgba(227, 181, 71, 0.1),
+      0 4px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .luxury-glow:hover {
+    box-shadow: 
+      0 0 30px rgba(227, 181, 71, 0.4),
+      0 0 60px rgba(227, 181, 71, 0.2),
+      0 8px 30px rgba(0, 0, 0, 0.4);
+  }
+
+  /* Flip Card */
   .flip-card {
     perspective: 1000px;
   }

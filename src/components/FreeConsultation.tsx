@@ -115,9 +115,9 @@ export default function FreeConsultation() {
                   href="https://forms.gle/8mz7dZXLcr47QSNG8"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-primary w-full text-center py-4 block text-lg elite-glow"
+                  className="btn-primary w-full text-center py-4 block text-lg elite-glow transform hover:scale-105 transition-all duration-300"
                 >
-                  <span className="muscle-text">Schedule Now</span>
+                  <span className="muscle-text">BOOK FREE CONSULTATION</span>
                 </a>
                 
                 <div className="text-center">

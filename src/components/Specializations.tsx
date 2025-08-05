@@ -118,12 +118,12 @@ export default function Specializations() {
               Book your free consultation and discover which specialization works best for your goals.
             </p>
             <a
-              href="https://wa.me/27635432439?text=Hi! I'd like to learn more about your training specializations. Can we schedule a consultation?"
+              href="https://forms.gle/8mz7dZXLcr47QSNG8"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary px-8 py-4 text-lg elite-glow"
+              className="btn-primary px-8 py-4 text-lg elite-glow transform hover:scale-105 transition-all duration-300"
             >
-              <span className="muscle-text">Schedule Free Consultation</span>
+              <span className="muscle-text">BOOK FREE CONSULTATION</span>
             </a>
           </div>
         </div>
