@@ -31,11 +31,11 @@ export default function Navigation() {
 
   // Different nav items based on current page
   const homeNavItems = [
-    { name: 'Home', href: '/' },
+    { name: 'Home', href: '/home' },
     { name: 'About', href: '/about' },
     { name: 'Training', href: '/services' },
     { name: 'Trainer', href: '/about#founder' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Contact', href: '/home#contact' },
   ]
 
   const marketingNavItems = [
@@ -78,7 +78,7 @@ export default function Navigation() {
             <button
               onClick={() => window.location.href = '/'}
               className="w-14 h-14 rounded-xl overflow-hidden transform hover:scale-110 transition-transform duration-300 border-2 border-primary-500/50 bg-elite-cream/10 backdrop-blur-sm luxury-glow depth-hover focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-neutral-950"
-              aria-label="The Lift Co - Go to homepage"
+              aria-label="The Lift Co - Go to landing page"
             >
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F40f4f3f8cf004cb78312fbe6b3e1cec8%2F08e7771950634f09bf5906b11a6d0d83?format=webp&width=800"

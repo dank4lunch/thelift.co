@@ -89,26 +89,26 @@ export default function Hero() {
 
             {/* Main Heading - Cleaner typography */}
             <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black font-heading premium-text mb-6 animate-slide-up glow-text muscle-text transform-3d leading-tight" role="banner">
-              BUILD TO
+              YOUR FITNESS
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary-400 via-accent-400 to-primary-400 animate-gradient">
-                BOOST
+                TRANSFORMATION
               </span>
             </h1>
 
             {/* Simplified tagline */}
             <div className="text-xl sm:text-2xl md:text-3xl text-primary-300 mb-8 animate-fade-in">
               <p className="font-medium leading-relaxed">
-                Elite Personal Training in Sandton CBD
+                Personal Training Across Gauteng
               </p>
               <p className="text-lg sm:text-xl text-accent-400 mt-2 font-semibold">
-                Free 15-minute consultation • Proven results
+                Free consultation • Real results • 10 years experience
               </p>
             </div>
           </div>
 
           {/* Simplified description */}
           <p className="text-lg sm:text-xl text-neutral-300 mb-12 max-w-2xl mx-auto leading-relaxed animate-slide-up font-medium">
-            Transform your body with expert guidance. Professional training that delivers real results.
+            Let's work together to build the strongest, healthiest version of yourself. I'm here to guide you every step of the way.
           </p>
 
           {/* CTA Buttons - Improved spacing and design */}
@@ -120,7 +120,7 @@ export default function Hero() {
               className="btn-primary text-lg px-10 py-4 elite-glow group relative overflow-hidden focus:outline-none focus:ring-2 focus:ring-primary-300 focus:ring-offset-2 focus:ring-offset-neutral-950 transform hover:scale-105 transition-all duration-300"
               aria-label="Book free consultation via Google Form"
             >
-              <span className="relative z-10 muscle-text font-bold">FREE CONSULTATION</span>
+              <span className="relative z-10 muscle-text font-bold">GET FREE CONSULTATION</span>
               <div className="absolute inset-0 bg-gradient-to-r from-primary-400 to-accent-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300" aria-hidden="true"></div>
             </a>
             <a
@@ -128,24 +128,24 @@ export default function Hero() {
               className="btn-secondary text-lg px-10 py-4 luxury-glow group relative overflow-hidden focus:outline-none focus:ring-2 focus:ring-accent-300 focus:ring-offset-2 focus:ring-offset-neutral-950 transform hover:scale-105 transition-all duration-300"
               aria-label="View training packages"
             >
-              <span className="relative z-10 muscle-text font-bold">VIEW PACKAGES</span>
+              <span className="relative z-10 muscle-text font-bold">EXPLORE PROGRAMS</span>
               <div className="absolute inset-0 bg-gradient-to-r from-accent-400 to-primary-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300" aria-hidden="true"></div>
             </a>
           </div>
 
-          {/* Quick stats - New addition for credibility */}
+          {/* Quick stats - Updated with 10 years */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-2xl mx-auto">
-            <div className="text-center group cursor-default">
-              <div className="text-3xl sm:text-4xl font-bold text-primary-400 mb-2 group-hover:scale-110 transition-transform duration-300">5+</div>
+            <div className="text-center group cursor-default depth-hover">
+              <div className="text-3xl sm:text-4xl font-bold text-primary-400 mb-2 group-hover:scale-110 transition-transform duration-300">10</div>
               <div className="text-neutral-300 font-medium text-sm uppercase tracking-wide">Years Experience</div>
             </div>
-            <div className="text-center group cursor-default">
+            <div className="text-center group cursor-default depth-hover">
               <div className="text-3xl sm:text-4xl font-bold text-accent-400 mb-2 group-hover:scale-110 transition-transform duration-300">100%</div>
               <div className="text-neutral-300 font-medium text-sm uppercase tracking-wide">Personalized</div>
             </div>
-            <div className="text-center group cursor-default">
-              <div className="text-3xl sm:text-4xl font-bold text-primary-400 mb-2 group-hover:scale-110 transition-transform duration-300">15min</div>
-              <div className="text-neutral-300 font-medium text-sm uppercase tracking-wide">Free Consultation</div>
+            <div className="text-center group cursor-default depth-hover">
+              <div className="text-3xl sm:text-4xl font-bold text-primary-400 mb-2 group-hover:scale-110 transition-transform duration-300">FREE</div>
+              <div className="text-neutral-300 font-medium text-sm uppercase tracking-wide">Initial Consultation</div>
             </div>
           </div>
         </div>

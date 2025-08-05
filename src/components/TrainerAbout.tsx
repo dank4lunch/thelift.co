@@ -17,9 +17,13 @@ export default function TrainerAbout() {
             </span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-heading text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-accent-400 mb-6 muscle-text">
-            Meet Tshiamo Sookane
-          </h2>
-          <div className="section-divider mb-8" />
+              MEET TSHIAMO
+            </h2>
+            <div className="section-divider mb-8" />
+            <p className="text-base sm:text-lg md:text-xl text-neutral-300 max-w-3xl mx-auto leading-relaxed font-medium px-4 sm:px-0">
+              Hi! I'm Tshiamo Sookane, your personal fitness coach with 10 years of experience helping people transform their lives. 
+              I believe fitness should be fun, challenging, and tailored just for you.
+            </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 max-w-6xl mx-auto items-center">
@@ -35,7 +39,7 @@ export default function TrainerAbout() {
                   />
                 </div>
               </div>
-              
+
               {/* Qualification Badge */}
               <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-primary-500 to-accent-500 text-neutral-950 px-6 py-4 rounded-xl shadow-xl elite-glow">
                 <div className="text-center">

@@ -69,14 +69,13 @@ export default function Specializations() {
               Training Expertise
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-heading text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-accent-400 mb-6 muscle-text">
-            My Specializations
-          </h2>
-          <div className="section-divider mb-8" />
-          <p className="text-lg text-neutral-300 max-w-3xl mx-auto leading-relaxed font-medium">
-            Discover the range of training methods I use to help clients achieve their fitness goals. 
-            Each specialization is designed to challenge you and deliver real results.
-          </p>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-heading text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-accent-400 mb-6 sm:mb-8 animate-fade-in muscle-text">
+              WHAT I CAN HELP YOU WITH
+            </h2>
+            <div className="section-divider mb-8" />
+            <p className="text-base sm:text-lg md:text-xl text-neutral-300 max-w-3xl mx-auto leading-relaxed font-medium px-4 sm:px-0">
+              Whether you're just starting out or looking to take your fitness to the next level, I've got the experience and programs to help you succeed.
+            </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -101,7 +100,7 @@ export default function Specializations() {
 
               {/* Hover effect overlay */}
               <div className={`absolute inset-0 bg-gradient-to-br ${spec.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300 rounded-xl`} />
-              
+
               {/* Bottom accent line */}
               <div className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${spec.color} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left`} />
             </div>
