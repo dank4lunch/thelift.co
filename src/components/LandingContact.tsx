@@ -43,7 +43,7 @@ Goals: ${formData.goals}
       </div>
 
       <div className="container-custom relative z-10">
-        <div className="max-w-2xl mx-auto">
+        <div className="max-w-2xl mx-auto px-4 text-safe">
           <div className="text-center mb-12">
             <div className="inline-block mb-6">
               <span className="elite-badge">

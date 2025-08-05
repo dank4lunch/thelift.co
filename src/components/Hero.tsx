@@ -74,7 +74,7 @@ export default function Hero() {
       </div>
 
       <div className="container-custom relative z-10">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8 text-safe">
           {/* Profile Image - Larger and more prominent */}
           <div className="mb-8">
             <div className="flex justify-center mb-8">
@@ -88,9 +88,9 @@ export default function Hero() {
             </div>
 
             {/* Main Heading - Cleaner typography */}
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black font-heading premium-text mb-6 animate-slide-up glow-text muscle-text transform-3d leading-tight" role="banner">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black font-heading premium-text mb-6 animate-slide-up glow-text muscle-text transform-3d leading-tight break-words" role="banner">
               YOUR FITNESS
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary-400 via-accent-400 to-primary-400 animate-gradient">
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary-400 via-accent-400 to-primary-400 animate-gradient break-words">
                 TRANSFORMATION
               </span>
             </h1>

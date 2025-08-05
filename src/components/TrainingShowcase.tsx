@@ -33,13 +33,13 @@ export default function TrainingShowcase() {
       </div>
 
       <div className="container-custom relative z-10">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 px-4 text-safe">
           <div className="inline-block mb-6">
             <span className="elite-badge">
               TRAINING IN ACTION
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-heading text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-accent-400 mb-8 muscle-text">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold font-heading text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-accent-400 mb-8 muscle-text break-words">
             ELITE RESULTS
           </h2>
           <div className="section-divider mb-8" />

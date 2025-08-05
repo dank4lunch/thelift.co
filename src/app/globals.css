@@ -109,6 +109,35 @@
     vertical-align: text-top;
   }
 
+  /* Text overflow and alignment utilities */
+  .text-safe {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
+  .container-safe {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .container-safe {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container-safe {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+
   /* Override Twemoji sizing to be consistent */
   img.emoji {
     height: 1em !important;

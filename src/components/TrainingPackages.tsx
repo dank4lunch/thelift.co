@@ -1,3 +1,4 @@
+
 'use client'
 
 import { useState } from 'react'
@@ -106,27 +107,27 @@ export default function TrainingPackages() {
       </div>
 
       <div className="container-custom relative z-10">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 px-4">
           <div className="inline-block mb-6">
             <span className="text-primary-400 text-lg font-bold tracking-wider uppercase border border-primary-500/30 px-6 py-3 rounded-full bg-primary-500/10">
               TRAINING PACKAGES
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-heading text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-accent-400 mb-6 muscle-text">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-heading text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-accent-400 mb-6 muscle-text leading-tight">
             GET LIFTED WITH YOUR PERSONAL TRAINER
           </h2>
           <div className="section-divider mb-8" />
-          <p className="text-base sm:text-lg md:text-xl text-neutral-300 max-w-3xl mx-auto leading-relaxed font-medium px-4 sm:px-0">
+          <p className="text-base sm:text-lg md:text-xl text-neutral-300 max-w-4xl mx-auto leading-relaxed font-medium">
             Choose the perfect training package that fits your goals and lifestyle. Custom packages available for all fitness levels.
           </p>
         </div>
 
         {/* Training Packages */}
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-20">
+        <div className="grid md:grid-cols-3 gap-6 lg:gap-8 max-w-7xl mx-auto mb-20 px-4">
           {packages.map((pkg, index) => (
             <div
               key={index}
-              className={`luxury-card p-8 relative depth-hover transition-all duration-500 ${
+              className={`luxury-card p-6 lg:p-8 relative depth-hover transition-all duration-500 ${
                 pkg.popular
                   ? 'bg-gradient-to-br from-primary-500/20 to-accent-500/20 border-primary-500/50 scale-105'
                   : 'bg-gradient-to-br from-neutral-900/50 to-neutral-800/50 border-neutral-700/50'
@@ -142,29 +143,29 @@ export default function TrainingPackages() {
               )}
 
               <div className="text-center mb-6">
-                <h3 className="text-2xl font-bold text-primary-400 mb-2 muscle-text">{pkg.name}</h3>
-                <div className="text-4xl font-black text-accent-400 mb-2">{pkg.price}</div>
+                <h3 className="text-xl lg:text-2xl font-bold text-primary-400 mb-2 muscle-text break-words">{pkg.name}</h3>
+                <div className="text-3xl lg:text-4xl font-black text-accent-400 mb-2">{pkg.price}</div>
                 {pkg.priceNote && (
                   <div className="text-sm text-neutral-400 mb-2">{pkg.priceNote}</div>
                 )}
                 <div className="text-neutral-300 font-medium">{pkg.duration}</div>
               </div>
 
-              <p className="text-neutral-300 mb-6 leading-relaxed">{pkg.description}</p>
+              <p className="text-neutral-300 mb-6 leading-relaxed text-sm lg:text-base">{pkg.description}</p>
 
               <div className="space-y-3 mb-8">
                 <h4 className="text-lg font-bold text-primary-400 muscle-text">What you're in for:</h4>
                 {pkg.features.map((feature, featureIndex) => (
                   <div key={featureIndex} className="flex items-start">
                     <span className="w-2 h-2 bg-accent-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                    <span className="text-neutral-300">{feature}</span>
+                    <span className="text-neutral-300 text-sm lg:text-base break-words">{feature}</span>
                   </div>
                 ))}
               </div>
 
               <button
                 onClick={() => handlePackageSelect(pkg.name)}
-                className={`w-full text-center py-4 px-6 rounded-lg font-bold muscle-text transition-all duration-300 ${
+                className={`w-full text-center py-4 px-6 rounded-lg font-bold muscle-text transition-all duration-300 text-sm lg:text-base ${
                   pkg.popular
                     ? 'bg-gradient-to-r from-primary-500 to-accent-500 text-neutral-950 hover:scale-105 elite-glow'
                     : 'bg-neutral-800 text-primary-400 border border-primary-500/50 hover:bg-primary-500/10'
@@ -177,10 +178,10 @@ export default function TrainingPackages() {
         </div>
 
         {/* Custom Packages Info */}
-        <div className="text-center mb-16">
-          <div className="luxury-card p-8 max-w-3xl mx-auto">
-            <h3 className="text-2xl font-bold text-primary-400 mb-4 muscle-text">Custom Packages</h3>
-            <p className="text-neutral-300 mb-6">
+        <div className="text-center mb-16 px-4">
+          <div className="luxury-card p-6 lg:p-8 max-w-4xl mx-auto">
+            <h3 className="text-xl lg:text-2xl font-bold text-primary-400 mb-4 muscle-text">Custom Packages</h3>
+            <p className="text-neutral-300 mb-6 leading-relaxed">
               Training session times are arranged directly with trainers, as their schedules vary from week to week.
               All custom packages are available as once-off or recurring.
             </p>
@@ -191,22 +192,22 @@ export default function TrainingPackages() {
         </div>
 
         {/* FAQ Section */}
-        <div className="max-w-4xl mx-auto">
-          <h3 className="text-3xl font-bold text-center text-primary-400 mb-12 muscle-text">Frequently Asked Questions</h3>
+        <div className="max-w-5xl mx-auto px-4">
+          <h3 className="text-2xl lg:text-3xl font-bold text-center text-primary-400 mb-12 muscle-text">Frequently Asked Questions</h3>
           <div className="space-y-6">
             {faqs.map((faq, index) => (
               <div key={index} className="luxury-card p-6">
-                <h4 className="text-lg font-bold text-accent-400 mb-3 muscle-text">{faq.question}</h4>
-                <p className="text-neutral-300 leading-relaxed">{faq.answer}</p>
+                <h4 className="text-lg font-bold text-accent-400 mb-3 muscle-text break-words">{faq.question}</h4>
+                <p className="text-neutral-300 leading-relaxed break-words">{faq.answer}</p>
               </div>
             ))}
           </div>
         </div>
 
         {/* Available Times */}
-        <div className="text-center mt-16">
-          <div className="luxury-card p-8 max-w-3xl mx-auto">
-            <h3 className="text-2xl font-bold text-primary-400 mb-4 muscle-text">Training Schedule</h3>
+        <div className="text-center mt-16 px-4">
+          <div className="luxury-card p-6 lg:p-8 max-w-4xl mx-auto">
+            <h3 className="text-xl lg:text-2xl font-bold text-primary-400 mb-4 muscle-text">Training Schedule</h3>
             <p className="text-neutral-300 mb-6">
               Available Monday to Sunday, 5AM - 10PM
             </p>

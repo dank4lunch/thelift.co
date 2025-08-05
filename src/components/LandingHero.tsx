@@ -54,7 +54,7 @@ export default function LandingHero() {
         ))}
       </div>
 
-      <div className="container-custom relative z-10 max-w-2xl mx-auto text-center">
+      <div className="container-custom relative z-10 max-w-2xl mx-auto text-center text-safe">
         {/* Logo */}
         <div className={`mb-8 sm:mb-12 transition-all duration-1000 ${textVisible ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-10'}`}>
           <div className="inline-flex items-center justify-center w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 bg-gradient-to-br from-primary-400/20 to-accent-400/20 backdrop-blur-sm border-2 border-primary-400/50 rounded-2xl shadow-2xl luxury-glow">
@@ -69,7 +69,7 @@ export default function LandingHero() {
 
         {/* Main Headline */}
         <div className={`mb-8 sm:mb-12 transition-all duration-1000 delay-300 ${textVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-primary-400 via-accent-400 to-primary-400 mb-6 sm:mb-8 leading-tight tracking-wide">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-primary-400 via-accent-400 to-primary-400 mb-6 sm:mb-8 leading-tight tracking-wide break-words">
             BUILT TO BOOST
           </h1>
           
