@@ -87,7 +87,7 @@ export default function LandingHero() {
           {/* Hero Profile */}
           <div className="mb-12 depth-hover">
             <div className="flex justify-center mb-8">
-              <div className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-3xl overflow-hidden border-4 border-primary-400/70 bg-gradient-to-br from-primary-500/30 to-accent-500/30 backdrop-blur-sm shadow-2xl luxury-glow transform hover:scale-110 transition-all duration-700 tilt-3d">
+              <div className="w-40 h-40 sm:w-44 sm:h-44 md:w-48 md:h-48 rounded-3xl overflow-hidden border-4 border-primary-400/70 bg-gradient-to-br from-primary-500/30 to-accent-500/30 backdrop-blur-sm shadow-2xl luxury-glow transform hover:scale-110 transition-all duration-700 tilt-3d"></div>
                 <img 
                   src="https://cdn.builder.io/api/v1/image/assets%2F40f4f3f8cf004cb78312fbe6b3e1cec8%2F08e7771950634f09bf5906b11a6d0d83?format=webp&width=800"
                   alt="Tshiamo Sookane - Your Personal Fitness Coach"

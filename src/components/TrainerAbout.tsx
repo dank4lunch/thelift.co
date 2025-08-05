@@ -1,6 +1,13 @@
+
 'use client'
 
 export default function TrainerAbout() {
+  const additionalImages = [
+    '/attached_assets/IMG_0240_1754424813561.jpeg',
+    '/attached_assets/IMG_0242_1754424813561.jpeg',
+    '/attached_assets/IMG_0245_1754424813561.jpeg'
+  ]
+
   return (
     <section id="about-trainer" className="section-padding bg-gradient-to-b from-neutral-900 to-neutral-950 relative overflow-hidden">
       {/* Background elements */}
@@ -13,7 +20,7 @@ export default function TrainerAbout() {
         <div className="text-center mb-16">
           <div className="inline-block mb-6">
             <span className="text-primary-400 text-lg font-bold tracking-wider uppercase border border-primary-500/30 px-6 py-3 rounded-full bg-primary-500/10">
-              Your Trainer
+              Your Trainer & Creative Entrepreneur
             </span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-heading text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-accent-400 mb-6 muscle-text">
@@ -21,8 +28,7 @@ export default function TrainerAbout() {
             </h2>
             <div className="section-divider mb-8" />
             <p className="text-base sm:text-lg md:text-xl text-neutral-300 max-w-3xl mx-auto leading-relaxed font-medium px-4 sm:px-0">
-              Hi! I'm Tshiamo Sookane, your personal fitness coach with 10 years of experience helping people transform their lives. 
-              I believe fitness should be fun, challenging, and tailored just for you.
+              Get lifted with your personal trainer! I'm Tshiamo Sookane, your personal fitness coach and creative entrepreneur with 10 years of experience helping people transform their lives through fitness and creative excellence.
             </p>
         </div>
 
@@ -30,18 +36,31 @@ export default function TrainerAbout() {
           {/* Trainer Image */}
           <div className="order-2 lg:order-1">
             <div className="relative">
-              <div className="w-full max-w-md mx-auto lg:max-w-full">
+              <div className="w-full max-w-md mx-auto lg:max-w-full mb-8">
                 <div className="strength-card p-6 bg-gradient-to-br from-primary-500/20 to-accent-500/20 border border-primary-500/50">
                   <img 
                     src="https://cdn.builder.io/api/v1/image/assets%2F40f4f3f8cf004cb78312fbe6b3e1cec8%2F08e7771950634f09bf5906b11a6d0d83?format=webp&width=800"
-                    alt="Tshiamo Sookane - Personal Trainer in Sandton"
+                    alt="Tshiamo Sookane - Personal Trainer & Creative Entrepreneur in Gauteng"
                     className="w-full h-96 object-cover rounded-lg shadow-2xl"
                   />
                 </div>
               </div>
 
+              {/* Additional Training Photos */}
+              <div className="grid grid-cols-3 gap-4">
+                {additionalImages.map((image, index) => (
+                  <div key={index} className="strength-card p-2 bg-gradient-to-br from-accent-500/10 to-primary-500/10 border border-accent-500/30">
+                    <img
+                      src={image}
+                      alt={`Training session ${index + 1}`}
+                      className="w-full h-24 object-cover rounded"
+                    />
+                  </div>
+                ))}
+              </div>
+
               {/* Qualification Badge */}
-              <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-primary-500 to-accent-500 text-neutral-950 px-6 py-4 rounded-xl shadow-xl elite-glow">
+              <div className="absolute -top-6 -right-6 bg-gradient-to-r from-primary-500 to-accent-500 text-neutral-950 px-6 py-4 rounded-xl shadow-xl elite-glow">
                 <div className="text-center">
                   <div className="text-sm font-bold uppercase tracking-wider">Certified</div>
                   <div className="text-xs font-medium">HFPA Exercise Science</div>
@@ -54,12 +73,32 @@ export default function TrainerAbout() {
           <div className="order-1 lg:order-2 space-y-8">
             <div>
               <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary-400 mb-4 muscle-text">
-                Higher Certificate in Exercise Science (HFPA)
+                The Lift.Co - Creative Excellence Meets Fitness
               </h3>
               <p className="text-lg text-neutral-300 leading-relaxed font-medium mb-6">
-                Based in Sandton CBD, Gauteng, I specialize in transforming lives through science-backed fitness programs. 
-                With my Higher Certificate in Exercise Science from HFPA, I bring both knowledge and passion to every training session.
+                The Lift.Co is an amalgamation of a holistic creative process. It's a segmented business, split into sport and fitness training and creative marketing services.
               </p>
+              <p className="text-lg text-neutral-300 leading-relaxed font-medium mb-6">
+                The training side offers in-person training, online coaching, and sports-specific training and conditioning. The creative marketing business extends from digital marketing to event coordination and curation - and everything in between.
+              </p>
+              <p className="text-lg text-neutral-300 leading-relaxed font-medium mb-6">
+                Based on the talents of one dreamer who is willing to stand out and service across the spectrum. I believe in transforming lives through both physical fitness and creative expression.
+              </p>
+            </div>
+
+            {/* Business Hours */}
+            <div className="strength-card p-6 bg-gradient-to-r from-primary-500/20 to-accent-500/20 border border-primary-500/50 mb-6">
+              <h4 className="text-xl font-bold text-primary-400 mb-4 muscle-text">Training Hours</h4>
+              <div className="space-y-2 text-neutral-300">
+                <div className="flex justify-between">
+                  <span className="font-medium">Monday - Saturday:</span>
+                  <span>5:00 AM - 10:00 PM</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="font-medium">Sunday:</span>
+                  <span>By Appointment</span>
+                </div>
+              </div>
             </div>
 
             {/* Contact Methods */}
@@ -76,7 +115,7 @@ export default function TrainerAbout() {
                   </svg>
                 </div>
                 <div className="text-sm font-bold text-green-400">WhatsApp</div>
-                <div className="text-xs text-neutral-400 mt-1">Instant Response</div>
+                <div className="text-xs text-neutral-400 mt-1">063 543 2439</div>
               </a>
 
               <a
@@ -118,8 +157,8 @@ export default function TrainerAbout() {
                 </div>
                 <div>
                   <h4 className="text-lg font-bold text-accent-400 muscle-text">Training Location</h4>
-                  <p className="text-neutral-300 font-medium">Sandton CBD, Gauteng</p>
-                  <p className="text-sm text-neutral-400">South Africa</p>
+                  <p className="text-neutral-300 font-medium">Albermarle, Germiston</p>
+                  <p className="text-sm text-neutral-400">Gauteng, South Africa</p>
                 </div>
               </div>
             </div>
