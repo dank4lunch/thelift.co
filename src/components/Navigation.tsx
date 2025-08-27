@@ -152,6 +152,19 @@ export default function Navigation() {
                   {item.name}
                 </Link>
               ))}
+              {/* Marketing Link */}
+              <Link
+                href="/marketing"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={`block w-full text-left px-6 py-4 transition-all duration-300 font-bold uppercase tracking-wide border-b border-neutral-800/30 last:border-b-0 ${
+                  pathname === '/marketing'
+                    ? 'text-primary-400 bg-neutral-800/50'
+                    : 'text-neutral-300 hover:text-primary-400 hover:bg-neutral-800/50'
+                }`}
+                style={{ animationDelay: `${navItems.length * 0.1}s` }}
+              >
+                Marketing
+              </Link>
             </div>
 
             <div className="p-4 border-t border-neutral-700/50">

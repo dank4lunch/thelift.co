@@ -1,3 +1,5 @@
+'use client'
+
 import Hero from '@/components/Hero'
 import TrainerAbout from '@/components/TrainerAbout'
 import Specializations from '@/components/Specializations'
