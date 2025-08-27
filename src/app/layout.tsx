@@ -1,14 +1,6 @@
+
 import type { Metadata } from 'next'
-
-<head>
-  <title>The Lift Co | Your Transformation Partner</title>
-  <meta name="description" content="Transform your body and life with The Lift Co. Expert training, brand development, and business strategies." />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="icon" href="/favicon.ico" />
-</head>
-
 import React from 'react'
-
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -35,11 +27,6 @@ export const metadata: Metadata = {
   },
 }
 
-export const viewport = {
-  width: 'device-width',
-  initialScale: 1,
-}
-
 export default function RootLayout({
   children,
 }: {
@@ -47,6 +34,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <title>The Lift Co | Your Transformation Partner</title>
+        <meta name="description" content="Transform your body and life with The Lift Co. Expert training, brand development, and business strategies." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </head>
       <body>
         {children}
       </body>
