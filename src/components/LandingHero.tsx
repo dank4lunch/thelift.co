@@ -1,5 +1,3 @@
-
-```typescriptreact
 'use client'
 
 import { useState, useEffect } from 'react'
@@ -57,7 +55,7 @@ export default function LandingHero() {
       <div className="container max-w-2xl mx-auto text-center relative z-10 text-safe">
         <div className={`mb-8 sm:mb-12 transition-opacity duration-1000 ${textVisible ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-10'}`}>
           <div className="inline-flex items-center justify-center w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 bg-gradient-to-br from-primary-400/20 to-accent-400/20 backdrop-blur-sm border-2 border-primary-400/50 rounded-2xl shadow-2xl luxury-glow overflow-hidden">
-            <img 
+            <img
               src="/images/IMG_0253_1754429519057.jpeg"
               alt="The Lift Co Logo"
               className="w-full h-full object-cover"
@@ -80,7 +78,7 @@ export default function LandingHero() {
           </div>
 
           <p className="text-base sm:text-lg md:text-xl text-neutral-300 leading-relaxed max-w-lg mx-auto">
-            I'm not your average trainer. I'm a creative entrepreneur who's obsessed 
+            I'm not your average trainer. I'm a creative entrepreneur who's obsessed
             with human transformation - and I've spent 10 years perfecting the art of getting results.
             <br className="hidden sm:block" />
             <span className="text-primary-300 font-semibold">Ready to stop making excuses and start making progress?</span>
@@ -132,4 +130,3 @@ export default function LandingHero() {
     </section>
   )
 }
-```
