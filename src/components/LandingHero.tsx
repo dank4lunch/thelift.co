@@ -28,7 +28,7 @@ export default function LandingHero() {
       opacity: 0.3 + Math.random() * 0.4,
     }))
     setFloatingElements(elements)
-    
+
     // Trigger text animation
     setTimeout(() => setTextVisible(true), 300)
   }, [])
@@ -71,7 +71,7 @@ export default function LandingHero() {
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-primary-400 via-accent-400 to-primary-400 mb-6 sm:mb-8 leading-tight tracking-wide break-words">
             BUILT TO BOOST
           </h1>
-          
+
           <div className="space-y-3 sm:space-y-4 mb-8 sm:mb-10">
             <p className="text-xl sm:text-2xl md:text-3xl text-neutral-200 font-semibold">
               Strategic Moves.
@@ -97,7 +97,7 @@ export default function LandingHero() {
           >
             START TRAINING
           </a>
-          
+
           <a
             href="/marketing"
             className="w-full max-w-sm mx-auto bg-gradient-to-r from-accent-600 to-primary-600 text-white font-bold py-4 sm:py-5 px-8 sm:px-10 rounded-xl text-base sm:text-lg shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 luxury-glow muscle-text tracking-wide"

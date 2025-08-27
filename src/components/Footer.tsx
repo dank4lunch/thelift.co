@@ -1,8 +1,7 @@
 'use client'
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear()
-
+  const currentYear = new Date().getFullYear() 
   const quickLinks = [
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
@@ -189,8 +188,8 @@ export default function Footer() {
           <div className="text-center">
             <h5 className="text-lg font-bold text-accent-400 mb-4 muscle-text">TRAINING HOURS</h5>
             <div className="flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-8 text-neutral-300">
-              <span className="font-medium">Mon-Fri: <span className="text-primary-400 font-bold">06:00-20:00</span></span>
-              <span className="font-medium">Saturday: <span className="text-primary-400 font-bold">08:00-16:00</span></span>
+              <span className="font-medium">Mon-Sat: <span className="text-primary-400 font-bold">05:00-20:00</span></span>
+               
               <span className="font-medium">Sunday: <span className="text-accent-400 font-bold">By Appointment</span></span>
             </div>
           </div>
