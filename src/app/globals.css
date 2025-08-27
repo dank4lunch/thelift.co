@@ -169,11 +169,13 @@
   .btn-primary {
     @apply bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-500 hover:to-primary-600 text-neutral-950 font-bold py-4 px-8 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 ease-out border border-primary-500/30;
     transform-style: preserve-3d;
+    display: inline-block;
+    width: fit-content;
   }
 
   .btn-primary:hover {
-    transform: scale(1.05) rotateX(5deg) translateZ(10px);
-    box-shadow: 0 15px 35px rgba(227, 181, 71, 0.4);
+    transform: scale(1.1) rotate(-2deg);
+    box-shadow: 0 25px 50px rgba(227, 181, 71, 0.4);
   }
 
   .btn-secondary {

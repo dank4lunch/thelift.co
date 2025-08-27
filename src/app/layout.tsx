@@ -1,4 +1,12 @@
 import type { Metadata } from 'next'
+
+<head>
+  <title>The Lift Co | Your Transformation Partner</title>
+  <meta name="description" content="Transform your body and life with The Lift Co. Expert training, brand development, and business strategies." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="/favicon.ico" />
+</head>
+
 import React from 'react'
 
 import './globals.css'
