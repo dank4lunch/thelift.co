@@ -1,4 +1,3 @@
-
 'use client'
 
 import { useState, useEffect } from 'react'
@@ -10,14 +9,14 @@ export default function Hero() {
 
   const rotatingTexts = [
     "TRANSFORM YOUR BODY",
-    "ELEVATE YOUR BUSINESS", 
+    "ELEVATE YOUR BUSINESS",
     "DOMINATE YOUR MARKET",
     "ACHIEVE ELITE STATUS"
   ]
 
   useEffect(() => {
     setIsLoaded(true)
-    
+
     const interval = setInterval(() => {
       setCurrentText((prev) => (prev + 1) % rotatingTexts.length)
     }, 3000)
@@ -37,17 +36,21 @@ export default function Hero() {
   }
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-neutral-950 via-neutral-900 to-neutral-950">
-      {/* Enhanced Background Pattern */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary-500/30 to-accent-500/30"></div>
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-accent-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-primary-600/5 rounded-full blur-2xl animate-ping" style={{ animationDelay: '1s' }}></div>
+    <section
+      id="hero"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 px-4 sm:px-6 lg:px-8"
+      role="banner"
+      aria-labelledby="hero-heading"
+    >
+      {/* Background Effects */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-1/4 left-1/4 w-48 sm:w-64 md:w-96 h-48 sm:h-64 md:h-96 bg-primary-500/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-40 sm:w-56 md:w-80 h-40 sm:h-56 md:h-80 bg-accent-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 sm:w-48 md:w-64 h-32 sm:h-48 md:h-64 bg-primary-600/10 rounded-full blur-2xl animate-float"></div>
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center max-w-6xl mx-auto">
+      <div className="container-custom relative z-10 text-center w-full max-w-7xl mx-auto">
+        <div className="max-w-6xl mx-auto space-y-6 sm:space-y-8 md:space-y-10">
           {/* Animated Badge */}
           <div className="inline-block mb-8 animate-fade-in">
             <span className="px-6 py-3 bg-gradient-to-r from-primary-500/20 to-accent-500/20 border border-primary-500/30 rounded-full text-primary-400 font-bold text-sm tracking-wider uppercase">
@@ -56,69 +59,72 @@ export default function Hero() {
           </div>
 
           {/* Dynamic Main Heading */}
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-transparent bg-clip-text bg-gradient-to-r from-primary-400 via-accent-500 to-primary-400 mb-6 leading-tight animate-slide-up">
-            <span className="block mb-2">THE LIFT CO</span>
-            <span className="block text-4xl md:text-5xl lg:text-6xl transition-all duration-1000 ease-in-out transform">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-transparent bg-clip-text bg-gradient-to-r from-primary-400 via-accent-500 to-primary-400 leading-tight animate-slide-up">
+            <span className="block mb-2 sm:mb-4">THE LIFT CO</span>
+            <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl transition-all duration-1000 ease-in-out transform break-words">
               {rotatingTexts[currentText]}
             </span>
           </h1>
 
           {/* Enhanced Subheading */}
-          <div className="mb-8 space-y-4 animate-fade-in" style={{ animationDelay: '0.5s' }}>
-            <p className="text-2xl md:text-3xl text-neutral-200 font-bold">
+          <div className="space-y-4 sm:space-y-6 animate-fade-in px-4" style={{ animationDelay: '0.5s' }}>
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-neutral-200 font-bold break-words">
               Where Strength Meets Strategy
             </p>
-            <p className="text-lg md:text-xl text-neutral-300 max-w-4xl mx-auto leading-relaxed">
-              Elite personal training, strategic business development, and creative marketing solutions. 
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-neutral-300 max-w-4xl mx-auto leading-relaxed break-words">
+              Elite personal training, strategic business development, and creative marketing solutions.
               Based in Albermarle, Germiston, serving all of Gauteng with premium services that deliver results.
             </p>
           </div>
 
-          {/* Enhanced CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16 animate-scale-in" style={{ animationDelay: '1s' }}>
+          {/* Call-to-Action Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-12 sm:mb-16 animate-scale-in px-4" style={{ animationDelay: '1s' }}>
+            <a
+              href="https://forms.gle/8mz7dZXLcr47QSNG8"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary w-full sm:w-auto px-8 sm:px-12 py-4 text-sm sm:text-base md:text-lg relative overflow-hidden group elite-glow focus:outline-none focus:ring-2 focus:ring-primary-300 focus:ring-offset-2 focus:ring-offset-neutral-950 text-center"
+              aria-label="Book personal training session"
+            >
+              <span className="relative z-10 muscle-text whitespace-nowrap">START YOUR TRANSFORMATION</span>
+            </a>
+
             <Link
               href="/services"
-              className="group relative bg-gradient-to-r from-primary-500 to-accent-500 text-neutral-950 font-bold py-5 px-10 rounded-2xl hover:scale-105 transition-all duration-300 shadow-2xl text-lg overflow-hidden"
+              className="btn-secondary w-full sm:w-auto px-8 sm:px-12 py-4 text-sm sm:text-base md:text-lg relative overflow-hidden group focus:outline-none focus:ring-2 focus:ring-accent-300 focus:ring-offset-2 focus:ring-offset-neutral-950 text-center"
+              aria-label="View our services"
             >
-              <span className="relative z-10">START YOUR TRANSFORMATION</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-accent-500 to-primary-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </Link>
-            <Link
-              href="/contact"
-              className="group border-2 border-primary-500 text-primary-400 font-bold py-5 px-10 rounded-2xl hover:bg-primary-500 hover:text-neutral-950 transition-all duration-300 text-lg relative overflow-hidden"
-            >
-              <span className="relative z-10">FREE CONSULTATION</span>
-              <div className="absolute inset-0 bg-primary-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+              <span className="relative z-10 muscle-text whitespace-nowrap">EXPLORE SERVICES</span>
             </Link>
           </div>
 
-          {/* Enhanced Features Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20 animate-slide-up" style={{ animationDelay: '1.5s' }}>
-            <div className="group bg-gradient-to-br from-neutral-800/80 to-neutral-900/80 p-8 rounded-2xl border border-primary-500/30 hover:border-primary-500/60 transition-all duration-300 hover:transform hover:scale-105 backdrop-blur-sm">
-              <div className="w-16 h-16 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:animate-pulse">
-                <span className="text-2xl">💪</span>
+          {/* Services Preview */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-16 sm:mb-20 animate-fade-in px-4" style={{ animationDelay: '1.5s' }}>
+            <div className="group bg-gradient-to-br from-neutral-800/80 to-neutral-900/80 p-6 sm:p-8 rounded-2xl border border-accent-500/30 hover:border-accent-500/60 transition-all duration-300 hover:transform hover:scale-105 backdrop-blur-sm">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-accent-500 to-primary-500 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:animate-pulse">
+                <span className="text-xl sm:text-2xl">💪</span>
               </div>
-              <h3 className="text-primary-400 font-bold text-xl mb-4">ELITE PERSONAL TRAINING</h3>
-              <p className="text-neutral-300 leading-relaxed">One-on-one coaching, specialized programs, and results-driven training that transforms bodies and lives.</p>
-              <div className="mt-4 text-sm text-accent-400 font-semibold">From R500 per session</div>
+              <h3 className="text-primary-400 font-bold text-lg sm:text-xl mb-3 sm:mb-4 text-center">ELITE TRAINING</h3>
+              <p className="text-neutral-300 leading-relaxed text-sm sm:text-base text-center">Transform your body with personalized training programs designed by certified professionals who understand your goals.</p>
+              <div className="mt-3 sm:mt-4 text-xs sm:text-sm text-accent-400 font-semibold text-center">Premium Sessions</div>
             </div>
-            
-            <div className="group bg-gradient-to-br from-neutral-800/80 to-neutral-900/80 p-8 rounded-2xl border border-accent-500/30 hover:border-accent-500/60 transition-all duration-300 hover:transform hover:scale-105 backdrop-blur-sm">
-              <div className="w-16 h-16 bg-gradient-to-r from-accent-500 to-primary-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:animate-pulse">
-                <span className="text-2xl">🚀</span>
+
+            <div className="group bg-gradient-to-br from-neutral-800/80 to-neutral-900/80 p-6 sm:p-8 rounded-2xl border border-primary-500/30 hover:border-primary-500/60 transition-all duration-300 hover:transform hover:scale-105 backdrop-blur-sm">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:animate-pulse">
+                <span className="text-xl sm:text-2xl">🎨</span>
               </div>
-              <h3 className="text-accent-400 font-bold text-xl mb-4">CREATIVE MARKETING</h3>
-              <p className="text-neutral-300 leading-relaxed">Strategic brand development, digital presence, and marketing solutions that drive growth and engagement.</p>
-              <div className="mt-4 text-sm text-primary-400 font-semibold">Custom Solutions</div>
+              <h3 className="text-accent-400 font-bold text-lg sm:text-xl mb-3 sm:mb-4 text-center">CREATIVE MARKETING</h3>
+              <p className="text-neutral-300 leading-relaxed text-sm sm:text-base text-center">Strategic brand development, digital presence, and marketing solutions that drive growth and engagement.</p>
+              <div className="mt-3 sm:mt-4 text-xs sm:text-sm text-primary-400 font-semibold text-center">Custom Solutions</div>
             </div>
-            
-            <div className="group bg-gradient-to-br from-neutral-800/80 to-neutral-900/80 p-8 rounded-2xl border border-primary-500/30 hover:border-primary-500/60 transition-all duration-300 hover:transform hover:scale-105 backdrop-blur-sm">
-              <div className="w-16 h-16 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:animate-pulse">
-                <span className="text-2xl">📈</span>
+
+            <div className="group bg-gradient-to-br from-neutral-800/80 to-neutral-900/80 p-6 sm:p-8 rounded-2xl border border-primary-500/30 hover:border-primary-500/60 transition-all duration-300 hover:transform hover:scale-105 backdrop-blur-sm sm:col-span-2 lg:col-span-1">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:animate-pulse">
+                <span className="text-xl sm:text-2xl">📈</span>
               </div>
-              <h3 className="text-primary-400 font-bold text-xl mb-4">BUSINESS STRATEGY</h3>
-              <p className="text-neutral-300 leading-relaxed">Event coordination, business development, and strategic planning that scales operations and maximizes potential.</p>
-              <div className="mt-4 text-sm text-accent-400 font-semibold">Elite Packages</div>
+              <h3 className="text-primary-400 font-bold text-lg sm:text-xl mb-3 sm:mb-4 text-center">BUSINESS STRATEGY</h3>
+              <p className="text-neutral-300 leading-relaxed text-sm sm:text-base text-center">Event coordination, business development, and strategic planning that scales operations and maximizes potential.</p>
+              <div className="mt-3 sm:mt-4 text-xs sm:text-sm text-accent-400 font-semibold text-center">Elite Packages</div>
             </div>
           </div>
 

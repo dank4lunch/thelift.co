@@ -54,10 +54,10 @@ export default function Navigation() {
       <div className="container-custom">
         <div className="flex items-center justify-between py-4">
           {/* Brand Name */}
-          <div className="flex items-center">
+          <div className="flex items-center min-w-0 flex-1 sm:flex-none">
             <Link
               href="/"
-              className="text-xl sm:text-2xl font-black font-heading text-transparent bg-clip-text bg-gradient-to-r from-primary-400 via-accent-500 to-primary-400 muscle-text focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-neutral-950 rounded-xl px-3 py-2 hover:scale-105 transition-all duration-300"
+              className="text-lg sm:text-xl md:text-2xl font-black font-heading text-transparent bg-clip-text bg-gradient-to-r from-primary-400 via-accent-500 to-primary-400 muscle-text focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-neutral-950 rounded-xl px-2 sm:px-3 py-2 hover:scale-105 transition-all duration-300 whitespace-nowrap"
               aria-label="The Lift Co - Go to homepage"
               style={{ 
                 backgroundSize: '200% 200%',
@@ -66,8 +66,8 @@ export default function Navigation() {
             >
               THE LIFT CO
             </Link>
-            <div className="ml-2">
-              <p className="text-xs text-accent-400 font-bold uppercase tracking-wider">
+            <div className="ml-1 sm:ml-2 hidden sm:block">
+              <p className="text-xs text-accent-400 font-bold uppercase tracking-wider whitespace-nowrap">
                 Elite Training
               </p>
             </div>
@@ -96,12 +96,12 @@ export default function Navigation() {
           </div>
 
           {/* CTA Button */}
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <a
               href="https://forms.gle/8mz7dZXLcr47QSNG8"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary px-8 py-3 text-sm relative overflow-hidden group elite-glow focus:outline-none focus:ring-2 focus:ring-primary-300 focus:ring-offset-2 focus:ring-offset-neutral-950"
+              className="btn-primary px-6 lg:px-8 py-3 text-sm relative overflow-hidden group elite-glow focus:outline-none focus:ring-2 focus:ring-primary-300 focus:ring-offset-2 focus:ring-offset-neutral-950 whitespace-nowrap"
               aria-label="Book training now"
             >
               <span className="relative z-10 muscle-text">BOOK NOW</span>

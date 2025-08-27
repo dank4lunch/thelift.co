@@ -249,7 +249,31 @@
     .btn-primary,
     .btn-secondary,
     .btn-outline {
-      @apply min-h-[44px] text-base;
+      @apply min-h-[48px] text-sm px-6 py-3;
+      word-break: keep-all;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  /* Prevent text overflow on mobile */
+  .text-safe {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    max-width: 100%;
+  }
+
+  /* Mobile container improvements */
+  @media (max-width: 640px) {
+    .container-custom {
+      @apply px-4;
+    }
+    
+    .heading-responsive {
+      word-break: break-word;
+      overflow-wrap: break-word;
     }
   }
 
