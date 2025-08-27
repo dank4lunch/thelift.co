@@ -166,16 +166,25 @@
 }
 
 @layer components {
+  /* Z-index management */
+  .z-background { z-index: 1; }
+  .z-content { z-index: 10; }
+  .z-floating { z-index: 5; }
+  .z-overlay { z-index: 20; }
+  .z-modal { z-index: 50; }
+  .z-tooltip { z-index: 60; }
+
   .btn-primary {
     @apply bg-gradient-to-r from-primary-500 via-primary-600 to-accent-500 hover:from-primary-400 hover:via-primary-500 hover:to-accent-400 text-neutral-950 font-bold py-4 px-8 rounded-2xl shadow-xl hover:shadow-2xl transform transition-all duration-500 ease-out;
     transform-style: preserve-3d;
     display: inline-block;
     width: fit-content;
     background-size: 200% 200%;
-    animation: gradient-shift 4s ease infinite;
+    animation: gradient-shift 5s ease infinite;
     border: 2px solid rgba(227, 181, 71, 0.3);
     position: relative;
     overflow: hidden;
+    z-index: 10;
   }
 
   .btn-primary::before {
@@ -542,9 +551,21 @@
     opacity: 0.7;
   }
 
-  /* Enhanced floating elements */
+  /* Enhanced floating elements with staggered timing */
   .floating-element {
-    animation: float-complex 6s ease-in-out infinite;
+    animation: float-complex 8s ease-in-out infinite;
+  }
+
+  .floating-element:nth-child(2n) {
+    animation-delay: 2s;
+  }
+
+  .floating-element:nth-child(3n) {
+    animation-delay: 4s;
+  }
+
+  .floating-element:nth-child(4n) {
+    animation-delay: 6s;
   }
 
   @keyframes float-complex {
@@ -552,13 +573,13 @@
       transform: translateY(0px) rotateX(0deg) rotateY(0deg) scale(1);
     }
     25% {
-      transform: translateY(-20px) rotateX(5deg) rotateY(10deg) scale(1.1);
+      transform: translateY(-15px) rotateX(3deg) rotateY(5deg) scale(1.05);
     }
     50% {
-      transform: translateY(-10px) rotateX(-3deg) rotateY(-5deg) scale(0.95);
+      transform: translateY(-8px) rotateX(-2deg) rotateY(-3deg) scale(0.98);
     }
     75% {
-      transform: translateY(-25px) rotateX(8deg) rotateY(15deg) scale(1.05);
+      transform: translateY(-18px) rotateX(5deg) rotateY(8deg) scale(1.03);
     }
   }
 
@@ -597,19 +618,28 @@
       0 0 100px rgba(168, 145, 72, 0.2);
   }
 
-  /* Pulsing glow effect */
+  /* Pulsing glow effect with staggered timing */
   .energy-pulse {
-    animation: energy-pulse 4s ease-in-out infinite;
+    animation: energy-pulse 6s ease-in-out infinite;
+    z-index: 1;
+  }
+
+  .energy-pulse:nth-child(2) {
+    animation-delay: 2s;
+  }
+
+  .energy-pulse:nth-child(3) {
+    animation-delay: 4s;
   }
 
   @keyframes energy-pulse {
     0%, 100% {
-      opacity: 0.6;
+      opacity: 0.4;
       transform: scale(1) rotate(0deg);
     }
     50% {
-      opacity: 0.9;
-      transform: scale(1.1) rotate(180deg);
+      opacity: 0.7;
+      transform: scale(1.08) rotate(90deg);
     }
   }
 
