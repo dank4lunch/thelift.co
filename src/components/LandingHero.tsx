@@ -1,4 +1,5 @@
 
+```typescriptreact
 'use client'
 
 import { useState, useEffect } from 'react'
@@ -23,19 +24,18 @@ export default function LandingHero() {
       left: Math.random() * 100,
       top: Math.random() * 100,
       delay: Math.random() * 4,
-      duration: 6 + Math.random() * 4,
+      duration: 8 + Math.random() * 4,  // Duration extended for smoother animations
       size: 0.3 + Math.random() * 1.2,
       opacity: 0.3 + Math.random() * 0.4,
     }))
     setFloatingElements(elements)
 
-    // Trigger text animation
-    setTimeout(() => setTextVisible(true), 300)
+    // Increase visibility transition duration for a nicer effect
+    setTimeout(() => setTextVisible(true), 600)
   }, [])
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-neutral-950 via-neutral-900 to-neutral-950 relative overflow-hidden px-4 sm:px-6 lg:px-8">
-      {/* Floating background elements */}
+    <section className="min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-neutral-950 via-neutral-900 to-neutral-950 relative overflow-hidden">
       <div className="absolute inset-0">
         {floatingElements.map((element) => (
           <div
@@ -54,9 +54,8 @@ export default function LandingHero() {
         ))}
       </div>
 
-      <div className="container-custom relative z-10 max-w-2xl mx-auto text-center text-safe">
-        {/* Logo */}
-        <div className={`mb-8 sm:mb-12 transition-all duration-1000 ${textVisible ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-10'}`}>
+      <div className="container max-w-2xl mx-auto text-center relative z-10 text-safe">
+        <div className={`mb-8 sm:mb-12 transition-opacity duration-1000 ${textVisible ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-10'}`}>
           <div className="inline-flex items-center justify-center w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 bg-gradient-to-br from-primary-400/20 to-accent-400/20 backdrop-blur-sm border-2 border-primary-400/50 rounded-2xl shadow-2xl luxury-glow overflow-hidden">
             <img 
               src="/images/IMG_0253_1754429519057.jpeg"
@@ -66,9 +65,8 @@ export default function LandingHero() {
           </div>
         </div>
 
-        {/* Main Headline */}
         <div className={`mb-8 sm:mb-12 transition-all duration-1000 delay-300 ${textVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-primary-400 via-accent-400 to-primary-400 mb-6 sm:mb-8 leading-tight tracking-wide break-words">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-primary-400 via-accent-400 to-primary-400 mb-6 sm:mb-8 leading-tight tracking-wide break-words">
             BUILT TO BOOST
           </h1>
 
@@ -89,7 +87,6 @@ export default function LandingHero() {
           </p>
         </div>
 
-        {/* CTA Buttons */}
         <div className={`flex flex-col gap-4 sm:gap-6 mb-16 sm:mb-20 transition-all duration-1000 delay-600 ${textVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <a
             href="/home"
@@ -106,7 +103,6 @@ export default function LandingHero() {
           </a>
         </div>
 
-        {/* Explore indicator */}
         <div className={`transition-all duration-1000 delay-900 ${textVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="text-primary-400 font-bold text-sm sm:text-base uppercase tracking-wider mb-3">
             EXPLORE
@@ -119,7 +115,6 @@ export default function LandingHero() {
         </div>
       </div>
 
-      {/* Scroll to next section */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
         <button
           onClick={() => {
@@ -137,3 +132,4 @@ export default function LandingHero() {
     </section>
   )
 }
+```
