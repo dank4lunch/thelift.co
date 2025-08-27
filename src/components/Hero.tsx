@@ -38,60 +38,84 @@ export default function Hero() {
   return (
     <section id="home" className="min-h-screen flex items-center trainer-hero pt-20 perspective-container relative">
       {/* Simplified background with better visual hierarchy */}
-      <div className="absolute inset-0">
-        {/* Floating particles */}
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Enhanced floating particles */}
         {particles.map((particle) => (
           <div
             key={particle.id}
-            className="absolute w-2 h-2 bg-primary-400/60 rounded-full floating-orb"
+            className="absolute rounded-full floating-orb"
             style={{
               left: `${particle.left}%`,
               top: `${particle.top}%`,
               animationDelay: `${particle.delay}s`,
               animationDuration: `${particle.duration}s`,
+              width: `${4 + Math.random() * 8}px`,
+              height: `${4 + Math.random() * 8}px`,
+              background: `radial-gradient(circle, rgba(227, 181, 71, ${0.6 + Math.random() * 0.4}) 0%, transparent 70%)`,
+              filter: 'blur(0.5px)',
             }}
           />
         ))}
 
-        {/* Main gradient orbs */}
+        {/* Enhanced gradient orbs with better blending */}
         <div 
-          className="absolute w-[600px] h-[600px] bg-gradient-to-r from-primary-500/15 to-accent-500/15 rounded-full blur-3xl"
+          className="absolute w-[800px] h-[800px] rounded-full blur-3xl opacity-40"
           style={{
-            transform: `translate3d(${mousePosition.x * 0.015}px, ${mousePosition.y * 0.015}px, 0px)`,
-            left: '10%',
-            top: '10%',
+            background: 'radial-gradient(circle, rgba(227, 181, 71, 0.3) 0%, rgba(168, 145, 72, 0.2) 40%, transparent 70%)',
+            transform: `translate3d(${mousePosition.x * 0.02}px, ${mousePosition.y * 0.02}px, 0px)`,
+            left: '5%',
+            top: '5%',
           }}
         />
         <div 
-          className="absolute w-[500px] h-[500px] bg-gradient-to-r from-accent-400/12 to-primary-400/12 rounded-full blur-3xl"
+          className="absolute w-[600px] h-[600px] rounded-full blur-3xl opacity-30"
           style={{
-            transform: `translate3d(${mousePosition.x * -0.008}px, ${mousePosition.y * -0.008}px, 0px)`,
-            right: '15%',
-            bottom: '10%',
+            background: 'radial-gradient(circle, rgba(168, 145, 72, 0.25) 0%, rgba(227, 181, 71, 0.15) 50%, transparent 80%)',
+            transform: `translate3d(${mousePosition.x * -0.015}px, ${mousePosition.y * -0.015}px, 0px)`,
+            right: '10%',
+            bottom: '5%',
             animationDelay: '1.5s',
           }}
         />
+        
+        {/* Add aurora effect overlay */}
+        <div className="absolute inset-0 aurora-bg opacity-20" />
       </div>
 
       <div className="container-custom relative z-10">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8 text-safe">
           {/* Profile Image - Larger and more prominent */}
-          <div className="mb-8">
+          <div className="mb-12">
             <div className="flex justify-center mb-8">
-              <div className="w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 rounded-3xl overflow-hidden border-3 border-primary-400/60 bg-gradient-to-br from-primary-500/20 to-accent-500/20 backdrop-blur-sm shadow-2xl luxury-glow transform hover:scale-105 transition-all duration-500">
-                <img 
-                  src="https://cdn.builder.io/api/v1/image/assets%2F40f4f3f8cf004cb78312fbe6b3e1cec8%2F08e7771950634f09bf5906b11a6d0d83?format=webp&width=800"
-                  alt="Tshiamo Sookane - Personal Trainer"
-                  className="w-full h-full object-cover"
-                />
+              <div className="relative w-44 h-44 sm:w-52 sm:h-52 md:w-60 md:h-60">
+                {/* Animated ring */}
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary-400 via-accent-500 to-primary-600 p-1 animate-spin" style={{ animationDuration: '8s' }}>
+                  <div className="w-full h-full rounded-full bg-neutral-950" />
+                </div>
+                
+                {/* Profile image container */}
+                <div className="absolute inset-2 rounded-full overflow-hidden bg-gradient-to-br from-primary-500/20 via-transparent to-accent-500/20 backdrop-blur-sm shadow-2xl luxury-glow transform hover:scale-105 transition-all duration-700 modern-card">
+                  <img 
+                    src="https://cdn.builder.io/api/v1/image/assets%2F40f4f3f8cf004cb78312fbe6b3e1cec8%2F08e7771950634f09bf5906b11a6d0d83?format=webp&width=800"
+                    alt="Tshiamo Sookane - Personal Trainer"
+                    className="w-full h-full object-cover filter contrast-110 brightness-105"
+                  />
+                </div>
               </div>
             </div>
 
-            {/* Main Heading - Cleaner typography */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black font-heading premium-text mb-6 animate-slide-up glow-text muscle-text transform-3d leading-tight break-words" role="banner">
-              YOUR FITNESS
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary-400 via-accent-400 to-primary-400 animate-gradient break-words">
+            {/* Enhanced Main Heading */}
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black font-heading mb-8 animate-slide-up muscle-text transform-3d leading-tight break-words" role="banner">
+              <span className="block text-neutral-100 drop-shadow-lg">YOUR FITNESS</span>
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary-400 via-accent-500 via-primary-500 to-accent-400 animate-gradient break-words relative">
                 TRANSFORMATION
+                {/* Add shimmer effect */}
+                <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-pulse opacity-0 hover:opacity-100 transition-opacity duration-300" style={{ 
+                  background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent)',
+                  backgroundSize: '200% 100%',
+                  animation: 'shimmer 2s infinite',
+                  WebkitBackgroundClip: 'text'
+                }} />
               </span>
             </h1>
 
@@ -117,41 +141,46 @@ export default function Hero() {
             </p>
           </div>
 
-          {/* CTA Buttons - Improved spacing and design */}
+          {/* Enhanced CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16 animate-scale-in">
             <a
               href="https://forms.gle/8mz7dZXLcr47QSNG8"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary text-lg px-10 py-4 elite-glow group relative overflow-hidden focus:outline-none focus:ring-2 focus:ring-primary-300 focus:ring-offset-2 focus:ring-offset-neutral-950 transform hover:scale-105 transition-all duration-300"
+              className="btn-primary text-lg px-12 py-5 elite-glow group relative overflow-hidden focus:outline-none focus:ring-2 focus:ring-primary-300 focus:ring-offset-2 focus:ring-offset-neutral-950 transform transition-all duration-500 hover:shadow-2xl"
               aria-label="Book free consultation via Google Form"
             >
-              <span className="relative z-10 muscle-text font-bold">GET FREE CONSULTATION</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-primary-400 to-accent-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300" aria-hidden="true"></div>
+              <span className="relative z-10 muscle-text font-bold tracking-wide">GET FREE CONSULTATION</span>
+              {/* Pulse effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-primary-300/50 to-accent-300/50 opacity-0 group-hover:opacity-30 transition-opacity duration-500 animate-pulse" aria-hidden="true"></div>
             </a>
             <a
               href="#packages"
-              className="btn-secondary text-lg px-10 py-4 luxury-glow group relative overflow-hidden focus:outline-none focus:ring-2 focus:ring-accent-300 focus:ring-offset-2 focus:ring-offset-neutral-950 transform hover:scale-105 transition-all duration-300"
+              className="relative text-lg px-12 py-5 rounded-2xl font-bold border-2 border-primary-400/50 text-primary-400 hover:text-neutral-950 group overflow-hidden transition-all duration-500 focus:outline-none focus:ring-2 focus:ring-accent-300 focus:ring-offset-2 focus:ring-offset-neutral-950 modern-card"
               aria-label="View training packages"
             >
-              <span className="relative z-10 muscle-text font-bold">EXPLORE PROGRAMS</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-accent-400 to-primary-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300" aria-hidden="true"></div>
+              {/* Sliding background */}
+              <div className="absolute inset-0 bg-gradient-to-r from-primary-500 to-accent-500 transform translate-x-full group-hover:translate-x-0 transition-transform duration-500" aria-hidden="true"></div>
+              <span className="relative z-10 muscle-text font-bold tracking-wide">EXPLORE PROGRAMS</span>
             </a>
           </div>
 
-          {/* Quick stats - Updated with 10 years */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-2xl mx-auto">
-            <div className="text-center group cursor-default depth-hover">
-              <div className="text-3xl sm:text-4xl font-bold text-primary-400 mb-2 group-hover:scale-110 transition-transform duration-300">10</div>
-              <div className="text-neutral-300 font-medium text-sm uppercase tracking-wide">Years Experience</div>
+          {/* Enhanced stats section */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <div className="modern-card text-center group cursor-default border border-primary-400/30 hover:border-primary-400/60 transition-all duration-500">
+              <div className="text-4xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-br from-primary-400 to-accent-500 mb-3 group-hover:scale-110 transition-transform duration-500">10</div>
+              <div className="text-neutral-200 font-bold text-sm uppercase tracking-wider">Years Experience</div>
+              <div className="text-xs text-primary-300 mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Elite Training</div>
             </div>
-            <div className="text-center group cursor-default depth-hover">
-              <div className="text-3xl sm:text-4xl font-bold text-accent-400 mb-2 group-hover:scale-110 transition-transform duration-300">100%</div>
-              <div className="text-neutral-300 font-medium text-sm uppercase tracking-wide">Personalized</div>
+            <div className="modern-card text-center group cursor-default border border-accent-400/30 hover:border-accent-400/60 transition-all duration-500">
+              <div className="text-4xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-br from-accent-400 to-primary-500 mb-3 group-hover:scale-110 transition-transform duration-500">100%</div>
+              <div className="text-neutral-200 font-bold text-sm uppercase tracking-wider">Personalized</div>
+              <div className="text-xs text-accent-300 mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Custom Plans</div>
             </div>
-            <div className="text-center group cursor-default depth-hover">
-              <div className="text-3xl sm:text-4xl font-bold text-primary-400 mb-2 group-hover:scale-110 transition-transform duration-300">FREE</div>
-              <div className="text-neutral-300 font-medium text-sm uppercase tracking-wide">Initial Consultation</div>
+            <div className="modern-card text-center group cursor-default border border-primary-400/30 hover:border-primary-400/60 transition-all duration-500">
+              <div className="text-4xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-br from-primary-400 to-accent-500 mb-3 group-hover:scale-110 transition-transform duration-500">FREE</div>
+              <div className="text-neutral-200 font-bold text-sm uppercase tracking-wider">Initial Consultation</div>
+              <div className="text-xs text-primary-300 mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">No Commitment</div>
             </div>
           </div>
         </div>

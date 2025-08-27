@@ -63,11 +63,14 @@ export default function Navigation() {
   return (
     <nav
       id="navigation"
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? 'nav-blur shadow-2xl border-b border-primary-500/20'
+          ? 'bg-neutral-950/90 backdrop-blur-xl shadow-2xl border-b border-primary-500/30'
           : 'bg-transparent'
       }`}
+      style={{
+        background: isScrolled ? 'linear-gradient(135deg, rgba(23, 23, 23, 0.9) 0%, rgba(10, 10, 10, 0.95) 100%)' : 'transparent'
+      }}
       role="navigation"
       aria-label="Main navigation"
     >
@@ -76,9 +79,13 @@ export default function Navigation() {
           {/* Brand Name Only */}
           <div className="flex items-center">
             <button
-              className="text-xl sm:text-2xl font-bold font-heading premium-text muscle-text focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-neutral-950 rounded px-2 py-1"
+              className="text-xl sm:text-2xl font-black font-heading text-transparent bg-clip-text bg-gradient-to-r from-primary-400 via-accent-500 to-primary-400 muscle-text focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-neutral-950 rounded-xl px-3 py-2 hover:scale-105 transition-all duration-300"
               onClick={() => window.location.href = '/'}
               aria-label="The Lift Co - Go to homepage"
+              style={{ 
+                backgroundSize: '200% 200%',
+                animation: 'gradient-shift 4s ease infinite'
+              }}
             >
               THE LIFT CO
             </button>
