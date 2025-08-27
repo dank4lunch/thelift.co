@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { usePathname } from 'next/navigation'
+import Link from 'next/link'
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -29,36 +30,12 @@ export default function Navigation() {
     }
   }, [isMobileMenuOpen])
 
-  // Different nav items based on current page
-  const homeNavItems = [
-    { name: 'Home', href: '/home' },
+  const navItems = [
+    { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
-    { name: 'Training', href: '/services' },
-    { name: 'Trainer', href: '/about#founder' },
-    { name: 'Contact', href: '/home#contact' },
+    { name: 'Services', href: '/services' },
+    { name: 'Contact', href: '/contact' },
   ]
-
-  const marketingNavItems = [
-    { name: 'Overview', href: '/marketing' },
-    { name: 'Brand Services', href: '/marketing#brand-services' },
-    { name: 'Business Strategy', href: '/marketing#business-services' },
-    { name: 'Portfolio', href: '/about#founder' },
-    { name: 'Contact', href: '/#contact' },
-  ]
-
-  const navItems = pathname === '/marketing' ? marketingNavItems : homeNavItems
-
-  const handleNavigation = (href: string) => {
-    if (href.startsWith('#')) {
-      // Handle anchor navigation on current page
-      const element = document.querySelector(href)
-      element?.scrollIntoView({ behavior: 'smooth' })
-    } else {
-      // Handle page navigation
-      window.location.href = href
-    }
-    setIsMobileMenuOpen(false)
-  }
 
   return (
     <nav
@@ -76,11 +53,11 @@ export default function Navigation() {
     >
       <div className="container-custom">
         <div className="flex items-center justify-between py-4">
-          {/* Brand Name Only */}
+          {/* Brand Name */}
           <div className="flex items-center">
-            <button
+            <Link
+              href="/"
               className="text-xl sm:text-2xl font-black font-heading text-transparent bg-clip-text bg-gradient-to-r from-primary-400 via-accent-500 to-primary-400 muscle-text focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-neutral-950 rounded-xl px-3 py-2 hover:scale-105 transition-all duration-300"
-              onClick={() => window.location.href = '/'}
               aria-label="The Lift Co - Go to homepage"
               style={{ 
                 backgroundSize: '200% 200%',
@@ -88,77 +65,50 @@ export default function Navigation() {
               }}
             >
               THE LIFT CO
-            </button>
+            </Link>
             <div className="ml-2">
               <p className="text-xs text-accent-400 font-bold uppercase tracking-wider">
-                {pathname === '/marketing' ? 'Brand & Business' : 'Elite Training'}
+                Elite Training
               </p>
             </div>
           </div>
 
-          {/* Page Toggle Buttons */}
-          <div className="hidden lg:flex items-center space-x-2 mr-8">
-            <button
-              onClick={() => window.location.href = '/'}
-              className={`px-4 py-2 rounded-lg font-bold text-sm transition-all duration-300 ${
-                pathname !== '/marketing'
-                  ? 'bg-primary-500 text-neutral-950 border border-primary-400/50'
-                  : 'text-neutral-400 hover:text-primary-400'
-              }`}
-            >
-              FITNESS
-            </button>
-            <button
-              onClick={() => window.location.href = '/marketing'}
-              className={`px-4 py-2 rounded-lg font-bold text-sm transition-all duration-300 ${
-                pathname === '/marketing'
-                  ? 'bg-primary-500 text-neutral-950 border border-primary-400/50'
-                  : 'text-neutral-400 hover:text-primary-400'
-              }`}
-            >
-              MARKETING
-            </button>
-          </div>
-
-          {/* Desktop Navigation with 3D hover effects */}
+          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8" role="menubar">
             {navItems.map((item) => (
-              <button
+              <Link
                 key={item.name}
-                onClick={() => handleNavigation(item.href)}
-                className="text-neutral-300 hover:text-primary-400 font-bold transition-all duration-300 hover:scale-110 relative group uppercase tracking-wide depth-hover focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-neutral-950 rounded px-2 py-1"
+                href={item.href}
+                className={`font-bold transition-all duration-300 hover:scale-110 relative group uppercase tracking-wide depth-hover focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-neutral-950 rounded px-2 py-1 ${
+                  pathname === item.href 
+                    ? 'text-primary-400' 
+                    : 'text-neutral-300 hover:text-primary-400'
+                }`}
                 role="menuitem"
                 aria-label={`Navigate to ${item.name}`}
               >
                 {item.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-500 to-accent-500 group-hover:w-full transition-all duration-300" aria-hidden="true"></span>
-              </button>
+                <span className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-primary-500 to-accent-500 transition-all duration-300 ${
+                  pathname === item.href ? 'w-full' : 'w-0 group-hover:w-full'
+                }`} aria-hidden="true"></span>
+              </Link>
             ))}
           </div>
 
-          {/* CTA Button with 3D effect */}
+          {/* CTA Button */}
           <div className="hidden md:block">
-            <button
-              onClick={() => {
-                if (pathname === '/marketing') {
-                  handleNavigation('#contact')
-                } else if (pathname === '/') {
-                  window.open("https://forms.gle/8mz7dZXLcr47QSNG8", "_blank")
-                } else {
-                  handleNavigation('/home#packages')
-                }
-              }}
+            <a
+              href="https://forms.gle/8mz7dZXLcr47QSNG8"
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-primary px-8 py-3 text-sm relative overflow-hidden group elite-glow focus:outline-none focus:ring-2 focus:ring-primary-300 focus:ring-offset-2 focus:ring-offset-neutral-950"
-              aria-label={pathname === '/marketing' ? 'Get a quote' : 'Book training now'}
+              aria-label="Book training now"
             >
-              <span className="relative z-10 muscle-text">
-                {pathname === '/marketing' ? 'GET QUOTE' : 'BOOK NOW'}
-              </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-primary-400 to-accent-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" aria-hidden="true"></div>
-            </button>
+              <span className="relative z-10 muscle-text">BOOK NOW</span>
+            </a>
           </div>
 
-          {/* Mobile Menu Button with 3D effect */}
+          {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="md:hidden w-12 h-12 bg-gradient-to-r from-primary-500 to-accent-500 rounded-xl flex items-center justify-center border border-primary-500/30 depth-hover focus:outline-none focus:ring-2 focus:ring-primary-300 focus:ring-offset-2 focus:ring-offset-neutral-950"
@@ -174,7 +124,7 @@ export default function Navigation() {
           </button>
         </div>
 
-        {/* Mobile Menu with 3D transition */}
+        {/* Mobile Menu */}
         <div
           id="mobile-menu"
           className={`md:hidden fixed inset-x-0 top-[88px] z-40 transition-all duration-300 transform ${
@@ -186,72 +136,34 @@ export default function Navigation() {
           aria-labelledby="mobile-menu-button"
         >
           <div className="bg-neutral-900/95 backdrop-blur-lg border border-primary-500/20 rounded-lg mx-4 my-2 shadow-2xl overflow-hidden">
-            {/* Mobile Page Toggle */}
-            <div className="p-4 border-b border-neutral-700/50">
-              <div className="grid grid-cols-2 gap-2">
-                <button
-                  onClick={() => {
-                    window.location.href = '/'
-                    setIsMobileMenuOpen(false)
-                  }}
-                  className={`py-3 px-4 rounded-lg font-bold text-sm transition-all duration-300 ${
-                    pathname !== '/marketing'
-                      ? 'bg-primary-500 text-neutral-950'
-                      : 'text-neutral-400 border border-neutral-600 hover:border-primary-500/50'
-                  }`}
-                >
-                  FITNESS
-                </button>
-                <button
-                  onClick={() => {
-                    window.location.href = '/marketing'
-                    setIsMobileMenuOpen(false)
-                  }}
-                  className={`py-3 px-4 rounded-lg font-bold text-sm transition-all duration-300 ${
-                    pathname === '/marketing'
-                      ? 'bg-primary-500 text-neutral-950'
-                      : 'text-neutral-400 border border-neutral-600 hover:border-primary-500/50'
-                  }`}
-                >
-                  MARKETING
-                </button>
-              </div>
-            </div>
-
-            {/* Navigation Links */}
             <div className="py-2">
               {navItems.map((item, index) => (
-                <button
+                <Link
                   key={item.name}
-                  onClick={() => {
-                    handleNavigation(item.href)
-                    setIsMobileMenuOpen(false)
-                  }}
-                  className="block w-full text-left px-6 py-4 text-neutral-300 hover:text-primary-400 hover:bg-neutral-800/50 transition-all duration-300 font-bold uppercase tracking-wide border-b border-neutral-800/30 last:border-b-0"
+                  href={item.href}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={`block w-full text-left px-6 py-4 transition-all duration-300 font-bold uppercase tracking-wide border-b border-neutral-800/30 last:border-b-0 ${
+                    pathname === item.href
+                      ? 'text-primary-400 bg-neutral-800/50'
+                      : 'text-neutral-300 hover:text-primary-400 hover:bg-neutral-800/50'
+                  }`}
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   {item.name}
-                </button>
+                </Link>
               ))}
             </div>
 
-            {/* CTA Button */}
             <div className="p-4 border-t border-neutral-700/50">
-              <button
-                onClick={() => {
-                  if (pathname === '/marketing') {
-                    handleNavigation('#contact')
-                  } else if (pathname === '/') {
-                    window.open("https://forms.gle/8mz7dZXLcr47QSNG8", "_blank")
-                  } else {
-                    handleNavigation('/home#packages')
-                  }
-                  setIsMobileMenuOpen(false)
-                }}
-                className="w-full bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-500 hover:to-primary-600 text-neutral-950 font-bold py-4 px-6 rounded-xl shadow-lg transition-all duration-300 muscle-text"
+              <a
+                href="https://forms.gle/8mz7dZXLcr47QSNG8"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="w-full bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-500 hover:to-primary-600 text-neutral-950 font-bold py-4 px-6 rounded-xl shadow-lg transition-all duration-300 muscle-text block text-center"
               >
-                {pathname === '/marketing' ? 'GET QUOTE' : 'BOOK NOW'}
-              </button>
+                BOOK NOW
+              </a>
             </div>
           </div>
         </div>
