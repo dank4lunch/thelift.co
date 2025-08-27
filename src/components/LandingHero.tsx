@@ -114,18 +114,15 @@ export default function LandingHero() {
       </div>
 
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-        <button
-          onClick={() => {
-            const nextSection = document.querySelector('#training-showcase')
-            nextSection?.scrollIntoView({ behavior: 'smooth' })
-          }}
+        <a
+          href="/home"
           className="p-3 rounded-full bg-primary-500/20 border border-primary-500/30 hover:bg-primary-500/30 transition-all duration-300 group"
-          aria-label="Scroll to next section"
+          aria-label="Explore more"
         >
           <svg className="w-5 h-5 text-primary-400 group-hover:text-primary-300 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
           </svg>
-        </button>
+        </a>
       </div>
     </section>
   )

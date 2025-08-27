@@ -1,35 +1,22 @@
-
 'use client'
 
-import Hero from '@/components/Hero'
-import Navigation from '@/components/Navigation'
-import SkipNav from '@/components/SkipNav'
-import ClientErrorBoundary from '@/components/ClientErrorBoundary'
-import About from '@/components/About'
-import Services from '@/components/Services'
-import BusinessOverview from '@/components/BusinessOverview'
-import TrainingShowcase from '@/components/TrainingShowcase'
-import InstagramShowcase from '@/components/InstagramShowcase'
-import FAQ from '@/components/FAQ'
-import Contact from '@/components/Contact'
-import Footer from '@/components/Footer'
+import { useEffect } from 'react'
+import { useRouter } from 'next/navigation'
 
 export default function Home() {
+  const router = useRouter()
+
+  useEffect(() => {
+    // Redirect to landing page
+    router.push('/landing')
+  }, [router])
+
   return (
-    <ClientErrorBoundary>
-      <SkipNav />
-      <Navigation />
-      <main className="min-h-screen bg-gradient-to-b from-neutral-950 via-neutral-900 to-neutral-950">
-        <Hero />
-        <About />
-        <Services />
-        <BusinessOverview />
-        <TrainingShowcase />
-        <InstagramShowcase />
-        <FAQ />
-        <Contact />
-      </main>
-      <Footer />
-    </ClientErrorBoundary>
+    <div className="min-h-screen bg-gradient-to-b from-neutral-950 via-neutral-900 to-neutral-950 flex items-center justify-center">
+      <div className="text-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-500 mx-auto mb-4"></div>
+        <p className="text-neutral-400">Redirecting to landing page...</p>
+      </div>
+    </div>
   )
 }
