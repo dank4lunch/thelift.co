@@ -1,7 +1,25 @@
 
 'use client'
 
-export default function TrainerAbout() {
+type TrainerAboutProps = {
+  aboutText: string
+  operatingHours: string
+  packages: Array<{
+    name: string
+    description: string
+    sessions?: string
+    duration?: string
+    price: string
+    perSessionPrice?: string
+  }>
+  faq: Array<{
+    question: string
+    answer: string
+  }>
+  consultationPrice: string
+}
+
+export default function TrainerAbout({ aboutText, operatingHours, packages, faq, consultationPrice }: TrainerAboutProps) {
   const additionalImages = [
     '/images/IMG_0240_1754424813561.jpeg',
     '/images/IMG_0242_1754424813561.jpeg', 
