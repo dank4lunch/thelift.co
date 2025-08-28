@@ -98,9 +98,9 @@ export function redirectToPayFast(paymentData: PayFastPayment): void {
 
 // Package pricing (in Rands)
 export const PACKAGE_PRICES = {
-  'PT Intro Pack': 624,
-  'PT Six Pack': 1270,
-  'Monthly One-on-One Pack': 2160
+  'Free Consultation': 0,
+  'PT Starter Pack': 1270,
+  'Elite Monthly': 2160
 } as const
 
 export type PackageName = keyof typeof PACKAGE_PRICES
