@@ -5,10 +5,8 @@ import { useState, useEffect } from 'react'
 
 export default function LandingHero() {
   const [textVisible, setTextVisible] = useState(false)
-  const [isClient, setIsClient] = useState(false)
 
   useEffect(() => {
-    setIsClient(true)
     setTimeout(() => setTextVisible(true), 300)
   }, [])
 
@@ -48,17 +46,17 @@ export default function LandingHero() {
               </a>
 
               <a
-                href="/about"
+                href="/home"
                 className="bg-neutral-800 text-white font-bold py-4 px-8 rounded-full text-center text-lg border border-neutral-600 hover:bg-neutral-700 transition-all duration-300"
               >
-                Learn More
+                Explore Services
               </a>
             </div>
 
-            {/* Quick Links */}
+            {/* Service Links */}
             <div className="flex flex-wrap gap-6 text-sm text-neutral-400">
-              <a href="/services" className="hover:text-orange-400 transition-colors">View Services</a>
-              <a href="/home#packages" className="hover:text-orange-400 transition-colors">Training Packages</a>
+              <a href="/services" className="hover:text-orange-400 transition-colors">Training Programs</a>
+              <a href="/about" className="hover:text-orange-400 transition-colors">About Tshiamo</a>
               <a href="/marketing" className="hover:text-orange-400 transition-colors">Business Services</a>
             </div>
           </div>
