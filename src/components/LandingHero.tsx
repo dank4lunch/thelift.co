@@ -34,12 +34,6 @@ export default function LandingHero() {
               <p className="transform hover:scale-105 transition-transform duration-300 cursor-default muscle-text text-accent-400">Life Transformation. ✨</p>
             </div>
 
-            <p className="text-base sm:text-lg md:text-xl text-neutral-300 mb-8 sm:mb-12 max-w-4xl mx-auto leading-relaxed animate-slide-up font-medium px-4 sm:px-0">
-              Welcome to <span className="text-primary-400 font-bold">The Lift Co</span> — where we don't just train bodies, we build empires. 
-              Transform your fitness, elevate your brand, and boost your business with a coach who believes in lifting you up in every way possible. 
-              <span className="text-accent-400 font-semibold">This is your movement. This is your moment.</span>
-            </p>
-
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mb-8 sm:mb-12">
               <a
