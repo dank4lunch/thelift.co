@@ -295,10 +295,87 @@ export default function LandingHero() {
             Transform your body, elevate your brand, boost your business.
           </motion.p>
 
-          {/* CTA Buttons */}
+          {/* Service Selection */}
           <motion.div 
             variants={itemVariants}
-            className="flex flex-col sm:flex-row gap-6 justify-center items-center"
+            className="mb-12"
+          >
+            <p className="text-lg md:text-xl text-neutral-400 mb-8 font-semibold">
+              Choose Your Path to Excellence
+            </p>
+            
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              {/* Fitness Path */}
+              <motion.div
+                variants={buttonVariants}
+                initial="hidden"
+                animate="visible"
+                whileHover="hover"
+                whileTap="tap"
+                className="group"
+              >
+                <Link 
+                  href="/fitness"
+                  className="block p-8 bg-gradient-to-br from-red-900/50 to-red-800/50 border-2 border-red-500/30 rounded-2xl hover:border-red-400 transition-all duration-300 backdrop-blur-sm"
+                >
+                  <div className="text-6xl mb-4 group-hover:animate-pulse">💪</div>
+                  <h3 className="text-2xl font-black text-red-400 mb-4 muscle-text">
+                    FITNESS TRANSFORMATION
+                  </h3>
+                  <p className="text-neutral-300 mb-6 leading-relaxed">
+                    Elite personal training, nutrition coaching, and body transformation programs. 
+                    Build the strength and physique of a champion.
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-red-400 font-bold text-lg">
+                      Start Your Journey →
+                    </span>
+                    <div className="text-sm text-neutral-400">
+                      Personal Training • Nutrition • Results
+                    </div>
+                  </div>
+                </Link>
+              </motion.div>
+
+              {/* Marketing Path */}
+              <motion.div
+                variants={buttonVariants}
+                initial="hidden"
+                animate="visible"
+                whileHover="hover"
+                whileTap="tap"
+                transition={{ delay: 0.1 }}
+                className="group"
+              >
+                <Link 
+                  href="/brand"
+                  className="block p-8 bg-gradient-to-br from-yellow-900/50 to-yellow-800/50 border-2 border-yellow-500/30 rounded-2xl hover:border-yellow-400 transition-all duration-300 backdrop-blur-sm"
+                >
+                  <div className="text-6xl mb-4 group-hover:animate-pulse">🚀</div>
+                  <h3 className="text-2xl font-black text-yellow-400 mb-4 muscle-text">
+                    BRAND & BUSINESS
+                  </h3>
+                  <p className="text-neutral-300 mb-6 leading-relaxed">
+                    Strategic brand development, creative marketing, and business growth solutions. 
+                    Elevate your business to elite status.
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-yellow-400 font-bold text-lg">
+                      Scale Your Empire →
+                    </span>
+                    <div className="text-sm text-neutral-400">
+                      Branding • Marketing • Strategy
+                    </div>
+                  </div>
+                </Link>
+              </motion.div>
+            </div>
+          </motion.div>
+
+          {/* Quick Action Buttons */}
+          <motion.div 
+            variants={itemVariants}
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <motion.div
               variants={buttonVariants}
@@ -307,20 +384,22 @@ export default function LandingHero() {
               whileHover="hover"
               whileTap="tap"
             >
-              <Link 
-                href="/fitness"
-                className="group relative inline-flex items-center justify-center px-12 py-6 text-xl font-bold text-white bg-gradient-to-r from-red-600 to-red-500 rounded-full overflow-hidden shadow-2xl transform-gpu"
+              <a
+                href="https://forms.gle/8mz7dZXLcr47QSNG8"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white bg-gradient-to-r from-primary-600 to-primary-500 rounded-full overflow-hidden shadow-2xl transform-gpu"
               >
-                <span className="relative z-10 flex items-center gap-3">
-                  🏋️‍♂️ Start Your Transformation
+                <span className="relative z-10 flex items-center gap-2">
+                  📞 Free Consultation
                 </span>
                 <motion.div 
-                  className="absolute inset-0 bg-gradient-to-r from-red-500 to-red-400"
+                  className="absolute inset-0 bg-gradient-to-r from-primary-500 to-primary-400"
                   initial={{ x: "-100%" }}
                   whileHover={{ x: 0 }}
                   transition={{ type: "tween", ease: "easeInOut", duration: 0.3 }}
                 />
-              </Link>
+              </a>
             </motion.div>
 
             <motion.div
@@ -332,11 +411,11 @@ export default function LandingHero() {
               transition={{ delay: 0.1 }}
             >
               <Link 
-                href="/brand"
-                className="group relative inline-flex items-center justify-center px-12 py-6 text-xl font-bold text-white border-2 border-yellow-400 rounded-full hover:bg-yellow-400 hover:text-neutral-900 transition-all duration-300 shadow-2xl"
+                href="/services"
+                className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white border-2 border-primary-400 rounded-full hover:bg-primary-400 hover:text-neutral-900 transition-all duration-300 shadow-2xl"
               >
-                <span className="flex items-center gap-3">
-                  🚀 Scale Your Business
+                <span className="flex items-center gap-2">
+                  📋 View All Services
                 </span>
               </Link>
             </motion.div>
