@@ -265,7 +265,7 @@ export function redirectToPayFast(paymentData: PayFastPayment, passphrase?: stri
   }
   
   // Generate and add signature
-  const signature = generatePayFastSignature(paymentData as Record<string, string>, passphrase)
+  const signature = generatePayFastSignature(paymentData as unknown as Record<string, string>, passphrase)
   const signatureInput = document.createElement('input')
   signatureInput.type = 'hidden'
   signatureInput.name = 'signature'
