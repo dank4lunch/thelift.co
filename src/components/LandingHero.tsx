@@ -1,4 +1,3 @@
-
 'use client'
 
 import { useState, useEffect } from 'react'
@@ -55,9 +54,15 @@ export default function LandingHero() {
 
             {/* Service Links */}
             <div className="flex flex-wrap gap-6 text-sm text-neutral-400">
-              <a href="/fitness" className="hover:text-primary-400 transition-colors">💪 Elite Training</a>
-              <a href="/brand" className="hover:text-primary-400 transition-colors">🎯 Brand Development</a>
+              <a href="/fitness" className="hover:text-primary-400 transition-colors">💪 Elite Personal Training</a>
+              <a href="/brand" className="hover:text-primary-400 transition-colors">🎯 Brand Dominance</a>
+              <a href="/business" className="hover:text-primary-400 transition-colors">💼 Business Powerhouse</a>
+              <a href="/consultation" className="hover:text-primary-400 transition-colors">💡 Consultation</a>
               <a href="/about" className="hover:text-primary-400 transition-colors">✨ Meet Tshiamo</a>
+              <a href="/trainer" className="hover:text-primary-400 transition-colors">👨‍🏫 Trainer</a>
+              <a href="/contact" className="hover:text-primary-400 transition-colors">📞 Contact</a>
+              <a href="/" className="hover:text-primary-400 transition-colors">🏠 Home</a>
+              <a href="/programs" className="hover:text-primary-400 transition-colors">📚 Programs</a>
             </div>
           </div>
 

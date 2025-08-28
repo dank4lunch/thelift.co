@@ -76,48 +76,18 @@ export default function Navigation() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8" role="menubar">
             <Link
-              href="/dominate"
+              href="/"
               className={`font-bold transition-all duration-300 hover:scale-110 relative group uppercase tracking-wide depth-hover focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-neutral-950 rounded px-2 py-1 ${
-                pathname === '/dominate' 
+                pathname === '/' 
                   ? 'text-primary-400' 
                   : 'text-neutral-300 hover:text-primary-400'
               }`}
               role="menuitem"
-              aria-label="Navigate to Why We Dominate"
+              aria-label="Navigate to Home"
             >
-              Why We Dominate
+              Home
               <span className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-primary-500 to-accent-500 transition-all duration-300 ${
-                pathname === '/dominate' ? 'w-full' : 'w-0 group-hover:w-full'
-              }`} aria-hidden="true"></span>
-            </Link>
-            <Link
-              href="/packages"
-              className={`font-bold transition-all duration-300 hover:scale-110 relative group uppercase tracking-wide depth-hover focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-neutral-950 rounded px-2 py-1 ${
-                pathname === '/packages' 
-                  ? 'text-primary-400' 
-                  : 'text-neutral-300 hover:text-primary-400'
-              }`}
-              role="menuitem"
-              aria-label="Navigate to Training Packages"
-            >
-              Training Packages
-              <span className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-primary-500 to-accent-500 transition-all duration-300 ${
-                pathname === '/packages' ? 'w-full' : 'w-0 group-hover:w-full'
-              }`} aria-hidden="true"></span>
-            </Link>
-            <Link
-              href="/gallery"
-              className={`font-bold transition-all duration-300 hover:scale-110 relative group uppercase tracking-wide depth-hover focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-neutral-950 rounded px-2 py-1 ${
-                pathname === '/gallery' 
-                  ? 'text-primary-400' 
-                  : 'text-neutral-300 hover:text-primary-400'
-              }`}
-              role="menuitem"
-              aria-label="Navigate to Gallery"
-            >
-              Gallery
-              <span className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-primary-500 to-accent-500 transition-all duration-300 ${
-                pathname === '/gallery' ? 'w-full' : 'w-0 group-hover:w-full'
+                pathname === '/' ? 'w-full' : 'w-0 group-hover:w-full'
               }`} aria-hidden="true"></span>
             </Link>
             <Link
@@ -133,6 +103,36 @@ export default function Navigation() {
               About
               <span className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-primary-500 to-accent-500 transition-all duration-300 ${
                 pathname === '/about' ? 'w-full' : 'w-0 group-hover:w-full'
+              }`} aria-hidden="true"></span>
+            </Link>
+            <Link
+              href="/programs"
+              className={`font-bold transition-all duration-300 hover:scale-110 relative group uppercase tracking-wide depth-hover focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-neutral-950 rounded px-2 py-1 ${
+                pathname === '/programs' 
+                  ? 'text-primary-400' 
+                  : 'text-neutral-300 hover:text-primary-400'
+              }`}
+              role="menuitem"
+              aria-label="Navigate to Programs"
+            >
+              Programs
+              <span className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-primary-500 to-accent-500 transition-all duration-300 ${
+                pathname === '/programs' ? 'w-full' : 'w-0 group-hover:w-full'
+              }`} aria-hidden="true"></span>
+            </Link>
+            <Link
+              href="/trainer"
+              className={`font-bold transition-all duration-300 hover:scale-110 relative group uppercase tracking-wide depth-hover focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-neutral-950 rounded px-2 py-1 ${
+                pathname === '/trainer' 
+                  ? 'text-primary-400' 
+                  : 'text-neutral-300 hover:text-primary-400'
+              }`}
+              role="menuitem"
+              aria-label="Navigate to Trainer"
+            >
+              Trainer
+              <span className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-primary-500 to-accent-500 transition-all duration-300 ${
+                pathname === '/trainer' ? 'w-full' : 'w-0 group-hover:w-full'
               }`} aria-hidden="true"></span>
             </Link>
             <Link
@@ -195,40 +195,16 @@ export default function Navigation() {
           <div className="bg-neutral-900/95 backdrop-blur-lg border border-primary-500/20 rounded-lg mx-4 my-2 shadow-2xl overflow-hidden">
             <div className="py-2">
               <Link
-                href="/dominate"
+                href="/"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className={`block w-full text-left px-6 py-4 transition-all duration-300 font-bold uppercase tracking-wide border-b border-neutral-800/30 last:border-b-0 ${
-                  pathname === '/dominate'
+                  pathname === '/'
                     ? 'text-primary-400 bg-neutral-800/50'
                     : 'text-neutral-300 hover:text-primary-400 hover:bg-neutral-800/50'
                 }`}
                 style={{ animationDelay: `0.0s` }}
               >
-                🔥 Why We Dominate
-              </Link>
-              <Link
-                href="/packages"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className={`block w-full text-left px-6 py-4 transition-all duration-300 font-bold uppercase tracking-wide border-b border-neutral-800/30 last:border-b-0 ${
-                  pathname === '/packages'
-                    ? 'text-primary-400 bg-neutral-800/50'
-                    : 'text-neutral-300 hover:text-primary-400 hover:bg-neutral-800/50'
-                }`}
-                style={{ animationDelay: `0.1s` }}
-              >
-                💪 Training Packages
-              </Link>
-              <Link
-                href="/gallery"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className={`block w-full text-left px-6 py-4 transition-all duration-300 font-bold uppercase tracking-wide border-b border-neutral-800/30 last:border-b-0 ${
-                  pathname === '/gallery'
-                    ? 'text-primary-400 bg-neutral-800/50'
-                    : 'text-neutral-300 hover:text-primary-400 hover:bg-neutral-800/50'
-                }`}
-                style={{ animationDelay: `0.2s` }}
-              >
-                📸 Gallery
+                🏠 Home
               </Link>
               <Link
                 href="/about"
@@ -238,9 +214,33 @@ export default function Navigation() {
                     ? 'text-primary-400 bg-neutral-800/50'
                     : 'text-neutral-300 hover:text-primary-400 hover:bg-neutral-800/50'
                 }`}
+                style={{ animationDelay: `0.1s` }}
+              >
+                ✨ About
+              </Link>
+              <Link
+                href="/programs"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={`block w-full text-left px-6 py-4 transition-all duration-300 font-bold uppercase tracking-wide border-b border-neutral-800/30 last:border-b-0 ${
+                  pathname === '/programs'
+                    ? 'text-primary-400 bg-neutral-800/50'
+                    : 'text-neutral-300 hover:text-primary-400 hover:bg-neutral-800/50'
+                }`}
+                style={{ animationDelay: `0.2s` }}
+              >
+                💪 Programs
+              </Link>
+              <Link
+                href="/trainer"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={`block w-full text-left px-6 py-4 transition-all duration-300 font-bold uppercase tracking-wide border-b border-neutral-800/30 last:border-b-0 ${
+                  pathname === '/trainer'
+                    ? 'text-primary-400 bg-neutral-800/50'
+                    : 'text-neutral-300 hover:text-primary-400 hover:bg-neutral-800/50'
+                }`}
                 style={{ animationDelay: `0.3s` }}
               >
-                ✨ About Tshiamo
+                🏆 Trainer
               </Link>
               <Link
                 href="/contact"
@@ -252,7 +252,7 @@ export default function Navigation() {
                 }`}
                 style={{ animationDelay: `0.4s` }}
               >
-                📞 Get In Touch
+                📞 Contact
               </Link>
             </div>
 
