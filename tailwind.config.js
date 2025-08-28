@@ -1,9 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    './index.html',
+    './src/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     extend: {
@@ -144,11 +143,11 @@ module.exports = {
           '75%': { transform: 'rotateX(-5deg) rotateY(5deg)' },
         },
         depthPulse: {
-          '0%, 100%': { 
+          '0%, 100%': {
             transform: 'scale(1) translateZ(0px)',
             boxShadow: '0 0 0 rgba(227, 181, 71, 0)'
           },
-          '50%': { 
+          '50%': {
             transform: 'scale(1.05) translateZ(10px)',
             boxShadow: '0 10px 25px rgba(227, 181, 71, 0.3)'
           },

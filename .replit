@@ -6,19 +6,11 @@ run = "npm run dev"
 channel = "stable-25_05"
 
 [deployment]
-run = ["sh", "-c", "npm run build && npm start"]
+run = ["sh", "-c", "npm run build && npm run preview"]
 
 [[ports]]
-localPort = 3000
-externalPort = 3000
-
-[[ports]]
-localPort = 3001
+localPort = 5000
 externalPort = 80
-
-[[ports]]
-localPort = 3002
-externalPort = 3002
 
 [workflows]
 runButton = "Run"
