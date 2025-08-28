@@ -10,172 +10,111 @@ export default function Navigation() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20)
-    }
-
-    const handleClickOutside = (event: MouseEvent) => {
-      const target = event.target as Element
-      if (isMobileMenuOpen && !target.closest('nav')) {
-        setIsMobileMenuOpen(false)
-      }
+      setIsScrolled(window.scrollY > 50)
     }
 
     window.addEventListener('scroll', handleScroll)
-    document.addEventListener('mousedown', handleClickOutside)
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-      document.removeEventListener('mousedown', handleClickOutside)
-    }
-  }, [isMobileMenuOpen])
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   const navItems = [
-    { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { name: 'Services', href: '/services' },
-    { name: 'Contact', href: '/contact' },
+    { href: '/', label: 'Home' },
+    { href: '/about', label: 'About' },
+    { href: '/services', label: 'Services' },
+    { href: '/contact', label: 'Contact' },
   ]
 
   return (
-    <nav
-      id="navigation"
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled
-          ? 'bg-neutral-950/90 backdrop-blur-xl shadow-2xl border-b border-primary-500/30'
+    <nav 
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled 
+          ? 'bg-neutral-950/95 backdrop-blur-md border-b border-primary-500/20' 
           : 'bg-transparent'
       }`}
-      style={{
-        background: isScrolled ? 'linear-gradient(135deg, rgba(23, 23, 23, 0.9) 0%, rgba(10, 10, 10, 0.95) 100%)' : 'transparent'
-      }}
-      role="navigation"
-      aria-label="Main navigation"
     >
-      <div className="container-custom">
-        <div className="flex items-center justify-between py-4">
-          {/* Brand Name */}
-          <div className="flex items-center min-w-0 flex-1 sm:flex-none">
-            <Link
-              to="/"
-              className="text-lg sm:text-xl md:text-2xl font-black font-heading text-transparent bg-clip-text bg-gradient-to-r from-primary-400 via-accent-500 to-primary-400 muscle-text focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-neutral-950 rounded-xl px-2 sm:px-3 py-2 hover:scale-105 transition-all duration-300 whitespace-nowrap"
-              aria-label="The Lift Co - Go to homepage"
-              style={{ 
-                backgroundSize: '200% 200%',
-                animation: 'gradient-shift 4s ease infinite'
-              }}
-            >
-              THE LIFT CO
-            </Link>
-            <div className="ml-1 sm:ml-2 hidden sm:block">
-              <p className="text-xs text-accent-400 font-bold uppercase tracking-wider whitespace-nowrap">
-                Elite Training
-              </p>
+      <div className="container-safe max-w-7xl mx-auto">
+        <div className="flex items-center justify-between h-16 sm:h-20">
+          {/* Logo */}
+          <Link 
+            to="/" 
+            className="flex items-center space-x-3 group"
+          >
+            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-primary-500 to-accent-500 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-primary-500/25 transition-all duration-300">
+              <span className="text-neutral-950 font-bold text-lg sm:text-xl">TL</span>
             </div>
-          </div>
+            <div className="hidden sm:block">
+              <span className="text-xl font-bold premium-text">The Lift Co</span>
+              <p className="text-xs text-neutral-400 -mt-1">Elite Fitness Solutions</p>
+            </div>
+          </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8" role="menubar">
+          <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <Link
-                key={item.name}
+                key={item.href}
                 to={item.href}
-                className={`font-bold transition-all duration-300 hover:scale-110 relative group uppercase tracking-wide depth-hover focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-neutral-950 rounded px-2 py-1 ${
-                  location.pathname === item.href 
-                    ? 'text-primary-400' 
+                className={`relative px-4 py-2 text-sm font-medium transition-all duration-300 group ${
+                  location.pathname === item.href
+                    ? 'text-primary-400'
                     : 'text-neutral-300 hover:text-primary-400'
                 }`}
-                role="menuitem"
-                aria-label={`Navigate to ${item.name}`}
               >
-                {item.name}
-                <span className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-primary-500 to-accent-500 transition-all duration-300 ${
-                  location.pathname === item.href ? 'w-full' : 'w-0 group-hover:w-full'
-                }`} aria-hidden="true"></span>
+                {item.label}
+                <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary-500 to-accent-500 transform transition-transform duration-300 ${
+                  location.pathname === item.href ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                }`}></span>
               </Link>
             ))}
-          </div>
-
-          {/* CTA Button */}
-          <div className="hidden lg:block">
-            <a
-              href="https://forms.gle/8mz7dZXLcr47QSNG8"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary px-6 lg:px-8 py-3 text-sm relative overflow-hidden group elite-glow focus:outline-none focus:ring-2 focus:ring-primary-300 focus:ring-offset-2 focus:ring-offset-neutral-950 whitespace-nowrap"
-              aria-label="Book training now"
+            <Link
+              to="/contact"
+              className="px-6 py-2 bg-gradient-to-r from-primary-500 to-accent-500 text-neutral-950 font-semibold rounded-full hover:shadow-lg hover:shadow-primary-500/25 transition-all duration-300 transform hover:scale-105"
             >
-              <span className="relative z-10 muscle-text">BOOK NOW</span>
-            </a>
+              Get Started
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden w-12 h-12 bg-gradient-to-r from-primary-500 to-accent-500 rounded-xl flex items-center justify-center border border-primary-500/30 depth-hover focus:outline-none focus:ring-2 focus:ring-primary-300 focus:ring-offset-2 focus:ring-offset-neutral-950"
-            aria-label={isMobileMenuOpen ? 'Close mobile menu' : 'Open mobile menu'}
-            aria-expanded={isMobileMenuOpen}
-            aria-controls="mobile-menu"
+            className="md:hidden p-2 text-neutral-300 hover:text-primary-400 transition-colors"
+            aria-label="Toggle mobile menu"
           >
             <div className="w-6 h-6 flex flex-col justify-center items-center">
-              <span className={`bg-neutral-950 block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isMobileMenuOpen ? 'rotate-45 translate-y-1' : '-translate-y-0.5'}`}></span>
-              <span className={`bg-neutral-950 block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 ${isMobileMenuOpen ? 'opacity-0' : 'opacity-100'}`}></span>
-              <span className={`bg-neutral-950 block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isMobileMenuOpen ? '-rotate-45 -translate-y-1' : 'translate-y-0.5'}`}></span>
+              <span className={`block w-5 h-0.5 bg-current transition-all duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-1' : '-translate-y-1'}`}></span>
+              <span className={`block w-5 h-0.5 bg-current transition-all duration-300 ${isMobileMenuOpen ? 'opacity-0' : 'opacity-100'}`}></span>
+              <span className={`block w-5 h-0.5 bg-current transition-all duration-300 ${isMobileMenuOpen ? '-rotate-45 -translate-y-1' : 'translate-y-1'}`}></span>
             </div>
           </button>
         </div>
 
         {/* Mobile Menu */}
-        <div
-          id="mobile-menu"
-          className={`md:hidden fixed inset-x-0 top-[88px] z-40 transition-all duration-300 transform ${
-            isMobileMenuOpen 
-              ? 'opacity-100 visible translate-y-0' 
-              : 'opacity-0 invisible -translate-y-4'
-          }`}
-          role="menu"
-          aria-labelledby="mobile-menu-button"
-        >
-          <div className="bg-neutral-900/95 backdrop-blur-lg border border-primary-500/20 rounded-lg mx-4 my-2 shadow-2xl overflow-hidden">
-            <div className="py-2">
-              {navItems.map((item, index) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className={`block w-full text-left px-6 py-4 transition-all duration-300 font-bold uppercase tracking-wide border-b border-neutral-800/30 last:border-b-0 ${
-                    location.pathname === item.href
-                      ? 'text-primary-400 bg-neutral-800/50'
-                      : 'text-neutral-300 hover:text-primary-400 hover:bg-neutral-800/50'
-                  }`}
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  {item.name}
-                </Link>
-              ))}
-              {/* Marketing Link */}
+        <div className={`md:hidden transition-all duration-300 overflow-hidden ${
+          isMobileMenuOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'
+        }`}>
+          <div className="py-4 space-y-2 bg-neutral-950/95 backdrop-blur-md rounded-b-lg border-t border-primary-500/20">
+            {navItems.map((item) => (
               <Link
-                to="/marketing"
+                key={item.href}
+                to={item.href}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className={`block w-full text-left px-6 py-4 transition-all duration-300 font-bold uppercase tracking-wide border-b border-neutral-800/30 last:border-b-0 ${
-                  location.pathname === '/marketing'
-                    ? 'text-primary-400 bg-neutral-800/50'
-                    : 'text-neutral-300 hover:text-primary-400 hover:bg-neutral-800/50'
+                className={`block px-4 py-3 text-sm font-medium transition-colors ${
+                  location.pathname === item.href
+                    ? 'text-primary-400 bg-primary-500/10'
+                    : 'text-neutral-300 hover:text-primary-400 hover:bg-primary-500/5'
                 }`}
-                style={{ animationDelay: `${navItems.length * 0.1}s` }}
               >
-                Marketing
+                {item.label}
               </Link>
-            </div>
-
-            <div className="p-4 border-t border-neutral-700/50">
-              <a
-                href="https://forms.gle/8mz7dZXLcr47QSNG8"
-                target="_blank"
-                rel="noopener noreferrer"
+            ))}
+            <div className="px-4 pt-2">
+              <Link
+                to="/contact"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="w-full bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-500 hover:to-primary-600 text-neutral-950 font-bold py-4 px-6 rounded-xl shadow-lg transition-all duration-300 muscle-text block text-center"
+                className="block w-full px-6 py-3 bg-gradient-to-r from-primary-500 to-accent-500 text-neutral-950 font-semibold rounded-full text-center hover:shadow-lg transition-all duration-300"
               >
-                BOOK NOW
-              </a>
+                Get Started
+              </Link>
             </div>
           </div>
         </div>
