@@ -5,27 +5,6 @@ const nextConfig = {
     optimizePackageImports: ['lucide-react']
   },
 
-  // Improve webpack configuration
-  webpack: (config, { dev, isServer }) => {
-    // Add fallbacks for Node.js modules in client-side code
-    if (!isServer) {
-      config.resolve.fallback = {
-        ...config.resolve.fallback,
-        crypto: false,
-        fs: false,
-        path: false,
-        os: false,
-      }
-    }
-
-    // Disable source maps in development to reduce HMR issues
-    if (dev) {
-      config.devtool = false
-    }
-
-    return config
-  },
-
   // Disable strict mode temporarily to avoid double-rendering issues
   reactStrictMode: false,
 

@@ -1,12 +1,11 @@
+
 import type { Metadata } from 'next'
-import React from 'react'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'The Lift Co | Your Transformation Partner',
-  description: 'Transform your body and life with The Lift Co. Expert training, brand development, and business strategies.',
-  viewport: 'width=device-width, initial-scale=1',
-};
+  title: 'The Lift Co - Personal Training & Fitness Services',
+  description: 'Professional personal training services with Tshiamo Sookane in Gauteng, South Africa.',
+}
 
 export default function RootLayout({
   children,
@@ -15,13 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <title>{String(metadata.title)}</title>
-        <meta name="description" content={String(metadata.description)} />
-        <meta name="viewport" content={String(metadata.viewport)} />
-        <link rel="icon" href="/favicon.ico" />
-      </head>
-      <body>
+      <body className="antialiased">
         {children}
       </body>
     </html>
