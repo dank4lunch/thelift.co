@@ -39,7 +39,9 @@ export default function LandingHero() {
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mb-8 sm:mb-12">
               <a
-                href="/contact"
+                href="https://forms.gle/8mz7dZXLcr47QSNG8"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-primary text-center min-h-[52px] flex items-center justify-center"
               >
                 Book Free Consultation
