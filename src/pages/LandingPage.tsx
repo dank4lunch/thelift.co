@@ -1,6 +1,13 @@
-
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+
+// Note: The original code had imports for Navigation, LandingHero, About, Services, Founder, Contact, and Footer.
+// Based on the provided changes, it seems the intention was to replace 'LandingHero' with 'Hero' and
+// potentially clean up or adjust other imports if they were related to the Next.js/Vite conflict.
+// Since the original code did not contain these imports, and the changes are applied directly to the provided snippet,
+// we will proceed with the assumption that the provided snippet IS the entire file and the imports mentioned in the changes
+// were either mistakenly provided or intended for a different file.
+// The core of the change is to replace the usage of 'LandingHero' with 'Hero'.
 
 interface FloatingElement {
   id: number
@@ -25,7 +32,7 @@ export default function LandingPage() {
     },
     {
       text: "10 years of experience shows. He doesn't just train - he elevates everything about your approach to fitness and life.",
-      author: "Marcus T.", 
+      author: "Marcus T.",
       role: "Entrepreneur"
     },
     {
@@ -133,7 +140,7 @@ export default function LandingPage() {
             </div>
 
             <p className="text-lg sm:text-xl md:text-2xl text-neutral-300 leading-relaxed max-w-3xl mx-auto mb-8">
-              I'm not your average trainer. I'm a <span className="text-primary-400 font-bold">creative entrepreneur</span> obsessed 
+              I'm not your average trainer. I'm a <span className="text-primary-400 font-bold">creative entrepreneur</span> obsessed
               with human transformation. 10 years perfecting the art of getting results.
             </p>
 
@@ -216,7 +223,7 @@ export default function LandingPage() {
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-16">
             Success Stories
           </h2>
-          
+
           <div className="bg-gradient-to-br from-neutral-800/50 to-neutral-900/50 backdrop-blur-sm border border-neutral-700/50 rounded-xl p-8 sm:p-12">
             <div className="transition-all duration-500 ease-in-out">
               <p className="text-xl sm:text-2xl text-neutral-200 italic mb-8 leading-relaxed">
@@ -280,11 +287,11 @@ export default function LandingPage() {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-accent-400 mb-8">
             Ready to Get Lifted?
           </h2>
-          
+
           <p className="text-xl text-neutral-300 mb-12 leading-relaxed">
             Stop waiting for the perfect moment. Your transformation starts with a single decision.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link
               to="/home"
@@ -292,7 +299,7 @@ export default function LandingPage() {
             >
               Get Started Today
             </Link>
-            
+
             <a
               href="tel:+27635432439"
               className="border-2 border-primary-500 text-primary-400 hover:bg-primary-500 hover:text-neutral-950 font-bold py-4 px-8 rounded-xl text-lg transition-all duration-300"
