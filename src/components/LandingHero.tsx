@@ -5,7 +5,8 @@ import { useState, useEffect } from 'react'
 export default function LandingHero() {
   const [textVisible, setTextVisible] = useState(false)
 
-  useEffect(() => toTextVisible(true), 300)
+  useEffect(() => {
+    setTimeout(() => setTextVisible(true), 300)
   }, [])
 
   return (
