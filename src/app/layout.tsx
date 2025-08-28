@@ -1,6 +1,7 @@
 
 import type { Metadata } from 'next'
 import './globals.css'
+import ClientErrorBoundary from '@/components/ClientErrorBoundary'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://thelift.co'),
@@ -76,7 +77,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased">
-        {children}
+        <ClientErrorBoundary>
+          {children}
+        </ClientErrorBoundary>
       </body>
     </html>
   )

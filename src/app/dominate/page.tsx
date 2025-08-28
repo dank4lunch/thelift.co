@@ -1,4 +1,3 @@
-
 import { Metadata } from 'next'
 import Navigation from '@/components/Navigation'
 import TrainerAbout from '@/components/TrainerAbout'
@@ -29,21 +28,21 @@ export default function DominatePage() {
             operatingHours="Monday to Sunday: 5 AM - 10 PM, Sunday by appointment."
             packages={[
               {
-                name: 'One-on-One',
-                description: "Whether you want a full-time trainer or you need a few months of training to help you reach one of your short-term goals, you can work with your trainer to select a custom package. This allows you to set the frequency of workouts and duration you'll need them for.",
-                sessions: '8 sessions over 1 month',
-                duration: '60 min per session',
-                price: 'R2 160',
+                name: 'Dominate Program',
+                description: "Elite performance training designed for those who refuse to settle for mediocrity. This is where champions are forged.",
+                sessions: '12 sessions over 6 weeks',
+                duration: '75 min per session',
+                price: 'R3 240',
                 perSessionPrice: 'R270 per session'
               }
             ]}
             faq={[
               {
-                question: 'What makes your training different?',
-                answer: 'We provide holistic transformation combining fitness with strategic business guidance.'
+                question: "What makes the Dominate program different?",
+                answer: "This program is designed for serious athletes and individuals who want to push their limits with advanced training methodologies."
               }
             ]}
-            consultationPrice="R350"
+            consultationPrice="R500"
           />
           <Specializations />
         </div>

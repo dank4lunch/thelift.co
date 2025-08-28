@@ -1,4 +1,3 @@
-
 import Navigation from '@/components/Navigation'
 import SkipNav from '@/components/SkipNav'
 import About from '@/components/About'
@@ -48,8 +47,8 @@ export default function AboutPage() {
             ]}
             faq={[
               {
-                question: 'What is your training approach?',
-                answer: 'I focus on holistic transformation combining physical fitness with mindset coaching.'
+                question: "What should I expect in my first session?",
+                answer: "Your first session includes a comprehensive fitness assessment, goal setting, and an introduction to your personalized training program."
               }
             ]}
             consultationPrice="R500"

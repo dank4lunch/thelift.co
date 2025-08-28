@@ -24,38 +24,25 @@ export default function Home() {
           <main id="main-content" className="focus:outline-none" tabIndex={-1}>
             <Hero />
             <TrainerAbout
-              aboutText="The Lift.co is an amalgamation of a holistic creative process. It is a segmented business, split into sport and fitness training and creative marketing services. The training is in-person training and online coaching and sports specific training and conditioning, and the creative marketing business extends from digital marketing to event coordination and curation, and everything in between. Based on the talents of one dreamer, who is willing to stand out and service across the spectrum. Get lifted with personal trainer. Creative entrepreneur."
+              aboutText="The Lift.co is an amalgamation of a holistic creative process. It is a segmented business, split into sport and fitness training and creative marketing services. The training is in-person training and online coaching and sports specific training and conditioning, and the creative marketing business extends from digital marketing to event coordination and curation, and everything in between. Based on the talents of one dreamer, who is willing to stand out and service across the spectrum."
               operatingHours="Monday to Sunday: 5 AM - 10 PM, Sunday by appointment."
               packages={[
                 {
-                  name: 'One-on-One',
-                  description: "Whether you want a full-time trainer or you need a few months of training to help you reach one of your short-term goals, you can work with your trainer to select a custom package. This allows you to set the frequency of workouts and duration you'll need them for.",
-                  sessions: '8 sessions over 1 month',
-                  duration: '60 min per session',
-                  price: 'R2 160',
-                  perSessionPrice: 'R270 per session',
-                },
-                {
-                  name: 'PT Six Pack',
-                  description: '1 x in-depth consultation, 5 x 45 min training sessions',
-                  price: 'R1270 per package',
-                },
-              ]}
-              faq={ [
-                {
-                  question: "What can I expect from my consultation?",
-                  answer: "The best way to kick off your Personal Training journey. The consultation is about getting to know you better so your Personal Trainer has a clear idea of your goals. During the consultation, you will discuss your training goals, health concerns, your training preferences, and available packages and costs.",
-                },
-                {
-                  question: "What if I can't make my appointment?",
-                  answer: "Please contact us at least 24 hours in advance to reschedule your appointment. No-shows or cancellations made less than 24 hours in advance will be charged the full session fee."
-                },
-                {
-                  question: "What if I'm not happy with my Personal Trainer?",
-                  answer: "We strive to ensure all our clients are satisfied with their training experience. If you are not happy with your Personal Trainer, please contact us to discuss your concerns. We will do our best to find a suitable solution, which may include matching you with a different trainer."
+                  name: 'Starter Program',
+                  description: "Perfect for beginners ready to start their fitness journey with professional guidance and support.",
+                  sessions: '4 sessions over 2 weeks',
+                  duration: '45 min per session',
+                  price: 'R1 080',
+                  perSessionPrice: 'R270 per session'
                 }
               ]}
-              consultationPrice="R64"
+              faq={[
+                {
+                  question: "How do I get started?",
+                  answer: "Book your free consultation and we'll create a personalized plan that fits your goals and lifestyle."
+                }
+              ]}
+              consultationPrice="R500"
             />
             <Specializations />
             <Gallery />
