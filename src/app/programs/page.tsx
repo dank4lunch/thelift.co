@@ -94,61 +94,50 @@ export default function ProgramsPage() {
             <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
               {programs.map((program, index) => (
                 <div key={index} className="group">
-                  <div className="bg-gradient-to-br from-neutral-800 to-neutral-900 rounded-2xl overflow-hidden border border-primary-500/20 hover:border-primary-500/40 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-primary-500/20">
-                    {/* Program Image */}
-                    <div className="relative h-64 overflow-hidden">
-                      <div className={`absolute inset-0 bg-gradient-to-br ${program.gradient} opacity-80`}></div>
-                      <img 
-                        src={program.image} 
-                        alt={program.title}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                      />
-                      <div className="absolute top-4 right-4">
-                        <span className="bg-primary-500 text-neutral-950 px-3 py-1 rounded-full text-sm font-bold uppercase tracking-wide">
-                          Elite
-                        </span>
-                      </div>
+                  <div className="bg-gradient-to-br from-neutral-800 to-neutral-900 rounded-2xl border border-primary-500/20 hover:border-primary-500/40 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-primary-500/20 p-8">
+                    {/* Program Content */}
+                    <div className="mb-6">
+                      <span className="bg-primary-500 text-neutral-950 px-3 py-1 rounded-full text-sm font-bold uppercase tracking-wide mb-4 inline-block">
+                        Elite
+                      </span>
                     </div>
 
-                    {/* Program Content */}
-                    <div className="p-8">
-                      <h3 className="text-2xl font-black mb-2 text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-accent-400 muscle-text uppercase tracking-wide">
-                        {program.title}
-                      </h3>
-                      <p className="text-primary-400 font-bold mb-4 uppercase tracking-wider text-sm">
-                        {program.subtitle}
-                      </p>
-                      <p className="text-neutral-300 mb-6 leading-relaxed">
-                        {program.description}
-                      </p>
+                    <h3 className="text-2xl font-black mb-2 text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-accent-400 muscle-text uppercase tracking-wide">
+                      {program.title}
+                    </h3>
+                    <p className="text-primary-400 font-bold mb-4 uppercase tracking-wider text-sm">
+                      {program.subtitle}
+                    </p>
+                    <p className="text-neutral-300 mb-6 leading-relaxed">
+                      {program.description}
+                    </p>
 
-                      {/* Features */}
-                      <div className="mb-8">
-                        <h4 className="font-bold text-neutral-200 mb-4 uppercase tracking-wide">What's Included:</h4>
-                        <ul className="space-y-2">
-                          {program.features.map((feature, featureIndex) => (
-                            <li key={featureIndex} className="flex items-center text-neutral-400">
-                              <span className="text-primary-400 mr-3">✓</span>
-                              {feature}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
+                    {/* Features */}
+                    <div className="mb-8">
+                      <h4 className="font-bold text-neutral-200 mb-4 uppercase tracking-wide">What's Included:</h4>
+                      <ul className="space-y-2">
+                        {program.features.map((feature, featureIndex) => (
+                          <li key={featureIndex} className="flex items-center text-neutral-400">
+                            <span className="text-primary-400 mr-3">✓</span>
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
 
-                      {/* Price & CTA */}
-                      <div className="flex items-center justify-between">
-                        <span className="text-2xl font-black text-primary-400 muscle-text">
-                          {program.price}
-                        </span>
-                        <a
-                          href={program.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="btn-primary px-6 py-3 muscle-text group-hover:scale-110 transition-transform duration-300"
-                        >
-                          START NOW
-                        </a>
-                      </div>
+                    {/* Price & CTA */}
+                    <div className="flex items-center justify-between">
+                      <span className="text-2xl font-black text-primary-400 muscle-text">
+                        {program.price}
+                      </span>
+                      <a
+                        href={program.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn-primary px-6 py-3 muscle-text group-hover:scale-110 transition-transform duration-300"
+                      >
+                        START NOW
+                      </a>
                     </div>
                   </div>
                 </div>
