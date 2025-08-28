@@ -2,16 +2,11 @@
 const nextConfig = {
   // Disable external scripts and improve error handling
   experimental: {
-    optimizePackageImports: ['lucide-react', 'framer-motion', 'three', '@react-three/fiber', '@react-three/drei']
+    optimizePackageImports: ['lucide-react']
   },
 
-  // Enable strict mode for better performance
-  reactStrictMode: true,
-
-  // Ensure app runs on correct port
-  env: {
-    NEXT_PUBLIC_PORT: process.env.PORT || '3000',
-  },
+  // Disable strict mode temporarily to avoid double-rendering issues
+  reactStrictMode: false,
 
   // Add security headers
   async headers() {
