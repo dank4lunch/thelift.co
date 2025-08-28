@@ -1,8 +1,12 @@
+
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
+
+// Force dynamic rendering to prevent static generation issues
+export const dynamic = 'force-dynamic'
 
 interface PaymentInfo {
   package: string
@@ -11,7 +15,7 @@ interface PaymentInfo {
   name: string
 }
 
-export default function PaymentSuccess() {
+function PaymentSuccessContent() {
   const [paymentInfo, setPaymentInfo] = useState<PaymentInfo | null>(null)
   const searchParams = useSearchParams()
 
@@ -138,5 +142,20 @@ export default function PaymentSuccess() {
         </div>
       </div>
     </main>
+  )
+}
+
+export default function PaymentSuccess() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 flex items-center justify-center">
+        <div className="text-center">
+          <div className="w-8 h-8 border-4 border-primary-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+          <p className="text-neutral-300">Loading payment details...</p>
+        </div>
+      </div>
+    }>
+      <PaymentSuccessContent />
+    </Suspense>
   )
 }
