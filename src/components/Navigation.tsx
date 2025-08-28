@@ -1,13 +1,12 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { usePathname } from 'next/navigation'
-import Link from 'next/link'
+import { Link, useLocation } from 'react-router-dom'
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const pathname = usePathname()
+  const location = useLocation()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -56,7 +55,7 @@ export default function Navigation() {
           {/* Brand Name */}
           <div className="flex items-center min-w-0 flex-1 sm:flex-none">
             <Link
-              href="/"
+              to="/"
               className="text-lg sm:text-xl md:text-2xl font-black font-heading text-transparent bg-clip-text bg-gradient-to-r from-primary-400 via-accent-500 to-primary-400 muscle-text focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-neutral-950 rounded-xl px-2 sm:px-3 py-2 hover:scale-105 transition-all duration-300 whitespace-nowrap"
               aria-label="The Lift Co - Go to homepage"
               style={{ 
@@ -78,9 +77,9 @@ export default function Navigation() {
             {navItems.map((item) => (
               <Link
                 key={item.name}
-                href={item.href}
+                to={item.href}
                 className={`font-bold transition-all duration-300 hover:scale-110 relative group uppercase tracking-wide depth-hover focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-neutral-950 rounded px-2 py-1 ${
-                  pathname === item.href 
+                  location.pathname === item.href 
                     ? 'text-primary-400' 
                     : 'text-neutral-300 hover:text-primary-400'
                 }`}
@@ -89,7 +88,7 @@ export default function Navigation() {
               >
                 {item.name}
                 <span className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-primary-500 to-accent-500 transition-all duration-300 ${
-                  pathname === item.href ? 'w-full' : 'w-0 group-hover:w-full'
+                  location.pathname === item.href ? 'w-full' : 'w-0 group-hover:w-full'
                 }`} aria-hidden="true"></span>
               </Link>
             ))}
@@ -140,10 +139,10 @@ export default function Navigation() {
               {navItems.map((item, index) => (
                 <Link
                   key={item.name}
-                  href={item.href}
+                  to={item.href}
                   onClick={() => setIsMobileMenuOpen(false)}
                   className={`block w-full text-left px-6 py-4 transition-all duration-300 font-bold uppercase tracking-wide border-b border-neutral-800/30 last:border-b-0 ${
-                    pathname === item.href
+                    location.pathname === item.href
                       ? 'text-primary-400 bg-neutral-800/50'
                       : 'text-neutral-300 hover:text-primary-400 hover:bg-neutral-800/50'
                   }`}
@@ -154,10 +153,10 @@ export default function Navigation() {
               ))}
               {/* Marketing Link */}
               <Link
-                href="/marketing"
+                to="/marketing"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className={`block w-full text-left px-6 py-4 transition-all duration-300 font-bold uppercase tracking-wide border-b border-neutral-800/30 last:border-b-0 ${
-                  pathname === '/marketing'
+                  location.pathname === '/marketing'
                     ? 'text-primary-400 bg-neutral-800/50'
                     : 'text-neutral-300 hover:text-primary-400 hover:bg-neutral-800/50'
                 }`}
