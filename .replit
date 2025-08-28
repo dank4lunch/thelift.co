@@ -20,15 +20,6 @@ externalPort = 80
 localPort = 3002
 externalPort = 3002
 
-[[ports]]
-localPort = 5000
-externalPort = 5000
-
-[[ports]]
-localPort = 5001
-externalPort = 3001
-exposeLocalhost = true
-
 [workflows]
 runButton = "Run"
 

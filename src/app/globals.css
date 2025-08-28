@@ -279,7 +279,7 @@
     .container-custom {
       @apply px-4;
     }
-
+    
     .heading-responsive {
       word-break: break-word;
       overflow-wrap: break-word;
