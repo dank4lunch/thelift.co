@@ -16,13 +16,26 @@ import { Metadata } from 'next'
 import Gallery from '@/components/Gallery'
 
 export const metadata: Metadata = {
-  title: 'Home - The Lift Co | Personal Training & Fitness Services',
-  description: 'Discover comprehensive personal training services with Tshiamo Sookane. 10 years of experience in fitness coaching, boxing, HIIT, and nutrition planning across Gauteng.',
-  keywords: 'personal trainer Gauteng, fitness coach, boxing training, HIIT training, nutrition coaching, sports conditioning',
+  title: 'Premium Personal Training Services - Transform Your Life Today',
+  description: 'Experience elite personal training with Tshiamo Sookane! 🏋️‍♂️ 10+ years transforming lives across Gauteng with boxing, HIIT, strength training & holistic wellness coaching. Built to Boost your potential!',
+  keywords: 'elite personal trainer, premium fitness coaching, boxing training, HIIT workouts, strength training, nutrition coaching, life transformation, Gauteng fitness, mobile personal training, sports conditioning',
   openGraph: {
-    title: 'The Lift Co - Complete Fitness Services',
-    description: 'Your complete fitness transformation journey starts here with expert guidance and proven results.',
+    title: 'The Lift Co - Elite Personal Training That Changes Lives 💪',
+    description: 'Join the fitness revolution! Premium personal training, boxing, HIIT, and holistic wellness coaching that transforms bodies and minds. Built to Boost. Strategic Moves. Creative Lifts.',
     type: 'website',
+    images: [
+      {
+        url: '/images/IMG_0253_1754429519057.jpeg',
+        width: 1200,
+        height: 630,
+        alt: 'Tshiamo Sookane - Elite Personal Trainer',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Elite Personal Training That Transforms Lives 💪',
+    description: 'Premium fitness coaching with Tshiamo Sookane. Built to Boost your potential! 🚀',
   },
 }
 

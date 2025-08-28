@@ -25,15 +25,18 @@ export default function LandingHero() {
           {/* Text Section */}
           <div className={`flex-1 max-w-2xl transition-all duration-1000 ${textVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-6 gradient-text">
-              Fitness Goals with a Personal Trainer across Gauteng
+              Transform Your Life with Elite Personal Training 💪
+              <span className="block text-2xl sm:text-3xl lg:text-4xl text-primary-400 mt-2">
+                Built to Boost. Strategic Moves. Creative Lifts.
+              </span>
             </h1>
 
             <p className="text-lg sm:text-xl text-neutral-300 leading-relaxed mb-6">
-              Book a <span className="font-bold text-primary-400">free 15-minute consultation</span> and get a tailored plan that fits your schedule.
+              Ready to level up? 🚀 Book your <span className="font-bold text-primary-400">FREE 15-minute consultation</span> with Tshiamo and discover what elite fitness coaching can do for YOU.
             </p>
 
             <p className="text-base sm:text-lg text-neutral-400 mb-8">
-              In-person or mobile sessions across Gauteng — Sandton, Johannesburg, Germiston & surrounds
+              ✨ Mobile sessions across Gauteng — from Sandton boardrooms to Germiston gyms, I bring the energy to YOU
             </p>
 
             {/* Action Buttons */}
@@ -81,10 +84,10 @@ export default function LandingHero() {
                   Tshiamo Sookane
                 </h3>
                 <p className="text-primary-400 font-semibold text-base sm:text-lg">
-                  Founder & Head Trainer
+                  Elite Trainer & Life Transformer ⚡
                 </p>
                 <p className="text-neutral-400 text-sm sm:text-base">
-                  The dreamer behind The Lift Co
+                  The visionary dreamer lifting Gauteng up, one client at a time 🌟
                 </p>
               </div>
             </div>
