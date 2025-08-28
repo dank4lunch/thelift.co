@@ -1,4 +1,3 @@
-
 'use client'
 
 import { useState, useEffect } from 'react'
@@ -6,8 +5,7 @@ import { useState, useEffect } from 'react'
 export default function LandingHero() {
   const [textVisible, setTextVisible] = useState(false)
 
-  useEffect(() => {
-    setTimeout(() => setTextVisible(true), 300)
+  useEffect(() => toTextVisible(true), 300)
   }, [])
 
   return (
@@ -24,20 +22,22 @@ export default function LandingHero() {
 
           {/* Text Section */}
           <div className={`flex-1 max-w-2xl transition-all duration-1000 ${textVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-6 gradient-text">
-              Transform Your Life with Elite Personal Training 💪
-              <span className="block text-2xl sm:text-3xl lg:text-4xl text-primary-400 mt-2">
-                Built to Boost. Strategic Moves. Creative Lifts.
-              </span>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-heading text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-accent-400 mb-6 sm:mb-8 animate-fade-in muscle-text leading-tight">
+              BUILT TO BOOST 🚀
             </h1>
 
-            <p className="text-lg sm:text-xl text-neutral-300 leading-relaxed mb-6">
-              Ready to level up? 🚀 Book your <span className="font-bold text-primary-400">FREE 15-minute consultation</span> with Tshiamo and discover what elite fitness coaching can do for YOU.
-            </p>
+            <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-primary-300 mb-6 sm:mb-8 space-y-2 sm:space-y-3 animate-fade-in">
+              <p className="transform hover:scale-105 transition-transform duration-300 cursor-default muscle-text">Strategic Moves. 🎯</p>
+              <p className="transform hover:scale-105 transition-transform duration-300 cursor-default muscle-text">Creative Lifts. 💡</p>
+              <p className="transform hover:scale-105 transition-transform duration-300 cursor-default muscle-text text-accent-400">Life Transformation. ✨</p>
+            </div>
+          </div>
 
-            <p className="text-base sm:text-lg text-neutral-400 mb-8">
-              ✨ Mobile sessions across Gauteng — from Sandton boardrooms to Germiston gyms, I bring the energy to YOU
-            </p>
+          <p className="text-base sm:text-lg md:text-xl text-neutral-300 mb-8 sm:mb-12 max-w-4xl mx-auto leading-relaxed animate-slide-up font-medium px-4 sm:px-0">
+            Welcome to <span className="text-primary-400 font-bold">The Lift Co</span> — where we don't just train bodies, we build empires. 
+            Transform your fitness, elevate your brand, and boost your business with a coach who believes in lifting you up in every way possible. 
+            <span className="text-accent-400 font-semibold">This is your movement. This is your moment.</span>
+          </p>
 
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mb-8 sm:mb-12">
@@ -51,18 +51,18 @@ export default function LandingHero() {
               </a>
 
               <a
-                href="/home"
-                className="bg-neutral-800 text-white font-bold py-4 px-6 sm:px-8 rounded-full text-center text-base sm:text-lg border border-neutral-600 hover:bg-neutral-700 transition-all duration-300 min-h-[52px] flex items-center justify-center"
+                href="/fitness"
+                className="bg-neutral-800 text-white font-bold py-4 px-8 rounded-full text-center text-lg border border-neutral-600 hover:bg-neutral-700 transition-all duration-300"
               >
                 Explore Services
               </a>
             </div>
 
             {/* Service Links */}
-            <div className="flex flex-wrap gap-4 sm:gap-6 text-sm text-neutral-400 justify-center sm:justify-start">
-              <a href="/services" className="hover:text-primary-400 transition-colors">Training Programs</a>
-              <a href="/about" className="hover:text-primary-400 transition-colors">About Tshiamo</a>
-              <a href="/marketing" className="hover:text-primary-400 transition-colors">Business Services</a>
+            <div className="flex flex-wrap gap-6 text-sm text-neutral-400">
+              <a href="/fitness" className="hover:text-primary-400 transition-colors">💪 Elite Training</a>
+              <a href="/brand" className="hover:text-primary-400 transition-colors">🎯 Brand Development</a>
+              <a href="/about" className="hover:text-primary-400 transition-colors">✨ Meet Tshiamo</a>
             </div>
           </div>
 

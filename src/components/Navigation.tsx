@@ -75,24 +75,67 @@ export default function Navigation() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8" role="menubar">
-            {navItems.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className={`font-bold transition-all duration-300 hover:scale-110 relative group uppercase tracking-wide depth-hover focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-neutral-950 rounded px-2 py-1 ${
-                  pathname === item.href 
-                    ? 'text-primary-400' 
-                    : 'text-neutral-300 hover:text-primary-400'
-                }`}
-                role="menuitem"
-                aria-label={`Navigate to ${item.name}`}
-              >
-                {item.name}
-                <span className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-primary-500 to-accent-500 transition-all duration-300 ${
-                  pathname === item.href ? 'w-full' : 'w-0 group-hover:w-full'
-                }`} aria-hidden="true"></span>
-              </Link>
-            ))}
+            {/* Removed original nav items and replaced with new ones */}
+            <Link
+              href="/fitness"
+              className={`font-bold transition-all duration-300 hover:scale-110 relative group uppercase tracking-wide depth-hover focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-neutral-950 rounded px-2 py-1 ${
+                pathname === '/fitness' 
+                  ? 'text-primary-400' 
+                  : 'text-neutral-300 hover:text-primary-400'
+              }`}
+              role="menuitem"
+              aria-label="Navigate to Fitness"
+            >
+              Fitness
+              <span className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-primary-500 to-accent-500 transition-all duration-300 ${
+                pathname === '/fitness' ? 'w-full' : 'w-0 group-hover:w-full'
+              }`} aria-hidden="true"></span>
+            </Link>
+            <Link
+              href="/brand"
+              className={`font-bold transition-all duration-300 hover:scale-110 relative group uppercase tracking-wide depth-hover focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-neutral-950 rounded px-2 py-1 ${
+                pathname === '/brand' 
+                  ? 'text-primary-400' 
+                  : 'text-neutral-300 hover:text-primary-400'
+              }`}
+              role="menuitem"
+              aria-label="Navigate to Brand"
+            >
+              Brand
+              <span className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-primary-500 to-accent-500 transition-all duration-300 ${
+                pathname === '/brand' ? 'w-full' : 'w-0 group-hover:w-full'
+              }`} aria-hidden="true"></span>
+            </Link>
+            <Link
+              href="/about"
+              className={`font-bold transition-all duration-300 hover:scale-110 relative group uppercase tracking-wide depth-hover focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-neutral-950 rounded px-2 py-1 ${
+                pathname === '/about' 
+                  ? 'text-primary-400' 
+                  : 'text-neutral-300 hover:text-primary-400'
+              }`}
+              role="menuitem"
+              aria-label="Navigate to About"
+            >
+              About
+              <span className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-primary-500 to-accent-500 transition-all duration-300 ${
+                pathname === '/about' ? 'w-full' : 'w-0 group-hover:w-full'
+              }`} aria-hidden="true"></span>
+            </Link>
+            <Link
+              href="/contact"
+              className={`font-bold transition-all duration-300 hover:scale-110 relative group uppercase tracking-wide depth-hover focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-neutral-950 rounded px-2 py-1 ${
+                pathname === '/contact' 
+                  ? 'text-primary-400' 
+                  : 'text-neutral-300 hover:text-primary-400'
+              }`}
+              role="menuitem"
+              aria-label="Navigate to Contact"
+            >
+              Contact
+              <span className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-primary-500 to-accent-500 transition-all duration-300 ${
+                pathname === '/contact' ? 'w-full' : 'w-0 group-hover:w-full'
+              }`} aria-hidden="true"></span>
+            </Link>
           </div>
 
           {/* CTA Button */}
@@ -137,33 +180,54 @@ export default function Navigation() {
         >
           <div className="bg-neutral-900/95 backdrop-blur-lg border border-primary-500/20 rounded-lg mx-4 my-2 shadow-2xl overflow-hidden">
             <div className="py-2">
-              {navItems.map((item, index) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className={`block w-full text-left px-6 py-4 transition-all duration-300 font-bold uppercase tracking-wide border-b border-neutral-800/30 last:border-b-0 ${
-                    pathname === item.href
-                      ? 'text-primary-400 bg-neutral-800/50'
-                      : 'text-neutral-300 hover:text-primary-400 hover:bg-neutral-800/50'
-                  }`}
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  {item.name}
-                </Link>
-              ))}
-              {/* Marketing Link */}
+              {/* Updated mobile navigation links */}
               <Link
-                href="/marketing"
+                href="/fitness"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className={`block w-full text-left px-6 py-4 transition-all duration-300 font-bold uppercase tracking-wide border-b border-neutral-800/30 last:border-b-0 ${
-                  pathname === '/marketing'
+                  pathname === '/fitness'
                     ? 'text-primary-400 bg-neutral-800/50'
                     : 'text-neutral-300 hover:text-primary-400 hover:bg-neutral-800/50'
                 }`}
-                style={{ animationDelay: `${navItems.length * 0.1}s` }}
+                style={{ animationDelay: `0.0s` }}
               >
-                Marketing
+                💪 Fitness Training
+              </Link>
+              <Link
+                href="/brand"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={`block w-full text-left px-6 py-4 transition-all duration-300 font-bold uppercase tracking-wide border-b border-neutral-800/30 last:border-b-0 ${
+                  pathname === '/brand'
+                    ? 'text-primary-400 bg-neutral-800/50'
+                    : 'text-neutral-300 hover:text-primary-400 hover:bg-neutral-800/50'
+                }`}
+                style={{ animationDelay: `0.1s` }}
+              >
+                🎯 Brand Development
+              </Link>
+              <Link
+                href="/about"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={`block w-full text-left px-6 py-4 transition-all duration-300 font-bold uppercase tracking-wide border-b border-neutral-800/30 last:border-b-0 ${
+                  pathname === '/about'
+                    ? 'text-primary-400 bg-neutral-800/50'
+                    : 'text-neutral-300 hover:text-primary-400 hover:bg-neutral-800/50'
+                }`}
+                style={{ animationDelay: `0.2s` }}
+              >
+                ✨ About Tshiamo
+              </Link>
+              <Link
+                href="/contact"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={`block w-full text-left px-6 py-4 transition-all duration-300 font-bold uppercase tracking-wide border-b border-neutral-800/30 last:border-b-0 ${
+                  pathname === '/contact'
+                    ? 'text-primary-400 bg-neutral-800/50'
+                    : 'text-neutral-300 hover:text-primary-400 hover:bg-neutral-800/50'
+                }`}
+                style={{ animationDelay: `0.3s` }}
+              >
+                📞 Get In Touch
               </Link>
             </div>
 
