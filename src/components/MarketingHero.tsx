@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from 'react'
 
+import { useState, useEffect } from 'react'
+
 interface Particle {
   id: number
   left: number
