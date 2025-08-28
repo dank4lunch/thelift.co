@@ -34,20 +34,20 @@ export default function LandingHero() {
 
   return (
     <section className="min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-neutral-950 via-neutral-900 to-neutral-950 relative overflow-hidden">
-      {/* Background Elements - Reduced and Controlled */}
-      <div className="absolute inset-0 pointer-events-none">
-        {floatingElements.map((element) => (
+      {/* Background Elements - Further Reduced and Spaced */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        {floatingElements.slice(0, 4).map((element) => (
           <div
             key={element.id}
-            className="absolute rounded-full bg-gradient-to-r from-primary-400/30 to-accent-400/30 blur-sm"
+            className="absolute rounded-full bg-gradient-to-r from-primary-400/10 to-accent-400/10 blur-lg"
             style={{
-              left: `${element.left}%`,
-              top: `${element.top}%`,
-              width: `${element.size}rem`,
-              height: `${element.size}rem`,
-              opacity: element.opacity,
-              animation: `float ${element.duration}s ease-in-out infinite`,
-              animationDelay: `${element.delay}s`,
+              left: `${Math.max(10, Math.min(90, element.left))}%`,
+              top: `${Math.max(10, Math.min(90, element.top))}%`,
+              width: `${Math.min(element.size, 0.8)}rem`,
+              height: `${Math.min(element.size, 0.8)}rem`,
+              opacity: Math.min(element.opacity, 0.2),
+              animation: `gentleFloat ${element.duration + 2}s ease-in-out infinite`,
+              animationDelay: `${element.delay * 2}s`,
             }}
           />
         ))}
@@ -67,26 +67,29 @@ export default function LandingHero() {
         </div>
 
         {/* Main Heading */}
-        <div className={`mb-12 transition-all duration-1000 delay-200 ${textVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-primary-400 via-accent-400 to-primary-400 mb-8 leading-tight tracking-wide">
+        <div className={`mb-16 transition-all duration-1000 delay-200 ${textVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-primary-400 via-accent-400 to-primary-400 mb-12 leading-[1.1] tracking-wide text-center">
             BUILT TO BOOST
           </h1>
 
-          <div className="space-y-4 mb-10">
-            <p className="text-xl sm:text-2xl md:text-3xl text-neutral-200 font-semibold">
+          <div className="space-y-6 mb-12 text-center">
+            <p className="text-xl sm:text-2xl md:text-3xl text-neutral-200 font-semibold leading-relaxed">
               Strategic Moves.
             </p>
-            <p className="text-xl sm:text-2xl md:text-3xl text-neutral-200 font-semibold">
+            <p className="text-xl sm:text-2xl md:text-3xl text-neutral-200 font-semibold leading-relaxed">
               Creative Lifts.
             </p>
           </div>
 
-          <p className="text-base sm:text-lg md:text-xl text-neutral-300 leading-relaxed max-w-3xl mx-auto px-4">
-            I'm not your average trainer. I'm a creative entrepreneur who's obsessed
-            with human transformation - and I've spent 10 years perfecting the art of getting results.
-            <br className="hidden sm:block mt-4" />
-            <span className="text-primary-300 font-semibold block mt-4">Ready to stop making excuses and start making progress?</span>
-          </p>
+          <div className="max-w-4xl mx-auto px-4 space-y-6 text-center">
+            <p className="text-base sm:text-lg md:text-xl text-neutral-300 leading-relaxed">
+              I'm not your average trainer. I'm a creative entrepreneur who's obsessed
+              with human transformation - and I've spent 10 years perfecting the art of getting results.
+            </p>
+            <p className="text-primary-300 font-semibold text-lg sm:text-xl">
+              Ready to stop making excuses and start making progress?
+            </p>
+          </div>
         </div>
 
         {/* Action Buttons */}
@@ -119,20 +122,20 @@ export default function LandingHero() {
         </div>
       </div>
 
-      {/* Custom CSS for float animation */}
+      {/* Custom CSS for gentle float animation */}
       <style jsx>{`
-        @keyframes float {
+        @keyframes gentleFloat {
           0%, 100% {
-            transform: translateY(0px) translateX(0px);
+            transform: translateY(0px) translateX(0px) scale(1);
           }
           25% {
-            transform: translateY(-10px) translateX(5px);
+            transform: translateY(-5px) translateX(2px) scale(1.05);
           }
           50% {
-            transform: translateY(-5px) translateX(-5px);
+            transform: translateY(-3px) translateX(-2px) scale(0.95);
           }
           75% {
-            transform: translateY(-15px) translateX(3px);
+            transform: translateY(-7px) translateX(1px) scale(1.02);
           }
         }
       `}</style>
