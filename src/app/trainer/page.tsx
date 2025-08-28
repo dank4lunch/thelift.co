@@ -157,7 +157,7 @@ export default function TrainerPage() {
                     <div className="text-neutral-300 font-medium">Businesses Scaled</div>
                   </div>
                   <div className="bg-neutral-800/50 rounded-lg p-6 border border-accent-500/20">
-                    <div className="text-3xl font-black text-accent-400 mb-2">5 Years</div>
+                    <div className="text-3xl font-black text-accent-400 mb-2">10 Years</div>
                     <div className="text-neutral-300 font-medium">Elite Experience</div>
                   </div>
                 </div>
