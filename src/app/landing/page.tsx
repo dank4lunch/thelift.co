@@ -1,3 +1,4 @@
+
 'use client'
 
 import LandingHero from '@/components/LandingHero'
@@ -11,7 +12,7 @@ export default function LandingPage() {
     <ClientErrorBoundary>
       <SkipNav />
       <Navigation />
-      <main className="min-h-screen">
+      <main>
         <LandingHero />
       </main>
       <Footer />
