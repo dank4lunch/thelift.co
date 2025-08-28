@@ -75,35 +75,49 @@ export default function Navigation() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8" role="menubar">
-            {/* Removed original nav items and replaced with new ones */}
             <Link
-              href="/fitness"
+              href="/dominate"
               className={`font-bold transition-all duration-300 hover:scale-110 relative group uppercase tracking-wide depth-hover focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-neutral-950 rounded px-2 py-1 ${
-                pathname === '/fitness' 
+                pathname === '/dominate' 
                   ? 'text-primary-400' 
                   : 'text-neutral-300 hover:text-primary-400'
               }`}
               role="menuitem"
-              aria-label="Navigate to Fitness"
+              aria-label="Navigate to Why We Dominate"
             >
-              Fitness
+              Why We Dominate
               <span className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-primary-500 to-accent-500 transition-all duration-300 ${
-                pathname === '/fitness' ? 'w-full' : 'w-0 group-hover:w-full'
+                pathname === '/dominate' ? 'w-full' : 'w-0 group-hover:w-full'
               }`} aria-hidden="true"></span>
             </Link>
             <Link
-              href="/brand"
+              href="/packages"
               className={`font-bold transition-all duration-300 hover:scale-110 relative group uppercase tracking-wide depth-hover focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-neutral-950 rounded px-2 py-1 ${
-                pathname === '/brand' 
+                pathname === '/packages' 
                   ? 'text-primary-400' 
                   : 'text-neutral-300 hover:text-primary-400'
               }`}
               role="menuitem"
-              aria-label="Navigate to Brand"
+              aria-label="Navigate to Training Packages"
             >
-              Brand
+              Training Packages
               <span className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-primary-500 to-accent-500 transition-all duration-300 ${
-                pathname === '/brand' ? 'w-full' : 'w-0 group-hover:w-full'
+                pathname === '/packages' ? 'w-full' : 'w-0 group-hover:w-full'
+              }`} aria-hidden="true"></span>
+            </Link>
+            <Link
+              href="/gallery"
+              className={`font-bold transition-all duration-300 hover:scale-110 relative group uppercase tracking-wide depth-hover focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-neutral-950 rounded px-2 py-1 ${
+                pathname === '/gallery' 
+                  ? 'text-primary-400' 
+                  : 'text-neutral-300 hover:text-primary-400'
+              }`}
+              role="menuitem"
+              aria-label="Navigate to Gallery"
+            >
+              Gallery
+              <span className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-primary-500 to-accent-500 transition-all duration-300 ${
+                pathname === '/gallery' ? 'w-full' : 'w-0 group-hover:w-full'
               }`} aria-hidden="true"></span>
             </Link>
             <Link
@@ -180,30 +194,41 @@ export default function Navigation() {
         >
           <div className="bg-neutral-900/95 backdrop-blur-lg border border-primary-500/20 rounded-lg mx-4 my-2 shadow-2xl overflow-hidden">
             <div className="py-2">
-              {/* Updated mobile navigation links */}
               <Link
-                href="/fitness"
+                href="/dominate"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className={`block w-full text-left px-6 py-4 transition-all duration-300 font-bold uppercase tracking-wide border-b border-neutral-800/30 last:border-b-0 ${
-                  pathname === '/fitness'
+                  pathname === '/dominate'
                     ? 'text-primary-400 bg-neutral-800/50'
                     : 'text-neutral-300 hover:text-primary-400 hover:bg-neutral-800/50'
                 }`}
                 style={{ animationDelay: `0.0s` }}
               >
-                💪 Fitness Training
+                🔥 Why We Dominate
               </Link>
               <Link
-                href="/brand"
+                href="/packages"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className={`block w-full text-left px-6 py-4 transition-all duration-300 font-bold uppercase tracking-wide border-b border-neutral-800/30 last:border-b-0 ${
-                  pathname === '/brand'
+                  pathname === '/packages'
                     ? 'text-primary-400 bg-neutral-800/50'
                     : 'text-neutral-300 hover:text-primary-400 hover:bg-neutral-800/50'
                 }`}
                 style={{ animationDelay: `0.1s` }}
               >
-                🎯 Brand Development
+                💪 Training Packages
+              </Link>
+              <Link
+                href="/gallery"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={`block w-full text-left px-6 py-4 transition-all duration-300 font-bold uppercase tracking-wide border-b border-neutral-800/30 last:border-b-0 ${
+                  pathname === '/gallery'
+                    ? 'text-primary-400 bg-neutral-800/50'
+                    : 'text-neutral-300 hover:text-primary-400 hover:bg-neutral-800/50'
+                }`}
+                style={{ animationDelay: `0.2s` }}
+              >
+                📸 Gallery
               </Link>
               <Link
                 href="/about"
@@ -213,7 +238,7 @@ export default function Navigation() {
                     ? 'text-primary-400 bg-neutral-800/50'
                     : 'text-neutral-300 hover:text-primary-400 hover:bg-neutral-800/50'
                 }`}
-                style={{ animationDelay: `0.2s` }}
+                style={{ animationDelay: `0.3s` }}
               >
                 ✨ About Tshiamo
               </Link>
@@ -225,7 +250,7 @@ export default function Navigation() {
                     ? 'text-primary-400 bg-neutral-800/50'
                     : 'text-neutral-300 hover:text-primary-400 hover:bg-neutral-800/50'
                 }`}
-                style={{ animationDelay: `0.3s` }}
+                style={{ animationDelay: `0.4s` }}
               >
                 📞 Get In Touch
               </Link>
