@@ -1,4 +1,3 @@
-
 'use client'
 
 import { useState, useEffect } from 'react'
@@ -16,8 +15,10 @@ interface FloatingElement {
 export default function LandingHero() {
   const [floatingElements, setFloatingElements] = useState<FloatingElement[]>([])
   const [textVisible, setTextVisible] = useState(false)
+  const [isClient, setIsClient] = useState(false)
 
   useEffect(() => {
+    setIsClient(true)
     const elements = Array.from({ length: 8 }, (_, i) => ({
       id: i,
       left: Math.random() * 100,
@@ -36,7 +37,8 @@ export default function LandingHero() {
     <section className="min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-neutral-950 via-neutral-900 to-neutral-950 relative overflow-hidden">
       {/* Background Elements - Further Reduced and Spaced */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {floatingElements.slice(0, 4).map((element) => (
+        {/* Floating Elements - only render on client to avoid hydration mismatch */}
+        {isClient && floatingElements.slice(0, 4).map((element) => (
           <div
             key={element.id}
             className="absolute rounded-full bg-gradient-to-r from-primary-400/10 to-accent-400/10 blur-lg"
