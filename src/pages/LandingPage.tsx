@@ -35,6 +35,27 @@ export default function LandingPage() {
     }
   ]
 
+  const features = [
+    {
+      icon: "💪",
+      title: "Elite Fitness Training",
+      description: "10 years of experience in personal training, boxing, HIIT, and sports conditioning. Get results that last.",
+      highlights: ["1-on-1 Personal Training", "Boxing & HIIT", "Sports Conditioning", "Nutrition Guidance"]
+    },
+    {
+      icon: "🎨",
+      title: "Creative Business Solutions",
+      description: "Brand development, marketing strategies, and business growth. Elevate your entire empire.",
+      highlights: ["Brand Development", "Digital Marketing", "Event Coordination", "Business Strategy"]
+    },
+    {
+      icon: "⚡",
+      title: "Holistic Transformation",
+      description: "Strategic moves that transform every layer of your life and business. Mind, body, and brand.",
+      highlights: ["Complete Lifestyle Design", "Goal Achievement", "Mindset Coaching", "Success Systems"]
+    }
+  ]
+
   useEffect(() => {
     const elements = Array.from({ length: 20 }, (_, i) => ({
       id: i,
@@ -133,7 +154,7 @@ export default function LandingPage() {
             </Link>
 
             <Link
-              to="/marketing"
+              to="/services"
               className="flex-1 max-w-sm mx-auto bg-gradient-to-r from-accent-600 to-primary-600 text-white font-bold py-4 sm:py-5 px-8 sm:px-10 rounded-xl text-lg shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 text-center"
             >
               🚀 BUSINESS SERVICES
@@ -160,47 +181,40 @@ export default function LandingPage() {
               Why Choose The Lift Co?
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-accent-500 mx-auto mb-8"></div>
+            <p className="text-xl text-neutral-300 max-w-3xl mx-auto">
+              Experience the difference of working with a creative entrepreneur who understands both fitness and business success.
+            </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-neutral-800/50 to-neutral-900/50 backdrop-blur-sm border border-neutral-700/50 rounded-xl p-8 text-center hover:transform hover:scale-105 transition-all duration-300">
-              <div className="w-16 h-16 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-2xl">💪</span>
+            {features.map((feature, index) => (
+              <div key={index} className="bg-gradient-to-br from-neutral-800/50 to-neutral-900/50 backdrop-blur-sm border border-neutral-700/50 rounded-xl p-8 text-center hover:transform hover:scale-105 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-2xl">{feature.icon}</span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                <p className="text-neutral-300 leading-relaxed mb-6">
+                  {feature.description}
+                </p>
+                <ul className="space-y-2">
+                  {feature.highlights.map((highlight, idx) => (
+                    <li key={idx} className="text-sm text-primary-300 flex items-center justify-center">
+                      <span className="w-2 h-2 bg-primary-500 rounded-full mr-2"></span>
+                      {highlight}
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">Elite Fitness Training</h3>
-              <p className="text-neutral-300 leading-relaxed">
-                10 years of experience in personal training, boxing, HIIT, and sports conditioning. Get results that last.
-              </p>
-            </div>
-
-            <div className="bg-gradient-to-br from-neutral-800/50 to-neutral-900/50 backdrop-blur-sm border border-neutral-700/50 rounded-xl p-8 text-center hover:transform hover:scale-105 transition-all duration-300">
-              <div className="w-16 h-16 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-2xl">🎨</span>
-              </div>
-              <h3 className="text-xl font-bold text-white mb-4">Creative Business Solutions</h3>
-              <p className="text-neutral-300 leading-relaxed">
-                Brand development, marketing strategies, and business growth. Elevate your entire empire.
-              </p>
-            </div>
-
-            <div className="bg-gradient-to-br from-neutral-800/50 to-neutral-900/50 backdrop-blur-sm border border-neutral-700/50 rounded-xl p-8 text-center hover:transform hover:scale-105 transition-all duration-300">
-              <div className="w-16 h-16 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-2xl">⚡</span>
-              </div>
-              <h3 className="text-xl font-bold text-white mb-4">Holistic Transformation</h3>
-              <p className="text-neutral-300 leading-relaxed">
-                Strategic moves that transform every layer of your life and business. Mind, body, and brand.
-              </p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Testimonials Section */}
+      {/* Success Stories Section */}
       <section className="py-20 px-4 bg-gradient-to-b from-neutral-900 to-neutral-950">
         <div className="container max-w-4xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-16">
-            What People Say
+            Success Stories
           </h2>
           
           <div className="bg-gradient-to-br from-neutral-800/50 to-neutral-900/50 backdrop-blur-sm border border-neutral-700/50 rounded-xl p-8 sm:p-12">
@@ -226,6 +240,35 @@ export default function LandingPage() {
                 }`}
                 onClick={() => setCurrentTestimonial(index)}
               />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Process Section */}
+      <section className="py-20 px-4">
+        <div className="container max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-accent-400 mb-6">
+              How It Works
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-accent-500 mx-auto mb-8"></div>
+          </div>
+
+          <div className="grid md:grid-cols-4 gap-8">
+            {[
+              { step: "01", title: "Free Consultation", desc: "We discuss your goals, challenges, and create a custom plan" },
+              { step: "02", title: "Strategic Planning", desc: "Design your transformation roadmap for body and business" },
+              { step: "03", title: "Implementation", desc: "Execute with proven systems and continuous support" },
+              { step: "04", title: "Elite Results", desc: "Achieve your transformation and maintain long-term success" }
+            ].map((item, index) => (
+              <div key={index} className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full flex items-center justify-center mx-auto mb-4 text-neutral-950 font-bold text-xl">
+                  {item.step}
+                </div>
+                <h3 className="text-lg font-bold text-white mb-3">{item.title}</h3>
+                <p className="text-neutral-300 text-sm leading-relaxed">{item.desc}</p>
+              </div>
             ))}
           </div>
         </div>

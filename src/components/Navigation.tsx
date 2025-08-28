@@ -1,13 +1,10 @@
-'use client'
-
 import { useState, useEffect } from 'react'
-import { usePathname } from 'next/navigation'
-import Link from 'next/link'
+import { Link, useLocation } from 'react-router-dom'
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const pathname = usePathname()
+  const pathname = useLocation().pathname
 
   useEffect(() => {
     const handleScroll = () => {
