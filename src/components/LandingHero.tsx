@@ -6,7 +6,6 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls, Float, Text3D, Environment, PerspectiveCamera } from '@react-three/drei'
 import Link from 'next/link'
-import * as THREE from 'three'
 
 // 3D Floating Dumbbells Component
 function FloatingDumbbell({ position, rotation, scale = 1 }: { position: [number, number, number], rotation: [number, number, number], scale?: number }) {
@@ -68,8 +67,7 @@ function ParticleSystem() {
 // 3D Scene Component
 function Scene3D() {
   return (
-    <Canvas className="absolute inset-0 z-0">
-      <PerspectiveCamera makeDefault position={[0, 0, 10]} />
+    <Canvas className="absolute inset-0 z-0" camera={{ position: [0, 0, 10] }}>
       <ambientLight intensity={0.3} />
       <pointLight position={[10, 10, 10]} intensity={1} />
       <spotLight position={[-10, -10, -10]} angle={0.3} penumbra={1} intensity={0.5} />
@@ -211,7 +209,12 @@ export default function LandingHero() {
     <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950">
       {/* 3D Background Scene */}
       <div className="absolute inset-0 z-0">
-        <Suspense fallback={<div className="absolute inset-0 bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950" />}>
+        <Suspense fallback={
+          <div className="absolute inset-0 bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(239,68,68,0.1),transparent_50%)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,rgba(251,191,36,0.1),transparent_50%)]" />
+          </div>
+        }>
           <Scene3D />
         </Suspense>
       </div>
