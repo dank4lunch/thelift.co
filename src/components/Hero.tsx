@@ -87,13 +87,13 @@ export default function Hero() {
               <span className="relative z-10 muscle-text whitespace-nowrap">START YOUR TRANSFORMATION</span>
             </a>
 
-            <Link
+            <a
               href="/services"
               className="btn-secondary w-full sm:w-auto px-8 sm:px-12 py-4 text-sm sm:text-base md:text-lg relative overflow-hidden group focus:outline-none focus:ring-2 focus:ring-accent-300 focus:ring-offset-2 focus:ring-offset-neutral-950 text-center"
               aria-label="View our services"
             >
               <span className="relative z-10 muscle-text whitespace-nowrap">EXPLORE SERVICES</span>
-            </Link>
+            </a>
           </div>
 
           {/* Services Preview */}

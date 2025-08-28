@@ -1,10 +1,9 @@
 import { useState, useEffect } from 'react'
-import { Link, useLocation } from 'react-router-dom'
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const pathname = useLocation().pathname
+  const pathname = typeof window !== 'undefined' ? window.location.pathname : '/'
 
   useEffect(() => {
     const handleScroll = () => {
@@ -52,7 +51,7 @@ export default function Navigation() {
         <div className="flex items-center justify-between py-4">
           {/* Brand Name */}
           <div className="flex items-center min-w-0 flex-1 sm:flex-none">
-            <Link
+            <a
               href="/"
               className="text-lg sm:text-xl md:text-2xl font-black font-heading text-transparent bg-clip-text bg-gradient-to-r from-primary-400 via-accent-500 to-primary-400 muscle-text focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-neutral-950 rounded-xl px-2 sm:px-3 py-2 hover:scale-105 transition-all duration-300 whitespace-nowrap"
               aria-label="The Lift Co - Go to homepage"
@@ -62,7 +61,7 @@ export default function Navigation() {
               }}
             >
               THE LIFT CO
-            </Link>
+            </a>
             <div className="ml-1 sm:ml-2 hidden sm:block">
               <p className="text-xs text-accent-400 font-bold uppercase tracking-wider whitespace-nowrap">
                 Elite Training
@@ -73,7 +72,7 @@ export default function Navigation() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8" role="menubar">
             {navItems.map((item) => (
-              <Link
+              <a
                 key={item.name}
                 href={item.href}
                 className={`font-bold transition-all duration-300 hover:scale-110 relative group uppercase tracking-wide depth-hover focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-neutral-950 rounded px-2 py-1 ${
@@ -88,7 +87,7 @@ export default function Navigation() {
                 <span className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-primary-500 to-accent-500 transition-all duration-300 ${
                   pathname === item.href ? 'w-full' : 'w-0 group-hover:w-full'
                 }`} aria-hidden="true"></span>
-              </Link>
+              </a>
             ))}
           </div>
 
@@ -135,7 +134,7 @@ export default function Navigation() {
           <div className="bg-neutral-900/95 backdrop-blur-lg border border-primary-500/20 rounded-lg mx-4 my-2 shadow-2xl overflow-hidden">
             <div className="py-2">
               {navItems.map((item, index) => (
-                <Link
+                <a
                   key={item.name}
                   href={item.href}
                   onClick={() => setIsMobileMenuOpen(false)}
@@ -147,10 +146,10 @@ export default function Navigation() {
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   {item.name}
-                </Link>
+                </a>
               ))}
               {/* Marketing Link */}
-              <Link
+              <a
                 href="/marketing"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className={`block w-full text-left px-6 py-4 transition-all duration-300 font-bold uppercase tracking-wide border-b border-neutral-800/30 last:border-b-0 ${
@@ -161,7 +160,7 @@ export default function Navigation() {
                 style={{ animationDelay: `${navItems.length * 0.1}s` }}
               >
                 Marketing
-              </Link>
+              </a>
             </div>
 
             <div className="p-4 border-t border-neutral-700/50">
