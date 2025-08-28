@@ -38,7 +38,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 px-4 sm:px-6 lg:px-8"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 px-4 sm:px-6 lg:px-8 pt-20 sm:pt-0"
       role="banner"
       aria-labelledby="hero-heading"
     >
@@ -52,8 +52,8 @@ export default function Hero() {
       <div className="container-custom relative z-content text-center w-full max-w-7xl mx-auto">
         <div className="max-w-6xl mx-auto space-y-6 sm:space-y-8 md:space-y-10">
           {/* Animated Badge */}
-          <div className="inline-block mb-8 animate-fade-in">
-            <span className="px-6 py-3 bg-gradient-to-r from-primary-500/20 to-accent-500/20 border border-primary-500/30 rounded-full text-primary-400 font-bold text-sm tracking-wider uppercase">
+          <div className="inline-block mb-6 sm:mb-8 mt-8 sm:mt-12 animate-fade-in">
+            <span className="px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-primary-500/20 to-accent-500/20 border border-primary-500/30 rounded-full text-primary-400 font-bold text-xs sm:text-sm tracking-wider uppercase">
               Elite Fitness & Business Solutions
             </span>
           </div>
