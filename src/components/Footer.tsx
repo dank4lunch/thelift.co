@@ -212,3 +212,14 @@ export default function Footer() {
     </footer>
   )
 }
+export default function Footer() {
+  return (
+    <footer className="bg-neutral-950 border-t border-neutral-800 py-8">
+      <div className="container mx-auto px-4 text-center">
+        <p className="text-neutral-400">
+          © 2024 The Lift Co. All rights reserved.
+        </p>
+      </div>
+    </footer>
+  )
+}
