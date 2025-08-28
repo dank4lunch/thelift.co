@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fitness Goals - Personal Trainer</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      width: 100%;
+      padding: 20px;
+    }
+
+    .text-section {
+      max-width: 600px;
+    }
+
+    .text-section h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      line-height: 1.2;
+      color: orange;
+    }
+
+    .text-section p {
+      font-size: 1.1rem;
+      margin: 15px 0;
+      color: #ccc;
+    }
+
+    .btns {
+      margin-top: 20px;
+    }
+
+    .btn {
+      padding: 12px 20px;
+      margin-right: 10px;
+      border-radius: 25px;
+      font-weight: bold;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: orange;
+      color: #111;
+    }
+
+    .btn-secondary {
+      background: #222;
+      color: #fff;
+      border: 1px solid #555;
+    }
+
+    .profile-pic {
+      width: 100px; /* WhatsApp profile pic size */
+      height: 100px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid orange;
+      flex-shrink: 0;
+    }
+
+    .profile-pic img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .profile-text {
+      margin-top: 10px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="text-section">
+      <h1>Fitness Goals with a Personal Trainer across Gauteng</h1>
+      <p>
+        Book a <b>free 15-minute consultation</b> and get a tailored plan that fits your schedule.  
+        In-person or mobile sessions across Gauteng.  
+      </p>
+      <p>Serving all of Gauteng — Sandton, Johannesburg, Germiston & surrounds</p>
+      <div class="btns">
+        <button class="btn btn-primary">Book Free Consultation</button>
+        <button class="btn btn-secondary">Personal Details</button>
+      </div>
+    </div>
+
+    <div class="profile">
+      <div class="profile-pic">
+        <img src="trainer.jpg" alt="Trainer">
+      </div>
+      <div class="profile-text">
+        <b>Tshiamo Sookane</b><br>
+        Founder & Head Trainer<br>
+        <small>The dreamer behind The Lift Co</small>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
