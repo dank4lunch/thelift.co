@@ -25,12 +25,12 @@ export interface PayFastPayment {
 
 // PayFast configuration
 const PAYFAST_CONFIG: PayFastConfig = {
-  merchant_id: import.meta.env.VITE_PAYFAST_MERCHANT_ID || '10004002',
-  merchant_key: import.meta.env.VITE_PAYFAST_MERCHANT_KEY || 'q1cd2rdny4a53',
-  return_url: `${import.meta.env.VITE_SITE_URL || 'http://localhost:5000'}/payment/success`,
-  cancel_url: `${import.meta.env.VITE_SITE_URL || 'http://localhost:5000'}/payment/cancelled`,
-  notify_url: `${import.meta.env.VITE_SITE_URL || 'http://localhost:5000'}/api/payment/notify`,
-  sandbox: import.meta.env.MODE !== 'production'
+  merchant_id: process.env.NEXT_PUBLIC_PAYFAST_MERCHANT_ID || '10004002',
+  merchant_key: process.env.NEXT_PUBLIC_PAYFAST_MERCHANT_KEY || 'q1cd2rdny4a53',
+  return_url: `${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/payment/success`,
+  cancel_url: `${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/payment/cancelled`,
+  notify_url: `${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/api/payment/notify`,
+  sandbox: process.env.NODE_ENV !== 'production'
 }
 
 export function createPayFastPayment(paymentData: {
