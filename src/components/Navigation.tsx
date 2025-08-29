@@ -3,10 +3,12 @@
 import { useState, useEffect } from 'react'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
+import AIHealthAssistant from './AIHealthAssistant'
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [showAIAssistant, setShowAIAssistant] = useState(false)
   const pathname = usePathname()
 
   useEffect(() => {
@@ -34,6 +36,7 @@ export default function Navigation() {
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
     { name: 'Services', href: '/services' },
+    { name: 'AI Fitness Coach', href: '#ai-coach', isSpecial: true },
     { name: 'Contact', href: '/contact' },
   ]
 
@@ -135,6 +138,16 @@ export default function Navigation() {
                 pathname === '/trainer' ? 'w-full' : 'w-0 group-hover:w-full'
               }`} aria-hidden="true"></span>
             </Link>
+            <button
+              onClick={() => setShowAIAssistant(true)}
+              className="font-bold transition-all duration-300 hover:scale-110 relative group uppercase tracking-wide depth-hover focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-neutral-950 rounded px-2 py-1 text-neutral-300 hover:text-primary-400 bg-gradient-to-r from-primary-500/20 to-accent-500/20 border border-primary-500/30"
+              role="menuitem"
+              aria-label="Open AI Fitness Coach"
+            >
+              🤖 AI Coach
+              <span className="absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-primary-500 to-accent-500 transition-all duration-300 w-0 group-hover:w-full" aria-hidden="true"></span>
+            </button>
+            
             <Link
               href="/contact"
               className={`font-bold transition-all duration-300 hover:scale-110 relative group uppercase tracking-wide depth-hover focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-neutral-950 rounded px-2 py-1 ${
@@ -242,6 +255,17 @@ export default function Navigation() {
               >
                 🏆 Trainer
               </Link>
+              <button
+                onClick={() => {
+                  setIsMobileMenuOpen(false)
+                  setShowAIAssistant(true)
+                }}
+                className="block w-full text-left px-6 py-4 transition-all duration-300 font-bold uppercase tracking-wide border-b border-neutral-800/30 text-neutral-300 hover:text-primary-400 hover:bg-neutral-800/50 bg-gradient-to-r from-primary-500/10 to-accent-500/10"
+                style={{ animationDelay: `0.4s` }}
+              >
+                🤖 AI Fitness Coach
+              </button>
+              
               <Link
                 href="/contact"
                 onClick={() => setIsMobileMenuOpen(false)}
@@ -250,7 +274,7 @@ export default function Navigation() {
                     ? 'text-primary-400 bg-neutral-800/50'
                     : 'text-neutral-300 hover:text-primary-400 hover:bg-neutral-800/50'
                 }`}
-                style={{ animationDelay: `0.4s` }}
+                style={{ animationDelay: `0.5s` }}
               >
                 📞 Contact
               </Link>
@@ -270,6 +294,11 @@ export default function Navigation() {
           </div>
         </div>
       </div>
+      
+      {/* AI Health Assistant */}
+      {showAIAssistant && (
+        <AIHealthAssistant onClose={() => setShowAIAssistant(false)} />
+      )}
     </nav>
   )
 }
