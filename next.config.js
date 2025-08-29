@@ -1,13 +1,25 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Disable external scripts and improve error handling
   experimental: {
-    optimizePackageImports: ['lucide-react', 'framer-motion', 'three', '@react-three/fiber', '@react-three/drei']
+    optimizePackageImports: ['framer-motion']
   },
+  transpilePackages: ['three'],
+  webpack: (config, { isServer }) => {
+    // Handle 3D libraries properly for client-side only
+    if (!isServer) {
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        fs: false,
+      }
+    }
 
-  // Enable strict mode for better performance
-  reactStrictMode: true,
+    config.externals.push({
+      'utf-8-validate': 'commonjs utf-8-validate',
+      'bufferutil': 'commonjs bufferutil',
+    })
 
+    return config
+  },
   // Ensure app runs on correct port
   env: {
     NEXT_PUBLIC_PORT: process.env.PORT || '3000',

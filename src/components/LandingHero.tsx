@@ -1,4 +1,3 @@
-
 'use client'
 
 import { useState, useEffect, Suspense } from 'react'
@@ -73,20 +72,20 @@ function Scene3D() {
       <ambientLight intensity={0.3} />
       <pointLight position={[10, 10, 10]} intensity={1} />
       <spotLight position={[-10, -10, -10]} angle={0.3} penumbra={1} intensity={0.5} />
-      
+
       <Environment preset="night" />
-      
+
       {/* Floating Dumbbells */}
       <FloatingDumbbell position={[-4, 2, -3]} rotation={[0.5, 0.3, 0]} scale={0.8} />
       <FloatingDumbbell position={[5, -1, -2]} rotation={[-0.3, 0.8, 0.2]} scale={0.6} />
       <FloatingDumbbell position={[2, 3, -4]} rotation={[0.2, -0.5, 0.1]} scale={0.7} />
-      
+
       {/* 3D Text */}
       <Floating3DText />
-      
+
       {/* Particle System */}
       <ParticleSystem />
-      
+
       <OrbitControls 
         enableZoom={false} 
         enablePan={false} 
@@ -102,7 +101,8 @@ function Scene3D() {
 export default function LandingHero() {
   const [currentText, setCurrentText] = useState(0)
   const [isVisible, setIsVisible] = useState(false)
-  
+  const [isClient, setIsClient] = useState(false)
+
   const heroTexts = [
     "Built to Boost Your Potential 💪",
     "Strategic Moves for Success 🚀", 
@@ -111,6 +111,7 @@ export default function LandingHero() {
 
   useEffect(() => {
     setIsVisible(true)
+    setIsClient(true)
     const textInterval = setInterval(() => {
       setCurrentText((prev) => (prev + 1) % heroTexts.length)
     }, 4000)
@@ -211,9 +212,14 @@ export default function LandingHero() {
     <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950">
       {/* 3D Background Scene */}
       <div className="absolute inset-0 z-0">
-        <Suspense fallback={<div className="absolute inset-0 bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950" />}>
+        {isClient ? (
           <Scene3D />
-        </Suspense>
+        ) : (
+          <div className="absolute inset-0 bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(239,68,68,0.1),transparent_50%)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,rgba(251,191,36,0.1),transparent_50%)]" />
+          </div>
+        )}
       </div>
 
       {/* Animated Background Overlay */}
