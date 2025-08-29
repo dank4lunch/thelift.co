@@ -6,6 +6,7 @@ import { Canvas } from '@react-three/fiber'
 import { OrbitControls, Float, Text3D, Environment, PerspectiveCamera } from '@react-three/drei'
 import Link from 'next/link'
 import * as THREE from 'three'
+import AIHealthAssistant from './AIHealthAssistant'
 
 // 3D Floating Dumbbells Component
 function FloatingDumbbell({ position, rotation, scale = 1 }: { position: [number, number, number], rotation: [number, number, number], scale?: number }) {
@@ -102,6 +103,7 @@ export default function LandingHero() {
   const [currentText, setCurrentText] = useState(0)
   const [isVisible, setIsVisible] = useState(false)
   const [isClient, setIsClient] = useState(false)
+  const [showAIAssistant, setShowAIAssistant] = useState(false)
 
   const heroTexts = [
     "Built to Boost Your Potential 💪",
@@ -337,6 +339,24 @@ export default function LandingHero() {
               whileTap="tap"
               transition={{ delay: 0.1 }}
             >
+              <button 
+                onClick={() => setShowAIAssistant(true)}
+                className="group relative inline-flex items-center justify-center px-12 py-6 text-xl font-bold text-white border-2 border-primary-400 rounded-full hover:bg-primary-400 hover:text-neutral-950 transition-all duration-300 shadow-2xl bg-gradient-to-r from-primary-500/20 to-accent-500/20 backdrop-blur-sm"
+              >
+                <span className="flex items-center gap-3">
+                  🤖 Get Your AI Fitness Plan
+                </span>
+              </button>
+            </motion.div>
+
+            <motion.div
+              variants={buttonVariants}
+              initial="hidden"
+              animate="visible"
+              whileHover="hover"
+              whileTap="tap"
+              transition={{ delay: 0.2 }}
+            >
               <Link 
                 href="/brand"
                 className="group relative inline-flex items-center justify-center px-12 py-6 text-xl font-bold text-white border-2 border-yellow-400 rounded-full hover:bg-yellow-400 hover:text-neutral-900 transition-all duration-300 shadow-2xl"
@@ -378,6 +398,11 @@ export default function LandingHero() {
           </motion.div>
         </div>
       </motion.div>
+      
+      {/* AI Health Assistant */}
+      {showAIAssistant && (
+        <AIHealthAssistant onClose={() => setShowAIAssistant(false)} />
+      )}
     </section>
   )
 }

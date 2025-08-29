@@ -2,10 +2,19 @@ import { NextRequest, NextResponse } from 'next/server'
 
 export async function POST(request: NextRequest) {
   try {
-    const { prompt } = await request.json()
+    const body = await request.text()
+    if (!body) {
+      return NextResponse.json({ error: 'No request body provided' }, { status: 400 })
+    }
+    
+    const { prompt } = JSON.parse(body)
+    
+    if (!prompt) {
+      return NextResponse.json({ error: 'No prompt provided' }, { status: 400 })
+    }
 
     if (!process.env.OPENAI_API_KEY) {
-      throw new Error('OpenAI API key not configured')
+      return NextResponse.json({ error: 'OpenAI API key not configured' }, { status: 500 })
     }
 
     const response = await fetch('https://api.openai.com/v1/chat/completions', {
