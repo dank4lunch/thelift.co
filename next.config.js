@@ -47,7 +47,18 @@ const nextConfig = {
       },
     ]
   },
-  allowedDevOrigins: ['3285b41d-92fb-4e70-a6e6-f318b2036917-00-6u9yp2t8h94l.kirk.replit.dev']
+  // Allow all hosts for Replit development
+  async rewrites() {
+    return []
+  },
+  
+  async redirects() {
+    return []
+  },
+  
+  // Ensure proper configuration for Replit
+  trailingSlash: false,
+  poweredByHeader: false
 }
 
 module.exports = nextConfig
