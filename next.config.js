@@ -5,9 +5,12 @@ const nextConfig = {
   },
   transpilePackages: ['three'],
   
+  // Fix for Replit preview access
+  allowedDevOrigins: ['3285b41d-92fb-4e70-a6e6-f318b2036917-00-6u9yp2t8h94l.kirk.replit.dev'],
+  
   // Essential for Replit to work properly
   images: {
-    domains: ['localhost', '0.0.0.0'],
+    domains: ['localhost', '0.0.0.0', '3285b41d-92fb-4e70-a6e6-f318b2036917-00-6u9yp2t8h94l.kirk.replit.dev'],
     remotePatterns: [
       {
         protocol: 'https',
@@ -35,25 +38,6 @@ const nextConfig = {
     })
 
     return config
-  },
-
-  // Remove security headers that block Replit iframe
-  async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: [
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin',
-          },
-        ],
-      },
-    ]
   },
 
   // Essential Replit configuration
