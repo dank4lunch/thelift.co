@@ -2,12 +2,21 @@ import { NextRequest, NextResponse } from 'next/server'
 
 export async function POST(request: NextRequest) {
   try {
-    const body = await request.text()
-    if (!body) {
-      return NextResponse.json({ error: 'No request body provided' }, { status: 400 })
-    }
+    // Handle both JSON and text requests
+    let prompt: string
     
-    const { prompt } = JSON.parse(body)
+    const contentType = request.headers.get('content-type')
+    if (contentType?.includes('application/json')) {
+      const data = await request.json()
+      prompt = data.prompt
+    } else {
+      const body = await request.text()
+      if (!body) {
+        return NextResponse.json({ error: 'No request body provided' }, { status: 400 })
+      }
+      const data = JSON.parse(body)
+      prompt = data.prompt
+    }
     
     if (!prompt) {
       return NextResponse.json({ error: 'No prompt provided' }, { status: 400 })

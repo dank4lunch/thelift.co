@@ -157,7 +157,7 @@ Write in first person as Tshiamo, with an encouraging, professional tone that re
           initial={{ opacity: 0, scale: 0.8, y: 50 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.8, y: 50 }}
-          transition={{ type: "spring", stiffness: 300, damping: 30 }}
+          transition={{ type: "spring" as const, stiffness: 300, damping: 30 }}
         >
           <div className="p-4 sm:p-6">
             <div className="flex justify-between items-start mb-4 sm:mb-6">
@@ -205,7 +205,7 @@ Write in first person as Tshiamo, with an encouraging, professional tone that re
           className="bg-neutral-900 rounded-xl p-6 sm:p-8 text-center border border-primary-500/30 max-w-md w-full mx-4"
           initial={{ opacity: 0, scale: 0.8, y: 50 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
-          transition={{ type: "spring", stiffness: 300, damping: 30 }}
+          transition={{ type: "spring" as const, stiffness: 300, damping: 30 }}
         >
           <motion.div 
             className="w-16 h-16 border-4 border-primary-500 border-t-transparent rounded-full mx-auto mb-4"
@@ -262,7 +262,7 @@ Write in first person as Tshiamo, with an encouraging, professional tone that re
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -20 }}
-              transition={{ type: "spring", stiffness: 300, damping: 30 }}
+              transition={{ type: "spring" as const, stiffness: 300, damping: 30 }}
               className="mb-6 sm:mb-8"
             >
               <h3 className="text-lg sm:text-xl font-semibold text-white mb-4 sm:mb-6">{currentQ.question}</h3>

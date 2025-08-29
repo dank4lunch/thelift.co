@@ -29,20 +29,14 @@ function FloatingDumbbell({ position, rotation, scale = 1 }: { position: [number
   )
 }
 
-// 3D Text Component
+// 3D Text Component - Simplified to avoid font issues
 function Floating3DText() {
   return (
     <Float speed={2} rotationIntensity={0.2} floatIntensity={0.3}>
-      <Text3D
-        font="/fonts/helvetiker_regular.typeface.json"
-        size={0.5}
-        height={0.1}
-        position={[-2, 0, 0]}
-        rotation={[0, 0.2, 0]}
-      >
-        LIFT
+      <mesh position={[-2, 0, 0]} rotation={[0, 0.2, 0]}>
+        <boxGeometry args={[2, 0.5, 0.2]} />
         <meshStandardMaterial color="#e3b547" metalness={0.3} roughness={0.4} />
-      </Text3D>
+      </mesh>
     </Float>
   )
 }
@@ -143,7 +137,7 @@ export default function LandingHero() {
       y: 0,
       scale: 1,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         stiffness: 100,
         damping: 12,
         duration: 0.8
@@ -162,7 +156,7 @@ export default function LandingHero() {
       y: 0,
       rotateX: 0,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         stiffness: 120,
         damping: 10
       }
@@ -188,7 +182,7 @@ export default function LandingHero() {
       scale: 1,
       y: 0,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         stiffness: 150,
         damping: 10,
         delay: 1
@@ -197,9 +191,9 @@ export default function LandingHero() {
     hover: {
       scale: 1.05,
       y: -5,
-      boxShadow: "0 20px 40px rgba(239, 68, 68, 0.3)",
+      boxShadow: "0 20px 40px rgba(255, 255, 255, 0.2)",
       transition: {
-        type: "spring",
+        type: "spring" as const,
         stiffness: 400,
         damping: 10
       }
@@ -244,28 +238,27 @@ export default function LandingHero() {
             <motion.h1 
               className="text-6xl md:text-8xl lg:text-9xl font-black text-white leading-none tracking-tight"
               style={{
-                textShadow: "0 0 30px rgba(239, 68, 68, 0.5), 0 0 60px rgba(239, 68, 68, 0.3)",
+                textShadow: "0 0 30px rgba(255, 255, 255, 0.3), 0 0 60px rgba(255, 255, 255, 0.1)",
                 transform: "perspective(1000px) rotateX(5deg)"
               }}
             >
-              THE{" "}
               <motion.span 
-                className="text-transparent bg-clip-text bg-gradient-to-r from-primary-500 via-accent-400 to-primary-600"
+                className="text-white"
                 animate={{
-                  backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
+                  textShadow: [
+                    "0 0 30px rgba(255, 255, 255, 0.3)",
+                    "0 0 40px rgba(255, 255, 255, 0.5)",
+                    "0 0 30px rgba(255, 255, 255, 0.3)"
+                  ]
                 }}
                 transition={{
-                  duration: 3,
+                  duration: 2,
                   repeat: Infinity,
-                  ease: "linear"
-                }}
-                style={{
-                  backgroundSize: "200% 200%"
+                  ease: "easeInOut"
                 }}
               >
-                LIFT
-              </motion.span>{" "}
-              CO
+                THE LIFT CO
+              </motion.span>
             </motion.h1>
           </motion.div>
 
