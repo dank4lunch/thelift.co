@@ -40,7 +40,7 @@ function Floating3DText() {
         rotation={[0, 0.2, 0]}
       >
         LIFT
-        <meshStandardMaterial color="#ef4444" metalness={0.3} roughness={0.4} />
+        <meshStandardMaterial color="#e3b547" metalness={0.3} roughness={0.4} />
       </Text3D>
     </Float>
   )
@@ -248,7 +248,7 @@ export default function LandingHero() {
             >
               THE{" "}
               <motion.span 
-                className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-yellow-400 to-red-600"
+                className="text-transparent bg-clip-text bg-gradient-to-r from-primary-500 via-accent-400 to-primary-600"
                 animate={{
                   backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
                 }}
@@ -315,7 +315,7 @@ export default function LandingHero() {
             >
               <Link 
                 href="/fitness"
-                className="group relative inline-flex items-center justify-center px-12 py-6 text-xl font-bold text-white bg-gradient-to-r from-red-600 to-red-500 rounded-full overflow-hidden shadow-2xl transform-gpu"
+                className="group relative inline-flex items-center justify-center px-12 py-6 text-xl font-bold text-neutral-950 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full overflow-hidden shadow-2xl transform-gpu"
               >
                 <span className="relative z-10 flex items-center gap-3">
                   🏋️‍♂️ Start Your Transformation
