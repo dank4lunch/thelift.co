@@ -4,6 +4,22 @@ const nextConfig = {
     optimizePackageImports: ['framer-motion']
   },
   transpilePackages: ['three'],
+  
+  // Essential for Replit to work properly
+  images: {
+    domains: ['localhost', '0.0.0.0'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '*.replit.dev',
+      },
+      {
+        protocol: 'http',
+        hostname: 'localhost',
+      },
+    ],
+  },
+
   webpack: (config, { isServer }) => {
     // Handle 3D libraries properly for client-side only
     if (!isServer) {
@@ -20,21 +36,13 @@ const nextConfig = {
 
     return config
   },
-  // Ensure app runs on correct port
-  env: {
-    NEXT_PUBLIC_PORT: process.env.PORT || '3000',
-  },
 
-  // Add security headers
+  // Remove security headers that block Replit iframe
   async headers() {
     return [
       {
         source: '/(.*)',
         headers: [
-          {
-            key: 'X-Frame-Options',
-            value: 'DENY',
-          },
           {
             key: 'X-Content-Type-Options',
             value: 'nosniff',
@@ -47,18 +55,15 @@ const nextConfig = {
       },
     ]
   },
-  // Allow all hosts for Replit development
+
+  // Essential Replit configuration
+  trailingSlash: false,
+  poweredByHeader: false,
+  
+  // Allow iframe embedding for Replit preview
   async rewrites() {
     return []
-  },
-  
-  async redirects() {
-    return []
-  },
-  
-  // Ensure proper configuration for Replit
-  trailingSlash: false,
-  poweredByHeader: false
+  }
 }
 
 module.exports = nextConfig
