@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { createPayFastPayment, redirectToPayFast, PACKAGE_PRICES, PackageName } from '@/utils/payfast-simple'
+import { processIKhokhaPayment, redirectToIKhokha } from '@/utils/ikhokha'
 
 interface PaymentFormProps {
   packageName: PackageName
@@ -14,7 +15,8 @@ export default function PaymentForm({ packageName, onClose }: PaymentFormProps) 
     lastName: '',
     email: '',
     phone: '',
-    terms: false
+    terms: false,
+    paymentMethod: 'ikhokha' as 'payfast' | 'ikhokha'
   })
   const [isProcessing, setIsProcessing] = useState(false)
   const [errors, setErrors] = useState<Record<string, string>>({})
@@ -61,44 +63,64 @@ export default function PaymentForm({ packageName, onClose }: PaymentFormProps) 
 
     setIsProcessing(true)
 
+    // Store payment info in localStorage for success page
+    localStorage.setItem('pending_payment', JSON.stringify({
+      package: packageName,
+      amount: packagePrice,
+      email: formData.email,
+      name: `${formData.firstName} ${formData.lastName}`,
+      paymentMethod: formData.paymentMethod
+    }))
+
     try {
-      const paymentData = createPayFastPayment({
-        package_name: packageName,
-        amount: packagePrice,
-        customer_name: `${formData.firstName} ${formData.lastName}`,
-        customer_email: formData.email,
-        customer_phone: formData.phone
-      })
+      if (formData.paymentMethod === 'ikhokha') {
+        // Process iKhokha payment
+        const result = await processIKhokhaPayment({
+          package_name: packageName,
+          amount: packagePrice,
+          customer_name: `${formData.firstName} ${formData.lastName}`,
+          customer_email: formData.email,
+          customer_phone: formData.phone
+        })
 
-      // Store payment info in localStorage for success page
-      localStorage.setItem('pending_payment', JSON.stringify({
-        package: packageName,
-        amount: packagePrice,
-        email: formData.email,
-        name: `${formData.firstName} ${formData.lastName}`
-      }))
+        if (result.success && result.paymentUrl) {
+          redirectToIKhokha(result.paymentUrl)
+        } else {
+          throw new Error(result.error || 'iKhokha payment initiation failed')
+        }
+      } else {
+        // Process PayFast payment
+        const paymentData = createPayFastPayment({
+          package_name: packageName,
+          amount: packagePrice,
+          customer_name: `${formData.firstName} ${formData.lastName}`,
+          customer_email: formData.email,
+          customer_phone: formData.phone
+        })
 
-      // Redirect to PayFast
-      try {
-        redirectToPayFast(paymentData)
-      } catch (redirectError) {
-        console.error('PayFast redirect error:', redirectError)
-        // Fallback to WhatsApp if payment redirect fails
-        const message = `Hi! I'd like to purchase the ${packageName} for R${packagePrice}. My details: ${formData.firstName} ${formData.lastName}, ${formData.email}, ${formData.phone}`
-        const encodedMessage = encodeURIComponent(message)
-        window.open(`https://wa.me/27635432439?text=${encodedMessage}`, '_blank')
-        setIsProcessing(false)
-        return
+        try {
+          redirectToPayFast(paymentData)
+        } catch (redirectError) {
+          console.error('PayFast redirect error:', redirectError)
+          throw new Error('PayFast redirect failed')
+        }
       }
     } catch (error) {
       console.error('Payment error:', error)
-      alert('There was an error processing your payment. Please try again.')
+      alert(`There was an error processing your ${formData.paymentMethod === 'ikhokha' ? 'iKhokha' : 'PayFast'} payment. Please try again or contact support.`)
       setIsProcessing(false)
+      
+      // Fallback to WhatsApp if payment fails
+      const message = `Hi! I'd like to purchase the ${packageName} for R${packagePrice}. My details: ${formData.firstName} ${formData.lastName}, ${formData.email}, ${formData.phone}. Payment method ${formData.paymentMethod} failed.`
+      const encodedMessage = encodeURIComponent(message)
+      window.open(`https://wa.me/27635432439?text=${encodedMessage}`, '_blank')
     }
   }
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value, type, checked } = e.target
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    const { name, value, type } = e.target
+    const checked = (e.target as HTMLInputElement).checked
+    
     setFormData(prev => ({
       ...prev,
       [name]: type === 'checkbox' ? checked : value
@@ -246,6 +268,28 @@ export default function PaymentForm({ packageName, onClose }: PaymentFormProps) 
               )}
             </div>
 
+            <div>
+              <label htmlFor="paymentMethod" className="block text-sm font-bold mb-2 text-neutral-300">
+                Payment Method *
+              </label>
+              <select
+                id="paymentMethod"
+                name="paymentMethod"
+                value={formData.paymentMethod}
+                onChange={handleInputChange}
+                className="w-full px-3 py-3 rounded-lg bg-neutral-800 border border-neutral-600 text-white focus:outline-none focus:ring-2 focus:ring-primary-500 transition-all duration-200"
+              >
+                <option value="ikhokha">iKhokha (Recommended)</option>
+                <option value="payfast">PayFast</option>
+              </select>
+              <p className="mt-1 text-xs text-neutral-400">
+                {formData.paymentMethod === 'ikhokha' 
+                  ? 'Secure payment processing with competitive rates' 
+                  : 'Alternative payment gateway option'
+                }
+              </p>
+            </div>
+
             <div className="flex items-start space-x-3">
               <input
                 type="checkbox"
@@ -259,7 +303,7 @@ export default function PaymentForm({ packageName, onClose }: PaymentFormProps) 
               />
               <div>
                 <label htmlFor="terms" className="text-sm text-neutral-300 cursor-pointer">
-                  I agree to the terms and conditions and privacy policy. Payment will be processed securely through PayFast.
+                  I agree to the terms and conditions and privacy policy. Payment will be processed securely through {formData.paymentMethod === 'ikhokha' ? 'iKhokha' : 'PayFast'}.
                 </label>
                 {errors.terms && (
                   <p id="terms-error" className="mt-1 text-sm text-red-400" role="alert">
@@ -303,8 +347,11 @@ export default function PaymentForm({ packageName, onClose }: PaymentFormProps) 
               <span className="text-sm font-bold text-green-400">Secure Payment</span>
             </div>
             <p className="text-xs text-neutral-400">
-              Your payment is processed securely through PayFast, South Africa's leading payment gateway. 
-              We support all major credit cards, EFT, and instant banking.
+              Your payment is processed securely through {formData.paymentMethod === 'ikhokha' ? 'iKhokha' : 'PayFast'}, 
+              {formData.paymentMethod === 'ikhokha' 
+                ? 'South Africa\'s leading payment gateway with competitive rates and instant EFT support.'
+                : 'South Africa\'s trusted payment gateway with support for all major credit cards, EFT, and instant banking.'
+              }
             </p>
           </div>
         </div>
